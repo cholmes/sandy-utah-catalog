@@ -9,7 +9,7 @@
   "title": "Communities",
   "description": "Communities in Sandy City, Utah. 30 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:37:26Z",
+  "updated": "2026-10-06T20:51:07Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2542,
-      "file:checksum": "1220ad2cd71e00a1d9b3e80296a6e69a29de7f7637bfdd2b4e17ac8fe4bca859288b"
+      "file:checksum": "1220a6b9f316cba78ccdfaeffe0d1dcd8a141621c13cb757dee33912e8e8638564b5"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2378,
-      "file:checksum": "122094c29defc5c269ece7f71f4d897f3f32443f2ed53f32010f609f9120e83c4364"
+      "file:checksum": "1220e09910eb71e4445edc113e024c5137025e172c04cb23f41dee43094beb494059"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

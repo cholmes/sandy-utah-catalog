@@ -48,5 +48,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/IrrigationDitches/FeatureServer/9](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/IrrigationDitches/FeatureServer/9) on 2026-10-06T20:37:26Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/IrrigationDitches/FeatureServer/9](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/IrrigationDitches/FeatureServer/9) on 2026-10-06T20:51:07Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

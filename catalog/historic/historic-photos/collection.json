@@ -9,7 +9,7 @@
   "title": "Historic Photographs",
   "description": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>Sandy City Historic Photo clickable point locations from which photos were taken. Clicking brings up the images.</SPAN></P></DIV></DIV></DIV>. 159 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:37:26Z",
+  "updated": "2026-10-06T20:51:07Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2413,
-      "file:checksum": "1220ae4aff615c5aa83d77860c7a87855732529fd5d6fb4f30782676d95df9020657"
+      "file:checksum": "1220afbb68a26ffb00fe594c9f7a8f15cab5ef9a0dc7a27daef54a146fe817c784f2"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2096,
-      "file:checksum": "1220d23e135c130f9c9af7c9039ede2dfae715ad54d6667df2ba1e9055cbb867579a"
+      "file:checksum": "1220e3053465d8def776d0552b455a33b16b86bafb312974249fcfdb96eacf2cb33f"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

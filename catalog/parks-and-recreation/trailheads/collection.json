@@ -9,7 +9,7 @@
   "title": "Trailheads",
   "description": "Trailheads in Sandy, Utah area. 20 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:37:26Z",
+  "updated": "2026-10-06T20:51:07Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2183,
-      "file:checksum": "122015fa285446fe6ebb481976fb0b26283c20ee23c72b2859ac87b094903301c76e"
+      "file:checksum": "122018b3208f6ca6cb1a7d317d43257830a62b6cab5a91f558283dac11d5a5c1d7bd"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2089,
-      "file:checksum": "122045f7b6fb146f3a8fc8f15fddac4c0810c55407a900b908365bca2bd57b15dcb0"
+      "file:checksum": "1220c3ec7fa080c4db3d95ce8a97b8331815ef4325ce15b2a377a5216faac2fa2d3f"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

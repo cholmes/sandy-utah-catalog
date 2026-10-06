@@ -9,7 +9,7 @@
   "title": "Police Calls for Service",
   "description": "Police Calls for Service in Sandy City, Utah. The upstream service publishes no description for this layer. 185,647 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:37:26Z",
+  "updated": "2026-10-06T20:51:07Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2779,
-      "file:checksum": "12209395a70f42ee1085a48420217fc69fbe6a4812b6685a2a95cb79cc692e4bdbee"
+      "file:checksum": "1220f3565f204614f848a7b364a9f39480ab41cb9ce33f0a0c99a3800c9234c6f0ee"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3406,
-      "file:checksum": "1220e532234748feed4d38d2181f1d06d2e88fe635afffab1ec55bd808c943fb5659"
+      "file:checksum": "12206ce056013750f4b39a7e38423309154da07ec5af4642f1716004d0c85b2b90ee"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

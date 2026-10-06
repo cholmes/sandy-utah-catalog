@@ -9,7 +9,7 @@
   "title": "Conditional Use Permits",
   "description": "Conditional Use Permits in Sandy City, Utah. The upstream service publishes no description for this layer. 960 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:37:26Z",
+  "updated": "2026-10-06T20:51:07Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2476,
-      "file:checksum": "122056c8c05a9d1b36c5451831f210e8ad087e9f91f4a03b9999fae975d648cf7700"
+      "file:checksum": "1220d13c38ccd05349861efe2f4a36e0d50d12b9f5aeccb73e8894e17dd6a5c3b2b0"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2178,
-      "file:checksum": "12203138cf4977d5e8ab3c3159d91a874154f6d4b48a9c4bfa9de9e6fcb7b5ddb563"
+      "file:checksum": "12208bf0b5d9b53ceccc593665964b2287438ecfb45a379b07b04bbbbe83cd2644d3"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

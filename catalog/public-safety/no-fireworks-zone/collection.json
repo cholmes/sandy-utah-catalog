@@ -9,7 +9,7 @@
   "title": "No Fireworks Zones",
   "description": "No firework zone in Sandy City, Utah. 169 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:37:26Z",
+  "updated": "2026-10-06T20:51:07Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2257,
-      "file:checksum": "1220f75d1122f87371fff4b48ddfd2156c75e09a4d15e911439584f5d37352f9695c"
+      "file:checksum": "1220d67056e8982749752f053313b540b637085a05687d44f097c93393f378654c2c"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2062,
-      "file:checksum": "122007bdcc74d876eb9c3c23c35cf1121f0b9c8428f4b2df7378dcd9ce98249f11ce"
+      "file:checksum": "1220ce40231236c043d0dd436803371ec86e09eee9d8b435094387b907126805c00a"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

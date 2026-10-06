@@ -9,7 +9,7 @@
   "title": "Crime Incidents",
   "description": "Crime Incidents in Sandy City, Utah. The upstream service publishes no description for this layer. 29,572 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:37:26Z",
+  "updated": "2026-10-06T20:51:07Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2870,
-      "file:checksum": "122066576a8ddc2b3c38cf4b09db01614577d61845cd6c72c022d931bcee0d3c8f69"
+      "file:checksum": "1220daabfcb412c3be57ed6e1fc0dd99e272321e5bcc4af9d8e139764a53dd5e0595"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3132,
-      "file:checksum": "12203b4979c7445d6dd3280180fdabe557d82e28dd4e0a27d14c6fab910d7d8f1591"
+      "file:checksum": "1220dcee687a3bd1667fea44c74959d1b9242d1465fdb7e9f0eb262330b8213260e4"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

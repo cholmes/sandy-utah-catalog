@@ -9,7 +9,7 @@
   "title": "Golf Courses",
   "description": "Golf courses in Sandy City, Utah. 4 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:37:26Z",
+  "updated": "2026-10-06T20:51:07Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2476,
-      "file:checksum": "1220177a951330f4c2a46456ec2232f7219d8ae349e92e299ada88cd10e0fa2d56a1"
+      "file:checksum": "1220bd1deb9559d95f0941036fea915bcfb1738625d2a2003c808e12e8567e669c46"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 5974,
-      "file:checksum": "12208f96d79b8650b176f2ff49d4e76f7a0506fa9d73f2689f19cd92fa445e13fea7"
+      "file:checksum": "12206f8cf38795b12dc99be015bfd75bb00308580bbe53a57ddbdb7f1f28a17bf393"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

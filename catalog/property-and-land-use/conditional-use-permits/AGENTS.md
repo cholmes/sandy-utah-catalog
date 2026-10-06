@@ -50,5 +50,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/CUP/FeatureServer/0](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/CUP/FeatureServer/0) on 2026-10-06T20:37:26Z.
+Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/CUP/FeatureServer/0](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/CUP/FeatureServer/0) on 2026-10-06T20:51:07Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

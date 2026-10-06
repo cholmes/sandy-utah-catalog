@@ -9,7 +9,7 @@
   "title": "Wildland Urban Interface",
   "description": "Urban wildland interface in Sandy City, Utah. 1 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:37:26Z",
+  "updated": "2026-10-06T20:51:07Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2340,
-      "file:checksum": "12204a69fd8e12282278c3652ef2313e0cfd89ff1ebb8252268203d1a89ae31698c0"
+      "file:checksum": "1220108299910468b5b7daf4983475f7495aaaa000d09b864cecb39bfd3ae0523524"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2029,
-      "file:checksum": "122046e22cfe0fa7d336d29304a81608f82c8f587081d4da97d6ed9ed81e67a19c94"
+      "file:checksum": "1220ffb48517f259431e8d8d82f2d5a9fd16b44db275d4df04ed4c0815cbe5ab41f5"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
