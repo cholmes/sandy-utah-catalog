@@ -59,5 +59,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Common/City_Council_Districts/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Common/City_Council_Districts/MapServer/0) on 2026-10-06T19:21:37Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Common/City_Council_Districts/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Common/City_Council_Districts/MapServer/0) on 2026-10-06T19:24:57Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

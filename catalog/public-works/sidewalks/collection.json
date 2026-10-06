@@ -9,7 +9,7 @@
   "title": "Sidewalks",
   "description": "Sidewalk Inventory (In Progress) This layer will be used to identify areas that are missing sidewalks and help calculate an estimated cost of adding sidewalks where needed. 8,586 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:21:37Z",
+  "updated": "2026-10-06T19:24:57Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2240,
-      "file:checksum": "1220c18f88dc4c89469ea0e81363e6930ae76c8075b664ce1241c5285faf5749d47a"
+      "file:checksum": "122080df9a7bc8e42717b661944e07eda631a26d37aa1937ea6e3989c1c67b25bc9a"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3005,
-      "file:checksum": "12202e30eb3621931c2fd77a91f25981a0fce92c660101170af4a0ee636746f67fde"
+      "file:checksum": "122008dd47b18f9895d58c6a852289d74301bebfc2fc2e2c6724a7823d5ddeacd40c"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

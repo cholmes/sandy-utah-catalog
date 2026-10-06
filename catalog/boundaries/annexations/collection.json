@@ -9,7 +9,7 @@
   "title": "Annexations",
   "description": "Annexations in Sandy City, Utah. 521 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:21:37Z",
+  "updated": "2026-10-06T19:24:57Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2159,
-      "file:checksum": "1220c6a21f385c26367a4ec3dfe1fbe9cb557a42a15aed98dcd0ff23dedf59786ffc"
+      "file:checksum": "12204d355847ab4e8ed8cf234aae5f0fa42bf332581cff9e44d632e50b58e0541ab3"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2452,
-      "file:checksum": "1220467f1278f735e4b6ce6f8e9e0fdde4ecd18eb3e5b899125b3774cccfeb34287e"
+      "file:checksum": "122002506f41154fa7ae92d7f8b19a1fc53d310e9550d424657bbe3e3e291b777bf4"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

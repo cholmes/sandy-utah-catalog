@@ -9,7 +9,7 @@
   "title": "UTA Bus Routes",
   "description": "UTA Bus Routes in Sandy City, Utah. The upstream service publishes no description for this layer. 49 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:21:37Z",
+  "updated": "2026-10-06T19:24:57Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2307,
-      "file:checksum": "1220c67dd641cbb1b7a2d3194c4c4acdf88ded285b74c3e004823b8821e3e56ed017"
+      "file:checksum": "12200fdea5867ca107bd8ecb8d5bcbbcd64b502426c8ec9b0cb145075cb2ce30e361"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2142,
-      "file:checksum": "12208e0f64f6358b5e8d0e3b483156167f60d312ca284c13efff2ce1ebbbb7acbd8d"
+      "file:checksum": "1220723a93d188703df294b29e72d5378bc0a94a50f1edbdf29bf49870a64f09f447"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

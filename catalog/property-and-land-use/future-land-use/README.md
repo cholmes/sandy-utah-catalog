@@ -17,7 +17,7 @@ Sandy City publishes no licence for this data. There is no terms-of-use page on 
 This is a **mirror**. Sandy City produced the data; it is republished here unmodified except where noted below.
 
 - **Source**: [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Sandy_Future_Land_Use_Map_WFL1/FeatureServer/12](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Sandy_Future_Land_Use_Map_WFL1/FeatureServer/12)
-- **Mirrored**: 2026-10-06T19:21:37Z
+- **Mirrored**: 2026-10-06T19:24:57Z
 
 Converted with [gpio](https://github.com/developmentseed/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
 

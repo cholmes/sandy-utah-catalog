@@ -17,7 +17,7 @@ Sandy City publishes no licence for this data. There is no terms-of-use page on 
 This is a **mirror**. Sandy City produced the data; it is republished here unmodified except where noted below.
 
 - **Source**: [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0)
-- **Mirrored**: 2026-10-06T19:21:37Z
+- **Mirrored**: 2026-10-06T19:24:57Z
 
 Converted with [gpio](https://github.com/developmentseed/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
 
@@ -37,5 +37,6 @@ SELECT count(*) FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/p
 
 - `accountid`, a utility customer identifier, was dropped before publication.
 - The inventory is incomplete. 18,992 of 26,213 service lines are `bothsidesstatus = 'Unknown'` and 7,221 are `Non-Lead`. **No row is classified `Lead`**, and none is `Unknown - Likely Lead`, although the upstream field domain defines both values. A map of this layer shows where the city has not yet looked, not where lead is absent. The default style therefore paints only the categories that occur.
+- The vector tiles carry seven display columns; the GeoParquet carries all 47. The full set did not fit the tile size cap.
 - Columns dropped from the upstream layer before publication: `Editor`/`Creator` (the staff username that last edited the row) and `GlobalID` (an Esri replication identifier). `EditDate` and `CreationDate` are kept, because they carry real provenance.
 - The upstream service publishes no description for this layer, so this page describes only what the data contains.

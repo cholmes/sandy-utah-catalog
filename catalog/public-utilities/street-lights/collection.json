@@ -9,7 +9,7 @@
   "title": "Street Lights",
   "description": "Street Lights in Sandy City, Utah. The upstream service publishes no description for this layer. 8,727 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:21:37Z",
+  "updated": "2026-10-06T19:24:57Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2339,
-      "file:checksum": "12205397dd3ee84d2cd55d827477f3391a2e909fe6e0c0a0e81ab7e0327b8ea16f89"
+      "file:checksum": "122015518864a629ccbdc9c97c5fb84f0351aab7d88f92759440d0e9eb7503d17883"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3192,
-      "file:checksum": "1220ca2042d4df6d79dedbded75a11c5dc131609b1387586c13ad3fbb66507b723df"
+      "file:checksum": "1220f1c3a00f60720839c6d9d9e3de6238b25a8b98de9221aea3b9ce7bffab8d848e"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

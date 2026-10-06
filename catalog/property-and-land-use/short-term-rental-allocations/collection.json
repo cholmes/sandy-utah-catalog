@@ -9,7 +9,7 @@
   "title": "Short-Term Rental Allocations",
   "description": "Community Count for Short Term Rentals in Sandy City\nThis map contains a polygon layer of the Sandy City Communities. With attributes of the allocated short term rental space. This layer holds the per-community short-term-rental permit cap, not the location of individual rentals. Each of the 30 community areas carries `Max_STR` (the cap), `Current_STR` (permits issued) and `Open_STR` (permits still available). One community is at -1, meaning it is over its cap. 30 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:21:37Z",
+  "updated": "2026-10-06T19:24:57Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2801,
-      "file:checksum": "1220e360be93a07272689cb46fc660d681b6519fc3e424cf7e6a3ed136b0953bc1e0"
+      "file:checksum": "122069425c8a83d7746469e86afca960825b9cefdb3a8893a7e589d7e784cb115ad7"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2621,
-      "file:checksum": "1220f72388af910236b21909f4fdb3af21ea55c20a53907003de52cf009c5455ec92"
+      "file:checksum": "122073723558574596cbb30ce2ba5eee9128c3603d0ef1a50601d074204f1f08aac2"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

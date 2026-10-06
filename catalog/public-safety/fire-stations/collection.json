@@ -9,7 +9,7 @@
   "title": "Fire Stations",
   "description": "Fire Stations in and around Sandy City, Utah. 68 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:21:37Z",
+  "updated": "2026-10-06T19:24:57Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2405,
-      "file:checksum": "122022bc1026d969d6183f128ee3ce799e3a245073377b53ac0c5c6c858d1b7695c4"
+      "file:checksum": "1220b02fdecbf9a345471cd2fbeec491befdefb82e2a597e621470fa69e6afd75ecc"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2363,
-      "file:checksum": "12200540c328cae16b7db8ce54206bc0a42ed5eb759ae65dd2f4e7e66a4ee2e7b95d"
+      "file:checksum": "1220f279a51f0e0c141f8409e510bfec65d86cdd6776e05dff0f9dedde582e695ca3"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

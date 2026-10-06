@@ -17,7 +17,7 @@ Sandy City publishes no licence for this data. There is no terms-of-use page on 
 This is a **mirror**. Sandy City produced the data; it is republished here unmodified except where noted below.
 
 - **Source**: [https://gis.sandy.utah.gov/arcgis/rest/services/Common/Address_Points/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Common/Address_Points/MapServer/0)
-- **Mirrored**: 2026-10-06T19:21:37Z
+- **Mirrored**: 2026-10-06T19:24:57Z
 - **Attribution, as the service states it**: Sandy City GIS
 
 Converted with [gpio](https://github.com/developmentseed/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
@@ -33,3 +33,7 @@ Converted with [gpio](https://github.com/developmentseed/geoparquet-io) (`extrac
 INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;
 SELECT count(*) FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/address-points/address-points.parquet';
 ```
+
+## Known issues
+
+- The vector tiles carry five display columns; the GeoParquet carries all 37. The full set did not fit the tile size cap.

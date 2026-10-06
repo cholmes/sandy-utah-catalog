@@ -9,7 +9,7 @@
   "title": "Water Distribution Mains",
   "description": "Water Distribution Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 15,249 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:21:37Z",
+  "updated": "2026-10-06T19:24:57Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2721,
-      "file:checksum": "12201b36a6304ea5f8250635d510a41684cf6a8c8032b1ac8ffb956fd36b851c100f"
+      "file:checksum": "1220fa8d552eda844927e7918462d73aa075133cc319db7c41a31b74c0e3c4ee2940"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3638,
-      "file:checksum": "12208abe93d56e156bccdfcc9ee0091bd6374ecf0440733bc75bc5a8ab97e059a513"
+      "file:checksum": "1220f3ea5b3f3e5110d35979a64c22a7e9d80779b63d5dbe3249dcd2b0795071f586"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

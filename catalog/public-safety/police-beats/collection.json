@@ -9,7 +9,7 @@
   "title": "Police Beats",
   "description": "Police beats in Sandy City, Utah. 4 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:21:37Z",
+  "updated": "2026-10-06T19:24:57Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2182,
-      "file:checksum": "1220cb3f5a28aa99391561e3b50758bdc7e662c6b22da1d540a4e9695b53f1a787ac"
+      "file:checksum": "12201382e80a5635bca43e245f304d0412c6d7e1b1c627f7263364fcfae7bc07846a"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2087,
-      "file:checksum": "1220970140511ba79e3ea4c8abc2c0d7f2f5e454e61f830c0d7c1bf90020f6e33965"
+      "file:checksum": "122014bb8b518d13b1458b383700837f7c33e2384194c2faa3efbdc777b2704b4de8"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

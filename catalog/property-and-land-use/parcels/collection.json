@@ -9,7 +9,7 @@
   "title": "Parcels",
   "description": "Parcels in and around Sandy City, Utah as of July, 2022. The service describes itself as current to July 2022, so it lags the county's live parcel fabric by more than three years. 106,087 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:21:37Z",
+  "updated": "2026-10-06T19:24:57Z",
   "providers": [
     {
       "name": "Salt Lake County Recorder",
@@ -114,8 +114,8 @@
         "visual"
       ],
       "proj:epsg": 3857,
-      "file:size": 26186229,
-      "file:checksum": "122034d3fda753e09b7977f1e133c48a7f112654c1df638505388751137b84e886a5"
+      "file:size": 10666473,
+      "file:checksum": "12201b06e24d7fabb282a527b7f60393342806b12e22b8e9ef5903ae2a1316e08f90"
     },
     "style-default": {
       "href": "./styles/default.json",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2408,
-      "file:checksum": "122012602bd1eb040d152f82f5999cd45512cfbd5f1293097e5468433dbb9a4dd5f5"
+      "file:size": 2910,
+      "file:checksum": "122083cec04367c852523de7fe39a022416f0677c654192aa3185156ef0e885e5aea"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 4130,
-      "file:checksum": "12204179572068ace337193c4772472737a1dc1edc966af880c66fd7f3c510fd0486"
+      "file:checksum": "122077a757e878b761a5b6d5c4df8279cae73844769dc2be1bbaf2aecc1ee5cce3d6"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -155,8 +155,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 162364,
-      "file:checksum": "12206a0a82519094a464bde94c4bcda9528268b960b4bf1f50937f9e4210024d5304"
+      "file:size": 347015,
+      "file:checksum": "12202b36b0ecea69c8c83b0a99e46c5f479e5a30bd7e08509a53d39a96bbd1c2bbc3"
     }
   },
   "table:columns": [

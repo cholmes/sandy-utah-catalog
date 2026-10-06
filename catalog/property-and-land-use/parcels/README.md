@@ -17,7 +17,7 @@ Sandy City publishes no licence for this data. There is no terms-of-use page on 
 This is a **mirror**. Sandy City produced the data; it is republished here unmodified except where noted below.
 
 - **Source**: [https://gis.sandy.utah.gov/arcgis/rest/services/Common/Parcels/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Common/Parcels/FeatureServer/0)
-- **Mirrored**: 2026-10-06T19:21:37Z
+- **Mirrored**: 2026-10-06T19:24:57Z
 - **Attribution, as the service states it**: Salt Lake County Recorder
 
 Converted with [gpio](https://github.com/developmentseed/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
@@ -37,3 +37,4 @@ SELECT count(*) FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/p
 ## Known issues
 
 - The upstream service states the extract is current to July 2022.
+- The GeoParquet carries all 84 columns the county publishes, including owner name and mailing address, which are public record under the Salt Lake County Recorder. The **vector tiles carry only seven display columns** (`parcel_id`, `prop_location`, `Property_Type_Simple_Desc`, `parcel_acres`, `year_built`, `total_sq_ft`, `Community`). Carrying all 84 pushed 56 of 106 full-zoom tiles past the 500 KB cap, and the tiler shed 37,706 parcels to fit. Query the GeoParquet for anything not in that list.
