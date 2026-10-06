@@ -1,0 +1,78 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ],
+  "id": "public-works",
+  "title": "Public Works and Transportation",
+  "description": "Maintained roads, speed limits, sidewalks, pavement condition, transit and waste collection. 7 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Public Works and Transportation README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Public Works and Transportation agent guide"
+    },
+    {
+      "rel": "child",
+      "href": "./bus-routes/collection.json",
+      "type": "application/json",
+      "title": "UTA Bus Routes"
+    },
+    {
+      "rel": "child",
+      "href": "./bus-stops/collection.json",
+      "type": "application/json",
+      "title": "UTA Bus Stops"
+    },
+    {
+      "rel": "child",
+      "href": "./garbage-days/collection.json",
+      "type": "application/json",
+      "title": "Garbage Collection Days"
+    },
+    {
+      "rel": "child",
+      "href": "./pavement-condition/collection.json",
+      "type": "application/json",
+      "title": "Pavement Condition"
+    },
+    {
+      "rel": "child",
+      "href": "./sandy-maintained-roads/collection.json",
+      "type": "application/json",
+      "title": "Sandy-Maintained Roads"
+    },
+    {
+      "rel": "child",
+      "href": "./sidewalks/collection.json",
+      "type": "application/json",
+      "title": "Sidewalks"
+    },
+    {
+      "rel": "child",
+      "href": "./speed-limits/collection.json",
+      "type": "application/json",
+      "title": "Speed Limits"
+    }
+  ]
+}

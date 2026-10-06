@@ -1,0 +1,52 @@
+{
+  "version": 8,
+  "name": "Agency",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../fire-stations.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "fire-stations-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "fire-stations",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "upcase",
+            [
+              "slice",
+              [
+                "get",
+                "Type"
+              ],
+              0,
+              5
+            ]
+          ],
+          "METRO",
+          "#e03131",
+          "UFA  ",
+          "#f08c00",
+          "UFA",
+          "#f08c00",
+          "SLCFD",
+          "#1c7ed6",
+          "DFD",
+          "#2f9e44",
+          "DFD\r\n",
+          "#2f9e44",
+          "#ced4da"
+        ],
+        "circle-radius": 5,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

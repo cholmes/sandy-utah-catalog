@@ -1,0 +1,314 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "pavement-condition",
+  "title": "Pavement Condition",
+  "description": "Pavement Condition in Sandy City, Utah. The upstream service publishes no description for this layer. 2,165 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.916053,
+          40.528286,
+          -111.778055,
+          40.618218
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Pavement Condition README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Pavement Condition agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/PMA_Segments/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/pavement-condition/pavement-condition.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "pavement-condition"
+      ],
+      "title": "Pavement Condition vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/pavement-condition/pavement-condition.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Pavement Condition (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 518136,
+      "file:checksum": "12204c6ee72248785b9c2b6b767a5101f7b5d7dce10d50be6441a94258ad1a7242a8"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/pavement-condition/pavement-condition.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Pavement Condition (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 1037851,
+      "file:checksum": "122043d140b56de71900591f548bfd4997284d6e14fc9f6ca2d3cf5d8fc64f8bfb10"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Pavement condition",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 667,
+      "file:checksum": "1220e5f19b980f7508a856f318928144399e9d4ac9a239a93a2fa9db1161970dc3ab"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Pavement Condition README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2404,
+      "file:checksum": "12204d5ecd93a40a2b66924f40ce705c74a5cd605bf4e1623cf8b16ded2597cf7860"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Pavement Condition agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3025,
+      "file:checksum": "122097d10534e805d32fc8ebd07d688cd3ce8cd812e3e556ba6d46d537534d45d572"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Location",
+      "type": "string"
+    },
+    {
+      "name": "PMA_TXT",
+      "type": "string"
+    },
+    {
+      "name": "Section_Num",
+      "type": "string"
+    },
+    {
+      "name": "Municipality",
+      "type": "string"
+    },
+    {
+      "name": "PWA",
+      "type": "int16"
+    },
+    {
+      "name": "Council_District",
+      "type": "string"
+    },
+    {
+      "name": "Quadrant",
+      "type": "string"
+    },
+    {
+      "name": "Street_Name",
+      "type": "string"
+    },
+    {
+      "name": "From_Location",
+      "type": "string"
+    },
+    {
+      "name": "To_Location",
+      "type": "string"
+    },
+    {
+      "name": "FunctionClass",
+      "type": "string"
+    },
+    {
+      "name": "GIS_Length",
+      "type": "double"
+    },
+    {
+      "name": "GIS_Width",
+      "type": "double"
+    },
+    {
+      "name": "Avg_SectionWidth",
+      "type": "int16"
+    },
+    {
+      "name": "RM_Length",
+      "type": "double"
+    },
+    {
+      "name": "RM_Width",
+      "type": "double"
+    },
+    {
+      "name": "RM_Area",
+      "type": "double"
+    },
+    {
+      "name": "Pavement_Type",
+      "type": "string"
+    },
+    {
+      "name": "AADT_Count",
+      "type": "int32"
+    },
+    {
+      "name": "AADT_Date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Lanes",
+      "type": "int16"
+    },
+    {
+      "name": "One_Way",
+      "type": "int16"
+    },
+    {
+      "name": "PQI",
+      "type": "double"
+    },
+    {
+      "name": "PQI_Date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Year_Built",
+      "type": "string"
+    },
+    {
+      "name": "Cost_Window",
+      "type": "string"
+    },
+    {
+      "name": "Costs_SqFt",
+      "type": "double"
+    },
+    {
+      "name": "Road_Value",
+      "type": "double"
+    },
+    {
+      "name": "GASB_Class",
+      "type": "string"
+    },
+    {
+      "name": "GASB_Cond_Group",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "Date_Built_Annexed",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Road_Source",
+      "type": "string"
+    },
+    {
+      "name": "Maintenance_District",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 2165,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "pavement-condition"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8471205,
+    40.5732513,
+    7
+  ]
+}

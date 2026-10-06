@@ -1,0 +1,194 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "wildland-urban-interface",
+  "title": "Wildland Urban Interface",
+  "description": "Urban wildland interface in Sandy City, Utah. 1 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.853132,
+          40.533219,
+          -111.776299,
+          40.59007
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Wildland Urban Interface README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Wildland Urban Interface agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Urban_Wildland_Interface/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/wildland-urban-interface/wildland-urban-interface.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "wildland-urban-interface"
+      ],
+      "title": "Wildland Urban Interface vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/wildland-urban-interface/wildland-urban-interface.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Wildland Urban Interface (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 15446,
+      "file:checksum": "122088f2cf91261b31cd25c5d84db10478c7c968004989db096ccaca995b7193df87"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/wildland-urban-interface/wildland-urban-interface.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Wildland Urban Interface (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 12053,
+      "file:checksum": "122059d73d0819b3db6ac3fa69b7e477a4481f1de698fe242e82e6e269fe4c3f82d0"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 656,
+      "file:checksum": "12207f9009eab0955b5b40ab81d442d88ad9e8bb8453c1b245ae8d4bbc53f9deab3a"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Wildland Urban Interface README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2334,
+      "file:checksum": "12209ca9aee0b605757d81e6d88e382fa216219a84e7e674812fabdaefc35ecef52e"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Wildland Urban Interface agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2016,
+      "file:checksum": "12207af87e85569b59c77ee7854903e02b800de6c67db13e4c747a1fe2698de653e4"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Id",
+      "type": "int32"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 1,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "wildland-urban-interface"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8147465,
+    40.561651,
+    7
+  ]
+}

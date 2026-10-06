@@ -1,0 +1,119 @@
+{
+  "version": 8,
+  "name": "Zoning group",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../zoning.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "zoning-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "zoning",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "case",
+            [
+              "==",
+              [
+                "slice",
+                [
+                  "get",
+                  "LEGEND_COD"
+                ],
+                0,
+                2
+              ],
+              "MF"
+            ],
+            "MF",
+            [
+              "==",
+              [
+                "slice",
+                [
+                  "get",
+                  "LEGEND_COD"
+                ],
+                0,
+                2
+              ],
+              "OS"
+            ],
+            "OS",
+            [
+              "==",
+              [
+                "slice",
+                [
+                  "get",
+                  "LEGEND_COD"
+                ],
+                0,
+                2
+              ],
+              "PO"
+            ],
+            "PO",
+            [
+              "==",
+              [
+                "slice",
+                [
+                  "get",
+                  "LEGEND_COD"
+                ],
+                0,
+                2
+              ],
+              "TC"
+            ],
+            "TC",
+            [
+              "slice",
+              [
+                "get",
+                "LEGEND_COD"
+              ],
+              0,
+              1
+            ]
+          ],
+          "R",
+          "#ffd43b",
+          "MF",
+          "#f08c00",
+          "C",
+          "#e03131",
+          "OS",
+          "#2f9e44",
+          "PO",
+          "#9775fa",
+          "I",
+          "#868e96",
+          "H",
+          "#1098ad",
+          "TC",
+          "#d6336c",
+          "#ced4da"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "zoning-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "zoning",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

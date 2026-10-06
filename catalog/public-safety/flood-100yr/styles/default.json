@@ -1,0 +1,41 @@
+{
+  "version": 8,
+  "name": "Floodway",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../flood-100yr.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "flood-100yr-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "flood-100yr",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "ZONE_SUBTY"
+          ],
+          "FLOODWAY",
+          "#1c7ed6",
+          "#74c0fc"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "flood-100yr-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "flood-100yr",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

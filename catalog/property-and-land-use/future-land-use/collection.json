@@ -1,0 +1,190 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "future-land-use",
+  "title": "Future Land Use",
+  "description": "Future Land Use Map from Sandy City General Plan. 979 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921593,
+          40.528075,
+          -111.77701,
+          40.618004
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Future Land Use README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Future Land Use agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Sandy_Future_Land_Use_Map_WFL1/FeatureServer/12",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/future-land-use/future-land-use.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "future-land-use"
+      ],
+      "title": "Future Land Use vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/future-land-use/future-land-use.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Future Land Use (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 590662,
+      "file:checksum": "12200f4482ad6ab150985d06ea4598499af4fa234927af80ec1f28de9d01da7c76c8"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/future-land-use/future-land-use.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Future Land Use (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 274304,
+      "file:checksum": "1220b7780fb0d1f66c4fd8216acdceb793932327a84a77a9d4fab798684e0a0ab9dc"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Future land use",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 958,
+      "file:checksum": "1220f6e4a7eb4b0af3a59584a3b0dc8ceaf41cfb89c1da6fa1150e3aef6b8d6a7709"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Future Land Use README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2263,
+      "file:checksum": "12206acdc5359bda03da5f7392d10b1272bfa93ba8a8a7a7025a45d5f685fe92956b"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Future Land Use agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2284,
+      "file:checksum": "12201407ceacf23911b07fb5fcd38c3bb0ff6329cfa2453d6da882aa09a3fc5c9fb5"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Future_Land_Use",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 979,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "future-land-use"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8493017,
+    40.5730397,
+    7
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../address-points.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "address-points-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "address-points",
+      "paint": {
+        "circle-color": "#f08c00",
+        "circle-radius": 3.2,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

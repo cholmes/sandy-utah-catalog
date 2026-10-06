@@ -1,0 +1,454 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "golf-courses",
+  "title": "Golf Courses",
+  "description": "Golf courses in Sandy City, Utah. 4 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921169,
+          40.529427,
+          -111.8038,
+          40.600862
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Parks and Recreation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Golf Courses README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Golf Courses agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Golf_Courses/MapServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/golf-courses/golf-courses.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "golf-courses"
+      ],
+      "title": "Golf Courses vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/golf-courses/golf-courses.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Golf Courses (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 48590,
+      "file:checksum": "12205a2b84f7cacb277d0484eeeea1ceb37e304c6191d6ffea5ace95945972139b58"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/golf-courses/golf-courses.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Golf Courses (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 40384,
+      "file:checksum": "12208cde5f5db6c61f51e78750cd99c4725bed1a160afd450e8dd4c6a9d4a394ba27"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 596,
+      "file:checksum": "12202069248da2ce8713cc2abb72a08b1590a41446b90438e78a39293444b65c69e1"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Golf Courses README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2470,
+      "file:checksum": "122075dd95dc0c0668e3b0843c69ee471641f52725b8041122f18acfafed843d7579"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Golf Courses agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 5961,
+      "file:checksum": "12207ae58eb83d735c45c83f12ab28a486e5195236ee32295b3056a6a3ca21283df5"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "NAME",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Municipality",
+      "type": "string"
+    },
+    {
+      "name": "Phone",
+      "type": "string"
+    },
+    {
+      "name": "Type",
+      "type": "string"
+    },
+    {
+      "name": "Acres",
+      "type": "double"
+    },
+    {
+      "name": "Reservable",
+      "type": "string"
+    },
+    {
+      "name": "Indoor_Pavilion",
+      "type": "string"
+    },
+    {
+      "name": "Outdoor_Pavilion",
+      "type": "string"
+    },
+    {
+      "name": "Restrooms",
+      "type": "string"
+    },
+    {
+      "name": "Parking_Stalls",
+      "type": "int16"
+    },
+    {
+      "name": "BBQ_Pit",
+      "type": "string"
+    },
+    {
+      "name": "Playground",
+      "type": "string"
+    },
+    {
+      "name": "Jogging_Path_Miles",
+      "type": "double"
+    },
+    {
+      "name": "Baseball_Diamonds",
+      "type": "int16"
+    },
+    {
+      "name": "Baseball_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Basketball_Stands",
+      "type": "int16"
+    },
+    {
+      "name": "Basketball_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Soccer_Fields",
+      "type": "int16"
+    },
+    {
+      "name": "Soccer_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Softball_Diamonds",
+      "type": "int16"
+    },
+    {
+      "name": "Softball_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Tennis_Courts",
+      "type": "int16"
+    },
+    {
+      "name": "Tennis_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Volleyball_Courts",
+      "type": "int16"
+    },
+    {
+      "name": "Volleyball_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Electrical_Outlets",
+      "type": "string"
+    },
+    {
+      "name": "Water_Outlets",
+      "type": "string"
+    },
+    {
+      "name": "Notes",
+      "type": "string"
+    },
+    {
+      "name": "URL",
+      "type": "string"
+    },
+    {
+      "name": "ParkID",
+      "type": "string"
+    },
+    {
+      "name": "Park_ID",
+      "type": "double"
+    },
+    {
+      "name": "County",
+      "type": "string"
+    },
+    {
+      "name": "State",
+      "type": "string"
+    },
+    {
+      "name": "StreetNum",
+      "type": "string"
+    },
+    {
+      "name": "StreetName",
+      "type": "string"
+    },
+    {
+      "name": "StreetType",
+      "type": "string"
+    },
+    {
+      "name": "Zip",
+      "type": "string"
+    },
+    {
+      "name": "Reference",
+      "type": "string"
+    },
+    {
+      "name": "RefComment",
+      "type": "string"
+    },
+    {
+      "name": "Park_Acres",
+      "type": "double"
+    },
+    {
+      "name": "AcreSource",
+      "type": "string"
+    },
+    {
+      "name": "YearOpen",
+      "type": "int32"
+    },
+    {
+      "name": "ParkStatus",
+      "type": "string"
+    },
+    {
+      "name": "StatusCmnt",
+      "type": "string"
+    },
+    {
+      "name": "ParkType",
+      "type": "string"
+    },
+    {
+      "name": "ServicArea",
+      "type": "string"
+    },
+    {
+      "name": "MgtPriorty",
+      "type": "string"
+    },
+    {
+      "name": "Landowner",
+      "type": "string"
+    },
+    {
+      "name": "OwnerType",
+      "type": "string"
+    },
+    {
+      "name": "AgencyName",
+      "type": "string"
+    },
+    {
+      "name": "AgencyType",
+      "type": "string"
+    },
+    {
+      "name": "AcqSource",
+      "type": "string"
+    },
+    {
+      "name": "AcqMethod",
+      "type": "string"
+    },
+    {
+      "name": "AcqComment",
+      "type": "string"
+    },
+    {
+      "name": "DevSource",
+      "type": "string"
+    },
+    {
+      "name": "DevComment",
+      "type": "string"
+    },
+    {
+      "name": "Restricts",
+      "type": "string"
+    },
+    {
+      "name": "LWCFProt",
+      "type": "string"
+    },
+    {
+      "name": "OtherProt",
+      "type": "string"
+    },
+    {
+      "name": "ResPrtCmnt",
+      "type": "string"
+    },
+    {
+      "name": "EditDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Unit",
+      "type": "string"
+    },
+    {
+      "name": "Unit_ID",
+      "type": "string"
+    },
+    {
+      "name": "Unit_Acres",
+      "type": "double"
+    },
+    {
+      "name": "AddedTrails",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 4,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "golf-courses"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8626316,
+    40.5652545,
+    7
+  ]
+}

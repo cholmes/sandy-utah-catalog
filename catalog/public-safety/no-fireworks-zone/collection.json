@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "no-fireworks-zone",
+  "title": "No Fireworks Zones",
+  "description": "No firework zone in Sandy City, Utah. 169 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.920912,
+          40.487864,
+          -111.553355,
+          40.861941
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "No Fireworks Zones README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "No Fireworks Zones agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/NoFireworksZone/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/no-fireworks-zone/no-fireworks-zone.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "no-fireworks-zone"
+      ],
+      "title": "No Fireworks Zones vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/no-fireworks-zone/no-fireworks-zone.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "No Fireworks Zones (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 210909,
+      "file:checksum": "122040acde18549cef7ae7fa7ec115e45b75aaa00239a7a9ee1813a91a3d00a98997"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/no-fireworks-zone/no-fireworks-zone.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "No Fireworks Zones (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 270481,
+      "file:checksum": "122035d3afd15ef9870fe538ab465f7d7b3b823c29e802c53fcaa141c7966e6373f2"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 621,
+      "file:checksum": "122057e6907acf4b801b11e66eeedefec907dd47b8ee760dff65ae58d7e6aadb617f"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "No Fireworks Zones README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2251,
+      "file:checksum": "1220ab0e6e057a1731c42c98206cfc132ad778616a5658837e9be8dd06f6bdd885d8"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "No Fireworks Zones agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2049,
+      "file:checksum": "122004ddef0f184c91cab5bf43d2407c2e32da6ca6ab74986460968b6787a33ca04c"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Type",
+      "type": "string"
+    },
+    {
+      "name": "Home_Count",
+      "type": "int16"
+    },
+    {
+      "name": "Acres",
+      "type": "double"
+    },
+    {
+      "name": "Reason",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.STArea()",
+      "type": "double"
+    },
+    {
+      "name": "Shape.STLength()",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 169,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "no-fireworks-zone"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.7373155,
+    40.6749987,
+    7
+  ]
+}

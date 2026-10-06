@@ -2,12 +2,18 @@
   "type": "Catalog",
   "stac_version": "1.1.0",
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json"
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
   ],
-  "id": "example-catalog",
-  "title": "Example Catalog",
-  "description": "TODO(setup): one or two sentences saying what this catalog holds, who produced the data, and who it is for. A person and an agent both read this first.",
+  "id": "sandy-city-open-data",
+  "title": "Sandy City, Utah \u2014 Municipal Open Data",
+  "updated": "2026-10-06T19:01:57Z",
+  "description": "A cloud-native mirror of the public geospatial data published by Sandy City, Utah: parcels, zoning, addresses, boundaries, parks and trails, public safety districts, water and storm infrastructure, roads and transit. Sandy City serves this data from a public ArcGIS Server and an ArcGIS Online organization, but runs no open data portal, publishes no bulk downloads, and states no license. This catalog republishes the public-interest subset as GeoParquet and PMTiles so it can be queried, joined and mapped without reverse-engineering REST pagination. Sandy City produced the data; this catalog is an independent mirror and is not endorsed by the city. Read the [agent guide](AGENTS.md) before querying, and read each collection's README for what its columns mean and what is known to be wrong with them.",
   "links": [
+    {
+      "rel": "self",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/catalog.json",
+      "type": "application/json"
+    },
     {
       "rel": "root",
       "href": "./catalog.json",
@@ -27,13 +33,49 @@
     },
     {
       "rel": "vcs",
-      "href": "https://github.com/TODO(setup)",
+      "href": "https://github.com/cholmes/sandy-portolan",
       "title": "Source repository"
     },
     {
       "rel": "issues",
-      "href": "https://github.com/TODO(setup)/issues",
+      "href": "https://github.com/cholmes/sandy-portolan/issues",
       "title": "Issue tracker"
+    },
+    {
+      "rel": "child",
+      "href": "./boundaries/catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and Districts"
+    },
+    {
+      "rel": "child",
+      "href": "./property-and-land-use/catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "child",
+      "href": "./parks-and-recreation/catalog.json",
+      "type": "application/json",
+      "title": "Parks and Recreation"
+    },
+    {
+      "rel": "child",
+      "href": "./public-safety/catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "child",
+      "href": "./public-utilities/catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "child",
+      "href": "./public-works/catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
     }
   ]
 }

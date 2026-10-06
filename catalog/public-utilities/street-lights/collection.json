@@ -1,0 +1,302 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "street-lights",
+  "title": "Street Lights",
+  "description": "Street Lights in Sandy City, Utah. The upstream service publishes no description for this layer. 8,727 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.916145,
+          40.52845,
+          -111.779785,
+          40.617999
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Street Lights README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Street Lights agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StreetLights/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/street-lights/street-lights.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "street-lights"
+      ],
+      "title": "Street Lights vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/street-lights/street-lights.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Street Lights (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 860755,
+      "file:checksum": "1220ff23a7b3bd478cb476e44727007fba942744cf609145c168c501831f5aa4efb3"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/street-lights/street-lights.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Street Lights (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 2424610,
+      "file:checksum": "1220d20bb2fe01d63b181f677e6aea229fb875fcc63998fadacc14383ec7f1f84216"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 499,
+      "file:checksum": "12203d2f2273eabf50a8380ba82554f4659c69792efa1076ae0de47a24f360faba51"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Street Lights README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2345,
+      "file:checksum": "1220aec7fe26b946afff1301675a5c28df9af9fb08524a6759cca6a524f759bad47d"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Street Lights agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3187,
+      "file:checksum": "122047ed092607bede015c250a485c7539bbb681c34d89b3770a8db3a1917ce194ac"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "POLE_NUM",
+      "type": "double"
+    },
+    {
+      "name": "COMMENTS",
+      "type": "string"
+    },
+    {
+      "name": "GPS_DATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "NORTHING",
+      "type": "double"
+    },
+    {
+      "name": "EASTING",
+      "type": "double"
+    },
+    {
+      "name": "JURISDICTI",
+      "type": "string"
+    },
+    {
+      "name": "FIXTURE_TY",
+      "type": "string"
+    },
+    {
+      "name": "LAMP_TYPE",
+      "type": "string"
+    },
+    {
+      "name": "WATTS",
+      "type": "double"
+    },
+    {
+      "name": "LUMEN",
+      "type": "double"
+    },
+    {
+      "name": "NUM_HEADS",
+      "type": "int32"
+    },
+    {
+      "name": "RATE",
+      "type": "string"
+    },
+    {
+      "name": "POLE_TYPES",
+      "type": "string"
+    },
+    {
+      "name": "FEATURE_ID",
+      "type": "double"
+    },
+    {
+      "name": "DATE_INSTA",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "POLESUFFIX",
+      "type": "int32"
+    },
+    {
+      "name": "LOCATION",
+      "type": "string"
+    },
+    {
+      "name": "EPOLE_NUM",
+      "type": "string"
+    },
+    {
+      "name": "FacilityID",
+      "type": "string"
+    },
+    {
+      "name": "FIXTURE_INSTALL",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "SANDY_NUMBER",
+      "type": "string"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "STATUS",
+      "type": "string"
+    },
+    {
+      "name": "LampInstall",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "PoleReplace",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "WATTS_2",
+      "type": "double"
+    },
+    {
+      "name": "Lamp_Temperature",
+      "type": "string"
+    },
+    {
+      "name": "POLE_OWNER",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 8727,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "street-lights"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8480287,
+    40.5732265,
+    7
+  ]
+}

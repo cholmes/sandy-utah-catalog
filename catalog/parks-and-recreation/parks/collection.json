@@ -1,0 +1,454 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "parks",
+  "title": "Parks",
+  "description": "Parks in Sandy City, Utah. 41 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921169,
+          40.529501,
+          -111.801568,
+          40.609652
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Parks and Recreation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Parks README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Parks agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Parks/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/parks/parks.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "parks"
+      ],
+      "title": "Parks vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/parks/parks.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Parks (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 65988,
+      "file:checksum": "1220398779eb148a0af97df8bdb591c05c2473b2946cbff539c0ba5d7b321c5f23ef"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/parks/parks.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Parks (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 102133,
+      "file:checksum": "1220c374c308589e58aaf3ac607e5c7cc1c87cd21e845d003194a58c9f07a986e21f"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 561,
+      "file:checksum": "122072e303e82e9e40e81d8a0620b125e8443f4d4f1d753a0fc3872f7362e64b94c2"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Parks README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2390,
+      "file:checksum": "12201296e9401eeda52d6027fb03371005ea77cff4ad027e5b8e79c837e3e324626c"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Parks agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 5913,
+      "file:checksum": "1220990dd268b3978468d959adc1728fcae46115e126d97916ba98a537f6a875c274"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "NAME",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Municipality",
+      "type": "string"
+    },
+    {
+      "name": "Phone",
+      "type": "string"
+    },
+    {
+      "name": "Type",
+      "type": "string"
+    },
+    {
+      "name": "Acres",
+      "type": "double"
+    },
+    {
+      "name": "Reservable",
+      "type": "string"
+    },
+    {
+      "name": "Indoor_Pavilion",
+      "type": "string"
+    },
+    {
+      "name": "Outdoor_Pavilion",
+      "type": "string"
+    },
+    {
+      "name": "Restrooms",
+      "type": "string"
+    },
+    {
+      "name": "Parking_Stalls",
+      "type": "int16"
+    },
+    {
+      "name": "BBQ_Pit",
+      "type": "string"
+    },
+    {
+      "name": "Playground",
+      "type": "string"
+    },
+    {
+      "name": "Jogging_Path_Miles",
+      "type": "double"
+    },
+    {
+      "name": "Baseball_Diamonds",
+      "type": "int16"
+    },
+    {
+      "name": "Baseball_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Basketball_Stands",
+      "type": "int16"
+    },
+    {
+      "name": "Basketball_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Soccer_Fields",
+      "type": "int16"
+    },
+    {
+      "name": "Soccer_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Softball_Diamonds",
+      "type": "int16"
+    },
+    {
+      "name": "Softball_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Tennis_Courts",
+      "type": "int16"
+    },
+    {
+      "name": "Tennis_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Volleyball_Courts",
+      "type": "int16"
+    },
+    {
+      "name": "Volleyball_Lighting",
+      "type": "string"
+    },
+    {
+      "name": "Electrical_Outlets",
+      "type": "string"
+    },
+    {
+      "name": "Water_Outlets",
+      "type": "string"
+    },
+    {
+      "name": "Notes",
+      "type": "string"
+    },
+    {
+      "name": "URL",
+      "type": "string"
+    },
+    {
+      "name": "ParkID",
+      "type": "string"
+    },
+    {
+      "name": "Park_ID",
+      "type": "double"
+    },
+    {
+      "name": "County",
+      "type": "string"
+    },
+    {
+      "name": "State",
+      "type": "string"
+    },
+    {
+      "name": "StreetNum",
+      "type": "string"
+    },
+    {
+      "name": "StreetName",
+      "type": "string"
+    },
+    {
+      "name": "StreetType",
+      "type": "string"
+    },
+    {
+      "name": "Zip",
+      "type": "string"
+    },
+    {
+      "name": "Reference",
+      "type": "string"
+    },
+    {
+      "name": "RefComment",
+      "type": "string"
+    },
+    {
+      "name": "Park_Acres",
+      "type": "double"
+    },
+    {
+      "name": "AcreSource",
+      "type": "string"
+    },
+    {
+      "name": "YearOpen",
+      "type": "int32"
+    },
+    {
+      "name": "ParkStatus",
+      "type": "string"
+    },
+    {
+      "name": "StatusCmnt",
+      "type": "string"
+    },
+    {
+      "name": "ParkType",
+      "type": "string"
+    },
+    {
+      "name": "ServicArea",
+      "type": "string"
+    },
+    {
+      "name": "MgtPriorty",
+      "type": "string"
+    },
+    {
+      "name": "Landowner",
+      "type": "string"
+    },
+    {
+      "name": "OwnerType",
+      "type": "string"
+    },
+    {
+      "name": "AgencyName",
+      "type": "string"
+    },
+    {
+      "name": "AgencyType",
+      "type": "string"
+    },
+    {
+      "name": "AcqSource",
+      "type": "string"
+    },
+    {
+      "name": "AcqMethod",
+      "type": "string"
+    },
+    {
+      "name": "AcqComment",
+      "type": "string"
+    },
+    {
+      "name": "DevSource",
+      "type": "string"
+    },
+    {
+      "name": "DevComment",
+      "type": "string"
+    },
+    {
+      "name": "Restricts",
+      "type": "string"
+    },
+    {
+      "name": "LWCFProt",
+      "type": "string"
+    },
+    {
+      "name": "OtherProt",
+      "type": "string"
+    },
+    {
+      "name": "ResPrtCmnt",
+      "type": "string"
+    },
+    {
+      "name": "EditDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Unit",
+      "type": "string"
+    },
+    {
+      "name": "Unit_ID",
+      "type": "string"
+    },
+    {
+      "name": "Unit_Acres",
+      "type": "double"
+    },
+    {
+      "name": "AddedTrails",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 41,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "parks"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8614625,
+    40.5695919,
+    7
+  ]
+}

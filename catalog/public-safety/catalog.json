@@ -1,0 +1,90 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ],
+  "id": "public-safety",
+  "title": "Public Safety",
+  "description": "Fire and police service areas and stations, fireworks restrictions, and mapped geologic and flood hazards. 9 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Public Safety README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Public Safety agent guide"
+    },
+    {
+      "rel": "child",
+      "href": "./fault-zones/collection.json",
+      "type": "application/json",
+      "title": "Earthquake Fault Zones"
+    },
+    {
+      "rel": "child",
+      "href": "./fire-stations/collection.json",
+      "type": "application/json",
+      "title": "Fire Stations"
+    },
+    {
+      "rel": "child",
+      "href": "./fire-subdistricts/collection.json",
+      "type": "application/json",
+      "title": "Fire Dispatch Subdistricts"
+    },
+    {
+      "rel": "child",
+      "href": "./flood-100yr/collection.json",
+      "type": "application/json",
+      "title": "Approximate 100-Year Floodplain"
+    },
+    {
+      "rel": "child",
+      "href": "./landslide-risk/collection.json",
+      "type": "application/json",
+      "title": "Potential Landslide Risk Areas"
+    },
+    {
+      "rel": "child",
+      "href": "./no-fireworks-zone/collection.json",
+      "type": "application/json",
+      "title": "No Fireworks Zones"
+    },
+    {
+      "rel": "child",
+      "href": "./police-beats/collection.json",
+      "type": "application/json",
+      "title": "Police Beats"
+    },
+    {
+      "rel": "child",
+      "href": "./police-reporting-areas/collection.json",
+      "type": "application/json",
+      "title": "Police Reporting Areas"
+    },
+    {
+      "rel": "child",
+      "href": "./wildland-urban-interface/collection.json",
+      "type": "application/json",
+      "title": "Wildland Urban Interface"
+    }
+  ]
+}

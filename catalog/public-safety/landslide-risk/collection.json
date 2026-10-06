@@ -1,0 +1,198 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "landslide-risk",
+  "title": "Potential Landslide Risk Areas",
+  "description": "Map of hazards in Sandy City, Utah. 289 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -112.082025,
+          40.477012,
+          -111.612692,
+          40.862045
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Potential Landslide Risk Areas README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Potential Landslide Risk Areas agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Hazards/MapServer/4",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/landslide-risk/landslide-risk.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "landslide-risk"
+      ],
+      "title": "Potential Landslide Risk Areas vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/landslide-risk/landslide-risk.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Potential Landslide Risk Areas (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 97335,
+      "file:checksum": "122065b0eeb3a645c5e156e50138e39c9514c09609729498cc7b438e8436ec685ed8"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/landslide-risk/landslide-risk.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Potential Landslide Risk Areas (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 221289,
+      "file:checksum": "1220a29183f4f300f9cd6729ec89a095f51e498b0661595d688f312bd0d470c0522a"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 606,
+      "file:checksum": "1220437d3665906a06d500fbf36a65dce5b04683f16b5f73596a9b64c4b5f34b0391"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Potential Landslide Risk Areas README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2238,
+      "file:checksum": "122031986cde19ffb582ac5db27fc418cbe2114c20957d6a774d424bbf6a10a8254b"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Potential Landslide Risk Areas agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1978,
+      "file:checksum": "12206af938cf6f08107452d4f3ff7a4e74391aa79ce111a99257f4479db211dad236"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "MapCode",
+      "type": "string"
+    },
+    {
+      "name": "Hazard",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 289,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "landslide-risk"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8478392,
+    40.6699433,
+    7
+  ]
+}

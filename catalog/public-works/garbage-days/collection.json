@@ -1,0 +1,198 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "garbage-days",
+  "title": "Garbage Collection Days",
+  "description": "Garbage Collection Days in Sandy City, Utah. The upstream service publishes no description for this layer. 5 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921268,
+          40.527839,
+          -111.777213,
+          40.61822
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Garbage Collection Days README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Garbage Collection Days agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/GarbageDays/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/garbage-days/garbage-days.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "garbage-days"
+      ],
+      "title": "Garbage Collection Days vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/garbage-days/garbage-days.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Garbage Collection Days (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 43221,
+      "file:checksum": "1220ea82cd442013ed77aebf0f1c617888d8462f11dd0c704afae3f2ede8a076df67"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/garbage-days/garbage-days.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Garbage Collection Days (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 39795,
+      "file:checksum": "1220b861f8bf7ddec449d85f2afaa2c415eacbe99a0e1b5051f2cecbee4fbb5e02de"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 596,
+      "file:checksum": "12207c4527fc065993870937f7c59c0f2eacd0dab36ca1eba7e892739e5abaffa207"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Garbage Collection Days README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2414,
+      "file:checksum": "12208a9ec12846f00e921a9c794d1d52baab3a360157beffa699b437d28c31523525"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Garbage Collection Days agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1966,
+      "file:checksum": "1220ae8f455740012131a5f5351b5811158ca744236afc9012cd4dce4a95466c3ee8"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "WEEKDAY",
+      "type": "int16"
+    },
+    {
+      "name": "DAY_NAME",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 5,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "garbage-days"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492919,
+    40.5730367,
+    7
+  ]
+}

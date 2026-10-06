@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "trailheads",
+  "title": "Trailheads",
+  "description": "Trailheads in Sandy, Utah area. 20 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.916349,
+          40.539712,
+          -111.774666,
+          40.58972
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Parks and Recreation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Trailheads README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Trailheads agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Trailheads/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trailheads/trailheads.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "trailheads"
+      ],
+      "title": "Trailheads vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trailheads/trailheads.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Trailheads (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 13772,
+      "file:checksum": "1220e23d3cb00a79c46b5a7edfa901d6e9a614ee3abd04d243d1d28e29bf0c5a9d4b"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trailheads/trailheads.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Trailheads (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 29221,
+      "file:checksum": "1220a5c08eab5123a4c47304af029ea962f9a62b1640176d396cb94d03528a0237b7"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 490,
+      "file:checksum": "12202a8ca1deb6f69782fd598af961796478e34ae4be8f7ec500b47e8e102f57d8dd"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Trailheads README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2177,
+      "file:checksum": "1220191790f8e17b72a2adf4ea72bcfbfd86e41f6315d7b404ab281598a6d877f477"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Trailheads agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2076,
+      "file:checksum": "1220f0f9d3a605e1c4a532b3ee27b081324d364ee140f0826e8d6716a310a0fa8035"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Maintenance",
+      "type": "string"
+    },
+    {
+      "name": "Parking_Stalls",
+      "type": "int16"
+    },
+    {
+      "name": "Elevation",
+      "type": "int32"
+    },
+    {
+      "name": "Brochure_ID",
+      "type": "int16"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "Latitude",
+      "type": "double"
+    },
+    {
+      "name": "Longitude",
+      "type": "double"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 20,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "trailheads"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8456025,
+    40.5647193,
+    7
+  ]
+}

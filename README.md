@@ -1,92 +1,63 @@
-# Portolan Catalog Template
+# sandy-portolan
 
-A starting point for a [Portolan](https://www.portolan-sdi.org/) catalog whose
-metadata lives in git. Click **Use this template**, work through
-[SETUP.md](SETUP.md), and you have a repository whose CI validates every change
-before it publishes.
+A git-backed [Portolan](https://www.portolan-sdi.org/) catalog mirroring the
+public geospatial data of **Sandy City, Utah** — 42 collections covering
+parcels, zoning, addresses, boundaries, parks and trails, public safety
+districts, water and storm infrastructure, roads and transit.
 
-**`catalog/` is the published catalog.** Everything in it is published.
-Everything outside it never is. That boundary is the whole publish contract,
-and `tools/publish.py` has no flag or config key that widens it.
+Metadata lives in this repository and is validated by `rashid` on every pull
+request. The data itself lives on Source Cooperative at
+[portolan-mirrors/sandy-portolan](https://source.coop/portolan-mirrors/sandy-portolan).
 
-## Three kinds of file
+**Sandy City produced this data. This catalog is an independent mirror and is
+not endorsed by or affiliated with the city.**
 
-| Kind | Where | Example |
-|---|---|---|
-| Tracked and published | inside `catalog/` | STAC JSON, `README.md`, `AGENTS.md`, thumbnails, logos |
-| Tracked, never published | outside `catalog/` | `tools/`, `tests/`, `docs/`, this README, `catalog.publish.yaml` |
-| Neither | gitignored | GeoParquet, COGs, PMTiles, credentials |
+## Why
 
-The data lives in object storage next to the published metadata. The
-repository references it by URL and never stores it.
+Sandy City serves a large amount of geospatial data from a public ArcGIS
+Server and an ArcGIS Online organisation. It runs no open data portal,
+publishes no bulk downloads, and states no licence. Using any of it means
+reverse-engineering REST query URLs and paginating by hand.
+
+This catalog republishes the public-interest subset as GeoParquet and
+PMTiles, documented well enough to query without guessing.
+
+## Licence
+
+Sandy City publishes no licence for this data. Every collection declares the
+SPDX identifier `other`. See [catalog/LICENSE.md](catalog/LICENSE.md) for what
+was checked and what that means for reuse.
 
 ## Layout
 
-| Path | What it is |
-|---|---|
-| `catalog/` | The published tree, synced 1:1 to object storage |
-| `catalog.publish.yaml` | Where it publishes, and under what public URL |
-| `tools/publish.py` | The sync. Dry run by default |
-| `tools/upload_data.py` | The data upload. Dry run by default |
-| `tests/` | The gates CI runs on every pull request |
-| `docs/conformance.md` | Any validator finding this catalog accepts, and why |
-| `SETUP.md` | The checklist. Delete it when you are done |
-
-## Publish
-
-```bash
-python3 tools/publish.py            # dry run: what would change
-python3 tools/publish.py --confirm  # upload; needs AWS credentials
+```
+catalog/                     the published catalog; everything in it publishes
+  catalog.json               root
+  README.md  AGENTS.md       catalog-level documentation
+  LICENSE.md                 licence status, linked by every collection
+  <subcatalog>/              six, named for the city's own ArcGIS folders
+    <collection>/
+      collection.json
+      README.md  AGENTS.md
+      styles/default.json
+tools/                       publish.py and upload_data.py
+tests/                       the gates; run python3 tests/run_all.py
 ```
 
-It never deletes. Removing a file from `catalog/` does not unpublish it, so
-delete the object yourself if that is what you meant.
+Data files are never committed. See [AGENTS.md](AGENTS.md) for the
+contributor rules, including why this repository uses `tools/publish.py`
+rather than `portolan push`, and how the PMTiles are built.
 
-## Upload the data
-
-The data is too large for git, so it lives outside `catalog/`.
-`tools/upload_data.py` carries it to the same bucket prefix. Set `data_dir` in
-`catalog.publish.yaml` to the directory that holds it.
+## Working on it
 
 ```bash
-python3 tools/upload_data.py            # dry run: what would change
-python3 tools/upload_data.py --confirm  # upload; needs AWS credentials
+python3 tests/run_all.py          # all gates
+rashid check catalog --schema --data-scope local
+python3 tools/publish.py          # dry run
 ```
 
-Both scripts share one set of rules. `upload_data.py` imports the sentinel
-guard, the content types, the change detection, and the upload pool from
-`publish.py`. It changes one thing, the directory it walks. Only the suffixes
-in its allow-list upload, so staged scratch files stay out of the bucket.
+## Contributing
 
-## Test
-
-```bash
-python3 tests/run_all.py
-```
-
-| Gate | What it checks |
-|---|---|
-| `test_setup.py` | Template placeholders are all edited, or all untouched |
-| `test_links.py` | Every relative link and asset href resolves |
-| `test_publish.py` | Nothing outside `catalog/` can be uploaded |
-| `test_upload_data.py` | Only staged files with an allowed suffix upload |
-| `test_stac_valid.py` | Valid STAC 1.1.0, via `stac-check` |
-| `test_conformance.py` | Portolan conformance, via `rashid` |
-
-The two validator gates skip when their tools are absent, so a clean checkout
-runs with no setup. CI installs both and enforces them.
-
-## What this template does not decide
-
-How a published catalog points back at the repository that maintains it. Three
-encodings are in use across real catalogs and none is standardized, so this
-template ships none of them rather than freezing one in by default. The
-tradeoffs are in
-[portolan-spec#145](https://github.com/portolan-sdi/portolan-spec/issues/145)
-and in the
-[git-backed catalogs guidance](https://github.com/portolan-sdi/portolan-spec/blob/main/specs/best-practices/git-backed-catalogs.md).
-
-## License
-
-Apache-2.0, covering the tooling in this repository. The data you catalog
-carries its own license, which belongs in `catalog/README.md`.
+Found a wrong description, a mis-decoded column, or a licence statement from
+the city that this catalog does not reflect? Open an issue or a pull request.
+Metadata corrections are the reason this catalog lives in git.

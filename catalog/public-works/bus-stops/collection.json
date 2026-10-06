@@ -1,0 +1,214 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "bus-stops",
+  "title": "UTA Bus Stops",
+  "description": "UTA Bus Stops in Sandy City, Utah. The upstream service publishes no description for this layer. 3,195 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -112.108074,
+          40.478234,
+          -111.582724,
+          40.818033
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "UTA Bus Stops README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "UTA Bus Stops agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/UTA_Routes/MapServer/2",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-stops/bus-stops.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "bus-stops"
+      ],
+      "title": "UTA Bus Stops vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-stops/bus-stops.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "UTA Bus Stops (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 189927,
+      "file:checksum": "122060cdf0547b940f36de8d80c730319fb3600e1b850d4b6c8f5bf552e2626d92b0"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-stops/bus-stops.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "UTA Bus Stops (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 352663,
+      "file:checksum": "122022f3bf320b0f310ef5621c51840850af24f5c1c066a3e94f2afa41cf40a42640"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 487,
+      "file:checksum": "12206f3f19d599cdea7368644ed423abb879b290c9ec7bc0db34f52ebc645228ea1d"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "UTA Bus Stops README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2290,
+      "file:checksum": "1220170a49e2fc71025096d41d6ce1cee149cb1abdd16fbeafb59eb3f436177ab4b2"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "UTA Bus Stops agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2031,
+      "file:checksum": "1220ed8c20199eb6d5c0cd40b661c55d29f5c8a8afdf42cef2753fc3c138e671536e"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "stopabbr_j",
+      "type": "string"
+    },
+    {
+      "name": "uta_stopid",
+      "type": "int32"
+    },
+    {
+      "name": "avgboard",
+      "type": "int32"
+    },
+    {
+      "name": "avgalight",
+      "type": "int32"
+    },
+    {
+      "name": "route",
+      "type": "string"
+    },
+    {
+      "name": "mode",
+      "type": "string"
+    },
+    {
+      "name": "county",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 3195,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "bus-stops"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8463112,
+    40.6480474,
+    7
+  ]
+}

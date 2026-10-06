@@ -1,0 +1,234 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "water-distribution-mains",
+  "title": "Water Distribution Mains",
+  "description": "Water Distribution Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 15,249 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.91702,
+          40.528313,
+          -111.776956,
+          40.622918
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Distribution Mains README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Water Distribution Mains agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/WaterSystem/FeatureServer/8",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/water-distribution-mains/water-distribution-mains.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "water-distribution-mains"
+      ],
+      "title": "Water Distribution Mains vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/water-distribution-mains/water-distribution-mains.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Water Distribution Mains (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1328124,
+      "file:checksum": "12206bd2f64c80dd69acfe8fe148bee3099cad2144109afba37be235860f9d7eb561"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/water-distribution-mains/water-distribution-mains.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Water Distribution Mains (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 1530711,
+      "file:checksum": "12203e564d423c335af591354e71d821e9bacd159ebe54893d7368b8957ad6cc95a6"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Water entity",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 679,
+      "file:checksum": "1220c47ecb3bc277759cd210d57c459c9c80616c845f576eae116a7f1f948ddc3e71"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Distribution Mains README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2727,
+      "file:checksum": "1220bd219fbeb6a9e184441aa1028f80bb6ee1bf50b42b27dee243d287100369a056"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Water Distribution Mains agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3633,
+      "file:checksum": "12207c4a91d4c2086b763931f58a7d2652759301b30bf3023eb99db76890ac94517f"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "DIAMETER",
+      "type": "int16"
+    },
+    {
+      "name": "LINE_TYPE",
+      "type": "int16"
+    },
+    {
+      "name": "YEAR_",
+      "type": "int16"
+    },
+    {
+      "name": "FACILITYID",
+      "type": "string"
+    },
+    {
+      "name": "ENABLED",
+      "type": "int16"
+    },
+    {
+      "name": "WATER_ENTITY",
+      "type": "string"
+    },
+    {
+      "name": "CONST_STATUS",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "TracerWire",
+      "type": "string"
+    },
+    {
+      "name": "AssetStatus",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 15249,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "water-distribution-mains"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8470271,
+    40.5756128,
+    7
+  ]
+}

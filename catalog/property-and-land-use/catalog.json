@@ -1,0 +1,78 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ],
+  "id": "property-and-land-use",
+  "title": "Property and Land Use",
+  "description": "Parcels, zoning, subdivisions, address points, future land use and overlay zones. 7 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Property and Land Use README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Property and Land Use agent guide"
+    },
+    {
+      "rel": "child",
+      "href": "./address-points/collection.json",
+      "type": "application/json",
+      "title": "Address Points"
+    },
+    {
+      "rel": "child",
+      "href": "./future-land-use/collection.json",
+      "type": "application/json",
+      "title": "Future Land Use"
+    },
+    {
+      "rel": "child",
+      "href": "./parcels/collection.json",
+      "type": "application/json",
+      "title": "Parcels"
+    },
+    {
+      "rel": "child",
+      "href": "./sensitive-overlay-zone/collection.json",
+      "type": "application/json",
+      "title": "Sensitive Area Overlay Zone"
+    },
+    {
+      "rel": "child",
+      "href": "./short-term-rentals/collection.json",
+      "type": "application/json",
+      "title": "Short-Term Rentals"
+    },
+    {
+      "rel": "child",
+      "href": "./subdivisions/collection.json",
+      "type": "application/json",
+      "title": "Subdivisions"
+    },
+    {
+      "rel": "child",
+      "href": "./zoning/collection.json",
+      "type": "application/json",
+      "title": "Zoning Districts"
+    }
+  ]
+}

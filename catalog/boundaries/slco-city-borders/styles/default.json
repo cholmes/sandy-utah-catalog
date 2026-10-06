@@ -1,0 +1,32 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../slco-city-borders.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "slco-city-borders-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "slco-city-borders",
+      "paint": {
+        "fill-color": "#4c6ef5",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "slco-city-borders-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "slco-city-borders",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

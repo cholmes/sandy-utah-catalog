@@ -1,0 +1,51 @@
+{
+  "version": 8,
+  "name": "Future land use",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../future-land-use.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "future-land-use-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "future-land-use",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "Future_Land_Use"
+          ],
+          "LN",
+          "#ffe066",
+          "OP",
+          "#2f9e44",
+          "MN",
+          "#fd7e14",
+          "RLN",
+          "#ffa94d",
+          "LC",
+          "#e03131",
+          "NAC",
+          "#d6336c",
+          "#ced4da"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "future-land-use-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "future-land-use",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

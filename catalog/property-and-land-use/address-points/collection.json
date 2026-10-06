@@ -1,0 +1,314 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "address-points",
+  "title": "Address Points",
+  "description": "Address points from Sandy Utility Billing, Subdivision plats, parcel data. 60,400 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.972485,
+          40.458581,
+          -111.777281,
+          40.630493
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Address Points README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Address Points agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Address_Points/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/address-points/address-points.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "address-points"
+      ],
+      "title": "Address Points vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/address-points/address-points.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Address Points (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 4373091,
+      "file:checksum": "1220c3af49512b15d282bfeb40708c0830025c89b94b2268f272a73175180896f6a8"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/address-points/address-points.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Address Points (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 8897965,
+      "file:checksum": "12208df1b4f72fed3eb2795f13c57c65ce01a3e9f2da54cf92bea14be4f3b1e274ff"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 502,
+      "file:checksum": "1220b0d38e0a8cf9c94a0b7619a37c037d702b4b769c823f2331bdb97e952e1fb907"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Address Points README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2266,
+      "file:checksum": "122085df0d4b7e60601f6a6e80da76dcfbf1d6d9161bd4f137c62f9dda441d3508b5"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Address Points agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3802,
+      "file:checksum": "1220df2c25ef4ac0cb1fa3df396a3fab0960489be3aebdd112c4bd76fa51ade7b2d8"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Parcel_Id",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "HSNO",
+      "type": "int32"
+    },
+    {
+      "name": "DIR",
+      "type": "string"
+    },
+    {
+      "name": "STREET",
+      "type": "string"
+    },
+    {
+      "name": "SFX",
+      "type": "string"
+    },
+    {
+      "name": "STREET_DIR",
+      "type": "string"
+    },
+    {
+      "name": "APT",
+      "type": "string"
+    },
+    {
+      "name": "Municipality",
+      "type": "string"
+    },
+    {
+      "name": "Zip",
+      "type": "string"
+    },
+    {
+      "name": "Zip_Four",
+      "type": "string"
+    },
+    {
+      "name": "InSandy",
+      "type": "string"
+    },
+    {
+      "name": "Prop_Type",
+      "type": "string"
+    },
+    {
+      "name": "Prop_Subtype",
+      "type": "string"
+    },
+    {
+      "name": "IsRental",
+      "type": "string"
+    },
+    {
+      "name": "Building_Units",
+      "type": "int16"
+    },
+    {
+      "name": "Complex_Name",
+      "type": "string"
+    },
+    {
+      "name": "Alias_ID",
+      "type": "int32"
+    },
+    {
+      "name": "Alias_Street",
+      "type": "string"
+    },
+    {
+      "name": "Alias_Suffix_Dir",
+      "type": "string"
+    },
+    {
+      "name": "Updated_Date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Updated_By",
+      "type": "string"
+    },
+    {
+      "name": "Year_Built",
+      "type": "string"
+    },
+    {
+      "name": "Comment",
+      "type": "string"
+    },
+    {
+      "name": "Source",
+      "type": "string"
+    },
+    {
+      "name": "Placement",
+      "type": "string"
+    },
+    {
+      "name": "X_Coord",
+      "type": "double"
+    },
+    {
+      "name": "Y_Coord",
+      "type": "double"
+    },
+    {
+      "name": "Addy_ID",
+      "type": "int32"
+    },
+    {
+      "name": "Addy_ID_Text",
+      "type": "string"
+    },
+    {
+      "name": "PPH_Approx",
+      "type": "double"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Municipality_Code",
+      "type": "string"
+    },
+    {
+      "name": "New_Municipality_Code",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 60400,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "address-points"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8751875,
+    40.5446312,
+    7
+  ]
+}

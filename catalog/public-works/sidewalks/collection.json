@@ -1,0 +1,314 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "sidewalks",
+  "title": "Sidewalks",
+  "description": "Sidewalk Inventory (In Progress) This layer will be used to identify areas that are missing sidewalks and help calculate an estimated cost of adding sidewalks where needed. 8,586 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.916163,
+          40.528226,
+          -111.777334,
+          40.618049
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sidewalks README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sidewalks agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Sidewalks/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/sidewalks/sidewalks.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "sidewalks"
+      ],
+      "title": "Sidewalks vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/sidewalks/sidewalks.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Sidewalks (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1952544,
+      "file:checksum": "1220b38e575b2b90465c72456bd4e56e0b1209ef8b5f8d11fd30372ac27592e5d718"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/sidewalks/sidewalks.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Sidewalks (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 1506286,
+      "file:checksum": "12203133e7eba90eb9c042c02df465c0ec1cc2ef7db1b16b53cbfcc491c76b6e7753"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Sidewalk width",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 757,
+      "file:checksum": "1220067b372675b9193299b8735d45da2a9079e987e1eec2bc870132a1194494879a"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sidewalks README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2246,
+      "file:checksum": "1220b6d8cc3a78372d1bff106b80a8b2ea3598296ffafebfc1d352765456181432aa"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sidewalks agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3000,
+      "file:checksum": "1220a6742493911a825157e6ac1df3c150caaa3acfc78496eddf96c0b3c560a8d037"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "PMA",
+      "type": "string"
+    },
+    {
+      "name": "PWA",
+      "type": "string"
+    },
+    {
+      "name": "CityCouncil",
+      "type": "string"
+    },
+    {
+      "name": "Description",
+      "type": "string"
+    },
+    {
+      "name": "Width",
+      "type": "int16"
+    },
+    {
+      "name": "ApproxSqFt",
+      "type": "int32"
+    },
+    {
+      "name": "Miles",
+      "type": "double"
+    },
+    {
+      "name": "PubRightofWay",
+      "type": "string"
+    },
+    {
+      "name": "Jurisdiction",
+      "type": "string"
+    },
+    {
+      "name": "MaintainedBy",
+      "type": "string"
+    },
+    {
+      "name": "SideOfStreet",
+      "type": "string"
+    },
+    {
+      "name": "ApproxSections",
+      "type": "int16"
+    },
+    {
+      "name": "OverallCondition",
+      "type": "double"
+    },
+    {
+      "name": "CrackedSections_1",
+      "type": "int16"
+    },
+    {
+      "name": "CrackedSections_2",
+      "type": "int16"
+    },
+    {
+      "name": "CrackedSections_3",
+      "type": "int16"
+    },
+    {
+      "name": "CrackedSections_4",
+      "type": "int16"
+    },
+    {
+      "name": "SpallingSections_1",
+      "type": "int16"
+    },
+    {
+      "name": "SpallingSections_2",
+      "type": "int16"
+    },
+    {
+      "name": "SpallingSections_3",
+      "type": "int16"
+    },
+    {
+      "name": "SpallingSections_4",
+      "type": "int16"
+    },
+    {
+      "name": "SunkSections_1",
+      "type": "int16"
+    },
+    {
+      "name": "SunkSections_2",
+      "type": "int16"
+    },
+    {
+      "name": "SunkSections_3",
+      "type": "int16"
+    },
+    {
+      "name": "SunkSections_4",
+      "type": "int16"
+    },
+    {
+      "name": "RaisedSections_1",
+      "type": "int16"
+    },
+    {
+      "name": "RaisedSections_2",
+      "type": "int16"
+    },
+    {
+      "name": "RaisedSections_3",
+      "type": "int16"
+    },
+    {
+      "name": "RaisedSections_4",
+      "type": "int16"
+    },
+    {
+      "name": "QualityRating",
+      "type": "double"
+    },
+    {
+      "name": "EstReplacementCost",
+      "type": "double"
+    },
+    {
+      "name": "Comments",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.STLength()",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 8586,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "sidewalks"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8468159,
+    40.5731359,
+    7
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "city-boundary",
+  "title": "Sandy City Boundary",
+  "description": "Sandy City, Utah Border Outline. 1 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921268,
+          40.527839,
+          -111.777213,
+          40.61822
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and Districts"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sandy City Boundary README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sandy City Boundary agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Border_Outer_Sandy/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-boundary/city-boundary.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "city-boundary"
+      ],
+      "title": "Sandy City Boundary vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-boundary/city-boundary.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Sandy City Boundary (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 32983,
+      "file:checksum": "1220c958512a64870ba773f0cd149b329217fee6505d873492c3e401f7ea03fd9fdc"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-boundary/city-boundary.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Sandy City Boundary (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 22390,
+      "file:checksum": "1220fba2b717703e2d791115ef6a4a88d9dc1499e15c8c049a90341cfcf5edd32784"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 601,
+      "file:checksum": "1220d7ab517b5147e1997cf9b023f54a380895efc0adee5d36814bf058c935dce486"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sandy City Boundary README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2199,
+      "file:checksum": "1220b473e08cf54479265ffd098bf73adb7082323acd01118bc8eca7f1e4d6eb41f4"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sandy City Boundary agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1969,
+      "file:checksum": "1220e37fc187ec3c5b754ce7c065f92a78ff388400308185bdca7415af3cd84d7b31"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "CITY",
+      "type": "string"
+    },
+    {
+      "name": "CITY_CODE",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 1,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "city-boundary"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492919,
+    40.5730367,
+    7
+  ]
+}

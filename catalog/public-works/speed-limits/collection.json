@@ -1,0 +1,366 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "speed-limits",
+  "title": "Speed Limits",
+  "description": "Speed Limits in Sandy City, Utah. The upstream service publishes no description for this layer. 5,072 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.917479,
+          40.528287,
+          -111.778029,
+          40.618218
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Speed Limits README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Speed Limits agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Speed_Limits/MapServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/speed-limits/speed-limits.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "speed-limits"
+      ],
+      "title": "Speed Limits vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/speed-limits/speed-limits.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Speed Limits (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 662983,
+      "file:checksum": "12204cf40ab6933e19183c90b20a1a30ccad36ba7c9b3bdfa0876c16a7d914e7d912"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/speed-limits/speed-limits.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Speed Limits (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 1305503,
+      "file:checksum": "12207bc9e2b195af0869d4b1e8d353aceb31edcc963ff859ba749bb4c977b0e1132e"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 406,
+      "file:checksum": "12201eea8803aeecf836beb3d21ae611842c7dd1bcb6d348cbe8799ef9f762786bc8"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Speed Limits README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2588,
+      "file:checksum": "1220a12cad0cab5dccce56891bbccbe21ec3fde86071224c5fcb136c10f375d9a54c"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Speed Limits agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 4044,
+      "file:checksum": "12205642c082c28cab3a8a0763778d97ac7e336de24bd0561ece2367121bfcd422be"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "L_F_ADD",
+      "type": "double"
+    },
+    {
+      "name": "L_T_ADD",
+      "type": "double"
+    },
+    {
+      "name": "R_F_ADD",
+      "type": "double"
+    },
+    {
+      "name": "R_T_ADD",
+      "type": "double"
+    },
+    {
+      "name": "PRE_DIR",
+      "type": "string"
+    },
+    {
+      "name": "S_NAME",
+      "type": "string"
+    },
+    {
+      "name": "S_TYPE",
+      "type": "string"
+    },
+    {
+      "name": "SUF_DIR",
+      "type": "string"
+    },
+    {
+      "name": "ACS_ALIAS",
+      "type": "string"
+    },
+    {
+      "name": "ACS_STREET",
+      "type": "string"
+    },
+    {
+      "name": "ACS_SUFDIR",
+      "type": "string"
+    },
+    {
+      "name": "LABEL",
+      "type": "string"
+    },
+    {
+      "name": "L_CITYCD",
+      "type": "string"
+    },
+    {
+      "name": "R_CITYCD",
+      "type": "string"
+    },
+    {
+      "name": "LS_ZONE",
+      "type": "string"
+    },
+    {
+      "name": "FS_ZONE",
+      "type": "string"
+    },
+    {
+      "name": "LZIP",
+      "type": "string"
+    },
+    {
+      "name": "RZIP",
+      "type": "string"
+    },
+    {
+      "name": "ONE_WAY",
+      "type": "int32"
+    },
+    {
+      "name": "SPEED_LIMIT",
+      "type": "int32"
+    },
+    {
+      "name": "COMMENTS",
+      "type": "string"
+    },
+    {
+      "name": "VECCOMMENTS",
+      "type": "string"
+    },
+    {
+      "name": "UNIQUE_ID",
+      "type": "int32"
+    },
+    {
+      "name": "EXCLUDE",
+      "type": "string"
+    },
+    {
+      "name": "S_DATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "M_DATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "SOURCE",
+      "type": "string"
+    },
+    {
+      "name": "S_SURF",
+      "type": "int32"
+    },
+    {
+      "name": "L_JURIS",
+      "type": "int32"
+    },
+    {
+      "name": "R_JURIS",
+      "type": "int32"
+    },
+    {
+      "name": "S_ROW",
+      "type": "int32"
+    },
+    {
+      "name": "S_ACCESS",
+      "type": "string"
+    },
+    {
+      "name": "S_USE",
+      "type": "string"
+    },
+    {
+      "name": "S_ACCUR",
+      "type": "int32"
+    },
+    {
+      "name": "CFCC",
+      "type": "string"
+    },
+    {
+      "name": "ALT_NAME",
+      "type": "string"
+    },
+    {
+      "name": "STREET",
+      "type": "string"
+    },
+    {
+      "name": "LOW",
+      "type": "double"
+    },
+    {
+      "name": "HIGH",
+      "type": "double"
+    },
+    {
+      "name": "MAINTENANCE",
+      "type": "string"
+    },
+    {
+      "name": "FUNCTIONAL_CLASS",
+      "type": "string"
+    },
+    {
+      "name": "CARTO_CODE",
+      "type": "string"
+    },
+    {
+      "name": "DATA_DATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "DATA_EDITOR",
+      "type": "string"
+    },
+    {
+      "name": "RuleID",
+      "type": "int32"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.STLength()",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 5072,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "speed-limits"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8478062,
+    40.573254,
+    7
+  ]
+}

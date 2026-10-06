@@ -1,0 +1,270 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "street-trees",
+  "title": "Street and Park Trees",
+  "description": "An inventory of trees in Sandy City, Utah. The same tree inventory is published twice by the city, as `Parks/Grounds_and_Forestry` and as `Pub_Works/ParksDeptTrees`, both reporting the same feature count. This mirrors the Parks copy. 7,997 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.917739,
+          40.529528,
+          -111.803488,
+          40.617339
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Parks and Recreation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Street and Park Trees README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Street and Park Trees agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Grounds_and_Forestry/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/street-trees/street-trees.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "street-trees"
+      ],
+      "title": "Street and Park Trees vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/street-trees/street-trees.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Street and Park Trees (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 507901,
+      "file:checksum": "1220297bca3754333d2583702075891a1ff8ffc8638013ccb1aa2416775811fb244c"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/street-trees/street-trees.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Street and Park Trees (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 672579,
+      "file:checksum": "1220019b7833630a62f33606470fc888c0a7dc4f777f8fba788ce26ec8e4e077ed18"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 496,
+      "file:checksum": "1220e9800818017748468dbb2e927f5f8d0ecefdaf026ca3063fa3aa4e944f0c9048"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Street and Park Trees README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2798,
+      "file:checksum": "12204061bce9ccf95783c0a2a793fcec83c4279e0436a5535e9c1d7d2c61730273e4"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Street and Park Trees agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2499,
+      "file:checksum": "12200d58be39be33beb712632b1e427eb24321827025235486ccf5d574ec708eb64e"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Species",
+      "type": "string"
+    },
+    {
+      "name": "Other_Spec",
+      "type": "string"
+    },
+    {
+      "name": "Tree_ID_",
+      "type": "int32"
+    },
+    {
+      "name": "Caliper",
+      "type": "string"
+    },
+    {
+      "name": "Height",
+      "type": "string"
+    },
+    {
+      "name": "Condition",
+      "type": "string"
+    },
+    {
+      "name": "Max_PDOP",
+      "type": "double"
+    },
+    {
+      "name": "Collection_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "Comments",
+      "type": "string"
+    },
+    {
+      "name": "Photo",
+      "type": "string"
+    },
+    {
+      "name": "AssetID",
+      "type": "string"
+    },
+    {
+      "name": "Location",
+      "type": "string"
+    },
+    {
+      "name": "Disease_Abiotic",
+      "type": "string"
+    },
+    {
+      "name": "Disease_Biotic",
+      "type": "string"
+    },
+    {
+      "name": "Disease_Comment",
+      "type": "string"
+    },
+    {
+      "name": "Disease_Date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Hazard",
+      "type": "string"
+    },
+    {
+      "name": "Hazard_Date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Pruning_Needs",
+      "type": "string"
+    },
+    {
+      "name": "Pruning_Date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Tree_Value",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 7997,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "street-trees"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -113.9264184,
+    30.5708124,
+    7
+  ]
+}

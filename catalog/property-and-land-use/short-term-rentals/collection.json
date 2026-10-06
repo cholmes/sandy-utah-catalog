@@ -1,0 +1,210 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "short-term-rentals",
+  "title": "Short-Term Rentals",
+  "description": "Community Count for Short Term Rentals in Sandy City\nThis map contains a polygon layer of the Sandy City Communities. With attributes of the allocated short term rental space. 30 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921268,
+          40.527841,
+          -111.777212,
+          40.61822
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Short-Term Rentals README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Short-Term Rentals agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rentals/short-term-rentals.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "short-term-rentals"
+      ],
+      "title": "Short-Term Rentals vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rentals/short-term-rentals.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Short-Term Rentals (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 86560,
+      "file:checksum": "1220a243800f7343a78687fe01dec154cb11e129e11e835fbec39b719e4350444892"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rentals/short-term-rentals.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Short-Term Rentals (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 73952,
+      "file:checksum": "1220d20e8e08a5f55adedd31f6cb4fbf5645f97f3db82b85b25697fcccdaf301dd02"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 626,
+      "file:checksum": "1220300854e8f39d7c8df268065a8d8bfa919c156f8423d734a6391ec57a1500bbb4"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Short-Term Rentals README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2418,
+      "file:checksum": "12206f618a6bb614601790bde3da68fe9a87b32496aab94b6e046268740d5f0c884c"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Short-Term Rentals agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2297,
+      "file:checksum": "122087a3520abef2c9d919a0c03998353b97b0ab905a919e23bfccc6bccb0226df44"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "Alloted_Status",
+      "type": "string"
+    },
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "COMMUNITY_ID",
+      "type": "double"
+    },
+    {
+      "name": "COMMUNITY_NAME",
+      "type": "string"
+    },
+    {
+      "name": "Max_STR",
+      "type": "int16"
+    },
+    {
+      "name": "Current_STR",
+      "type": "int16"
+    },
+    {
+      "name": "Open_STR",
+      "type": "int16"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 30,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "short-term-rentals"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492919,
+    40.5730378,
+    7
+  ]
+}

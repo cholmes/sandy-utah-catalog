@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../street-trees.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "street-trees-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "street-trees",
+      "paint": {
+        "circle-color": "#2f9e44",
+        "circle-radius": 3.2,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": 8,
+  "name": "Grave status",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../cemetery-graves.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "cemetery-graves-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "cemetery-graves",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "to-string",
+            [
+              "get",
+              "Status"
+            ]
+          ],
+          "3",
+          "#5c940d",
+          "1",
+          "#a9e34b",
+          "2",
+          "#ffd43b",
+          "9",
+          "#38d9a9",
+          "8",
+          "#868e96",
+          "7",
+          "#e03131",
+          "#ced4da"
+        ],
+        "fill-opacity": 0.9
+      }
+    },
+    {
+      "id": "cemetery-graves-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "cemetery-graves",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.2
+      }
+    }
+  ]
+}

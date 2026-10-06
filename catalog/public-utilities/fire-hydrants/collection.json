@@ -1,0 +1,346 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "fire-hydrants",
+  "title": "Fire Hydrants",
+  "description": "Fire Hydrants in Sandy City, Utah. The upstream service publishes no description for this layer. Sandy also publishes a hydrant layer under `Pub_Safety/Hydrants` with a different count (5,047 against 5,292). This mirrors the Public Utilities copy, which is the one maintained with the water system. 5,292 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.916951,
+          40.528349,
+          -111.778234,
+          40.616888
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Fire Hydrants README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Fire Hydrants agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/WaterSystem/FeatureServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/fire-hydrants/fire-hydrants.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "fire-hydrants"
+      ],
+      "title": "Fire Hydrants vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/fire-hydrants/fire-hydrants.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Fire Hydrants (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 663766,
+      "file:checksum": "12208f128ba28a1b47356fe969350cebb363abf69c0527a7e2d8a4136bfd28892875"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/fire-hydrants/fire-hydrants.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Fire Hydrants (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 1761852,
+      "file:checksum": "1220d23851d0793949a248f7f56680dcf68b086630c768f55dd73ea2695f6634e2e0"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 499,
+      "file:checksum": "122017ea279c60865172cac2985d0e747ad2d37d78b1047c6d793af6354afc8f4aec"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Fire Hydrants README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2798,
+      "file:checksum": "1220ccb3c70ce59f7bbcf1863c9ddfba9c1ec02245d52051dbd6d2ee2ba358c0a64a"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Fire Hydrants agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 4536,
+      "file:checksum": "1220b5237997e87e9e0fba389122a2ea2bf891cdbacf4700844e52575d4e30839475"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "FACILITYID",
+      "type": "string"
+    },
+    {
+      "name": "HYD_ID",
+      "type": "int32"
+    },
+    {
+      "name": "COMMENTS",
+      "type": "string"
+    },
+    {
+      "name": "GPS_DATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "NORTHING",
+      "type": "double"
+    },
+    {
+      "name": "EASTING",
+      "type": "double"
+    },
+    {
+      "name": "PROVIDER",
+      "type": "string"
+    },
+    {
+      "name": "MAP_NO",
+      "type": "string"
+    },
+    {
+      "name": "APADDRESS",
+      "type": "string"
+    },
+    {
+      "name": "LANDTIES",
+      "type": "string"
+    },
+    {
+      "name": "HYDSIZE",
+      "type": "double"
+    },
+    {
+      "name": "HYD_TYPE",
+      "type": "string"
+    },
+    {
+      "name": "HYD_MANUF",
+      "type": "string"
+    },
+    {
+      "name": "MANUF_DATE",
+      "type": "string"
+    },
+    {
+      "name": "VDEPTH",
+      "type": "string"
+    },
+    {
+      "name": "VLOCAT",
+      "type": "string"
+    },
+    {
+      "name": "VSIZE",
+      "type": "double"
+    },
+    {
+      "name": "VTYPE",
+      "type": "string"
+    },
+    {
+      "name": "VMAUF",
+      "type": "string"
+    },
+    {
+      "name": "VMAUNFDATE",
+      "type": "double"
+    },
+    {
+      "name": "INSTDATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "DATECOLT",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "COLLTBY",
+      "type": "string"
+    },
+    {
+      "name": "OTHER_INFO",
+      "type": "string"
+    },
+    {
+      "name": "ACAD_ANGLE",
+      "type": "double"
+    },
+    {
+      "name": "ENABLED",
+      "type": "int16"
+    },
+    {
+      "name": "ANCILLARYROLE",
+      "type": "int16"
+    },
+    {
+      "name": "LOCATION",
+      "type": "string"
+    },
+    {
+      "name": "INSPDATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "RESIDPRESSURE",
+      "type": "double"
+    },
+    {
+      "name": "STATICPRESSURE",
+      "type": "double"
+    },
+    {
+      "name": "TWENTYPSIFLOW",
+      "type": "double"
+    },
+    {
+      "name": "THIRTYPSIFLOW",
+      "type": "double"
+    },
+    {
+      "name": "WATER_ENTITY",
+      "type": "string"
+    },
+    {
+      "name": "FIRE_INSP_DIST",
+      "type": "string"
+    },
+    {
+      "name": "CONST_STATUS",
+      "type": "string"
+    },
+    {
+      "name": "STATUS",
+      "type": "string"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "AssetStatus",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 5292,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "fire-hydrants"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8476445,
+    40.5726185,
+    7
+  ]
+}

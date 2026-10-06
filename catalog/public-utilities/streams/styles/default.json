@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "Watercourse class",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../streams.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "streams-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "streams",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "CLASS"
+          ],
+          "Stream - Perennial",
+          "#1c7ed6",
+          "Stream - Intermittent",
+          "#74c0fc",
+          "River - Perennial",
+          "#0b7285",
+          "Canal",
+          "#f08c00",
+          "Aqueduct",
+          "#9775fa",
+          "#ced4da"
+        ],
+        "line-width": 1.6,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

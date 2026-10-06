@@ -1,0 +1,250 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "sewer-mains",
+  "title": "Sewer Mains",
+  "description": "Sewer Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 16,250 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.940321,
+          40.513522,
+          -111.777134,
+          40.632025
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sewer Mains README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sewer Mains agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Sewer/MapServer/2",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/sewer-mains/sewer-mains.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "sewer-mains"
+      ],
+      "title": "Sewer Mains vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/sewer-mains/sewer-mains.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Sewer Mains (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1198327,
+      "file:checksum": "1220163205da2f5be423912a0202b3d36637480c0cf49e7ce3166fdf07a2c19d4879"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/sewer-mains/sewer-mains.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Sewer Mains (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 2130663,
+      "file:checksum": "12209f699168f8a2d5ace1e08b7273fd0d586992731b07c2aac27d09da235078709b"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Sewer district",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 779,
+      "file:checksum": "12202c48091865b461e9904daa3556f4eddae936b66be6f1aeec847d7d18cac5a5ec"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sewer Mains README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2578,
+      "file:checksum": "122086d9bf581545882830681df0d76439acf1f550306cf46a9d637a72d0375c7b0e"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sewer Mains agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2873,
+      "file:checksum": "1220f57edf52c8bddd1225dbd2ddf6ec32bd76beca4ff13e147aab942c753a12fa21"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "Agency",
+      "type": "string"
+    },
+    {
+      "name": "PipeDiam",
+      "type": "double"
+    },
+    {
+      "name": "PipeType",
+      "type": "string"
+    },
+    {
+      "name": "Type",
+      "type": "string"
+    },
+    {
+      "name": "InstYear",
+      "type": "double"
+    },
+    {
+      "name": "ID",
+      "type": "string"
+    },
+    {
+      "name": "SLOPE",
+      "type": "double"
+    },
+    {
+      "name": "FROM_INV",
+      "type": "double"
+    },
+    {
+      "name": "TO_INV",
+      "type": "double"
+    },
+    {
+      "name": "Up_MH",
+      "type": "string"
+    },
+    {
+      "name": "Down_Mh",
+      "type": "string"
+    },
+    {
+      "name": "NumConnect",
+      "type": "int16"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 16250,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "sewer-mains"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8588164,
+    40.5728186,
+    7
+  ]
+}

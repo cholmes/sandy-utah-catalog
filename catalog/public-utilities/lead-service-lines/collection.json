@@ -1,0 +1,354 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "lead-service-lines",
+  "title": "Water Service Line Material Inventory",
+  "description": "Water Service Line Material Inventory in Sandy City, Utah. The upstream service publishes no description for this layer. Published by Sandy City to meet the service line inventory requirement of the US EPA Lead and Copper Rule Revisions. The inventory is incomplete: most lines are still classified Unknown. 26,213 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.916932,
+          40.528258,
+          -111.778039,
+          40.616166
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Service Line Material Inventory README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Water Service Line Material Inventory agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "lead-service-lines"
+      ],
+      "title": "Water Service Line Material Inventory vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Water Service Line Material Inventory (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1971447,
+      "file:checksum": "1220740ab5a62dcdd160e1b44f64460e819bcc81926e0d3d00f0d2b2a01b4bad95a5"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Water Service Line Material Inventory (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 3113294,
+      "file:checksum": "122039abe516d7f438b5d1bd49308e56c918a13c2ffe68baeef1d6f345fc85a3e380"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Utility-side material",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 1055,
+      "file:checksum": "12204a98edcd921c5daf7d48e9afec4ec346abc04ce41e455aad3a311a4d205962c6"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Service Line Material Inventory README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3051,
+      "file:checksum": "12207c19ee05bae6aba499214de0b22c50242f5c896a745dfe7c52e137e93075495a"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Water Service Line Material Inventory agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 6758,
+      "file:checksum": "122074b5c542a0a0a4fdda116e2ddacb734daec9d79caade46c323543415154a8568"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "address",
+      "type": "string"
+    },
+    {
+      "name": "location",
+      "type": "string"
+    },
+    {
+      "name": "sensitivepop",
+      "type": "string"
+    },
+    {
+      "name": "disadvantaged",
+      "type": "string"
+    },
+    {
+      "name": "utilassetid",
+      "type": "string"
+    },
+    {
+      "name": "utilmaterial",
+      "type": "string"
+    },
+    {
+      "name": "everlead",
+      "type": "string"
+    },
+    {
+      "name": "utilinstalldate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "utildiameter",
+      "type": "double"
+    },
+    {
+      "name": "utilsource",
+      "type": "string"
+    },
+    {
+      "name": "utilverified",
+      "type": "string"
+    },
+    {
+      "name": "utilverifmethod",
+      "type": "string"
+    },
+    {
+      "name": "utilverifdate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "utilstatus",
+      "type": "int16"
+    },
+    {
+      "name": "utilnotes",
+      "type": "string"
+    },
+    {
+      "name": "custassetid",
+      "type": "string"
+    },
+    {
+      "name": "custmaterial",
+      "type": "string"
+    },
+    {
+      "name": "custinstalldate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "custdiameter",
+      "type": "double"
+    },
+    {
+      "name": "custsource",
+      "type": "string"
+    },
+    {
+      "name": "custverified",
+      "type": "string"
+    },
+    {
+      "name": "custverifmethod",
+      "type": "string"
+    },
+    {
+      "name": "custverifdate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "custstatus",
+      "type": "int16"
+    },
+    {
+      "name": "custnotes",
+      "type": "string"
+    },
+    {
+      "name": "bothsidesstatus",
+      "type": "string"
+    },
+    {
+      "name": "leadconnector",
+      "type": "string"
+    },
+    {
+      "name": "leadsolder",
+      "type": "string"
+    },
+    {
+      "name": "otherfittings",
+      "type": "string"
+    },
+    {
+      "name": "buildingtype",
+      "type": "string"
+    },
+    {
+      "name": "pointofentry",
+      "type": "string"
+    },
+    {
+      "name": "copperwithlead",
+      "type": "string"
+    },
+    {
+      "name": "samplingsite",
+      "type": "string"
+    },
+    {
+      "name": "replacestatus",
+      "type": "string"
+    },
+    {
+      "name": "scheddate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "utilreplacedate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "custscheddate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "custreplacedate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "replacereason",
+      "type": "string"
+    },
+    {
+      "name": "custnotified",
+      "type": "string"
+    },
+    {
+      "name": "notifydate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "yearstructbuilt",
+      "type": "int16"
+    },
+    {
+      "name": "CreationDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "EditDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 26213,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "lead-service-lines"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8475379,
+    40.5722116,
+    7
+  ]
+}

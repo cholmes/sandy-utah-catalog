@@ -1,0 +1,266 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "flood-100yr",
+  "title": "Approximate 100-Year Floodplain",
+  "description": "Map of hazards in Sandy City, Utah. 828 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -112.256493,
+          40.43961,
+          -111.580163,
+          40.922922
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Approximate 100-Year Floodplain README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Approximate 100-Year Floodplain agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Hazards/MapServer/5",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/flood-100yr/flood-100yr.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "flood-100yr"
+      ],
+      "title": "Approximate 100-Year Floodplain vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/flood-100yr/flood-100yr.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Approximate 100-Year Floodplain (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 891542,
+      "file:checksum": "12203962691f0311c22d83610e1cfeb97fc68021249e17983b324054699f90182cd4"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/flood-100yr/flood-100yr.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Approximate 100-Year Floodplain (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 691353,
+      "file:checksum": "1220c94f0ba6a20ec74a9ac3507544867748d850b12b98160c415209602a610b1d4e"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Floodway",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 745,
+      "file:checksum": "1220133829a7e2a7a79b899b8121e4bc176bc066c9817374057c07809628ce007bac"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Approximate 100-Year Floodplain README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2214,
+      "file:checksum": "12206c9ab03534b7dbbe59354beecc4249533b9d6b116dbf523f6c5303279fc9e685"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Approximate 100-Year Floodplain agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2511,
+      "file:checksum": "12202d52ce4b9ffe8799bd8d3f1476958c305589db245a73343a2d3c08ae2eedbedd"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "DFIRM_ID",
+      "type": "string"
+    },
+    {
+      "name": "VERSION_ID",
+      "type": "string"
+    },
+    {
+      "name": "FLD_AR_ID",
+      "type": "string"
+    },
+    {
+      "name": "STUDY_TYP",
+      "type": "string"
+    },
+    {
+      "name": "FLD_ZONE",
+      "type": "string"
+    },
+    {
+      "name": "ZONE_SUBTY",
+      "type": "string"
+    },
+    {
+      "name": "SFHA_TF",
+      "type": "string"
+    },
+    {
+      "name": "STATIC_BFE",
+      "type": "double"
+    },
+    {
+      "name": "V_DATUM",
+      "type": "string"
+    },
+    {
+      "name": "DEPTH",
+      "type": "double"
+    },
+    {
+      "name": "LEN_UNIT",
+      "type": "string"
+    },
+    {
+      "name": "VELOCITY",
+      "type": "double"
+    },
+    {
+      "name": "VEL_UNIT",
+      "type": "string"
+    },
+    {
+      "name": "AR_REVERT",
+      "type": "string"
+    },
+    {
+      "name": "AR_SUBTRV",
+      "type": "string"
+    },
+    {
+      "name": "BFE_REVERT",
+      "type": "double"
+    },
+    {
+      "name": "DEP_REVERT",
+      "type": "double"
+    },
+    {
+      "name": "DUAL_ZONE",
+      "type": "string"
+    },
+    {
+      "name": "SOURCE_CIT",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.STArea()",
+      "type": "double"
+    },
+    {
+      "name": "Shape.STLength()",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 828,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "flood-100yr"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.9199754,
+    40.68158,
+    7
+  ]
+}

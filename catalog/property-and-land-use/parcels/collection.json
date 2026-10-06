@@ -1,0 +1,502 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "parcels",
+  "title": "Parcels",
+  "description": "Parcels in and around Sandy City, Utah as of July, 2022. The service describes itself as current to July 2022, so it lags the county's live parcel fabric by more than three years. 106,087 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Salt Lake County Recorder",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://slco.org/recorder/"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.972924,
+          40.496643,
+          -111.746465,
+          40.650177
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Parcels README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Parcels agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Parcels/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/parcels/parcels.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "parcels"
+      ],
+      "title": "Parcels vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/parcels/parcels.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Parcels (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 22677175,
+      "file:checksum": "1220d8b00f6210e5ca1570cc2cabab882319f42c21bd9777f4f34ef1e57e6855feff"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/parcels/parcels.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Parcels (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 26186229,
+      "file:checksum": "122034d3fda753e09b7977f1e133c48a7f112654c1df638505388751137b84e886a5"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 571,
+      "file:checksum": "12207e4888e2df4f44cc81335019c9d112ad54275e55e3d9f0ac959fe8fc54db6cda"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Parcels README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2414,
+      "file:checksum": "122050bc8b5ce01cb73ade143c79710afa839ea7663be8221388578b90e772cba279"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Parcels agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 4125,
+      "file:checksum": "1220be99c56f7c79e681702d014cd6d219577ee93104d2ba6af338881eacb35ab9ef"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "RECORDER_DATA_AS_OF",
+      "type": "string"
+    },
+    {
+      "name": "parcel_id",
+      "type": "string"
+    },
+    {
+      "name": "parent_parcel",
+      "type": "string"
+    },
+    {
+      "name": "num_old_prcls",
+      "type": "int32"
+    },
+    {
+      "name": "source_doc",
+      "type": "string"
+    },
+    {
+      "name": "date_created",
+      "type": "string"
+    },
+    {
+      "name": "last_vesting",
+      "type": "int32"
+    },
+    {
+      "name": "parcel_acres",
+      "type": "double"
+    },
+    {
+      "name": "own_name",
+      "type": "string"
+    },
+    {
+      "name": "multi_names",
+      "type": "int32"
+    },
+    {
+      "name": "tax_dist",
+      "type": "string"
+    },
+    {
+      "name": "care_of",
+      "type": "string"
+    },
+    {
+      "name": "own_addr",
+      "type": "string"
+    },
+    {
+      "name": "own_apt_num",
+      "type": "string"
+    },
+    {
+      "name": "own_citystate",
+      "type": "string"
+    },
+    {
+      "name": "own_country_code",
+      "type": "string"
+    },
+    {
+      "name": "own_zip",
+      "type": "string"
+    },
+    {
+      "name": "own_zip_four",
+      "type": "string"
+    },
+    {
+      "name": "prop_location",
+      "type": "string"
+    },
+    {
+      "name": "HouseNum",
+      "type": "string"
+    },
+    {
+      "name": "PreDir",
+      "type": "string"
+    },
+    {
+      "name": "StreetName",
+      "type": "string"
+    },
+    {
+      "name": "StreetType",
+      "type": "string"
+    },
+    {
+      "name": "StreetDir",
+      "type": "string"
+    },
+    {
+      "name": "exempt_type",
+      "type": "string"
+    },
+    {
+      "name": "property_type",
+      "type": "string"
+    },
+    {
+      "name": "Property_Type_Desc",
+      "type": "string"
+    },
+    {
+      "name": "Property_Type_Simple_Desc",
+      "type": "string"
+    },
+    {
+      "name": "Community",
+      "type": "string"
+    },
+    {
+      "name": "Quadrant",
+      "type": "string"
+    },
+    {
+      "name": "CityCouncil",
+      "type": "string"
+    },
+    {
+      "name": "Abnormal",
+      "type": "string"
+    },
+    {
+      "name": "Mun_Tax_Agency",
+      "type": "string"
+    },
+    {
+      "name": "Township",
+      "type": "string"
+    },
+    {
+      "name": "Range",
+      "type": "string"
+    },
+    {
+      "name": "Section",
+      "type": "int16"
+    },
+    {
+      "name": "Annexation",
+      "type": "string"
+    },
+    {
+      "name": "Lot",
+      "type": "string"
+    },
+    {
+      "name": "Subdivision",
+      "type": "string"
+    },
+    {
+      "name": "ASSESSOR_DATA_VALID_FOR",
+      "type": "string"
+    },
+    {
+      "name": "neighborhood_code",
+      "type": "int32"
+    },
+    {
+      "name": "nbhrd_low_sale",
+      "type": "int32"
+    },
+    {
+      "name": "nbhrd_high_sale",
+      "type": "int32"
+    },
+    {
+      "name": "nbhrd_av_sale",
+      "type": "int32"
+    },
+    {
+      "name": "new_growth_value",
+      "type": "int32"
+    },
+    {
+      "name": "nbrhd_av_home_sf",
+      "type": "int32"
+    },
+    {
+      "name": "abv_grnd_sf",
+      "type": "int32"
+    },
+    {
+      "name": "multi_structure",
+      "type": "string"
+    },
+    {
+      "name": "tax_year",
+      "type": "string"
+    },
+    {
+      "name": "greenbelt_acres",
+      "type": "double"
+    },
+    {
+      "name": "full_mkt_prcl_total",
+      "type": "double"
+    },
+    {
+      "name": "full_mkt_total_land",
+      "type": "double"
+    },
+    {
+      "name": "adjusted_prcl_total",
+      "type": "double"
+    },
+    {
+      "name": "adjusted_total_land",
+      "type": "double"
+    },
+    {
+      "name": "full_mkt_total_bldg",
+      "type": "double"
+    },
+    {
+      "name": "adjusted_total_bldg",
+      "type": "double"
+    },
+    {
+      "name": "total_full_mkt",
+      "type": "double"
+    },
+    {
+      "name": "total_adjusted",
+      "type": "double"
+    },
+    {
+      "name": "total_assessed",
+      "type": "double"
+    },
+    {
+      "name": "taxable_value",
+      "type": "double"
+    },
+    {
+      "name": "year_built",
+      "type": "double"
+    },
+    {
+      "name": "total_sq_ft",
+      "type": "double"
+    },
+    {
+      "name": "num_housing_units",
+      "type": "double"
+    },
+    {
+      "name": "lot_use",
+      "type": "string"
+    },
+    {
+      "name": "zip_two",
+      "type": "string"
+    },
+    {
+      "name": "tax_class1",
+      "type": "string"
+    },
+    {
+      "name": "Tax_Class1_Desc",
+      "type": "string"
+    },
+    {
+      "name": "tax_class2",
+      "type": "string"
+    },
+    {
+      "name": "Tax_Class2_Desc",
+      "type": "string"
+    },
+    {
+      "name": "tax_class3",
+      "type": "string"
+    },
+    {
+      "name": "Tax_Class3_Desc",
+      "type": "string"
+    },
+    {
+      "name": "tax_rate",
+      "type": "double"
+    },
+    {
+      "name": "Garbage",
+      "type": "string"
+    },
+    {
+      "name": "Legal_Description",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "Tax_District_2022",
+      "type": "string"
+    },
+    {
+      "name": "Sensitive_Overlay",
+      "type": "string"
+    },
+    {
+      "name": "Historic_Tiers",
+      "type": "string"
+    },
+    {
+      "name": "Wildland_Interface",
+      "type": "string"
+    },
+    {
+      "name": "Floodplain",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 106087,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "parcels"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8598414,
+    40.5735771,
+    7
+  ]
+}

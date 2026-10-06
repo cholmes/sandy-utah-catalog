@@ -1,0 +1,226 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "voting-precincts",
+  "title": "Voting Precincts",
+  "description": "Voting Precincts in Sandy City, Utah. The upstream service publishes no description for this layer. 102 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921308,
+          40.527847,
+          -111.777036,
+          40.618227
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and Districts"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Voting Precincts README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Voting Precincts agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Voting_Precincts/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/voting-precincts/voting-precincts.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "voting-precincts"
+      ],
+      "title": "Voting Precincts vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/voting-precincts/voting-precincts.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Voting Precincts (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 155500,
+      "file:checksum": "1220f01287536566a339b997890b71811b55b84befdebc1e1b510f23b63b5708a315"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/voting-precincts/voting-precincts.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Voting Precincts (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 149207,
+      "file:checksum": "12202007e74282b049a7face5b6d6960f16307f63e1837f88109dcaee1e9b8febddb"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Council district",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 904,
+      "file:checksum": "1220e0bc5d6fdd46a69ad040d9065161eace8e7b66234a724de3d5fcb321b56114c2"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Voting Precincts README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2370,
+      "file:checksum": "12200a5b262ecb17085b4de98d641044569f01828ac9428a038f533ac03028c369be"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Voting Precincts agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2339,
+      "file:checksum": "12204326770e0146a2cc87ac7a716e763d8dc9686161a73a3bf7ba0a89d187102260"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Precinct",
+      "type": "string"
+    },
+    {
+      "name": "Congress",
+      "type": "int32"
+    },
+    {
+      "name": "StateHouse",
+      "type": "int32"
+    },
+    {
+      "name": "StateSenate",
+      "type": "int32"
+    },
+    {
+      "name": "StateSchool",
+      "type": "int32"
+    },
+    {
+      "name": "CountyCoun",
+      "type": "int32"
+    },
+    {
+      "name": "LocalSchool",
+      "type": "string"
+    },
+    {
+      "name": "Municipality",
+      "type": "string"
+    },
+    {
+      "name": "CityCouncil",
+      "type": "string"
+    },
+    {
+      "name": "Shape_Leng",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 102,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "voting-precincts"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492235,
+    40.5730441,
+    7
+  ]
+}

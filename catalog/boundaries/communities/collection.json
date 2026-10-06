@@ -1,0 +1,254 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "communities",
+  "title": "Communities",
+  "description": "Communities in Sandy City, Utah. 30 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921268,
+          40.527841,
+          -111.777212,
+          40.61822
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and Districts"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Communities README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Communities agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Sandy_Communities/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/communities/communities.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "communities"
+      ],
+      "title": "Communities vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/communities/communities.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Communities (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 79663,
+      "file:checksum": "1220700e7c5bf526e68716096592f70a14822ca718be83ab07faecf79402037ae430"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/communities/communities.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Communities (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 113400,
+      "file:checksum": "122073b73d1c26f956a3966d888ad8f938903b8534e37bf3e920043a0775e74ab0c9"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 591,
+      "file:checksum": "122070cd51384cf81b9f63bd396184a64c720a355607e130a390f3e5f335aec8cb6f"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Communities README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2536,
+      "file:checksum": "122083139f508cf977521abb0065db71774dac01e1589db276e60ae67959d0d3e5c8"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Communities agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2365,
+      "file:checksum": "1220228d4cb8bfc7b1a049b515d71b2ae0c2f268c3bce38e4de5e04484a155aba52a"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "COMMUNITY_ID",
+      "type": "double"
+    },
+    {
+      "name": "COMMUNITY_NAME",
+      "type": "string"
+    },
+    {
+      "name": "LEADER_NAME",
+      "type": "string"
+    },
+    {
+      "name": "Color",
+      "type": "string"
+    },
+    {
+      "name": "EMERGENCY_PREPAREDNESS_LEADER",
+      "type": "string"
+    },
+    {
+      "name": "EMERGENCY_PREPAREDNESS_LEADER2",
+      "type": "string"
+    },
+    {
+      "name": "LINK",
+      "type": "string"
+    },
+    {
+      "name": "Sandy_HH",
+      "type": "int16"
+    },
+    {
+      "name": "Unicorp_HH",
+      "type": "int16"
+    },
+    {
+      "name": "Sandy_Pop",
+      "type": "double"
+    },
+    {
+      "name": "Unicorp_Pop",
+      "type": "double"
+    },
+    {
+      "name": "Total_HH",
+      "type": "int16"
+    },
+    {
+      "name": "Total_Pop",
+      "type": "double"
+    },
+    {
+      "name": "Date_Updated",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Sandy_PPH",
+      "type": "double"
+    },
+    {
+      "name": "Unincorp_PPH",
+      "type": "double"
+    },
+    {
+      "name": "Total_PPH",
+      "type": "double"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 30,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "communities"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492919,
+    40.5730378,
+    7
+  ]
+}

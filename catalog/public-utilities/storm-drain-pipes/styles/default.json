@@ -1,0 +1,42 @@
+{
+  "version": 8,
+  "name": "Ownership",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../storm-drain-pipes.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "storm-drain-pipes-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "storm-drain-pipes",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "OWNERSHIP"
+          ],
+          "City",
+          "#0c8599",
+          "City Facility",
+          "#1098ad",
+          "Other City",
+          "#66d9e8",
+          "Private",
+          "#f08c00",
+          "UDOT",
+          "#9775fa",
+          "County",
+          "#2f9e44",
+          "#ced4da"
+        ],
+        "line-width": 1.6,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

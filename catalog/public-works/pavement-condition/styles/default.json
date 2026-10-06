@@ -1,0 +1,36 @@
+{
+  "version": 8,
+  "name": "Pavement condition",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../pavement-condition.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "pavement-condition-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "pavement-condition",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "GASB_Cond_Group"
+          ],
+          "Good",
+          "#2f9e44",
+          "Fair",
+          "#ffd43b",
+          "Poor",
+          "#e03131",
+          "#ced4da"
+        ],
+        "line-width": 2.0,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

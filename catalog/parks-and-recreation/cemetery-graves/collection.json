@@ -1,0 +1,406 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "cemetery-graves",
+  "title": "Sandy City Cemetery Graves",
+  "description": "Provides access to the Sandy City, Utah Cemetery data. 11,695 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.875163,
+          40.585733,
+          -111.872348,
+          40.587933
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Parks and Recreation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sandy City Cemetery Graves README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sandy City Cemetery Graves agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Sandy_Cemetery/FeatureServer/37",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/cemetery-graves/cemetery-graves.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "cemetery-graves"
+      ],
+      "title": "Sandy City Cemetery Graves vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/cemetery-graves/cemetery-graves.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Sandy City Cemetery Graves (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1405976,
+      "file:checksum": "12203a91ea331a4271a0781efb8cd3155237bc20506b03b40c0b4f36172b4f7bc191"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/cemetery-graves/cemetery-graves.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Sandy City Cemetery Graves (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 161205,
+      "file:checksum": "12204ffc7023e118a85b841b1be68b4f6370715e8dbe59644bc4d4d64abdc07f70bc"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Grave status",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 994,
+      "file:checksum": "1220d469c8337ae8a4d11b0b5640aecaa72ba427718d5f6c01761f806404be88703e"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sandy City Cemetery Graves README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2293,
+      "file:checksum": "1220ed2d15f6230303495a5e6c5a877205a0a8048612df77bf386dfa7d9b29fe3ee6"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sandy City Cemetery Graves agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3862,
+      "file:checksum": "122010839ce1baaab0220e4292ac9c6202ddf4ac3629580c7b79acfb52060dea5d21"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Grave_ID",
+      "type": "int32"
+    },
+    {
+      "name": "BurialID",
+      "type": "double"
+    },
+    {
+      "name": "Section",
+      "type": "string"
+    },
+    {
+      "name": "Section_Lot",
+      "type": "string"
+    },
+    {
+      "name": "Section_Lot_Grave",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "int16"
+    },
+    {
+      "name": "Deceased",
+      "type": "string"
+    },
+    {
+      "name": "LastName",
+      "type": "string"
+    },
+    {
+      "name": "FirstMidName",
+      "type": "string"
+    },
+    {
+      "name": "Death_Place",
+      "type": "string"
+    },
+    {
+      "name": "Race",
+      "type": "string"
+    },
+    {
+      "name": "Birthplace",
+      "type": "string"
+    },
+    {
+      "name": "Father",
+      "type": "string"
+    },
+    {
+      "name": "Father_Nationality",
+      "type": "string"
+    },
+    {
+      "name": "Mother",
+      "type": "string"
+    },
+    {
+      "name": "Mother_Nationality",
+      "type": "string"
+    },
+    {
+      "name": "BIRTH_MO",
+      "type": "int16"
+    },
+    {
+      "name": "BIRTH_DAY",
+      "type": "int16"
+    },
+    {
+      "name": "BIRTH_YEAR",
+      "type": "int16"
+    },
+    {
+      "name": "BirthDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "DEATH_MO",
+      "type": "int16"
+    },
+    {
+      "name": "DEATH_DAY",
+      "type": "int16"
+    },
+    {
+      "name": "DEATH_YEAR",
+      "type": "int16"
+    },
+    {
+      "name": "DeathDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "BURIAL_MO",
+      "type": "int16"
+    },
+    {
+      "name": "BURIAL_DAY",
+      "type": "int16"
+    },
+    {
+      "name": "BURIAL_YEAR",
+      "type": "int16"
+    },
+    {
+      "name": "BurialDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Burial_Receipt_Num",
+      "type": "string"
+    },
+    {
+      "name": "Burial_Amount_Paid",
+      "type": "double"
+    },
+    {
+      "name": "Social_Status_old",
+      "type": "string"
+    },
+    {
+      "name": "Social_Status",
+      "type": "int16"
+    },
+    {
+      "name": "Gender",
+      "type": "string"
+    },
+    {
+      "name": "Cause_of_Death",
+      "type": "string"
+    },
+    {
+      "name": "Veteran",
+      "type": "int16"
+    },
+    {
+      "name": "Service",
+      "type": "string"
+    },
+    {
+      "name": "Rank",
+      "type": "string"
+    },
+    {
+      "name": "Unit",
+      "type": "string"
+    },
+    {
+      "name": "Conflict",
+      "type": "string"
+    },
+    {
+      "name": "EnteredBy",
+      "type": "string"
+    },
+    {
+      "name": "Last_Update",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Comments",
+      "type": "string"
+    },
+    {
+      "name": "On_the_Headstone",
+      "type": "string"
+    },
+    {
+      "name": "Notes_Landmarks",
+      "type": "string"
+    },
+    {
+      "name": "Mortuary",
+      "type": "string"
+    },
+    {
+      "name": "Mortuary_Phone",
+      "type": "string"
+    },
+    {
+      "name": "Ownership",
+      "type": "string"
+    },
+    {
+      "name": "CremationFlag",
+      "type": "int16"
+    },
+    {
+      "name": "Spouse",
+      "type": "string"
+    },
+    {
+      "name": "LocatedBy",
+      "type": "string"
+    },
+    {
+      "name": "VerifiedBy",
+      "type": "string"
+    },
+    {
+      "name": "Headstone_Mon_Placed_YN",
+      "type": "int16"
+    },
+    {
+      "name": "Headstone_Mon_Placed_Date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Monument_Co",
+      "type": "string"
+    },
+    {
+      "name": "Monument_Co_Phone",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 11695,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "cemetery-graves"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8737517,
+    40.5868306,
+    7
+  ]
+}

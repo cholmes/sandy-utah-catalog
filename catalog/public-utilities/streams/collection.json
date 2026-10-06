@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "streams",
+  "title": "Streams",
+  "description": "Sandy Waterways Streams. 848 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.92878,
+          40.506548,
+          -111.754273,
+          40.635077
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Streams README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Streams agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Streams/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/streams/streams.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "streams"
+      ],
+      "title": "Streams vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/streams/streams.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Streams (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 183682,
+      "file:checksum": "122012c894eb9aa12b8bbec3b8380215f87b4b0703d06f2473ef73d2ef0800ee7e8e"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/streams/streams.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Streams (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 177942,
+      "file:checksum": "12202799c3c7485555efe32036d8c90f262d9cc4680ae83ebf7351e8fe35de16c42b"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Watercourse class",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 750,
+      "file:checksum": "1220adb03be535acb03660b621c3cb187e23747289145e8ea7e32b43c6f4101d15e1"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Streams README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2091,
+      "file:checksum": "12207abb10297200fef850490437b17e962b0fcb4eb6d65d475810bbbd330b1e2df9"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Streams agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2193,
+      "file:checksum": "12207e9f6e5d0e002018f416928415f8879821cad84e7bb66d049f6bda396f26b82a"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "CLASS",
+      "type": "string"
+    },
+    {
+      "name": "NAME",
+      "type": "string"
+    },
+    {
+      "name": "CHANNEL_TYPE",
+      "type": "string"
+    },
+    {
+      "name": "CLASS___TYPE",
+      "type": "string"
+    },
+    {
+      "name": "Municipality",
+      "type": "string"
+    },
+    {
+      "name": "InPark",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 848,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "streams"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8414849,
+    40.5707672,
+    7
+  ]
+}

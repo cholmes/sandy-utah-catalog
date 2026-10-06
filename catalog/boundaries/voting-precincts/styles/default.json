@@ -1,0 +1,47 @@
+{
+  "version": 8,
+  "name": "Council district",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../voting-precincts.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "voting-precincts-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "voting-precincts",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "CityCouncil"
+          ],
+          "Sandy 1",
+          "#4c6ef5",
+          "Sandy 2",
+          "#f08c00",
+          "Sandy 3",
+          "#2f9e44",
+          "Sandy 4",
+          "#d6336c",
+          "#ced4da"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "voting-precincts-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "voting-precincts",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

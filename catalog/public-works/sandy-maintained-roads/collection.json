@@ -1,0 +1,190 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "sandy-maintained-roads",
+  "title": "Sandy-Maintained Roads",
+  "description": "Sandy-Maintained Roads in Sandy City, Utah. The upstream service publishes no description for this layer. 4,916 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.916053,
+          40.528295,
+          -111.778029,
+          40.618218
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sandy-Maintained Roads README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sandy-Maintained Roads agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Sandy_Maintained_Roads/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/sandy-maintained-roads/sandy-maintained-roads.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "sandy-maintained-roads"
+      ],
+      "title": "Sandy-Maintained Roads vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/sandy-maintained-roads/sandy-maintained-roads.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Sandy-Maintained Roads (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 400290,
+      "file:checksum": "12209bff2bd5b5a047e66e136c38666fc1fbb6fd5df0df7a8b93d754b58c085a644b"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/sandy-maintained-roads/sandy-maintained-roads.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Sandy-Maintained Roads (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 445597,
+      "file:checksum": "122096577de6d7ffdc098638d3faadd534be2a982e23569bf59e506f4a1db9e96cd3"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 436,
+      "file:checksum": "1220911d7ce7eb50800ac9863c1beeb26c29b6a8ee16f2d887ab1feedabc078361b4"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sandy-Maintained Roads README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2456,
+      "file:checksum": "122075941a620c92ac2277a17d653c92206787861cf07cbe396b5ed703028731c9d1"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sandy-Maintained Roads agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1981,
+      "file:checksum": "1220f7ec08ce8067c026074e6dbccb3396e28e6ab79dc5355c11a9967a568d41e3cd"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "BWAREA",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 4916,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "sandy-maintained-roads"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8471091,
+    40.5732557,
+    7
+  ]
+}

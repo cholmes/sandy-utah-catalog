@@ -1,0 +1,47 @@
+{
+  "version": 8,
+  "name": "District",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../city-council-districts.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "city-council-districts-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "city-council-districts",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "Name"
+          ],
+          "District 1",
+          "#4c6ef5",
+          "District 2",
+          "#f08c00",
+          "District 3",
+          "#2f9e44",
+          "District 4",
+          "#d6336c",
+          "#ced4da"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "city-council-districts-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "city-council-districts",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

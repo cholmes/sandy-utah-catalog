@@ -1,0 +1,210 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "city-council-districts",
+  "title": "City Council Districts",
+  "description": "City Council Districts in Sandy City, Utah. 4 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921268,
+          40.527839,
+          -111.777213,
+          40.61822
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and Districts"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "City Council Districts README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "City Council Districts agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/City_Council_Districts/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-council-districts/city-council-districts.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "city-council-districts"
+      ],
+      "title": "City Council Districts vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-council-districts/city-council-districts.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "City Council Districts (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 70798,
+      "file:checksum": "122052afb60d006a93fe29a06cc76cba40a2cf8ac35c423fd90f42268dd2f5f6d831"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-council-districts/city-council-districts.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "City Council Districts (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 62913,
+      "file:checksum": "12207cf81226120bcfe1fee9d8358b1eb68fce1101582c7f0598be291a81d43e0f64"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "District",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 931,
+      "file:checksum": "122030f8c2f2f318aeb3eadefd909eedda888a8c31305edd5f29e50faf9cfdfaa891"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "City Council Districts README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2293,
+      "file:checksum": "122043d095392ffdf71964560f097205bf277dabf14f66c65d12b583aa07d3ef6202"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "City Council Districts agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2275,
+      "file:checksum": "12203830075e91186dd3a31a54b3b95d6b668104100ce662616c1d3a7d203a7eb2fb"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "City_Counc",
+      "type": "string"
+    },
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "Council_Member",
+      "type": "string"
+    },
+    {
+      "name": "Link_to_Photo",
+      "type": "string"
+    },
+    {
+      "name": "Link_To_Bio",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 4,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "city-council-districts"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492919,
+    40.5730367,
+    7
+  ]
+}

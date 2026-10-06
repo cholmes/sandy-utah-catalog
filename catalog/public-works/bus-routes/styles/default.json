@@ -1,0 +1,38 @@
+{
+  "version": 8,
+  "name": "Route type",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../bus-routes.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "bus-routes-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "bus-routes",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "routetype"
+          ],
+          "Frequent",
+          "#d6336c",
+          "Regular",
+          "#845ef7",
+          "Limited",
+          "#868e96",
+          "Ski",
+          "#1098ad",
+          "#ced4da"
+        ],
+        "line-width": 2.0,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

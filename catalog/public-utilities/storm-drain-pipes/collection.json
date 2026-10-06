@@ -1,0 +1,362 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "storm-drain-pipes",
+  "title": "Storm Drain Pipes",
+  "description": "Storm Drain Pipes in Sandy City, Utah. The upstream service publishes no description for this layer. 19,492 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.920599,
+          40.527278,
+          -111.777886,
+          40.624035
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Pipes README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Pipes agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StormDrain/FeatureServer/6",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/storm-drain-pipes/storm-drain-pipes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "storm-drain-pipes"
+      ],
+      "title": "Storm Drain Pipes vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/storm-drain-pipes/storm-drain-pipes.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Storm Drain Pipes (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1563576,
+      "file:checksum": "12206a9eb47285ba982da17d50da52fe2b350936a0cc6442059433c229d59e5157a0"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/storm-drain-pipes/storm-drain-pipes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Storm Drain Pipes (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 2734431,
+      "file:checksum": "12207b6036851577797ef482d2b87a15030f745defe9f4467b27d455c79c07fc6eec"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Ownership",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 786,
+      "file:checksum": "1220df6d498016b018ed90da9c4157449d71e4632b552777143d4ca755062e5369f4"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Pipes README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2656,
+      "file:checksum": "1220353ede2b91c428ce40b2bcc3652707474843e76f9f059190d34c51c269678315"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Pipes agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 5204,
+      "file:checksum": "1220f91ba866509a09d6a17a784c2a0468a4668fe5a41c0e6cf09c1ba4bc1fa7109b"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "FacilityID",
+      "type": "string"
+    },
+    {
+      "name": "PIPE_TYPE",
+      "type": "string"
+    },
+    {
+      "name": "IRRIGATION",
+      "type": "int16"
+    },
+    {
+      "name": "PIPE_SIZE",
+      "type": "double"
+    },
+    {
+      "name": "INVERT_IN",
+      "type": "double"
+    },
+    {
+      "name": "INVERT_OUT",
+      "type": "double"
+    },
+    {
+      "name": "DIP_IN",
+      "type": "double"
+    },
+    {
+      "name": "DIP_OUT",
+      "type": "double"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "string"
+    },
+    {
+      "name": "RuleID",
+      "type": "int32"
+    },
+    {
+      "name": "Comments",
+      "type": "string"
+    },
+    {
+      "name": "link",
+      "type": "string"
+    },
+    {
+      "name": "PROJECT",
+      "type": "string"
+    },
+    {
+      "name": "OWNERSHIP",
+      "type": "string"
+    },
+    {
+      "name": "DATEINSTALLED",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "InvertNum",
+      "type": "int32"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "string"
+    },
+    {
+      "name": "STATUS",
+      "type": "string"
+    },
+    {
+      "name": "INVESTIGATE",
+      "type": "string"
+    },
+    {
+      "name": "CONDITION",
+      "type": "int32"
+    },
+    {
+      "name": "CRITICALITY",
+      "type": "int32"
+    },
+    {
+      "name": "Cond_Age",
+      "type": "int16"
+    },
+    {
+      "name": "Cond_Inspection",
+      "type": "int16"
+    },
+    {
+      "name": "Cond_Material",
+      "type": "int16"
+    },
+    {
+      "name": "Crit_Size",
+      "type": "int16"
+    },
+    {
+      "name": "Crit_Loc",
+      "type": "int16"
+    },
+    {
+      "name": "Crit_Irr",
+      "type": "int16"
+    },
+    {
+      "name": "Total_Score",
+      "type": "int16"
+    },
+    {
+      "name": "InspDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "PipeCond",
+      "type": "string"
+    },
+    {
+      "name": "MaintRating",
+      "type": "string"
+    },
+    {
+      "name": "MaintSched",
+      "type": "string"
+    },
+    {
+      "name": "InspectionZone",
+      "type": "int16"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "PIPE_SHAPE",
+      "type": "string"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "IrrigationLine",
+      "type": "string"
+    },
+    {
+      "name": "CUES_SCORE",
+      "type": "double"
+    },
+    {
+      "name": "CUES_ADJ_SCORE",
+      "type": "double"
+    },
+    {
+      "name": "VideoDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "AssetStatus",
+      "type": "string"
+    },
+    {
+      "name": "VerifiedDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "VerifiedBy",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 19492,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "storm-drain-pipes"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.849399,
+    40.5756374,
+    7
+  ]
+}

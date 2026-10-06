@@ -1,0 +1,398 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "trails",
+  "title": "Trails",
+  "description": "Trails in Sandy City, Utah area. 1,127 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.924048,
+          40.482076,
+          -111.716849,
+          40.640341
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Parks and Recreation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Trails README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Trails agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Trails/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trails/trails.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "trails"
+      ],
+      "title": "Trails vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trails/trails.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Trails (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 555797,
+      "file:checksum": "1220c09f788eb649119bcaf830ed417dfa3226cd5f3169aacccfa93f622efa89e2e3"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trails/trails.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Trails (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 522933,
+      "file:checksum": "12209d1b6f451e7354246e535eb3ba1181748ce32218a5a3ef05a770d5f9a9cff291"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 388,
+      "file:checksum": "1220643742792627c9169a478b009d8e00c4de699e4dca506077143ba8f7955c7b7a"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Trails README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2419,
+      "file:checksum": "12206a6faba1a210328bf0048866a51ea5a6a81dbda21c7b9863ca0653c92b84768f"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Trails agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3161,
+      "file:checksum": "1220f089031c8dd126db4cab242e8d497ca578352517f1f6c12c3183ac6ae3633d31"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "USAGE_",
+      "type": "string"
+    },
+    {
+      "name": "TrailID",
+      "type": "int32"
+    },
+    {
+      "name": "SystemName",
+      "type": "string"
+    },
+    {
+      "name": "SharedName",
+      "type": "string"
+    },
+    {
+      "name": "SystemType",
+      "type": "string"
+    },
+    {
+      "name": "ParkID",
+      "type": "string"
+    },
+    {
+      "name": "Park_ID",
+      "type": "double"
+    },
+    {
+      "name": "CityMuni",
+      "type": "string"
+    },
+    {
+      "name": "County",
+      "type": "string"
+    },
+    {
+      "name": "State",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "YearOpen",
+      "type": "int32"
+    },
+    {
+      "name": "Trails_JAKE_Temp_Length",
+      "type": "double"
+    },
+    {
+      "name": "L_Units",
+      "type": "string"
+    },
+    {
+      "name": "L_Source",
+      "type": "string"
+    },
+    {
+      "name": "TrlSurface",
+      "type": "string"
+    },
+    {
+      "name": "Width",
+      "type": "int32"
+    },
+    {
+      "name": "W_Units",
+      "type": "string"
+    },
+    {
+      "name": "Rating",
+      "type": "string"
+    },
+    {
+      "name": "DesignUse",
+      "type": "string"
+    },
+    {
+      "name": "UseComment",
+      "type": "string"
+    },
+    {
+      "name": "Accessible",
+      "type": "string"
+    },
+    {
+      "name": "Motorized",
+      "type": "string"
+    },
+    {
+      "name": "Hike",
+      "type": "string"
+    },
+    {
+      "name": "RoadBike",
+      "type": "string"
+    },
+    {
+      "name": "MtnBike",
+      "type": "string"
+    },
+    {
+      "name": "Equestrian",
+      "type": "string"
+    },
+    {
+      "name": "DogSled",
+      "type": "string"
+    },
+    {
+      "name": "Snowmobile",
+      "type": "string"
+    },
+    {
+      "name": "Snowshoe",
+      "type": "string"
+    },
+    {
+      "name": "XCntrySki",
+      "type": "string"
+    },
+    {
+      "name": "WCraft_Mtr",
+      "type": "string"
+    },
+    {
+      "name": "WCraft_Non",
+      "type": "string"
+    },
+    {
+      "name": "Portage",
+      "type": "string"
+    },
+    {
+      "name": "ATV",
+      "type": "string"
+    },
+    {
+      "name": "FourWD",
+      "type": "string"
+    },
+    {
+      "name": "Motorcycle",
+      "type": "string"
+    },
+    {
+      "name": "ParkTrail",
+      "type": "string"
+    },
+    {
+      "name": "OnStreetBike",
+      "type": "string"
+    },
+    {
+      "name": "AgencyName",
+      "type": "string"
+    },
+    {
+      "name": "AgencyType",
+      "type": "string"
+    },
+    {
+      "name": "AcqSource",
+      "type": "string"
+    },
+    {
+      "name": "AcqMethod",
+      "type": "string"
+    },
+    {
+      "name": "AcqComment",
+      "type": "string"
+    },
+    {
+      "name": "LWCFProt",
+      "type": "string"
+    },
+    {
+      "name": "OtherProt",
+      "type": "string"
+    },
+    {
+      "name": "ResPrtCmnt",
+      "type": "string"
+    },
+    {
+      "name": "EditDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "AssetID",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Location",
+      "type": "string"
+    },
+    {
+      "name": "Shape_Length_1",
+      "type": "double"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.STLength()",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 1127,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "trails"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8208088,
+    40.5611785,
+    7
+  ]
+}

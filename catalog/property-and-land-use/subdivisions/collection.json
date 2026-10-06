@@ -1,0 +1,226 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "subdivisions",
+  "title": "Subdivisions",
+  "description": "Subdivisions in Sandy City, Utah. 1,699 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.965277,
+          40.526143,
+          -111.758764,
+          40.622501
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Subdivisions README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Subdivisions agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Subdivisions/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/subdivisions/subdivisions.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "subdivisions"
+      ],
+      "title": "Subdivisions vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/subdivisions/subdivisions.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Subdivisions (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 457344,
+      "file:checksum": "12200554b7570b745ec5f00848a08c59902a2f854f21185e26d8eedce726054cd4cb"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/subdivisions/subdivisions.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Subdivisions (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 776135,
+      "file:checksum": "1220ae922160d9ffdff16261631d0c58d1192b4b766d22182dc86b75a821a46f5293"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 596,
+      "file:checksum": "1220a3e9515f60d639fda7f64c2ca520c257c9df4b81c8dbd7c5e62374a4d714184f"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Subdivisions README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2215,
+      "file:checksum": "1220ea7f4ffea05d58a16f300b33392075e3c734e7573a3f6c6b15228414ae180a2c"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Subdivisions agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2179,
+      "file:checksum": "12200eb86c55f039bedcac25513fe4b33f546299dbef848ee2c300dbe12d8eef56a1"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Full_Name",
+      "type": "string"
+    },
+    {
+      "name": "Lots",
+      "type": "int16"
+    },
+    {
+      "name": "Acres",
+      "type": "double"
+    },
+    {
+      "name": "Year_",
+      "type": "double"
+    },
+    {
+      "name": "Final_Approval",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "SLCO_Rec_Numb",
+      "type": "string"
+    },
+    {
+      "name": "SLCO_Book_Page",
+      "type": "string"
+    },
+    {
+      "name": "Easements_Digitized",
+      "type": "string"
+    },
+    {
+      "name": "Georeferenced_Plat",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 1699,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "subdivisions"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8621304,
+    40.5743842,
+    7
+  ]
+}

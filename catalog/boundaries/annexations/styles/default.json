@@ -1,0 +1,47 @@
+{
+  "version": 8,
+  "name": "Annexation type",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../annexations.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "annexations-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "annexations",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "Type"
+          ],
+          "Annexation",
+          "#4c6ef5",
+          "Boundary Adjustment",
+          "#f08c00",
+          "Incorporation",
+          "#2f9e44",
+          "Correction",
+          "#e03131",
+          "#ced4da"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "annexations-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "annexations",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

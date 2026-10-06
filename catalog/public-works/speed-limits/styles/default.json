@@ -1,0 +1,23 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../speed-limits.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "speed-limits-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "speed-limits",
+      "paint": {
+        "line-color": "#845ef7",
+        "line-width": 1.6,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

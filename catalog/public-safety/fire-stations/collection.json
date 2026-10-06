@@ -1,0 +1,230 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "fire-stations",
+  "title": "Fire Stations",
+  "description": "Fire Stations in and around Sandy City, Utah. 68 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -112.095736,
+          40.480028,
+          -111.580749,
+          40.793871
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Fire Stations README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Fire Stations agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Fire_Stations/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-stations/fire-stations.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "fire-stations"
+      ],
+      "title": "Fire Stations vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-stations/fire-stations.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Fire Stations (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 18623,
+      "file:checksum": "122020f352d277750f168f0d9884ddd5c007726df7c37b17b0c51474a9b0eb87a969"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-stations/fire-stations.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Fire Stations (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 123401,
+      "file:checksum": "1220f3f8443ace96fc0afc7e640b9f312044dc87262d3179b6ebde647bfa3d217c15"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Agency",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 985,
+      "file:checksum": "122016c31bf539f4755d984c61bff0820ddc1b8ddfb95d8f478df5aabed5058202a9"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Fire Stations README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2411,
+      "file:checksum": "1220a7d23af014cec3020ba90224dbbedf8a2169f1003e2b4eff96e4e03710aef54c"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Fire Stations agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2358,
+      "file:checksum": "1220008c4e324fd9f36d9505266b2a3e6d13f46169c86de5ebe87378069cca351a24"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Telephone",
+      "type": "string"
+    },
+    {
+      "name": "Jurisdiction",
+      "type": "string"
+    },
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "Type",
+      "type": "string"
+    },
+    {
+      "name": "Map_Label",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "Fire_Equipment",
+      "type": "string"
+    },
+    {
+      "name": "Medical_Equip",
+      "type": "string"
+    },
+    {
+      "name": "Specialties",
+      "type": "string"
+    },
+    {
+      "name": "Longitude",
+      "type": "double"
+    },
+    {
+      "name": "Latitude",
+      "type": "double"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 68,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "fire-stations"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8391445,
+    40.6368518,
+    7
+  ]
+}

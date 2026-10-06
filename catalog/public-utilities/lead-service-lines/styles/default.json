@@ -1,0 +1,48 @@
+{
+  "version": 8,
+  "name": "Utility-side material",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../lead-service-lines.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "lead-service-lines-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "lead-service-lines",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "utilmaterial"
+          ],
+          "Unknown - Material Unknown",
+          "#868e96",
+          "Unknown - Unlikely Lead",
+          "#ffd43b",
+          "Unknown - Likely Lead",
+          "#fd7e14",
+          "Lead",
+          "#c92a2a",
+          "Galvanized",
+          "#e8590c",
+          "Non-Lead - Copper",
+          "#2f9e44",
+          "Non-Lead - Plastic",
+          "#37b24d",
+          "Non-Lead - Other",
+          "#69db7c",
+          "#ced4da"
+        ],
+        "circle-radius": 2.6,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

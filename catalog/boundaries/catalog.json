@@ -1,0 +1,72 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ],
+  "id": "boundaries",
+  "title": "Boundaries and Districts",
+  "description": "City limits, annexation history, community areas, council districts and voting precincts. 6 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Boundaries and Districts README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Boundaries and Districts agent guide"
+    },
+    {
+      "rel": "child",
+      "href": "./annexations/collection.json",
+      "type": "application/json",
+      "title": "Annexations"
+    },
+    {
+      "rel": "child",
+      "href": "./city-boundary/collection.json",
+      "type": "application/json",
+      "title": "Sandy City Boundary"
+    },
+    {
+      "rel": "child",
+      "href": "./city-council-districts/collection.json",
+      "type": "application/json",
+      "title": "City Council Districts"
+    },
+    {
+      "rel": "child",
+      "href": "./communities/collection.json",
+      "type": "application/json",
+      "title": "Communities"
+    },
+    {
+      "rel": "child",
+      "href": "./slco-city-borders/collection.json",
+      "type": "application/json",
+      "title": "Salt Lake County City Borders"
+    },
+    {
+      "rel": "child",
+      "href": "./voting-precincts/collection.json",
+      "type": "application/json",
+      "title": "Voting Precincts"
+    }
+  ]
+}

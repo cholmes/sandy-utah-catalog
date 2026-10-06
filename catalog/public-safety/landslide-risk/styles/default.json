@@ -1,0 +1,32 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../landslide-risk.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "landslide-risk-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "landslide-risk",
+      "paint": {
+        "fill-color": "#e03131",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "landslide-risk-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "landslide-risk",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

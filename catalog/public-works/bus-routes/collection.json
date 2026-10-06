@@ -1,0 +1,206 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "bus-routes",
+  "title": "UTA Bus Routes",
+  "description": "UTA Bus Routes in Sandy City, Utah. The upstream service publishes no description for this layer. 49 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -112.30397,
+          40.473071,
+          -111.640215,
+          41.237705
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "UTA Bus Routes README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "UTA Bus Routes agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/UTA_Routes/MapServer/5",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-routes/bus-routes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "bus-routes"
+      ],
+      "title": "UTA Bus Routes vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-routes/bus-routes.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "UTA Bus Routes (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 297778,
+      "file:checksum": "1220e50d33da45a970ba3169ef5147d4f3ad0c8e26663580aab5b1e56c5bf7afeda7"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-routes/bus-routes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "UTA Bus Routes (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 376180,
+      "file:checksum": "1220071f1726f799e73660600ac8c1975c5dc8d23186962ea2c4bbd9c514dcca42da"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Route type",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 677,
+      "file:checksum": "1220b2ac38c549a3845d50c57ff456b199fe39e3a96c3a154d90f1e0449afb50d831"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "UTA Bus Routes README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2313,
+      "file:checksum": "1220dfd4938f5376615714610ed5008c7ff1691f9348ffb561afcb262d8ad8c208dc"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "UTA Bus Routes agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2137,
+      "file:checksum": "12205f28c2c1dda42657f580b78b65fdb28094ab23b6de2429b910999a257077f60d"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "frequency",
+      "type": "string"
+    },
+    {
+      "name": "routetype",
+      "type": "string"
+    },
+    {
+      "name": "avgbrd",
+      "type": "int32"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "county",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.STLength()",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 49,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "bus-routes"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.9717207,
+    40.855837,
+    7
+  ]
+}

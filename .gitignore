@@ -33,3 +33,6 @@ __pycache__/
 *.pyc
 .venv/
 .ruff_cache/
+
+# Local discovery output from the ArcGIS sweep. Scratch, not published.
+_research/

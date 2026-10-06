@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "zoning",
+  "title": "Zoning Districts",
+  "description": "Sandy Zoning districts for consumption by SLCo. 454 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921268,
+          40.527839,
+          -111.777212,
+          40.61822
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Zoning Districts README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Zoning Districts agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Zoning_Ex/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/zoning/zoning.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "zoning"
+      ],
+      "title": "Zoning Districts vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/zoning/zoning.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Zoning Districts (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 367840,
+      "file:checksum": "1220651c64397f8da336c5a928a347365e0b382457cea61b11f7c76fe2c26b7c14bc"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/zoning/zoning.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Zoning Districts (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 302706,
+      "file:checksum": "12208efe8f2d0cc5eaf219082a9678a35b58e909ce446542100ec3bd3f849cc5070a"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Zoning group",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 2214,
+      "file:checksum": "1220a44680973f63e557d19ba0f02e93efdb40fa406463e29bacad5212356c1d0a75"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Zoning Districts README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2519,
+      "file:checksum": "1220f271ff1ec8d3ac5561b0fe67a0b656fb2536d1bfa3c6562bbc0370b442bdaaba"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Zoning Districts agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2337,
+      "file:checksum": "1220ca3079c3eee661b7da134e0fb51e80e2660a2ffa532554a84156b39725b170cf"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "ZONE",
+      "type": "string"
+    },
+    {
+      "name": "ZONE_ACREA",
+      "type": "double"
+    },
+    {
+      "name": "LEGEND_COD",
+      "type": "string"
+    },
+    {
+      "name": "SD_ZONE",
+      "type": "string"
+    },
+    {
+      "name": "NAME",
+      "type": "string"
+    },
+    {
+      "name": "Definition",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "Editor_Date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Zone_Code",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 454,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "zoning"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492919,
+    40.5730368,
+    7
+  ]
+}

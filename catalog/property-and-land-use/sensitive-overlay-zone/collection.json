@@ -1,0 +1,190 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "sensitive-overlay-zone",
+  "title": "Sensitive Area Overlay Zone",
+  "description": "Sensitive Area Overlay Zone in Sandy City, Utah. The upstream service publishes no description for this layer. 34 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.922231,
+          40.488264,
+          -111.757822,
+          40.638489
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sensitive Area Overlay Zone README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sensitive Area Overlay Zone agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Sensitive_Overlay_Zone/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/sensitive-overlay-zone/sensitive-overlay-zone.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "sensitive-overlay-zone"
+      ],
+      "title": "Sensitive Area Overlay Zone vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/sensitive-overlay-zone/sensitive-overlay-zone.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Sensitive Area Overlay Zone (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 54536,
+      "file:checksum": "122043f0b2d842790da297c746916d0bc4650bee31c3599d24fbf0b816fa19d214da"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/sensitive-overlay-zone/sensitive-overlay-zone.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Sensitive Area Overlay Zone (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 64313,
+      "file:checksum": "12200215b307defa59b64bc3ced1f85e73b750dc868ac952aa850c2b31cf9fc24665"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 646,
+      "file:checksum": "1220dca20c5535c290e8b65288ff04f4dbf6218ba92fef6c8786763c57b6a61dfc10"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sensitive Area Overlay Zone README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2481,
+      "file:checksum": "12204afd83c56f6ef562271ba75be16d7b3b54405380eda620e010b660c1ffbf9d3a"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sensitive Area Overlay Zone agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2005,
+      "file:checksum": "1220015af770daf436e9b152361e3fe94026646cb22f48073d59a0cc7ae4b9a36e12"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 34,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "sensitive-overlay-zone"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8399827,
+    40.5634894,
+    7
+  ]
+}

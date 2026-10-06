@@ -1,0 +1,242 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "annexations",
+  "title": "Annexations",
+  "description": "Annexations in Sandy City, Utah. 521 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921233,
+          40.527839,
+          -111.777213,
+          40.61822
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Boundaries and Districts"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Annexations README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Annexations agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Annexations/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/annexations/annexations.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "annexations"
+      ],
+      "title": "Annexations vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/annexations/annexations.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Annexations (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 136210,
+      "file:checksum": "1220ea9fa155c8c33e36880c4c533e27b105a855fa14d8aafa9e5a29bb325a4453a5"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/annexations/annexations.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Annexations (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 406700,
+      "file:checksum": "122012e703be6fa3c34ef1ff963724e1dffee0c96e7c2f02e5a056a85762f7839e8c"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Annexation type",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 895,
+      "file:checksum": "1220323e67db694b974b82dad7d58db1126369308c7b3f02ce714d61ba875a0b95df"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Annexations README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2165,
+      "file:checksum": "122067f5a86eea7105450698f49abc8228bbad02ccc539c75daff0b968a1b01df9e1"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Annexations agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2447,
+      "file:checksum": "1220cb5f9c93ad182e91ae81455d0f528148d402c89827c74f8c41427db95a4c487b"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Year",
+      "type": "double"
+    },
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "Type",
+      "type": "string"
+    },
+    {
+      "name": "Governing_Jurisdiction",
+      "type": "string"
+    },
+    {
+      "name": "Old_Jurisdiction",
+      "type": "string"
+    },
+    {
+      "name": "Effective_Date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Acres",
+      "type": "double"
+    },
+    {
+      "name": "SLCO_Map_Record_Numb",
+      "type": "string"
+    },
+    {
+      "name": "SLCO_Map_Book_Page",
+      "type": "string"
+    },
+    {
+      "name": "SLCO_Ord_Record_Numb",
+      "type": "string"
+    },
+    {
+      "name": "SLCO_Ord_Book_Page",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Eff_Date_Notes",
+      "type": "string"
+    },
+    {
+      "name": "Sandy_Ord_Num",
+      "type": "string"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 521,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "annexations"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492744,
+    40.5730367,
+    7
+  ]
+}

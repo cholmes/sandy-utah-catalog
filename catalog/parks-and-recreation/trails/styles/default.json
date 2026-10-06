@@ -1,0 +1,23 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../trails.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "trails-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "trails",
+      "paint": {
+        "line-color": "#2f9e44",
+        "line-width": 1.6,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

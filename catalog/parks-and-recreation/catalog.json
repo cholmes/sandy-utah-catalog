@@ -1,0 +1,72 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ],
+  "id": "parks-and-recreation",
+  "title": "Parks and Recreation",
+  "description": "Parks, trails, trailheads, golf courses, the city cemetery and the public tree inventory. 6 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Parks and Recreation README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Parks and Recreation agent guide"
+    },
+    {
+      "rel": "child",
+      "href": "./cemetery-graves/collection.json",
+      "type": "application/json",
+      "title": "Sandy City Cemetery Graves"
+    },
+    {
+      "rel": "child",
+      "href": "./golf-courses/collection.json",
+      "type": "application/json",
+      "title": "Golf Courses"
+    },
+    {
+      "rel": "child",
+      "href": "./parks/collection.json",
+      "type": "application/json",
+      "title": "Parks"
+    },
+    {
+      "rel": "child",
+      "href": "./street-trees/collection.json",
+      "type": "application/json",
+      "title": "Street and Park Trees"
+    },
+    {
+      "rel": "child",
+      "href": "./trailheads/collection.json",
+      "type": "application/json",
+      "title": "Trailheads"
+    },
+    {
+      "rel": "child",
+      "href": "./trails/collection.json",
+      "type": "application/json",
+      "title": "Trails"
+    }
+  ]
+}

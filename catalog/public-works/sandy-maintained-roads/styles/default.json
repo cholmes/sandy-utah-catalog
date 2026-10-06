@@ -1,0 +1,23 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../sandy-maintained-roads.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "sandy-maintained-roads-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "sandy-maintained-roads",
+      "paint": {
+        "line-color": "#845ef7",
+        "line-width": 1.6,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

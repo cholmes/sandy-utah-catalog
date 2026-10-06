@@ -1,0 +1,78 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ],
+  "id": "public-utilities",
+  "title": "Public Utilities",
+  "description": "Water distribution, sewer and storm drain networks, street lights, streams and the lead service line inventory. 7 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Public Utilities README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Public Utilities agent guide"
+    },
+    {
+      "rel": "child",
+      "href": "./fire-hydrants/collection.json",
+      "type": "application/json",
+      "title": "Fire Hydrants"
+    },
+    {
+      "rel": "child",
+      "href": "./lead-service-lines/collection.json",
+      "type": "application/json",
+      "title": "Water Service Line Material Inventory"
+    },
+    {
+      "rel": "child",
+      "href": "./sewer-mains/collection.json",
+      "type": "application/json",
+      "title": "Sewer Mains"
+    },
+    {
+      "rel": "child",
+      "href": "./storm-drain-pipes/collection.json",
+      "type": "application/json",
+      "title": "Storm Drain Pipes"
+    },
+    {
+      "rel": "child",
+      "href": "./streams/collection.json",
+      "type": "application/json",
+      "title": "Streams"
+    },
+    {
+      "rel": "child",
+      "href": "./street-lights/collection.json",
+      "type": "application/json",
+      "title": "Street Lights"
+    },
+    {
+      "rel": "child",
+      "href": "./water-distribution-mains/collection.json",
+      "type": "application/json",
+      "title": "Water Distribution Mains"
+    }
+  ]
+}

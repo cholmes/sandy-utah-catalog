@@ -1,0 +1,32 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../fault-zones.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "fault-zones-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "fault-zones",
+      "paint": {
+        "fill-color": "#e03131",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "fault-zones-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "fault-zones",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

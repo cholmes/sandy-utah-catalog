@@ -1,0 +1,226 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "fire-subdistricts",
+  "title": "Fire Dispatch Subdistricts",
+  "description": "Fire subdistricts in Sandy City, Utah. 39 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921268,
+          40.527839,
+          -111.777213,
+          40.618071
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Fire Dispatch Subdistricts README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Fire Dispatch Subdistricts agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Fire_Subdistricts/MapServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-subdistricts/fire-subdistricts.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "fire-subdistricts"
+      ],
+      "title": "Fire Dispatch Subdistricts vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-subdistricts/fire-subdistricts.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Fire Dispatch Subdistricts (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 84582,
+      "file:checksum": "122013cdcd1da124a73da9bee88a805c469bb41eacdb9680467bb398797550388a69"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-subdistricts/fire-subdistricts.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Fire Dispatch Subdistricts (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 90627,
+      "file:checksum": "12207175786be9d95f52937af5f4a1e21687a15cab78059ab1b876b8ea1ce33d5360"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 621,
+      "file:checksum": "1220ccb4712cc828b27738eb98013d36d88c307a1f099acf4e4b324954398440264d"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Fire Dispatch Subdistricts README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2532,
+      "file:checksum": "12206af705035615476696d3bd5a550e9d3879d4b74fb32acc1d40f7351b88defd21"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Fire Dispatch Subdistricts agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2194,
+      "file:checksum": "12207be30e5576d306af83c921a399114467e19b6bb7e39332942e6eb3320dc7c714"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "CITY",
+      "type": "string"
+    },
+    {
+      "name": "CITY_CODE",
+      "type": "string"
+    },
+    {
+      "name": "FireZoneID",
+      "type": "string"
+    },
+    {
+      "name": "Agency",
+      "type": "string"
+    },
+    {
+      "name": "ID",
+      "type": "int32"
+    },
+    {
+      "name": "Stack_2_Deep",
+      "type": "string"
+    },
+    {
+      "name": "Stack_3_Deep",
+      "type": "string"
+    },
+    {
+      "name": "Stack_4_Deep",
+      "type": "string"
+    },
+    {
+      "name": "Stack_5_Deep",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.STArea()",
+      "type": "double"
+    },
+    {
+      "name": "Shape.STLength()",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 39,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "fire-subdistricts"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492925,
+    40.5729623,
+    7
+  ]
+}

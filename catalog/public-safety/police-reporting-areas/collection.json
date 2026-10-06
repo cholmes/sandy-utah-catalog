@@ -1,0 +1,230 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "police-reporting-areas",
+  "title": "Police Reporting Areas",
+  "description": "Police reporting areas in Sandy City, Utah. 439 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T19:01:44Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-portolan/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921268,
+          40.527841,
+          -111.777212,
+          40.61822
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Police Reporting Areas README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Police Reporting Areas agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Reporting_Areas/MapServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/police-reporting-areas/police-reporting-areas.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "police-reporting-areas"
+      ],
+      "title": "Police Reporting Areas vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/police-reporting-areas/police-reporting-areas.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Police Reporting Areas (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 200770,
+      "file:checksum": "1220fb57a0adbe33af2fef2de0540dacafc50126407a1c44d4b23a148f11fdae970f"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/police-reporting-areas/police-reporting-areas.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Police Reporting Areas (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 299854,
+      "file:checksum": "1220be45089f16924f354629fb0057e1ca7d59ce15978191929a8c5d729773e9c17d"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 646,
+      "file:checksum": "12202f66008835ab99de870c14dd243820764ad465e1fd5a6a4371831fc24156846e"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Police Reporting Areas README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2314,
+      "file:checksum": "12201e405f8aa82b68b72abf633924edeebd3144ba7c39cd852bbda201865de28bb5"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Police Reporting Areas agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2220,
+      "file:checksum": "1220d9f3e11fc60f15d5a204db10e73379e4a0743ce9d9d8685d98e8396044eddff1"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "OLDAREA",
+      "type": "string"
+    },
+    {
+      "name": "CITY",
+      "type": "string"
+    },
+    {
+      "name": "CITYDESCR",
+      "type": "string"
+    },
+    {
+      "name": "DISP_AREA",
+      "type": "string"
+    },
+    {
+      "name": "DISP_AREA_",
+      "type": "string"
+    },
+    {
+      "name": "TYPE",
+      "type": "string"
+    },
+    {
+      "name": "TYPE_DESC",
+      "type": "string"
+    },
+    {
+      "name": "STATUS",
+      "type": "string"
+    },
+    {
+      "name": "REPT_AREA",
+      "type": "string"
+    },
+    {
+      "name": "ACRES",
+      "type": "double"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 439,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "police-reporting-areas"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492919,
+    40.5730378,
+    7
+  ]
+}
