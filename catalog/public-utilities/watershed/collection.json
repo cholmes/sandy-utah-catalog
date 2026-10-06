@@ -9,7 +9,7 @@
   "title": "Watershed",
   "description": "Watershed in Sandy City, Utah. The upstream service publishes no description for this layer. 13 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:51:07Z",
+  "updated": "2026-10-06T21:15:15Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2313,
-      "file:checksum": "122075c042215f201189313cce835ac9d24d2b1795f7f89e82f13b833ec73b575764"
+      "file:checksum": "1220dd76a2018ef20a9b88c578b7b7ef2284edd2e144bd4f275176523a88e335ec39"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2066,
-      "file:checksum": "12203bb6390a7496eac497d282e9af2dffe75e1008fb1f864f028651189c027c3a61"
+      "file:checksum": "12209d473c2df721ccc09d900379f31182c0e6dd6ced93b7eae9fdeac9d60bf51b12"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -155,8 +155,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 38524,
-      "file:checksum": "1220976f37fbbfb5dd8e18ba44fa837912c98ac24008587ab002be8ab7f73491fb3b"
+      "file:size": 274920,
+      "file:checksum": "1220ece485a9f3d58ec40f256980d43fe00fa47840e8343227e887b7097e7fa7c3b2"
     }
   },
   "table:columns": [

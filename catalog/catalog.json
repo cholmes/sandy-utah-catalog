@@ -42,6 +42,12 @@
       "title": "Issue tracker"
     },
     {
+      "rel": "preview",
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Sandy City zoning and trails"
+    },
+    {
       "rel": "child",
       "href": "./boundaries/catalog.json",
       "type": "application/json",

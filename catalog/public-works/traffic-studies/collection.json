@@ -9,7 +9,7 @@
   "title": "Traffic Studies",
   "description": "Traffic Studies in Sandy City, Utah. The upstream service publishes no description for this layer. 150 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:51:07Z",
+  "updated": "2026-10-06T21:15:15Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2354,
-      "file:checksum": "12202caf47103c4d0f183cb4ea12b804a089119c41d3cbafa805dacf009ee2f7fbd4"
+      "file:checksum": "122058220b941742f29a611d957b2a27618368a94df5a3b875887f90c0afdd6952f0"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2063,
-      "file:checksum": "122050cccc2b40ca7c4fd1bf3a30b432bb0d179e52b7d08e43fa012cbaab55f2aad3"
+      "file:checksum": "1220ab05df11cca92df8d1d6d6c429a7bb374a7b2d3f012562f6b383deb840db9c12"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -155,8 +155,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 21737,
-      "file:checksum": "1220e6314f89454705c2634b6ae9749dffca40d4898c16eb0a8e3d74b116641d7037"
+      "file:size": 411872,
+      "file:checksum": "1220aad1e4821b7b3b9455fa7889f43f2996b11a34b16267ee869ad100c63829f8c1"
     }
   },
   "table:columns": [

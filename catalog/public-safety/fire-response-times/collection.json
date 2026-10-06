@@ -9,7 +9,7 @@
   "title": "Approximate Fire Response Times",
   "description": "Response Times for fire stations in and arouind Sandy City, Utah. 6 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:51:07Z",
+  "updated": "2026-10-06T21:15:15Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2317,
-      "file:checksum": "12206f73cdad474c8b6e2b201b87c7bd12f8af43784b86b89a8738ebb10dfb3fa5e8"
+      "file:checksum": "12207bc956f95c0cb4214a87536c8ccce64676a27b2ce951c19160d12ab050beb15d"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2268,
-      "file:checksum": "1220836c15968c6a62761f0ecab56807076346f4c6dc5eecc3892d5e05948806274a"
+      "file:checksum": "1220012b5a58a9366b127577af90dfb5795a95d920e1f318879125cafe63505878f0"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -155,8 +155,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 142582,
-      "file:checksum": "12201d75ca382e86e4ca5df4ff1ddefecdf9cb12b56bcdb8ccec13c62ecd5a7cad34"
+      "file:size": 329291,
+      "file:checksum": "12204fd6a76a969652cd6eaf3d37f84075c4ae8d5e0f5d6426adcc86cf923274dd92"
     }
   },
   "table:columns": [

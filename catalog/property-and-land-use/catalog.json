@@ -33,6 +33,12 @@
       "title": "Property and Land Use agent guide"
     },
     {
+      "rel": "preview",
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Property and Land Use thumbnail"
+    },
+    {
       "rel": "child",
       "href": "./address-points/collection.json",
       "type": "application/json",

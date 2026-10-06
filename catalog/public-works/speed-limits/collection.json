@@ -9,7 +9,7 @@
   "title": "Speed Limits",
   "description": "Speed Limits in Sandy City, Utah. The upstream service publishes no description for this layer. 5,072 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:51:07Z",
+  "updated": "2026-10-06T21:15:15Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2594,
-      "file:checksum": "1220e93985db5420108a95dbc88253310a3709e47bf94e1c6b3e958a2aeb2fdab2f0"
+      "file:checksum": "12204b41282137dcea0e2de99a64793f7d0967f5c1b2fb06e503584ecc7a6c3ec379"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 4251,
-      "file:checksum": "1220eef8c23244334213e6d1c8ad779774e69e3dacfbcdecc0260c50c05a489e860b"
+      "file:checksum": "1220206a0cf84c8e6d010967dfe0a253a045c302493def419e12796a372b0f434699"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -155,8 +155,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 191385,
-      "file:checksum": "12205080c857f3e761cdb476acf6d553b95bd0293e0f2973e6cb192bd7d23beff234"
+      "file:size": 526706,
+      "file:checksum": "12201764ea75e07305a31995270d9580f69d64bac4be66184d72826992581ff6fb02"
     }
   },
   "table:columns": [

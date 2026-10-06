@@ -9,7 +9,7 @@
   "title": "Zoning Districts",
   "description": "Sandy Zoning districts for consumption by SLCo. 454 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:51:07Z",
+  "updated": "2026-10-06T21:15:15Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2525,
-      "file:checksum": "1220298dcf21300de7d76eb31e71781975219ee355b49da9f3409c371e15fe1b8eef"
+      "file:checksum": "12209aefaa12a48e6fca045cefa82152c6caf9a8731b1dcf7536f4a245ea9ebe141a"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2354,
-      "file:checksum": "122095f9f4c6c54a5495893e59643f9b31f1331e232905e1fa2c0a03224add41de5d"
+      "file:checksum": "1220e18e7c107fded3fa74b8a396daa6202d462dc11b07b753d3b6c6d10c8b633766"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -155,8 +155,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 96938,
-      "file:checksum": "12200596516be89a888323278d1506bdee0a9993d9d368d7fd3b46f6aedf857a2f3a"
+      "file:size": 435095,
+      "file:checksum": "12204e10c105265703b89e534fdd26ce81002432d7abd7d04fd0c6d2558413226077"
     }
   },
   "table:columns": [

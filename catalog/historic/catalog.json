@@ -33,6 +33,12 @@
       "title": "Historic Sandy agent guide"
     },
     {
+      "rel": "preview",
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Historic Sandy thumbnail"
+    },
+    {
       "rel": "child",
       "href": "./contributing-structures/collection.json",
       "type": "application/json",

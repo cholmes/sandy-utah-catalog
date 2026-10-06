@@ -33,6 +33,12 @@
       "title": "Parks and Recreation agent guide"
     },
     {
+      "rel": "preview",
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Parks and Recreation thumbnail"
+    },
+    {
       "rel": "child",
       "href": "./cemetery-graves/collection.json",
       "type": "application/json",

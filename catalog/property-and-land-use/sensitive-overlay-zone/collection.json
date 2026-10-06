@@ -9,7 +9,7 @@
   "title": "Sensitive Area Overlay Zone",
   "description": "Sensitive Area Overlay Zone in Sandy City, Utah. The upstream service publishes no description for this layer. 34 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:51:07Z",
+  "updated": "2026-10-06T21:15:15Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2487,
-      "file:checksum": "12203af5f9c7c960a71373cf955d66ceed0d3d4730c2bc9295de5f0eb7be0a01b4d0"
+      "file:checksum": "12201f378e26593ba7cc4f282f8f1755e17ae71f1029946c5e70ff6bbf62728b6d34"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2018,
-      "file:checksum": "122055b83e821dc83481d7cee72d407a79e014cd636d8ec1b2cd1ce117dadefc5dc5"
+      "file:checksum": "1220003af920bae3440aec1e4258be5a1c8df352c38b1cc08cda1d86339563a07cd4"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -155,8 +155,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 59775,
-      "file:checksum": "122000242f1889f80024a210721a733c291d1bc06ead910ed49b1dd514894ea873c0"
+      "file:size": 241602,
+      "file:checksum": "12206be0f7f37d39389c1ec2c07600b1dd62929a43300be731df2c82916bfa797382"
     }
   },
   "table:columns": [

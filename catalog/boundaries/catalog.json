@@ -33,6 +33,12 @@
       "title": "Boundaries and Districts agent guide"
     },
     {
+      "rel": "preview",
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Boundaries and Districts thumbnail"
+    },
+    {
       "rel": "child",
       "href": "./annexations/collection.json",
       "type": "application/json",

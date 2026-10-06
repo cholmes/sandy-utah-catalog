@@ -9,7 +9,7 @@
   "title": "Trails",
   "description": "Trails in Sandy City, Utah area. 1,127 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:51:07Z",
+  "updated": "2026-10-06T21:15:15Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2425,
-      "file:checksum": "1220a855f38e2358c75b2eee7174681e9ba1c810b7a38893633c83845e74c01052d1"
+      "file:checksum": "12207c50b8946b9dc37186588bfa9349a883c857318a716a088449b72793d1004acc"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3174,
-      "file:checksum": "12203c8a0287632a9096fe5512f1cc51a0e4f70a9f79d57aa21460bd7ec69c06b89d"
+      "file:checksum": "1220197a2b2d98e6debf50fe7ac4ae50fa93fa7fbadad4da50ecfefe585111ee3c6f"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -155,8 +155,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 144664,
-      "file:checksum": "12201e439e054865d74e52deb797fe8ebd59a358e5a34eb1214f0f1e64c5cfe5ea6e"
+      "file:size": 509629,
+      "file:checksum": "122080ce76b7f4a0b5b83f027e64d61c041a640b8ebdb659af57ed62e1e772e52086"
     }
   },
   "table:columns": [

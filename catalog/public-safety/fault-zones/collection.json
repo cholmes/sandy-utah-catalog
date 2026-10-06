@@ -9,7 +9,7 @@
   "title": "Earthquake Fault Zones",
   "description": "Map of hazards in Sandy City, Utah. 14 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:51:07Z",
+  "updated": "2026-10-06T21:15:15Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2210,
-      "file:checksum": "122022a41dfc219448fe628269f6a5a0f0ef472f73bdbe1783bc4c4e68f8b98cb11a"
+      "file:checksum": "12204ad3ff2da1729ca2658bc61844257dcb0968d3837d6c58d3c02033d342d862c1"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 1951,
-      "file:checksum": "12202c1fb91369f409a896192a60658471b09f8e434301aea47569937a28f008a819"
+      "file:checksum": "1220c7aad7dad154326c0a498fa62975c3e3e43034e29ecd9bc775019f3db2ba8ffa"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -155,8 +155,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 36716,
-      "file:checksum": "12208789519501f1bf6ae1ed78635643d57b8828b80246b2d337667513cf91c05ddb"
+      "file:size": 250103,
+      "file:checksum": "1220ee89a04e517e5437ee2b199bbb384ecfcf73d0a1229f524b08ec6e211bf82a00"
     }
   },
   "table:columns": [
