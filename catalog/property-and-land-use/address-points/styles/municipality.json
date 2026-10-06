@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "Municipality",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../address-points.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "address-points-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "address-points",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "Municipality"
+          ],
+          "Sandy",
+          "#1c7ed6",
+          "Draper",
+          "#e8590c",
+          "Unincorporated - Internal",
+          "#868e96",
+          "Midvale",
+          "#2f9e44",
+          "Cottonwood Heights",
+          "#862e9c",
+          "South Jordan",
+          "#d6336c",
+          "Murray",
+          "#0ca678",
+          "#ced4da"
+        ],
+        "circle-radius": 2.2,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

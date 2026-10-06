@@ -1,0 +1,50 @@
+{
+  "version": 8,
+  "name": "Parcel size (acres)",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../parcels.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "parcels-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "parcels",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "to-number",
+            [
+              "get",
+              "parcel_acres"
+            ]
+          ],
+          "#fff5d6",
+          0.2,
+          "#ffd43b",
+          0.5,
+          "#fab005",
+          2,
+          "#f76707",
+          10,
+          "#c92a2a"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "parcels-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "parcels",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.1
+      }
+    }
+  ]
+}

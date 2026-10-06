@@ -1,0 +1,48 @@
+{
+  "version": 8,
+  "name": "Veteran burial",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../cemetery-graves.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "cemetery-graves-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "cemetery-graves",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "to-string",
+            [
+              "get",
+              "Veteran"
+            ]
+          ],
+          "1",
+          "#c92a2a",
+          "0",
+          "#adb5bd",
+          "-1",
+          "#e9ecef",
+          "#ced4da"
+        ],
+        "fill-opacity": 0.9
+      }
+    },
+    {
+      "id": "cemetery-graves-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "cemetery-graves",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.2
+      }
+    }
+  ]
+}

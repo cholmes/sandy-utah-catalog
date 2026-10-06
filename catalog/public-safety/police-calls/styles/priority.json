@@ -1,0 +1,47 @@
+{
+  "version": 8,
+  "name": "Call priority",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../police-calls.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "police-calls-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "police-calls",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "to-string",
+            [
+              "get",
+              "priority"
+            ]
+          ],
+          "1",
+          "#c92a2a",
+          "2",
+          "#e8590c",
+          "3",
+          "#f59f00",
+          "4",
+          "#74c0fc",
+          "5",
+          "#1c7ed6",
+          "9",
+          "#adb5bd",
+          "#ced4da"
+        ],
+        "circle-radius": 2.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

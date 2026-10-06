@@ -9,7 +9,7 @@
   "title": "Crime Incidents",
   "description": "Crime Incidents in Sandy City, Utah. The upstream service publishes no description for this layer. 29,572 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 877,
       "file:checksum": "1220082296c99e01316a7c23df41a191c7ebd8c13aa19b5cb31eb4b8b18e5627f91b"
     },
+    "style-year": {
+      "href": "./styles/year.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Year",
+      "roles": [
+        "style"
+      ],
+      "file:size": 819,
+      "file:checksum": "1220acf212f60138044955f6cb0d7bf14e0d0602d33ca24822ef96a6c9afb678e760"
+    },
+    "style-day-of-week": {
+      "href": "./styles/day-of-week.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Day of week",
+      "roles": [
+        "style"
+      ],
+      "file:size": 914,
+      "file:checksum": "12201dfd9dd890de95cd3372bc3e15f57aa6359b5751fea09e8bd0bea1871d0ea147"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2870,
-      "file:checksum": "1220c84e2ad8036a3b89bcd8aa14f64068831e26a3833693ad8c12876fba6bd865f1"
+      "file:checksum": "1220c632ec7ffc9dfb12894ca06e3dabd614f6d55f05437a60c3ca8e8b36113f6cec"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 3132,
-      "file:checksum": "1220d0c20720730f22067c9730d46f9490515d1a1f6520c4ec7a9c06ea8a863bd5c6"
+      "file:checksum": "12205520ad46782ffb018b1c2febcfc2e4a941de56a1e4f4a27bbaa811000f13fb30"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

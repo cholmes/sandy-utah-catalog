@@ -1,0 +1,36 @@
+{
+  "version": 8,
+  "name": "Sheeting material",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../traffic-signs.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "traffic-signs-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "traffic-signs",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "MATERIAL"
+          ],
+          "High Intensity",
+          "#1c7ed6",
+          "Engineering Grade",
+          "#f59f00",
+          "#ced4da"
+        ],
+        "circle-radius": 3.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

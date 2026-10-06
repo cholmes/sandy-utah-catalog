@@ -1,0 +1,42 @@
+{
+  "version": 8,
+  "name": "Lamp type",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../street-lights.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "street-lights-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "street-lights",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "LAMP_TYPE"
+          ],
+          "CORN COB LED",
+          "#f59f00",
+          "LED",
+          "#1c7ed6",
+          "IND",
+          "#862e9c",
+          "Induction",
+          "#ae3ec9",
+          "CORN COB",
+          "#e8590c",
+          "#ced4da"
+        ],
+        "circle-radius": 3.2,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

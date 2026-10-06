@@ -1,0 +1,47 @@
+{
+  "version": 8,
+  "name": "Dispatch area",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../police-reporting-areas.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "police-reporting-areas-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "police-reporting-areas",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "DISP_AREA_"
+          ],
+          "Sandy",
+          "#1c7ed6",
+          "Alta Canyon",
+          "#2f9e44",
+          "Crescent",
+          "#e8590c",
+          "Bell Canyon",
+          "#ae3ec9",
+          "#ced4da"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "police-reporting-areas-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "police-reporting-areas",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.2
+      }
+    }
+  ]
+}

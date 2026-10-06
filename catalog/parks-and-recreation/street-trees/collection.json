@@ -9,7 +9,7 @@
   "title": "Street and Park Trees",
   "description": "An inventory of trees in Sandy City, Utah. The same tree inventory is published twice by the city, as `Parks/Grounds_and_Forestry` and as `Pub_Works/ParksDeptTrees`, both reporting the same feature count. This mirrors the Parks copy. 7,966 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2804,
-      "file:checksum": "12208a6d972ed4ab3ad61dae4744a6b1090e55bf586618eadd8556ad04b7a8527d3f"
+      "file:checksum": "12202387aa6c16f244d7b342fd1431e93c84a1f6987cb62f75e09e0888729d5f2d0c"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2512,
-      "file:checksum": "1220cd5193769770893ed0e1090e4cbe0ac94aed62d0d5f64f34ae74524fcc2f4a49"
+      "file:checksum": "122046bd6cf5e713c3ac3dc3393968417189fd0737191b4ee318046e250df832c2a2"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

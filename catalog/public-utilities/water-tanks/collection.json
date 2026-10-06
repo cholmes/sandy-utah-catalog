@@ -9,7 +9,7 @@
   "title": "Water Tanks",
   "description": "Sandy Water Tank Points. 9 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2146,
-      "file:checksum": "1220c8cdac39770e623a701c7c1fd64af0e841b82b08cd42ed792b815715dac4d20f"
+      "file:checksum": "1220c783b9c8503cbb2aeeb1025a7682c1488d43a3c50c845e56f9f72d995829eeb7"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3079,
-      "file:checksum": "12209dbec9e606da24611808d17b5b9f77224957c759740df396f73faf96fdd15f20"
+      "file:checksum": "1220aab0a4a30497b4bb41d3b0474a4ff8fcb76ed8c50871a8c12a92cdd7396bcd16"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

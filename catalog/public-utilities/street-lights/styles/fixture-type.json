@@ -1,0 +1,42 @@
+{
+  "version": 8,
+  "name": "Fixture type",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../street-lights.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "street-lights-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "street-lights",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "FIXTURE_TY"
+          ],
+          "Acorn",
+          "#f59f00",
+          "Post Top",
+          "#1c7ed6",
+          "Cobra",
+          "#2f9e44",
+          "Shoe Box",
+          "#862e9c",
+          "Granville",
+          "#e8590c",
+          "#ced4da"
+        ],
+        "circle-radius": 3.2,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

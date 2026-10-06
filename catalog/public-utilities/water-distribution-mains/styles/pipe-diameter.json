@@ -1,0 +1,41 @@
+{
+  "version": 8,
+  "name": "Pipe diameter (inches)",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../water-distribution-mains.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "water-distribution-mains-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "water-distribution-mains",
+      "paint": {
+        "line-color": [
+          "step",
+          [
+            "to-number",
+            [
+              "get",
+              "DIAMETER"
+            ]
+          ],
+          "#c5f6fa",
+          6,
+          "#66d9e8",
+          10,
+          "#22b8cf",
+          16,
+          "#1098ad",
+          24,
+          "#0b7285"
+        ],
+        "line-width": 1.6,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

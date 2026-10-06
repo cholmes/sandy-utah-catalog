@@ -9,7 +9,7 @@
   "title": "Water Distribution Mains",
   "description": "Water Distribution Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 15,249 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 679,
       "file:checksum": "1220c47ecb3bc277759cd210d57c459c9c80616c845f576eae116a7f1f948ddc3e71"
     },
+    "style-pipe-material": {
+      "href": "./styles/pipe-material.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Pipe material",
+      "roles": [
+        "style"
+      ],
+      "file:size": 869,
+      "file:checksum": "1220baab287fe4bf85606f20c53235e3a74f11ef770c6fe924092ca11ab1869991cc"
+    },
+    "style-pipe-diameter": {
+      "href": "./styles/pipe-diameter.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Pipe diameter (inches)",
+      "roles": [
+        "style"
+      ],
+      "file:size": 760,
+      "file:checksum": "12200e6333fd3475c4138df08401bf6034fedc23a0cdf4b1dbbbfb57fac79b8851a5"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2733,
-      "file:checksum": "1220ed14246a47e2ea7fff6a02fe367093b22de02640f8a632c79dc74c91204a87ed"
+      "file:checksum": "12200e2330b80ac1131736d09c80c3e1367f676ff3c6d1fd3781ca874715cd6da372"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 3650,
-      "file:checksum": "1220a257437e7f2d198abbd51c5d9ac66b1de4d04f40b9ac299e3148e01b6c280046"
+      "file:checksum": "1220aab3128f3f8871f169b01a570b55a01e361d43b27aacf5481bff4fb6c78e54d5"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

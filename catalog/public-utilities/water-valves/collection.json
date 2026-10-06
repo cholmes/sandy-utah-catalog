@@ -9,7 +9,7 @@
   "title": "Water Valves",
   "description": "Water Valves in Sandy City, Utah. The upstream service publishes no description for this layer. 8,117 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2340,
-      "file:checksum": "1220eb7a04851a6cbe21d31b6e0a7349b83b66642435eab197fd4d15b25a47d85d5c"
+      "file:checksum": "1220c7a61010be134ac46e8f27625eb25e1324ae0e50cb206fe10dda5c13b8776b31"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 4186,
-      "file:checksum": "1220fdd6dbaa44c9eece73d4b08f36f5e07e91538e06afdeb6d0b38bd3663c673734"
+      "file:checksum": "1220fd8da906856411b512935d86fea4de359fd424cfac6a1f706e2443f52463a6cc"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

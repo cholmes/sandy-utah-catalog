@@ -1,0 +1,43 @@
+{
+  "version": 8,
+  "name": "Year",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../crime-incidents.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "crime-incidents-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "crime-incidents",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "to-string",
+            [
+              "get",
+              "year"
+            ]
+          ],
+          "2023",
+          "#d0ebff",
+          "2024",
+          "#74c0fc",
+          "2025",
+          "#1c7ed6",
+          "2026",
+          "#1864ab",
+          "#ced4da"
+        ],
+        "circle-radius": 2.6,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

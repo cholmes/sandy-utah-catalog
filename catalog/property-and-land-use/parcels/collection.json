@@ -9,7 +9,7 @@
   "title": "Parcels",
   "description": "Parcels in and around Sandy City, Utah as of July, 2022. The service describes itself as current to July 2022, so it lags the county's live parcel fabric by more than three years. 106,087 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Salt Lake County Recorder",
@@ -128,6 +128,36 @@
       "file:size": 571,
       "file:checksum": "12207e4888e2df4f44cc81335019c9d112ad54275e55e3d9f0ac959fe8fc54db6cda"
     },
+    "style-property-type": {
+      "href": "./styles/property-type.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Property type",
+      "roles": [
+        "style"
+      ],
+      "file:size": 913,
+      "file:checksum": "1220a3ed3f6aed1044c87550d717b6444cb618a6efb7b7c177dd94c7f1870618673b"
+    },
+    "style-parcel-size": {
+      "href": "./styles/parcel-size.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Parcel size (acres)",
+      "roles": [
+        "style"
+      ],
+      "file:size": 892,
+      "file:checksum": "1220613cefb1e2fab44a05cfb2680ca14a6b25ba94d8201ac95b22a81bf1fe9d8667"
+    },
+    "style-building-age": {
+      "href": "./styles/building-age.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Year built",
+      "roles": [
+        "style"
+      ],
+      "file:size": 925,
+      "file:checksum": "12207460720b98ea31925390b5b032c634dab701d5ac1c54942959254f9f002d239a"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +166,7 @@
         "metadata"
       ],
       "file:size": 2922,
-      "file:checksum": "122007ac8b05a4e102f4c4b7b3ba2a2319a4fd3ffd2dfc8a8d68f32d95d1c9a407d5"
+      "file:checksum": "1220578e55e1500bc647c11ca8ea1705728adfa0b8b91d69b4e8de0c109a321f76b7"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +176,7 @@
         "metadata"
       ],
       "file:size": 4138,
-      "file:checksum": "122003dc06f8bb421d4a9ccb069beb7524c1f7e2488504d0bf501dcb4f34836825f9"
+      "file:checksum": "1220fd102a7dd984e043da3f236a31b9b10d751c5945e38ec6d69063ab44c61040f4"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

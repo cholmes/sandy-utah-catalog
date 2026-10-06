@@ -1,0 +1,44 @@
+{
+  "version": 8,
+  "name": "Ownership",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../storm-manholes.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "storm-manholes-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "storm-manholes",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "OWNERSHIP"
+          ],
+          "City",
+          "#1c7ed6",
+          "Other City",
+          "#66d9e8",
+          "Private",
+          "#f59f00",
+          "UDOT",
+          "#862e9c",
+          "County",
+          "#2f9e44",
+          "City Facility",
+          "#0ca678",
+          "#ced4da"
+        ],
+        "circle-radius": 3.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

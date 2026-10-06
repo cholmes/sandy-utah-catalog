@@ -9,7 +9,7 @@
   "title": "Fire Dispatch Subdistricts",
   "description": "Fire subdistricts in Sandy City, Utah. 39 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2538,
-      "file:checksum": "1220db095c19e798c1d2f2cb305696ff9f801d9758a4dcd70777a334f84148f4caeb"
+      "file:checksum": "12206ae199edaa0613376c115d7eae8827264f51162783fc84e03b179af739c12a27"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2355,
-      "file:checksum": "1220c15bb8e6109499e315ab2f458e24827875c039f5be2227e9400922e12090646f"
+      "file:checksum": "1220b478f18abd1f51cdd9eb268f2ec783a175926d70f363f54c7062b58c181a8d92"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

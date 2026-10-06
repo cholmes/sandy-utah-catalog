@@ -1,0 +1,52 @@
+{
+  "version": 8,
+  "name": "Year built",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../parcels.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "parcels-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "parcels",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "to-number",
+            [
+              "get",
+              "year_built"
+            ]
+          ],
+          "#e9ecef",
+          1900,
+          "#5f3dc4",
+          1950,
+          "#1c7ed6",
+          1970,
+          "#0ca678",
+          1990,
+          "#ffd43b",
+          2010,
+          "#e8590c"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "parcels-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "parcels",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.1
+      }
+    }
+  ]
+}

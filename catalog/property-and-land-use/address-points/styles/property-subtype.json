@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "Property subtype",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../address-points.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "address-points-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "address-points",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "Prop_Subtype"
+          ],
+          "Single Family",
+          "#ffd43b",
+          "Townhome",
+          "#fab005",
+          "Condominium",
+          "#f76707",
+          "Apartment",
+          "#e8590c",
+          "Duplex",
+          "#f08c00",
+          "Commercial",
+          "#c92a2a",
+          "Land",
+          "#2f9e44",
+          "#ced4da"
+        ],
+        "circle-radius": 2.2,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

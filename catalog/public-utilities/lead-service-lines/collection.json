@@ -9,7 +9,7 @@
   "title": "Water Service Line Material Inventory",
   "description": "Water Service Line Material Inventory in Sandy City, Utah. The upstream service publishes no description for this layer. Published by Sandy City to meet the service line inventory requirement of the US EPA Lead and Copper Rule Revisions. The inventory is incomplete: most lines are still classified Unknown. 26,213 point features, mirrored as GeoParquet in EPSG:2850 (NAD83(HARN) / Utah Central) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 960,
       "file:checksum": "12200c6683c2589942dc5cef29b16e3a5e14cbe199d919247157ced849d2ba4d656b"
     },
+    "style-customer-side": {
+      "href": "./styles/customer-side.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Customer-side material",
+      "roles": [
+        "style"
+      ],
+      "file:size": 910,
+      "file:checksum": "12205bbf20123ae7f059ac57fb79aa49940d8ac4110bc1c90c73ce006fe417d256ee"
+    },
+    "style-line-status": {
+      "href": "./styles/line-status.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Whole-line status",
+      "roles": [
+        "style"
+      ],
+      "file:size": 724,
+      "file:checksum": "1220aa14f7dbed89d5d1660363f063a5c2819a674d155a389d74a7be7addfa407329"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 3560,
-      "file:checksum": "122071afd9da2b1c8b104c7b74a2efa83759f3e9d6857b58d5b12b25ff5f4bff8962"
+      "file:checksum": "12208fb0bd8eeaadce537c677fc038533871405955ba3280f419dcdc0364aa9b054b"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 6760,
-      "file:checksum": "12202705d1af0aa53e62470b71f145b857e35d1ee8784e0c57fa758982665034f669"
+      "file:checksum": "122091d4a516321743ddaeb7a6ab75f041579448005c958dc74e9e89b4a5d0d400e3"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

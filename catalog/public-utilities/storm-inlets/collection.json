@@ -9,7 +9,7 @@
   "title": "Storm Drain Inlets",
   "description": "Storm Drain Inlets in Sandy City, Utah. The upstream service publishes no description for this layer. 12,312 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2483,
-      "file:checksum": "12200811500ce2b67458aac8bc389e4fa7dd42f706bc69200d92a9723b3a20c370d7"
+      "file:checksum": "1220bd60f079eb7139085180ee30fd2a7a0d1db21775428527ba6d4cb3f44c52da2e"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3688,
-      "file:checksum": "1220b4683b2da0f6549d18e419b180b8a187c84afa740742395ee44e00eb85edd6bf"
+      "file:checksum": "122070cb565714b5333199f51ff349e41e292705067ddd1470bc90049377ec9479c4"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

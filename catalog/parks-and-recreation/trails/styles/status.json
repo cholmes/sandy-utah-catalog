@@ -1,0 +1,36 @@
+{
+  "version": 8,
+  "name": "Status",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../trails.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "trails-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "trails",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "Status"
+          ],
+          "Open",
+          "#2f9e44",
+          "Planned",
+          "#f59f00",
+          "Proposed",
+          "#adb5bd",
+          "#ced4da"
+        ],
+        "line-width": 2.0,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

@@ -9,7 +9,7 @@
   "title": "Police Calls for Service",
   "description": "Police Calls for Service in Sandy City, Utah. The upstream service publishes no description for this layer. 185,647 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 803,
       "file:checksum": "12205c28bd8d98513af086aeac34efb1377150a5c36727455c3019359e6eddb8bb66"
     },
+    "style-priority": {
+      "href": "./styles/priority.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Call priority",
+      "roles": [
+        "style"
+      ],
+      "file:size": 883,
+      "file:checksum": "1220e64a5d797201213981a424c8fa2e54473d79c879003d2755e39919bbba1ede5c"
+    },
+    "style-day-of-week": {
+      "href": "./styles/day-of-week.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Day of week",
+      "roles": [
+        "style"
+      ],
+      "file:size": 905,
+      "file:checksum": "1220f44477678441e23f50fa61195c91fa2ffa7dbbfaba85482d6d62755d2b1886d5"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2779,
-      "file:checksum": "1220022f0467dc8578996b8e5f1cd8252ecc36f8403767e19862eb0b6229853dce3b"
+      "file:checksum": "1220908d3d85a40597764e2e34f1c9ff258645427fa7b05e55e0b0ae859bf9475c4d"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 3406,
-      "file:checksum": "122022507fcee00a9c674e5ad7f89359087b47b4fea7ae2f1a0c2cd3ff457b1aaa1a"
+      "file:checksum": "12200fcabdc4fa180fec6ee65c70288d394a654724c5be88e0152f4139e9bf8b9151"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

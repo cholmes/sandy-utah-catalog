@@ -9,7 +9,7 @@
   "title": "Neighborhood Watch Groups",
   "description": "Neighborhood watch groups in Sandy City, Utah. 42 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2298,
-      "file:checksum": "1220c894b2db6e9e6ffed1207b72e54d0012257a4ce99b8bef95fa71932bf9a25272"
+      "file:checksum": "12206800ffe10462f5c8c6a823f2451a04ac2be58db4c2e293bd01362fdcb4636a97"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2373,
-      "file:checksum": "1220cbc9799b414332c32a38200cf3b52b953187010a1a54fb2a860740d8769dec97"
+      "file:checksum": "1220de1f55ab89b7d92a498d7c1ecbdbd6fff5cfa5c5bdfec8566b915ad8d2daeea9"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

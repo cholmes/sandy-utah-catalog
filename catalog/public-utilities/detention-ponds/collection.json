@@ -9,7 +9,7 @@
   "title": "Storm Detention Ponds",
   "description": "Storm Detention Ponds in Sandy City, Utah. The upstream service publishes no description for this layer. 210 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2389,
-      "file:checksum": "1220414ebbd14c1b2b760e45bf12ffb37b6e6f9bd4dac4e6fbc37855cbce8ff19bab"
+      "file:checksum": "12209c8c41427df9211524c590bca0d20572d6315156c845cb1489637b940fa22d68"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2741,
-      "file:checksum": "1220c7f11cb3c6e054705ffd4253ba3d73f21bef77d9e43b5908520b876c33bfc47c"
+      "file:checksum": "12209e5bf26475b6d8563dade3e6ef454a1fd45663ba8c3235fb5d02b8d9e55809d6"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

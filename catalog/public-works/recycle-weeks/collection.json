@@ -9,7 +9,7 @@
   "title": "Recycling Weeks",
   "description": "Recycling Weeks in Sandy City, Utah. The upstream service publishes no description for this layer. 10 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2417,
-      "file:checksum": "12208f38fd37544784e6d1df5c32114e59f8c6c67a568df6253736d2e2fd55ca1ed8"
+      "file:checksum": "1220bf7a59492187cb53908ec84bee2be8e1f1d0cf40624a6411c7745764213773a0"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2055,
-      "file:checksum": "12207b65a742117b18bde3329de61f48551fe983285d1dfd3b248a9f9145136c8aa7"
+      "file:checksum": "12202df2c0087a190c24f8332c2f3bd96b0642570f0d7e7978680608b3105567883a"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

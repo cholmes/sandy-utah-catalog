@@ -1,0 +1,44 @@
+{
+  "version": 8,
+  "name": "Pipe material",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../sewer-mains.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "sewer-mains-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "sewer-mains",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "Type"
+          ],
+          "C",
+          "#a9682a",
+          "Clay",
+          "#d9480f",
+          "Concrete",
+          "#868e96",
+          "PVC",
+          "#2f9e44",
+          "SS",
+          "#1c7ed6",
+          "HDPE",
+          "#0ca678",
+          "Private",
+          "#f59f00",
+          "#ced4da"
+        ],
+        "line-width": 1.6,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

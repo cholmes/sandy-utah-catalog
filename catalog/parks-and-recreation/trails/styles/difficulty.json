@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "Difficulty",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../trails.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "trails-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "trails",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "Rating"
+          ],
+          "Easiest",
+          "#2f9e44",
+          "Easy",
+          "#8ce99a",
+          "More Difficult",
+          "#f59f00",
+          "Most Difficult",
+          "#c92a2a",
+          "Varies",
+          "#868e96",
+          "#ced4da"
+        ],
+        "line-width": 2.0,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

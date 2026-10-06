@@ -1,0 +1,50 @@
+{
+  "version": 8,
+  "name": "Park size (acres)",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../parks.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "parks-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "parks",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "to-number",
+            [
+              "get",
+              "Acres"
+            ]
+          ],
+          "#d3f9d8",
+          2,
+          "#8ce99a",
+          10,
+          "#51cf66",
+          40,
+          "#2f9e44",
+          100,
+          "#1a7431"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "parks-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "parks",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

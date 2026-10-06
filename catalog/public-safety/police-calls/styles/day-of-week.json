@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "Day of week",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../police-calls.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "police-calls-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "police-calls",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "week_day_d"
+          ],
+          "MONDAY",
+          "#4c6ef5",
+          "TUESDAY",
+          "#0ca678",
+          "WEDNESDAY",
+          "#f59f00",
+          "THURSDAY",
+          "#e8590c",
+          "FRIDAY",
+          "#c92a2a",
+          "SATURDAY",
+          "#ae3ec9",
+          "SUNDAY",
+          "#868e96",
+          "#ced4da"
+        ],
+        "circle-radius": 2.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

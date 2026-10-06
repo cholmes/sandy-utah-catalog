@@ -9,7 +9,7 @@
   "title": "Communities",
   "description": "Communities in Sandy City, Utah. 30 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 591,
       "file:checksum": "122070cd51384cf81b9f63bd396184a64c720a355607e130a390f3e5f335aec8cb6f"
     },
+    "style-population": {
+      "href": "./styles/population.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Population",
+      "roles": [
+        "style"
+      ],
+      "file:size": 907,
+      "file:checksum": "1220a1bd37afe35f194e1e88bf075b0d5318a6f3e1b06b65d9eda1de6bd8aa2299bf"
+    },
+    "style-households": {
+      "href": "./styles/households.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Households",
+      "roles": [
+        "style"
+      ],
+      "file:size": 905,
+      "file:checksum": "1220d7e653a0087cb71a9d000bc6789e1b7f9cd7b9383621a308784d69a517895b47"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2542,
-      "file:checksum": "1220cf024fc253af7b3707ba50f5fb2b08e132c864d10ab50ef2420a14e56c6ccc6d"
+      "file:checksum": "1220d8b62b29576c57124ad3a5774ea28bf1e1ea7eba5c098e2ac3780516dd6ee30d"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 2378,
-      "file:checksum": "1220ee05a79a7a8476e3780e416592957a84fe883a23e2e958e8c3cab91d6ba3c36b"
+      "file:checksum": "12202e9dde7886bec3716746725813c6256fe35c9e400b4d63ba4c77bf880b56c060"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

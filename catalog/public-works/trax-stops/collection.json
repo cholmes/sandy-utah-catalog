@@ -9,7 +9,7 @@
   "title": "UTA TRAX Stops",
   "description": "UTA TRAX Stops in Sandy City, Utah. The upstream service publishes no description for this layer. 111 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2301,
-      "file:checksum": "1220768c36629a9a0c1656e0ab5f5f118a04076f531f502c6bf2e6e6622524df2754"
+      "file:checksum": "122087876ef49a1a8c30361f27f066f651c6bfe8407cd8f7542d2a313358e0dc0009"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2047,
-      "file:checksum": "1220fc27d9262e3f93761d2c1751ef788d0698ea7ac6d8b295991362249e5e5473d4"
+      "file:checksum": "122079022835acb4ee84094d77d5e46e551047542beea75319c3d792d9c19f867473"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

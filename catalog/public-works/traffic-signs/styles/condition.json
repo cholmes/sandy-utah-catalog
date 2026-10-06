@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "Condition",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../traffic-signs.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "traffic-signs-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "traffic-signs",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "CONDITION"
+          ],
+          "Excellent",
+          "#2f9e44",
+          "Good",
+          "#8ce99a",
+          "Good - Rivet",
+          "#a9e34b",
+          "Good - Tree Trim",
+          "#c0eb75",
+          "Poor",
+          "#c92a2a",
+          "Poor - Bent",
+          "#e8590c",
+          "Poor - Burnt",
+          "#862e9c",
+          "#ced4da"
+        ],
+        "circle-radius": 3.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

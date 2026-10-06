@@ -9,7 +9,7 @@
   "title": "Site Plan Review Applications",
   "description": "Site Plan Review Applications in Sandy City, Utah. The upstream service publishes no description for this layer. 1,549 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2617,
-      "file:checksum": "12204149e691ab2064c63ba0a69749e6ec92a1cbed4a6c9b1b52d35564be663e8f4f"
+      "file:checksum": "12203ddf9f4f451fe21d4b445a41c4e0c2cbf736b89403b235d54dc38748925dc330"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2132,
-      "file:checksum": "122093198df6fb0b518df785bdf541b3e83928ae28a211b64a7a9c12fd6d4a6ce3d7"
+      "file:checksum": "1220aeb6cde527e0604e3dd21de5fc6005fd912c3e39ea8f1c39417a40735d8b257f"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -9,7 +9,7 @@
   "title": "Water Pressure Zones",
   "description": "Water Pressure Zones in Sandy City, Utah. The upstream service publishes no description for this layer. 17 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2430,
-      "file:checksum": "12208e1c7e24a5a3f9fce89f5119417ee82c8a20737c1ebbffd7cef98b6767d53f4a"
+      "file:checksum": "1220b89a5afe90aa25515214f044c1db293fcc8d7802f68e4f55260380333a2bc8f4"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2325,
-      "file:checksum": "12201221d1d03b5ca794580b2eaa38d4fdb0b7cad45d09954bb558f334bcd28bf7b9"
+      "file:checksum": "1220727426aac5cd70496a6c0580a3322e780b27cf53312f0b00515aa1ca790494eb"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

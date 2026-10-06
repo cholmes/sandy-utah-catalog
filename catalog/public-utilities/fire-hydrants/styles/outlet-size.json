@@ -1,0 +1,41 @@
+{
+  "version": 8,
+  "name": "Outlet size (inches)",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../fire-hydrants.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "fire-hydrants-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "fire-hydrants",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "to-string",
+            [
+              "get",
+              "HYDSIZE"
+            ]
+          ],
+          "5.25",
+          "#c92a2a",
+          "4.0",
+          "#f59f00",
+          "3.0",
+          "#868e96",
+          "#ced4da"
+        ],
+        "circle-radius": 3.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

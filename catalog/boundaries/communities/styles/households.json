@@ -1,0 +1,50 @@
+{
+  "version": 8,
+  "name": "Households",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../communities.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "communities-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "communities",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "to-number",
+            [
+              "get",
+              "Total_HH"
+            ]
+          ],
+          "#e6fcf5",
+          500,
+          "#96f2d7",
+          1000,
+          "#38d9a9",
+          1500,
+          "#0ca678",
+          2000,
+          "#087f5b"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "communities-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "communities",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

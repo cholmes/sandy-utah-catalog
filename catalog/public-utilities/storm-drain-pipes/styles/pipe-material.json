@@ -1,0 +1,44 @@
+{
+  "version": 8,
+  "name": "Pipe material",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../storm-drain-pipes.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "storm-drain-pipes-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "storm-drain-pipes",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "PIPE_TYPE"
+          ],
+          "RCP",
+          "#1c7ed6",
+          "ADS",
+          "#2f9e44",
+          "PVC",
+          "#0ca678",
+          "CB",
+          "#f59f00",
+          "HDP",
+          "#e8590c",
+          "CMP",
+          "#862e9c",
+          "OD",
+          "#868e96",
+          "#ced4da"
+        ],
+        "line-width": 1.6,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

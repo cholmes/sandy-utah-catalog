@@ -9,7 +9,7 @@
   "title": "Address Points",
   "description": "Address points from Sandy Utility Billing, Subdivision plats, parcel data. 60,400 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 502,
       "file:checksum": "1220c87c27c6aec659d37fb1bbd71e07be00f11320be76e8fd316d20c1f2ce51d3bb"
     },
+    "style-property-subtype": {
+      "href": "./styles/property-subtype.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Property subtype",
+      "roles": [
+        "style"
+      ],
+      "file:size": 929,
+      "file:checksum": "12201318e3086823e05d83e176d841f8782dcce7df37a8a52153ec1eae50d975dac9"
+    },
+    "style-municipality": {
+      "href": "./styles/municipality.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Municipality",
+      "roles": [
+        "style"
+      ],
+      "file:size": 943,
+      "file:checksum": "122074f22b71f4d2f413f76ef975eaf889d4d3347d88ec23604fd8292d345075efee"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2412,
-      "file:checksum": "1220424fee9864d87394eaa6cd559ffcf26e51cc7b13089f5aa63dc610b4333c643d"
+      "file:checksum": "1220fdad31bace54a8e1a1cbfc4bf892392f5dc32f50ef0898d3032c75b38688a800"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 3815,
-      "file:checksum": "122098256a138f0d1c177802155ef3b8f67ecc4ceb5ccb90b4103611e17c37e21c2e"
+      "file:checksum": "12201a627060b93f29df418ce27d7efb798c5394f3efa5f7396b4a866e5ccfcf84f6"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

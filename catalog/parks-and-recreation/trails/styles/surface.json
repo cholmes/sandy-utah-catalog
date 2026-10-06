@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "Trail surface",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../trails.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "trails-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "trails",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "TrlSurface"
+          ],
+          "Hard Surface",
+          "#495057",
+          "Native Material",
+          "#a9682a",
+          "Asphalt",
+          "#212529",
+          "Concrete",
+          "#868e96",
+          "Chunk Wood",
+          "#d9480f",
+          "#ced4da"
+        ],
+        "line-width": 2.0,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

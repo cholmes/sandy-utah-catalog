@@ -1,0 +1,48 @@
+{
+  "version": 8,
+  "name": "Manufacturer",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../fire-hydrants.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "fire-hydrants-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "fire-hydrants",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "HYD_MANUF"
+          ],
+          "MUELLER",
+          "#1c7ed6",
+          "PACIFIC STATES",
+          "#2f9e44",
+          "WATEROUS",
+          "#f59f00",
+          "CLOW",
+          "#e8590c",
+          "IOWA",
+          "#862e9c",
+          "KENNEDY",
+          "#0ca678",
+          "EJ",
+          "#d6336c",
+          "OTHER",
+          "#868e96",
+          "#ced4da"
+        ],
+        "circle-radius": 3.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

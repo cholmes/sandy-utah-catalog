@@ -9,7 +9,7 @@
   "title": "Voting Precincts",
   "description": "Voting Precincts in Sandy City, Utah. The upstream service publishes no description for this layer. 102 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 904,
       "file:checksum": "1220e0bc5d6fdd46a69ad040d9065161eace8e7b66234a724de3d5fcb321b56114c2"
     },
+    "style-state-senate": {
+      "href": "./styles/state-senate.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "State senate district",
+      "roles": [
+        "style"
+      ],
+      "file:size": 872,
+      "file:checksum": "122020f79ca6134e4e6843e5c0f6fdb48c7d60d67b1403f63dda4caea2f479185499"
+    },
+    "style-us-congress": {
+      "href": "./styles/us-congress.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "US congressional district",
+      "roles": [
+        "style"
+      ],
+      "file:size": 871,
+      "file:checksum": "12201658f6092690b2565e8afd3b554a73d1aac9c8b7bac1c4048a3d5517e5f51a0f"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2376,
-      "file:checksum": "1220c9a67192f40125a0ee2906a3966ebb5a95177d52962c16106496f49c07018cec"
+      "file:checksum": "1220540d3ddc6132b9196d90dd97f9361385b1b8e7527421e7d389b960f76f82b427"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 2356,
-      "file:checksum": "12203fbdaaed8c298ea0bb096050a1c917e64b835ef0789ea0bb5f4b3a8df6969b5f"
+      "file:checksum": "1220308ca0b601ae53cab47f233bf6244d75d589da098a8e930f7b580fc68c5f6dfb"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

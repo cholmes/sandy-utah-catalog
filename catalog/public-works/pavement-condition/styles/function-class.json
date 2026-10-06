@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "Functional class",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../pavement-condition.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "pavement-condition-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "pavement-condition",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "FunctionClass"
+          ],
+          "Arterial Roads",
+          "#c92a2a",
+          "Minor Arterial Roads",
+          "#e8590c",
+          "Collector Roads",
+          "#f59f00",
+          "Residential Roads",
+          "#1c7ed6",
+          "Cul-de-sac/Dead End Roads",
+          "#adb5bd",
+          "#ced4da"
+        ],
+        "line-width": 2.0,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

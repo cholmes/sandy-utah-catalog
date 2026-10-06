@@ -9,7 +9,7 @@
   "title": "Street Lights",
   "description": "Street Lights in Sandy City, Utah. The upstream service publishes no description for this layer. 8,727 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 499,
       "file:checksum": "122054b43fcca6bce548e22c94dee7e30a40a59495f16f65ca5aa3cd69d44207bd05"
     },
+    "style-fixture-type": {
+      "href": "./styles/fixture-type.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Fixture type",
+      "roles": [
+        "style"
+      ],
+      "file:size": 824,
+      "file:checksum": "12202f64df9fb6bcccadd92a6133ea9f7e10d37e127c623ba34aff51ff5ff0e6eb37"
+    },
+    "style-lamp-type": {
+      "href": "./styles/lamp-type.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Lamp type",
+      "roles": [
+        "style"
+      ],
+      "file:size": 820,
+      "file:checksum": "1220888faf9c08a4bc5cfd6a1887ed7218d542ef4fd99af41bf152cbc549d13e82dd"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2351,
-      "file:checksum": "12200a38431f3000c766f382cfa2b90151a41a27ba9b2027fcd5ea630802f7aa064d"
+      "file:checksum": "1220a4bb2996a5e2ec767f84e7e863c24f99cac2e022dac6de906235796236ecbe2f"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 3200,
-      "file:checksum": "1220fca5d2a827687428b831edc04b7a73d00b37d539339e0e037b75a3f5d0d28af5"
+      "file:checksum": "1220ca9ffffc80ac311e1da4424fb418077910536ac6257f268d37f69e11270c4411"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -9,7 +9,7 @@
   "title": "Pavement Condition",
   "description": "Pavement Condition in Sandy City, Utah. The upstream service publishes no description for this layer. 2,165 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 667,
       "file:checksum": "1220e5f19b980f7508a856f318928144399e9d4ac9a239a93a2fa9db1161970dc3ab"
     },
+    "style-function-class": {
+      "href": "./styles/function-class.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Functional class",
+      "roles": [
+        "style"
+      ],
+      "file:size": 812,
+      "file:checksum": "1220491947c57638084e525bdcbfcb3bf8151958f83a64f1d1f6e821fc79ef788727"
+    },
+    "style-council-district": {
+      "href": "./styles/council-district.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Council district",
+      "roles": [
+        "style"
+      ],
+      "file:size": 729,
+      "file:checksum": "12202f4e68ab79a7ef68c97ec0c0949f1c9552683d8201fd3a74b19116a6a6748cc2"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2410,
-      "file:checksum": "122042bc3f461e710a1cafc5a0ae892c42d812c628f842d4ce0c6f22f709e394493a"
+      "file:checksum": "12206209b91725e68dd6e9b4cd68152b85775812dda2990441778c5cae215ef3a051"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 3042,
-      "file:checksum": "122010cda6c42a910b3b9596ceedb63d27068d41bad884b3d855d19a0a78f1b3bebb"
+      "file:checksum": "1220a794892bb32c2c1ad70714771e72990855f224b4b4eb6c355ae121ad3e7eaeaf"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

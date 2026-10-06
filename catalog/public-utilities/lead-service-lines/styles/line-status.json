@@ -1,0 +1,36 @@
+{
+  "version": 8,
+  "name": "Whole-line status",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../lead-service-lines.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "lead-service-lines-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "lead-service-lines",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "bothsidesstatus"
+          ],
+          "Unknown",
+          "#868e96",
+          "Non-Lead",
+          "#2f9e44",
+          "#ced4da"
+        ],
+        "circle-radius": 2.6,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

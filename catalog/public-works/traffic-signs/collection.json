@@ -9,7 +9,7 @@
   "title": "Traffic Signs",
   "description": "Traffic Signs in Sandy City, Utah. The upstream service publishes no description for this layer. 8,403 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 735,
       "file:checksum": "122001a9be8efd72160248fb0fd3b59b23dcd75c51bc88fc9a985b53e8281dadf0bb"
     },
+    "style-condition": {
+      "href": "./styles/condition.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Condition",
+      "roles": [
+        "style"
+      ],
+      "file:size": 923,
+      "file:checksum": "12200ef95839f82cf6b48d6723e969dafbe09b3f3a44497ea988890a6fff8e679a97"
+    },
+    "style-sheeting": {
+      "href": "./styles/sheeting.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Sheeting material",
+      "roles": [
+        "style"
+      ],
+      "file:size": 718,
+      "file:checksum": "1220cb06345e210e6ac94a817ad1d4e750dbed1036bfc4d277597f6fc29c481b9e2c"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2341,
-      "file:checksum": "12200fda67d0c821b4f53dfc36cbcb72bd38be040e61bcc5df00ac5b723b17bf57e1"
+      "file:checksum": "122092549172b086b5e578e963dd06236814ffb8835c6c12a1926438062983258146"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 4336,
-      "file:checksum": "12200feb0e0cfda894268ce7b75fda884e111bbb9fba5fa3604b2c7310b1bf74dffd"
+      "file:checksum": "12200f5ac5fe2fd974bde8d3ad7ee2cda183ebd4638540494ad8ee22f6ac36478517"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

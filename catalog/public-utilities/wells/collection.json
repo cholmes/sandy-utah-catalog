@@ -9,7 +9,7 @@
   "title": "Sandy Water Wells",
   "description": "Drinking Water Source Protection Other Well Points. 24 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2124,
-      "file:checksum": "12205f208744eb5640c309fc1c274610cbad66d28a12f57184ea1ef2dbda819ab8f4"
+      "file:checksum": "122038def5dd74171cbc65b7b1e2b5f3c3c0b6c40941e05112e27d78da313630327c"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2532,
-      "file:checksum": "1220077794e711e422f4251cb29889025e75f1d9d59865863cfba5487f1771c5ca2d"
+      "file:checksum": "122009572648c32fee37935cddbee0e084016f8e66b209c74ee76a53bd2e2e033e99"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

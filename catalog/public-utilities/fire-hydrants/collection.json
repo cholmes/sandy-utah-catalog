@@ -9,7 +9,7 @@
   "title": "Fire Hydrants",
   "description": "Fire Hydrants in Sandy City, Utah. The upstream service publishes no description for this layer. Sandy also publishes a hydrant layer under `Pub_Safety/Hydrants` with a different count (5,047 against 5,292). This mirrors the Public Utilities copy, which is the one maintained with the water system. 5,292 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,26 @@
       "file:size": 499,
       "file:checksum": "12207eef3ea7a06ae6de4b9cdeaa07c828f74772b0cd33597c4891a78018e7cbae48"
     },
+    "style-manufacturer": {
+      "href": "./styles/manufacturer.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Manufacturer",
+      "roles": [
+        "style"
+      ],
+      "file:size": 944,
+      "file:checksum": "1220287059808000487f82464bb3ee7a348ddc33c42973de9e53bfe6d2336c725ed4"
+    },
+    "style-outlet-size": {
+      "href": "./styles/outlet-size.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Outlet size (inches)",
+      "roles": [
+        "style"
+      ],
+      "file:size": 791,
+      "file:checksum": "122068e336c05fe6e65fcfeb93ab2340796c5adea2cb4291fffd2bb93b0dcb889a8b"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2804,
-      "file:checksum": "122016be96a09377325ae20fd36f5bd44793b2c51ca76f6b3c0d3512df5d00d11547"
+      "file:checksum": "12204ce35afd288b05ea98b3b79feb42804dd87e9f5106e0e15e797938f3993d43c1"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +166,7 @@
         "metadata"
       ],
       "file:size": 4549,
-      "file:checksum": "1220acd1bf07b69863a1dd69eb20953b8ebf2db740c63e85d5b2837ee1e00de98855"
+      "file:checksum": "1220675ea3acaf61052b37df2f80bab3ee2cca577a846844a0cd3bc1671effde3d7d"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -1,0 +1,38 @@
+{
+  "version": 8,
+  "name": "Council district",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../pavement-condition.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "pavement-condition-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "pavement-condition",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "Council_District"
+          ],
+          "COUNCIL #1",
+          "#4c6ef5",
+          "COUNCIL #2",
+          "#f08c00",
+          "COUNCIL #3",
+          "#2f9e44",
+          "COUNCIL #4",
+          "#d6336c",
+          "#ced4da"
+        ],
+        "line-width": 2.0,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

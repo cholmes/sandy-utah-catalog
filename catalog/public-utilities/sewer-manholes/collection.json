@@ -9,7 +9,7 @@
   "title": "Sewer Manholes",
   "description": "Sewer Manholes in Sandy City, Utah. The upstream service publishes no description for this layer. 16,020 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2342,
-      "file:checksum": "1220a3a58c5ecbf4171c84d6d347df813a14f830f8226b95d7b3e8d46fc088d5c3e2"
+      "file:checksum": "1220eb0bd193bbe062e5ac6a379c1f0360794903e84f72edbb0d56a9482cddd04932"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2599,
-      "file:checksum": "1220432cf777c45159188cfd6df81bde55440ed8a091a54396b45a8149e04746a638"
+      "file:checksum": "1220692f7dbccfa8c4d20182606ae06addd0b62e99f7647f9692ed3008f295573392"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

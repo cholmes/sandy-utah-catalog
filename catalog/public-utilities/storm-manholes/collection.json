@@ -9,7 +9,7 @@
   "title": "Storm Drain Manholes",
   "description": "Storm Drain Manholes in Sandy City, Utah. The upstream service publishes no description for this layer. 8,402 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T21:15:15Z",
+  "updated": "2026-10-06T22:11:04Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -128,6 +128,16 @@
       "file:size": 502,
       "file:checksum": "12204ab2385b834cb021e511cb9575524a14fc08a7e1266e5bfd8b6b6f911113fde0"
     },
+    "style-ownership": {
+      "href": "./styles/ownership.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Ownership",
+      "roles": [
+        "style"
+      ],
+      "file:size": 867,
+      "file:checksum": "12205e79c841983319d5f6ceb853d5a9717e0fa49a6466fa1e6326f15085c1c72591"
+    },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
@@ -136,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2369,
-      "file:checksum": "12203d7ca7bda1c99ea3420e1674ad54d2ae1b9961e5b32e62d41ae04a7e3d5a2048"
+      "file:checksum": "1220a90204c4b1ac42a3da380d6d1abb9da81d8496323a9b5e5381c20cd76c3605c0"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +156,7 @@
         "metadata"
       ],
       "file:size": 3857,
-      "file:checksum": "12200cd1014eb2ee1ed31370057f919142d54beeac097a053ebc45cf66e6b8b37651"
+      "file:checksum": "1220bfee4edf654cce321924a78cd0af29af3913f88afca053ef4ba20d4d40c174a0"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

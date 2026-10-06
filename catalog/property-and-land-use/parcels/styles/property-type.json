@@ -1,0 +1,49 @@
+{
+  "version": 8,
+  "name": "Property type",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../parcels.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "parcels-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "parcels",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "Property_Type_Simple_Desc"
+          ],
+          "Residential",
+          "#ffd43b",
+          "Condos",
+          "#f59f00",
+          "Commercial",
+          "#e03131",
+          "Land",
+          "#2f9e44",
+          "Other",
+          "#868e96",
+          "#ced4da"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "parcels-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "parcels",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.1
+      }
+    }
+  ]
+}
