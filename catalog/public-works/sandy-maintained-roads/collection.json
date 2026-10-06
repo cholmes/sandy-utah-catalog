@@ -7,9 +7,9 @@
   ],
   "id": "sandy-maintained-roads",
   "title": "Sandy-Maintained Roads",
-  "description": "Sandy-Maintained Roads in Sandy City, Utah. The upstream service publishes no description for this layer. 4,916 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Sandy-Maintained Roads in Sandy City, Utah. The upstream service publishes no description for this layer. 4,916 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2456,
-      "file:checksum": "122075941a620c92ac2277a17d653c92206787861cf07cbe396b5ed703028731c9d1"
+      "file:size": 2450,
+      "file:checksum": "12204d0ff1365dc482ae3787617581bccf673cbe80cea83f78612abdbb3bbd62df84"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 1981,
-      "file:checksum": "1220f7ec08ce8067c026074e6dbccb3396e28e6ab79dc5355c11a9967a568d41e3cd"
+      "file:size": 1986,
+      "file:checksum": "12206d15d6ce47aebd06e540ab2981b1ee849fbe87b711cb3b8da43072d242cf19d3"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Sandy-Maintained Roads thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 128892,
+      "file:checksum": "1220a9f6add081ec69dfdab7ab536031f0f0a55b9c586b2aea15fe63ab2f6b1fcd50"
     }
   },
   "table:columns": [

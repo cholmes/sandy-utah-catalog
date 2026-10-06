@@ -7,9 +7,9 @@
   ],
   "id": "subdivisions",
   "title": "Subdivisions",
-  "description": "Subdivisions in Sandy City, Utah. 1,699 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Subdivisions in Sandy City, Utah. 1,699 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2215,
-      "file:checksum": "1220ea7f4ffea05d58a16f300b33392075e3c734e7573a3f6c6b15228414ae180a2c"
+      "file:size": 2209,
+      "file:checksum": "1220ace648a24bc835ed98a2c73e62a718f89bd2b96e1954808eeb68867b54f7426f"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2179,
-      "file:checksum": "12200eb86c55f039bedcac25513fe4b33f546299dbef848ee2c300dbe12d8eef56a1"
+      "file:size": 2184,
+      "file:checksum": "1220f90901c8d2dc5635ac53510746436dc433a13340623c4b749a123e5ce3de3323"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Subdivisions thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 107271,
+      "file:checksum": "122072cdfc335cd95ecec0d948f33fb1612400ab41ff0c2482c0805b36dd61baa875"
     }
   },
   "table:columns": [

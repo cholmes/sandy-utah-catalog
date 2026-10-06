@@ -7,9 +7,9 @@
   ],
   "id": "address-points",
   "title": "Address Points",
-  "description": "Address points from Sandy Utility Billing, Subdivision plats, parcel data. 60,400 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Address points from Sandy Utility Billing, Subdivision plats, parcel data. 60,400 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -126,7 +126,7 @@
         "default"
       ],
       "file:size": 502,
-      "file:checksum": "1220b0d38e0a8cf9c94a0b7619a37c037d702b4b769c823f2331bdb97e952e1fb907"
+      "file:checksum": "1220c87c27c6aec659d37fb1bbd71e07be00f11320be76e8fd316d20c1f2ce51d3bb"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2266,
-      "file:checksum": "122085df0d4b7e60601f6a6e80da76dcfbf1d6d9161bd4f137c62f9dda441d3508b5"
+      "file:size": 2260,
+      "file:checksum": "1220036389d2a562b2ffbd8a82effb8a265c5c475bd3db823497c087b68116376245"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3802,
-      "file:checksum": "1220df2c25ef4ac0cb1fa3df396a3fab0960489be3aebdd112c4bd76fa51ade7b2d8"
+      "file:size": 3807,
+      "file:checksum": "12206f65e1d716b10d09cc8cad5bd68d576a67f222f993951116952640ac4e9725e9"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Address Points thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 96234,
+      "file:checksum": "1220de46b7dbc0e0d00708e167d2b59c201e6f5063e57eb8dd48847894492a4c984c"
     }
   },
   "table:columns": [

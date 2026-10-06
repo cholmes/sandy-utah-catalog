@@ -4,14 +4,14 @@ Every claim here is quoted from the upstream service or measured from the publis
 
 ## The one thing that will trip you up
 
-The GeoParquet is in **EPSG:3566**, NAD83/HARN Utah Central, in **US survey feet**. `ST_Length` and `ST_Area` return feet and square feet, not metres. The PMTiles are Web Mercator, because tiles have to be. Reproject before any distance comparison with another dataset:
+The GeoParquet is in **EPSG:2850** (NAD83(HARN) / Utah Central). Linear units are **metres**, so `ST_Length` and `ST_Area` return that unit. The PMTiles are Web Mercator, because tiles have to be. Reproject before any distance comparison with another dataset:
 
 ```sql
-SELECT ST_Transform(geometry, 'EPSG:3566', 'EPSG:4326') AS geom_wgs84
+SELECT ST_Transform(geometry, 'EPSG:2850', 'EPSG:4326') AS geom_wgs84
 FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.parquet';
 ```
 
-There is a `bbox` struct column on every row, written by gpio for spatial pruning. It is in EPSG:3566 too.
+There is a `bbox` struct column on every row, written by gpio for spatial pruning. It is in EPSG:2850 too.
 
 ## Schema
 
@@ -197,5 +197,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0) on 2026-10-06T19:01:44Z.
+Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0) on 2026-10-06T19:21:37Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

@@ -7,9 +7,9 @@
   ],
   "id": "communities",
   "title": "Communities",
-  "description": "Communities in Sandy City, Utah. 30 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Communities in Sandy City, Utah. 30 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2536,
-      "file:checksum": "122083139f508cf977521abb0065db71774dac01e1589db276e60ae67959d0d3e5c8"
+      "file:size": 2530,
+      "file:checksum": "122022e4ba804ce0a0e08b8ddc3ecd83e5769e953c38d3c0fa7d169ce370197f4f99"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2365,
-      "file:checksum": "1220228d4cb8bfc7b1a049b515d71b2ae0c2f268c3bce38e4de5e04484a155aba52a"
+      "file:size": 2370,
+      "file:checksum": "1220f8d64611fb0696e52f1ca1c925dfda2512c2bd963c2b8fb1888d49b3f4cbd57d"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Communities thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 53114,
+      "file:checksum": "1220b2ebbfea875635da2d4b134452ffe2766509b484d4498210a0c21890b23eacf7"
     }
   },
   "table:columns": [

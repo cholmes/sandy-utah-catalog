@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Default",
+  "name": "Police beat",
   "sources": {
     "data": {
       "type": "vector",
@@ -14,7 +14,22 @@
       "source": "data",
       "source-layer": "police-beats",
       "paint": {
-        "fill-color": "#e03131",
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "NAME"
+          ],
+          "Sandy",
+          "#1c7ed6",
+          "Crescent",
+          "#e8590c",
+          "Alta Canyon",
+          "#2f9e44",
+          "Bell Canyon",
+          "#ae3ec9",
+          "#ced4da"
+        ],
         "fill-opacity": 0.75
       }
     },

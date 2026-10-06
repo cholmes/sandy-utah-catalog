@@ -15,7 +15,7 @@
       "source-layer": "street-lights",
       "paint": {
         "circle-color": "#0c8599",
-        "circle-radius": 3.2,
+        "circle-radius": 4.0,
         "circle-stroke-color": "#ffffff",
         "circle-stroke-width": 0.5,
         "circle-opacity": 0.85

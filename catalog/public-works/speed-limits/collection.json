@@ -7,9 +7,9 @@
   ],
   "id": "speed-limits",
   "title": "Speed Limits",
-  "description": "Speed Limits in Sandy City, Utah. The upstream service publishes no description for this layer. 5,072 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Speed Limits in Sandy City, Utah. The upstream service publishes no description for this layer. 5,072 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -120,13 +120,13 @@
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "Default",
+      "title": "Posted speed limit",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 406,
-      "file:checksum": "12201eea8803aeecf836beb3d21ae611842c7dd1bcb6d348cbe8799ef9f762786bc8"
+      "file:size": 689,
+      "file:checksum": "12206d39f469f0ca62b94cc1074385ad9435c4f724636ac15247da15bae7cd18e41c"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2588,
-      "file:checksum": "1220a12cad0cab5dccce56891bbccbe21ec3fde86071224c5fcb136c10f375d9a54c"
+      "file:size": 2582,
+      "file:checksum": "1220913e22fc0bbe9b3c1e66bc6d51a350da21f46987364e8ed441f854b286f0fd9c"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 4044,
-      "file:checksum": "12205642c082c28cab3a8a0763778d97ac7e336de24bd0561ece2367121bfcd422be"
+      "file:size": 4239,
+      "file:checksum": "1220490ea11cc2adee9ef639bf7e303477c1d8fbb003b1708781ac8ce599064dce9e"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Speed Limits thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 191385,
+      "file:checksum": "12205080c857f3e761cdb476acf6d553b95bd0293e0f2973e6cb192bd7d23beff234"
     }
   },
   "table:columns": [

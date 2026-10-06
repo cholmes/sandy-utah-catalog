@@ -7,9 +7,9 @@
   ],
   "id": "pavement-condition",
   "title": "Pavement Condition",
-  "description": "Pavement Condition in Sandy City, Utah. The upstream service publishes no description for this layer. 2,165 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Pavement Condition in Sandy City, Utah. The upstream service publishes no description for this layer. 2,165 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2404,
-      "file:checksum": "12204d5ecd93a40a2b66924f40ce705c74a5cd605bf4e1623cf8b16ded2597cf7860"
+      "file:size": 2398,
+      "file:checksum": "1220e30da015dab3a088b3de18e017e8079ce076e36eab97147ba793495ac206bc17"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3025,
-      "file:checksum": "122097d10534e805d32fc8ebd07d688cd3ce8cd812e3e556ba6d46d537534d45d572"
+      "file:size": 3030,
+      "file:checksum": "122040c90ed0229be0a747a1d456f97f7538008c37c24fec7a6bdb429bc50f9dd3c7"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Pavement Condition thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 158689,
+      "file:checksum": "122048d8b2530368d10395d08fc50b52900c4324da0ab81331561b755e94918f55a1"
     }
   },
   "table:columns": [

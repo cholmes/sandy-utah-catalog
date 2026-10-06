@@ -58,9 +58,9 @@
     },
     {
       "rel": "child",
-      "href": "./short-term-rentals/collection.json",
+      "href": "./short-term-rental-allocations/collection.json",
       "type": "application/json",
-      "title": "Short-Term Rentals"
+      "title": "Short-Term Rental Allocations"
     },
     {
       "rel": "child",

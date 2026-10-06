@@ -4,7 +4,7 @@ Every claim here is quoted from the upstream service or measured from the publis
 
 ## The one thing that will trip you up
 
-The GeoParquet is in **EPSG:3566**, NAD83/HARN Utah Central, in **US survey feet**. `ST_Length` and `ST_Area` return feet and square feet, not metres. The PMTiles are Web Mercator, because tiles have to be. Reproject before any distance comparison with another dataset:
+The GeoParquet is in **EPSG:3566** (NAD83(HARN) / Utah Central (ftUS)). Linear units are **US survey feet**, so `ST_Length` and `ST_Area` return that unit. The PMTiles are Web Mercator, because tiles have to be. Reproject before any distance comparison with another dataset:
 
 ```sql
 SELECT ST_Transform(geometry, 'EPSG:3566', 'EPSG:4326') AS geom_wgs84
@@ -49,9 +49,25 @@ SELECT * FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-s
 
 Count by the column the default style uses:
 
-The default style is a single colour: no column in this collection has both low cardinality and enough population to carry a meaningful legend.
+```sql
+SELECT "TYPE_DESC", count(*) AS n
+FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/police-reporting-areas/police-reporting-areas.parquet'
+GROUP BY 1 ORDER BY n DESC;
+```
+
+Measured on the published file:
+
+- `Residential` — 100
+- `Commercial` — 88
+- `Intersection` — 71
+- `Apt, Condo, Hotel, Motel` — 62
+- `Park, Cemetery, Forest` — 54
+- `School, College` — 29
+- `Moble/Twin homes` — 13
+- `Freeway segment` — 12
+- `TRAX or Rail Crossing` — 10
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Reporting_Areas/MapServer/1](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Reporting_Areas/MapServer/1) on 2026-10-06T19:01:44Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Reporting_Areas/MapServer/1](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Reporting_Areas/MapServer/1) on 2026-10-06T19:21:37Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

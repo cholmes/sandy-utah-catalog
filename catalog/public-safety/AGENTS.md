@@ -1,6 +1,6 @@
 # AGENTS.md — Public Safety
 
-9 collections. Every GeoParquet here is in **EPSG:3566** (NAD83/HARN Utah Central, US survey feet), so lengths and areas come out in feet. Each collection's own `AGENTS.md` carries its schema, its coded-value lists and a query that runs.
+9 collections. Every GeoParquet here is in **EPSG:3566** (NAD83(HARN) / Utah Central, US survey feet), so lengths and areas come out in feet. Each collection's own `AGENTS.md` carries its schema, its coded-value lists and a query that runs.
 
 - [Earthquake Fault Zones](./fault-zones/) — see its README for columns and caveats
 - [Fire Stations](./fire-stations/) — see its README for columns and caveats

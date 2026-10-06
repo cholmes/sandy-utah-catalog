@@ -1,6 +1,6 @@
 # AGENTS.md — Public Works and Transportation
 
-7 collections. Every GeoParquet here is in **EPSG:3566** (NAD83/HARN Utah Central, US survey feet), so lengths and areas come out in feet. Each collection's own `AGENTS.md` carries its schema, its coded-value lists and a query that runs.
+7 collections. Every GeoParquet here is in **EPSG:3566** (NAD83(HARN) / Utah Central, US survey feet), so lengths and areas come out in feet. Each collection's own `AGENTS.md` carries its schema, its coded-value lists and a query that runs.
 
 - [UTA Bus Routes](./bus-routes/) — see its README for columns and caveats
 - [UTA Bus Stops](./bus-stops/) — see its README for columns and caveats

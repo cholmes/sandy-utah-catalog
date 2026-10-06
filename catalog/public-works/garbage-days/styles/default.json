@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Default",
+  "name": "Collection day",
   "sources": {
     "data": {
       "type": "vector",
@@ -14,7 +14,24 @@
       "source": "data",
       "source-layer": "garbage-days",
       "paint": {
-        "fill-color": "#845ef7",
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "DAY_NAME"
+          ],
+          "Monday",
+          "#4c6ef5",
+          "Tuesday",
+          "#0ca678",
+          "Wednesday",
+          "#f59f00",
+          "Thursday",
+          "#e8590c",
+          "Friday",
+          "#ae3ec9",
+          "#ced4da"
+        ],
         "fill-opacity": 0.75
       }
     },

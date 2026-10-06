@@ -7,9 +7,9 @@
   ],
   "id": "slco-city-borders",
   "title": "Salt Lake County City Borders",
-  "description": "Border outlines for cities in Salt Lake County, Utah. County-wide context rather than Sandy data: the municipal boundaries of every city in Salt Lake County. 69 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Border outlines for cities in Salt Lake County, Utah. County-wide context rather than Sandy data: the municipal boundaries of every city in Salt Lake County. 69 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Utah Geospatial Resource Center (AGRC)",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2345,
-      "file:checksum": "122060796b9dcd469859911c7053eb1dcc6083f36996e1c6bac749a6e71e28d2bf0d"
+      "file:size": 2339,
+      "file:checksum": "1220069d730089efc121af269768b4200cf4bcf5b144fbb07ae63ed8f0e944810972"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2002,
-      "file:checksum": "1220e12a7b5f53241ad6dcd24989ac458bb364599353163b561ece4c7957635a733f"
+      "file:size": 2007,
+      "file:checksum": "1220db388153b55e36061e53b5dabd28f0221ce74abbee8866b0dd2fc21fd2b936e3"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Salt Lake County City Borders thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 58244,
+      "file:checksum": "1220b8c400a8fe5065e204d8777245bff787f129ff6be9dcd3fe5ddf71d76a31717f"
     }
   },
   "table:columns": [

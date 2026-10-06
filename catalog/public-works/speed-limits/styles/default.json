@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Default",
+  "name": "Posted speed limit",
   "sources": {
     "data": {
       "type": "vector",
@@ -14,8 +14,24 @@
       "source": "data",
       "source-layer": "speed-limits",
       "paint": {
-        "line-color": "#845ef7",
-        "line-width": 1.6,
+        "line-color": [
+          "step",
+          [
+            "to-number",
+            [
+              "get",
+              "SPEED_LIMIT"
+            ]
+          ],
+          "#74c0fc",
+          25,
+          "#4c6ef5",
+          30,
+          "#f59f00",
+          40,
+          "#e03131"
+        ],
+        "line-width": 1.8,
         "line-opacity": 0.9
       }
     }

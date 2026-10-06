@@ -15,7 +15,7 @@
       "source-layer": "address-points",
       "paint": {
         "circle-color": "#f08c00",
-        "circle-radius": 3.2,
+        "circle-radius": 3.0,
         "circle-stroke-color": "#ffffff",
         "circle-stroke-width": 0.5,
         "circle-opacity": 0.85

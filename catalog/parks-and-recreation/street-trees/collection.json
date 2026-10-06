@@ -7,9 +7,9 @@
   ],
   "id": "street-trees",
   "title": "Street and Park Trees",
-  "description": "An inventory of trees in Sandy City, Utah. The same tree inventory is published twice by the city, as `Parks/Grounds_and_Forestry` and as `Pub_Works/ParksDeptTrees`, both reporting the same feature count. This mirrors the Parks copy. 7,997 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "An inventory of trees in Sandy City, Utah. The same tree inventory is published twice by the city, as `Parks/Grounds_and_Forestry` and as `Pub_Works/ParksDeptTrees`, both reporting the same feature count. This mirrors the Parks copy. 7,997 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -126,7 +126,7 @@
         "default"
       ],
       "file:size": 496,
-      "file:checksum": "1220e9800818017748468dbb2e927f5f8d0ecefdaf026ca3063fa3aa4e944f0c9048"
+      "file:checksum": "1220c6eef5fd94e21f2da24eb976c03c8d099311471d3bfce67af220c786c2dbd10e"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2798,
-      "file:checksum": "12204061bce9ccf95783c0a2a793fcec83c4279e0436a5535e9c1d7d2c61730273e4"
+      "file:size": 2792,
+      "file:checksum": "122027f61bf7618a8e78ae1238b5f411f0059765d11dc297d0b691767aa9d02e64b2"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2499,
-      "file:checksum": "12200d58be39be33beb712632b1e427eb24321827025235486ccf5d574ec708eb64e"
+      "file:size": 2504,
+      "file:checksum": "12205f05caac58a61ddbf251ad851e7c40d2addf2c6e2cf284ce0d40464f4608c448"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Street and Park Trees thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 57177,
+      "file:checksum": "1220c56a7b4580d587f34161a6d3b40b79dac23922c0b9fc39b00e7a9f501a68fa86"
     }
   },
   "table:columns": [

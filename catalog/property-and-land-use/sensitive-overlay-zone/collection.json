@@ -7,9 +7,9 @@
   ],
   "id": "sensitive-overlay-zone",
   "title": "Sensitive Area Overlay Zone",
-  "description": "Sensitive Area Overlay Zone in Sandy City, Utah. The upstream service publishes no description for this layer. 34 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Sensitive Area Overlay Zone in Sandy City, Utah. The upstream service publishes no description for this layer. 34 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2481,
-      "file:checksum": "12204afd83c56f6ef562271ba75be16d7b3b54405380eda620e010b660c1ffbf9d3a"
+      "file:size": 2475,
+      "file:checksum": "122037218d8a5dbb2bfb215f278d7d35391a72a04b896883b84d85761b3334b70ff7"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2005,
-      "file:checksum": "1220015af770daf436e9b152361e3fe94026646cb22f48073d59a0cc7ae4b9a36e12"
+      "file:size": 2010,
+      "file:checksum": "1220d6e0cd223e285042aeefa4ac7f265724d393269beccf9e25f8c2ab056f65982a"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Sensitive Area Overlay Zone thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 59775,
+      "file:checksum": "122000242f1889f80024a210721a733c291d1bc06ead910ed49b1dd514894ea873c0"
     }
   },
   "table:columns": [

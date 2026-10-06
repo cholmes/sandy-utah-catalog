@@ -7,9 +7,9 @@
   ],
   "id": "trailheads",
   "title": "Trailheads",
-  "description": "Trailheads in Sandy, Utah area. 20 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Trailheads in Sandy, Utah area. 20 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -126,7 +126,7 @@
         "default"
       ],
       "file:size": 490,
-      "file:checksum": "12202a8ca1deb6f69782fd598af961796478e34ae4be8f7ec500b47e8e102f57d8dd"
+      "file:checksum": "1220856206dfcd3d0cb5ce564c448a8d687db71c0286cb79ccf98e918150e8dc0d96"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2177,
-      "file:checksum": "1220191790f8e17b72a2adf4ea72bcfbfd86e41f6315d7b404ab281598a6d877f477"
+      "file:size": 2171,
+      "file:checksum": "1220ce99bbb7494f59a5e00a1ffa108ac67a6614e733a8dbb26a94feb0c51db2b3b8"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2076,
-      "file:checksum": "1220f0f9d3a605e1c4a532b3ee27b081324d364ee140f0826e8d6716a310a0fa8035"
+      "file:size": 2081,
+      "file:checksum": "122093ffa653b30e67279dc28817691968230bdea1c857c3fea81b1c3a0d860ecff8"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Trailheads thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9699,
+      "file:checksum": "122041ec78df22d55fe3ef9c0bc887be3677674b3769be48d5be2f70186e30b85a6f"
     }
   },
   "table:columns": [

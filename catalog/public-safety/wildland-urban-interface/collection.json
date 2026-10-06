@@ -7,9 +7,9 @@
   ],
   "id": "wildland-urban-interface",
   "title": "Wildland Urban Interface",
-  "description": "Urban wildland interface in Sandy City, Utah. 1 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Urban wildland interface in Sandy City, Utah. 1 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -126,7 +126,7 @@
         "default"
       ],
       "file:size": 656,
-      "file:checksum": "12207f9009eab0955b5b40ab81d442d88ad9e8bb8453c1b245ae8d4bbc53f9deab3a"
+      "file:checksum": "122053249f52575923abcda18fb8108c701e771b8ffcdf7d4a838090e58922259e20"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2334,
-      "file:checksum": "12209ca9aee0b605757d81e6d88e382fa216219a84e7e674812fabdaefc35ecef52e"
+      "file:size": 2328,
+      "file:checksum": "12201b6c0f026953efeac17e1f2583ea0389f4ef68221d1eb7f739cf9a656733e5f6"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2016,
-      "file:checksum": "12207af87e85569b59c77ee7854903e02b800de6c67db13e4c747a1fe2698de653e4"
+      "file:size": 2021,
+      "file:checksum": "1220adfff87648fb45c7f32291244415085b2287be211b5e5d5297bdb2e54f3acf42"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Wildland Urban Interface thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 31091,
+      "file:checksum": "12202680f67dfe805a4ae83d2a61757b04476d9666c80012f52db37cc9e55a2c6287"
     }
   },
   "table:columns": [

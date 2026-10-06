@@ -14,7 +14,7 @@
       "source": "data",
       "source-layer": "no-fireworks-zone",
       "paint": {
-        "fill-color": "#e03131",
+        "fill-color": "#d6336c",
         "fill-opacity": 0.75
       }
     },

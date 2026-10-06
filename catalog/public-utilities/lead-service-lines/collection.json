@@ -7,9 +7,9 @@
   ],
   "id": "lead-service-lines",
   "title": "Water Service Line Material Inventory",
-  "description": "Water Service Line Material Inventory in Sandy City, Utah. The upstream service publishes no description for this layer. Published by Sandy City to meet the service line inventory requirement of the US EPA Lead and Copper Rule Revisions. The inventory is incomplete: most lines are still classified Unknown. 26,213 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Water Service Line Material Inventory in Sandy City, Utah. The upstream service publishes no description for this layer. Published by Sandy City to meet the service line inventory requirement of the US EPA Lead and Copper Rule Revisions. The inventory is incomplete: most lines are still classified Unknown. 26,213 point features, mirrored as GeoParquet in EPSG:2850 (NAD83(HARN) / Utah Central) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -47,7 +47,7 @@
       ]
     }
   },
-  "proj:epsg": 3566,
+  "proj:epsg": 2850,
   "links": [
     {
       "rel": "root",
@@ -99,7 +99,7 @@
     "data": {
       "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.parquet",
       "type": "application/vnd.apache.parquet",
-      "title": "Water Service Line Material Inventory (GeoParquet, EPSG:3566)",
+      "title": "Water Service Line Material Inventory (GeoParquet, EPSG:2850)",
       "roles": [
         "data"
       ],
@@ -125,8 +125,8 @@
         "style",
         "default"
       ],
-      "file:size": 1055,
-      "file:checksum": "12204a98edcd921c5daf7d48e9afec4ec346abc04ce41e455aad3a311a4d205962c6"
+      "file:size": 960,
+      "file:checksum": "12200c6683c2589942dc5cef29b16e3a5e14cbe199d919247157ced849d2ba4d656b"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3051,
-      "file:checksum": "12207c19ee05bae6aba499214de0b22c50242f5c896a745dfe7c52e137e93075495a"
+      "file:size": 3425,
+      "file:checksum": "12205209487b46fc476e58718d2c17be3bceea3cfc05c11662db31f4801e68aa04f6"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 6758,
-      "file:checksum": "122074b5c542a0a0a4fdda116e2ddacb734daec9d79caade46c323543415154a8568"
+      "file:size": 6748,
+      "file:checksum": "1220c822c3fef8fc65f5e041c342cca460298de4542e346464ad78863bfbc29ebcb0"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Water Service Line Material Inventory thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 103211,
+      "file:checksum": "1220ff513eff815f6be05f385729672013f4c8dc6980e957e5afa9c0bc5902117e32"
     }
   },
   "table:columns": [

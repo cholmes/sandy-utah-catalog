@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Default",
+  "name": "Hazard type",
   "sources": {
     "data": {
       "type": "vector",
@@ -14,7 +14,20 @@
       "source": "data",
       "source-layer": "landslide-risk",
       "paint": {
-        "fill-color": "#e03131",
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "Hazard"
+          ],
+          "Land Slide",
+          "#e8590c",
+          "Rock Fall",
+          "#862e9c",
+          "Debris Flow",
+          "#1098ad",
+          "#ced4da"
+        ],
         "fill-opacity": 0.75
       }
     },

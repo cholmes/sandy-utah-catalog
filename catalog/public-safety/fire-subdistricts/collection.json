@@ -7,9 +7,9 @@
   ],
   "id": "fire-subdistricts",
   "title": "Fire Dispatch Subdistricts",
-  "description": "Fire subdistricts in Sandy City, Utah. 39 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Fire subdistricts in Sandy City, Utah. 39 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -120,13 +120,13 @@
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "Default",
+      "title": "First-due station",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 621,
-      "file:checksum": "1220ccb4712cc828b27738eb98013d36d88c307a1f099acf4e4b324954398440264d"
+      "file:size": 975,
+      "file:checksum": "1220ee822ef85ed0143adf3380204a27026f313803d53cc8180fdb3c1badd2245824"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2532,
-      "file:checksum": "12206af705035615476696d3bd5a550e9d3879d4b74fb32acc1d40f7351b88defd21"
+      "file:size": 2526,
+      "file:checksum": "1220173416d5bc5d4513a571d4ceaaa2bf85baeaf3afcb4a326e6ec7e30f33d061fc"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2194,
-      "file:checksum": "12207be30e5576d306af83c921a399114467e19b6bb7e39332942e6eb3320dc7c714"
+      "file:size": 2343,
+      "file:checksum": "1220bd5b0f0a0587a8120632eb0ab096ce6f1b3fbc6406aeb97e0203b45e96d17830"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Fire Dispatch Subdistricts thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 63067,
+      "file:checksum": "122025e080db8607a6d4a4735be3d11933289ac9f33caab9708e5854e96effe522e5"
     }
   },
   "table:columns": [

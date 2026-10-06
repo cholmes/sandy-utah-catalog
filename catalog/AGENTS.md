@@ -25,13 +25,25 @@ schema and the coded-value lists are.
 
 ## The projection, which is the most common way to get this wrong
 
-Every GeoParquet here is **EPSG:3566**, NAD83/HARN Utah Central, in **US
-survey feet**. This is what Sandy City publishes and it is deliberately
+**40 of the 42 collections are EPSG:3566**, NAD83(HARN) / Utah Central, in
+**US survey feet**. This is what Sandy City publishes and it is deliberately
 preserved rather than reprojected.
+
+**Two are not, and assuming otherwise gives wrong distances:**
+
+| Collection | `proj:epsg` | Linear unit |
+| --- | --- | --- |
+| `public-utilities/lead-service-lines` | 2850 | **metres** (same projection, metric) |
+| `property-and-land-use/future-land-use` | 3857 | Mercator metres, not ground distance |
+
+Both came from the city's ArcGIS Online organisation rather than its own
+server, which is why they differ. **Read `proj:epsg` off the collection before
+computing any length or area.** Do not assume the catalog is uniform.
 
 Consequences:
 
-- `ST_Length` and `ST_Area` return **feet and square feet**, not metres.
+- `ST_Length` and `ST_Area` return the collection's own unit, not metres by
+  default.
 - You cannot compare coordinates against a WGS84 dataset without transforming
   first.
 - `ST_MakeEnvelope` with degree arguments will match nothing.
@@ -41,14 +53,16 @@ INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;
 
 SELECT ST_Transform(geometry, 'EPSG:3566', 'EPSG:4326') AS geom_wgs84
 FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trails/trails.parquet'
-LIMIT 5;
+LIMIT 5;   -- trails is 3566; check proj:epsg for the collection you query
 ```
 
 The PMTiles are Web Mercator, because tiles have to be. Their asset carries
-`proj:epsg: 3857`, overriding the collection's `proj:epsg: 3566`.
+`proj:epsg: 3857`, which overrides the collection-level `proj:epsg` wherever
+the two differ.
 
 Every row carries a `bbox` struct column (`xmin`, `ymin`, `xmax`, `ymax`)
-written by gpio for spatial pruning. It is in EPSG:3566 like the geometry.
+written by gpio for spatial pruning. It is in the collection's own CRS, like
+the geometry.
 Rows are in Hilbert order, so a bbox filter prunes row groups efficiently.
 
 ## Join keys

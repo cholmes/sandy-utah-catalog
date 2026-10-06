@@ -7,9 +7,9 @@
   ],
   "id": "bus-stops",
   "title": "UTA Bus Stops",
-  "description": "UTA Bus Stops in Sandy City, Utah. The upstream service publishes no description for this layer. 3,195 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "UTA Bus Stops in Sandy City, Utah. The upstream service publishes no description for this layer. 3,195 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -126,7 +126,7 @@
         "default"
       ],
       "file:size": 487,
-      "file:checksum": "12206f3f19d599cdea7368644ed423abb879b290c9ec7bc0db34f52ebc645228ea1d"
+      "file:checksum": "1220ccf75d3342267305ff29aa941d3651cdf379d8374c32da70feac98553f4836ac"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2290,
-      "file:checksum": "1220170a49e2fc71025096d41d6ce1cee149cb1abdd16fbeafb59eb3f436177ab4b2"
+      "file:size": 2284,
+      "file:checksum": "12206d1e60bb8f4a15dc54ce23a4f08e0028b697bbf2aecb144c7342dc8dbd3644c3"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2031,
-      "file:checksum": "1220ed8c20199eb6d5c0cd40b661c55d29f5c8a8afdf42cef2753fc3c138e671536e"
+      "file:size": 2036,
+      "file:checksum": "122079ce6339e146da334611975cf29a787e2736f01e41b0872a84a5d8e5c5d51771"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "UTA Bus Stops thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 21597,
+      "file:checksum": "122089d9133e6019e4851c1214509547d2a98aa0bd5f29d27672473e598ab26f9adf"
     }
   },
   "table:columns": [

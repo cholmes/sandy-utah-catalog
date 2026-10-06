@@ -7,9 +7,9 @@
   ],
   "id": "police-reporting-areas",
   "title": "Police Reporting Areas",
-  "description": "Police reporting areas in Sandy City, Utah. 439 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Police reporting areas in Sandy City, Utah. 439 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -120,13 +120,13 @@
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "Default",
+      "title": "Area type",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 646,
-      "file:checksum": "12202f66008835ab99de870c14dd243820764ad465e1fd5a6a4371831fc24156846e"
+      "file:size": 1011,
+      "file:checksum": "1220ba6dcb3af6cf7fccefb36f36edab0b051357841a65cb1c7ffcd5f2e4a17663dd"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2314,
-      "file:checksum": "12201e405f8aa82b68b72abf633924edeebd3144ba7c39cd852bbda201865de28bb5"
+      "file:size": 2308,
+      "file:checksum": "122076d486ed18c497a8740fa5ecdd4d49ea546a11a175ddc07c31f5f8ea894f1ef0"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2220,
-      "file:checksum": "1220d9f3e11fc60f15d5a204db10e73379e4a0743ce9d9d8685d98e8396044eddff1"
+      "file:size": 2575,
+      "file:checksum": "1220b4e74991bfc0f1500eb6fa85f4f0edac21033f5f7585ee8ffef611d400fccc6d"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Police Reporting Areas thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 96333,
+      "file:checksum": "1220f37cdc37308a1dd0a2e532ca77e59cd9985e08f14357151e3ad6e64e1e9cef7e"
     }
   },
   "table:columns": [

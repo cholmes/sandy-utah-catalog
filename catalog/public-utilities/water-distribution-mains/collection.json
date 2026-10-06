@@ -7,9 +7,9 @@
   ],
   "id": "water-distribution-mains",
   "title": "Water Distribution Mains",
-  "description": "Water Distribution Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 15,249 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Water Distribution Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 15,249 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2727,
-      "file:checksum": "1220bd219fbeb6a9e184441aa1028f80bb6ee1bf50b42b27dee243d287100369a056"
+      "file:size": 2721,
+      "file:checksum": "12201b36a6304ea5f8250635d510a41684cf6a8c8032b1ac8ffb956fd36b851c100f"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3633,
-      "file:checksum": "12207c4a91d4c2086b763931f58a7d2652759301b30bf3023eb99db76890ac94517f"
+      "file:size": 3638,
+      "file:checksum": "12208abe93d56e156bccdfcc9ee0091bd6374ecf0440733bc75bc5a8ab97e059a513"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Water Distribution Mains thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 168217,
+      "file:checksum": "12201e23a2a447fb700c7e8246fa66e81a0448aaaeee8d19bcc238e68edeaf0c18c4"
     }
   },
   "table:columns": [

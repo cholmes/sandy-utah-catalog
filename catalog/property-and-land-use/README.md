@@ -8,7 +8,7 @@ Parcels, zoning, subdivisions, address points, future land use and overlay zones
 - [Future Land Use](./future-land-use/) — see its README for columns and caveats
 - [Parcels](./parcels/) — see its README for columns and caveats
 - [Sensitive Area Overlay Zone](./sensitive-overlay-zone/) — see its README for columns and caveats
-- [Short-Term Rentals](./short-term-rentals/) — see its README for columns and caveats
+- [Short-Term Rental Allocations](./short-term-rental-allocations/) — see its README for columns and caveats
 - [Subdivisions](./subdivisions/) — see its README for columns and caveats
 - [Zoning Districts](./zoning/) — see its README for columns and caveats
 

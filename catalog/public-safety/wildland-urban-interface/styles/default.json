@@ -14,7 +14,7 @@
       "source": "data",
       "source-layer": "wildland-urban-interface",
       "paint": {
-        "fill-color": "#e03131",
+        "fill-color": "#e8590c",
         "fill-opacity": 0.75
       }
     },

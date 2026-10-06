@@ -7,9 +7,9 @@
   ],
   "id": "parcels",
   "title": "Parcels",
-  "description": "Parcels in and around Sandy City, Utah as of July, 2022. The service describes itself as current to July 2022, so it lags the county's live parcel fabric by more than three years. 106,087 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Parcels in and around Sandy City, Utah as of July, 2022. The service describes itself as current to July 2022, so it lags the county's live parcel fabric by more than three years. 106,087 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Salt Lake County Recorder",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2414,
-      "file:checksum": "122050bc8b5ce01cb73ade143c79710afa839ea7663be8221388578b90e772cba279"
+      "file:size": 2408,
+      "file:checksum": "122012602bd1eb040d152f82f5999cd45512cfbd5f1293097e5468433dbb9a4dd5f5"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 4125,
-      "file:checksum": "1220be99c56f7c79e681702d014cd6d219577ee93104d2ba6af338881eacb35ab9ef"
+      "file:size": 4130,
+      "file:checksum": "12204179572068ace337193c4772472737a1dc1edc966af880c66fd7f3c510fd0486"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Parcels thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 162364,
+      "file:checksum": "12206a0a82519094a464bde94c4bcda9528268b960b4bf1f50937f9e4210024d5304"
     }
   },
   "table:columns": [

@@ -5,11 +5,11 @@
     "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "id": "short-term-rentals",
-  "title": "Short-Term Rentals",
-  "description": "Community Count for Short Term Rentals in Sandy City\nThis map contains a polygon layer of the Sandy City Communities. With attributes of the allocated short term rental space. 30 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "id": "short-term-rental-allocations",
+  "title": "Short-Term Rental Allocations",
+  "description": "Community Count for Short Term Rentals in Sandy City\nThis map contains a polygon layer of the Sandy City Communities. With attributes of the allocated short term rental space. This layer holds the per-community short-term-rental permit cap, not the location of individual rentals. Each of the 30 community areas carries `Max_STR` (the cap), `Current_STR` (permits issued) and `Open_STR` (permits still available). One community is at -1, meaning it is over its cap. 30 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -65,13 +65,13 @@
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Short-Term Rentals README"
+      "title": "Short-Term Rental Allocations README"
     },
     {
       "rel": "agents",
       "href": "./AGENTS.md",
       "type": "text/markdown",
-      "title": "Short-Term Rentals agent guide"
+      "title": "Short-Term Rental Allocations agent guide"
     },
     {
       "rel": "via",
@@ -87,19 +87,19 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rentals/short-term-rentals.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
-        "short-term-rentals"
+        "short-term-rental-allocations"
       ],
-      "title": "Short-Term Rentals vector tiles"
+      "title": "Short-Term Rental Allocations vector tiles"
     }
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rentals/short-term-rentals.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.parquet",
       "type": "application/vnd.apache.parquet",
-      "title": "Short-Term Rentals (GeoParquet, EPSG:3566)",
+      "title": "Short-Term Rental Allocations (GeoParquet, EPSG:3566)",
       "roles": [
         "data"
       ],
@@ -107,46 +107,56 @@
       "file:checksum": "1220a243800f7343a78687fe01dec154cb11e129e11e835fbec39b719e4350444892"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rentals/short-term-rentals.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "Short-Term Rentals (vector tiles, Web Mercator)",
+      "title": "Short-Term Rental Allocations (vector tiles, Web Mercator)",
       "roles": [
         "visual"
       ],
       "proj:epsg": 3857,
-      "file:size": 73952,
-      "file:checksum": "1220d20e8e08a5f55adedd31f6cb4fbf5645f97f3db82b85b25697fcccdaf301dd02"
+      "file:size": 74653,
+      "file:checksum": "122076bf006ecab34e7c1a69326a98bcdfbd35e01bfcdd92fe581049649f60696ff0"
     },
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "Default",
+      "title": "Permits still available",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 626,
-      "file:checksum": "1220300854e8f39d7c8df268065a8d8bfa919c156f8423d734a6391ec57a1500bbb4"
+      "file:size": 964,
+      "file:checksum": "122068fc2eb1d7a30d8338db80ab22d32e822ec7ea763f444653c884699d3664da09"
     },
     "readme": {
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Short-Term Rentals README",
+      "title": "Short-Term Rental Allocations README",
       "roles": [
         "metadata"
       ],
-      "file:size": 2418,
-      "file:checksum": "12206f618a6bb614601790bde3da68fe9a87b32496aab94b6e046268740d5f0c884c"
+      "file:size": 2801,
+      "file:checksum": "1220e360be93a07272689cb46fc660d681b6519fc3e424cf7e6a3ed136b0953bc1e0"
     },
     "agents": {
       "href": "./AGENTS.md",
       "type": "text/markdown",
-      "title": "Short-Term Rentals agent guide",
+      "title": "Short-Term Rental Allocations agent guide",
       "roles": [
         "metadata"
       ],
-      "file:size": 2297,
-      "file:checksum": "122087a3520abef2c9d919a0c03998353b97b0ab905a919e23bfccc6bccb0226df44"
+      "file:size": 2621,
+      "file:checksum": "1220f72388af910236b21909f4fdb3af21ea55c20a53907003de52cf009c5455ec92"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Short-Term Rental Allocations thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 47383,
+      "file:checksum": "12203efb1d23119d7759911261aed3e8fee780297c4ffef87bbe55db50f7846ffdb1"
     }
   },
   "table:columns": [
@@ -198,7 +208,7 @@
   "geoparquet:feature_count": 30,
   "geoparquet:geometry_type": "MultiPolygon",
   "pmtiles:layers": [
-    "short-term-rentals"
+    "short-term-rental-allocations"
   ],
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 14,

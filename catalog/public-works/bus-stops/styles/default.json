@@ -15,7 +15,7 @@
       "source-layer": "bus-stops",
       "paint": {
         "circle-color": "#845ef7",
-        "circle-radius": 3.2,
+        "circle-radius": 4.0,
         "circle-stroke-color": "#ffffff",
         "circle-stroke-width": 0.5,
         "circle-opacity": 0.85

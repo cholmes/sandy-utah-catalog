@@ -1,12 +1,12 @@
 # Future Land Use
 
-Future Land Use Map from Sandy City General Plan. 979 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.
+Future Land Use Map from Sandy City General Plan. 979 multipolygon features, mirrored as GeoParquet in EPSG:3857 (WGS 84 / Pseudo-Mercator) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.
 
 ## Coverage
 
 - **Features**: 979 (MultiPolygon)
 - **Extent (WGS84)**: `-111.921593, 40.528075, -111.77701, 40.618004`
-- **Coordinate system**: EPSG:3566, NAD83/HARN Utah Central, US survey feet
+- **Coordinate system**: EPSG:3857, WGS 84 / Pseudo-Mercator — linear units are Mercator metres, which are not ground distances away from the equator
 
 ## Licence
 
@@ -17,7 +17,7 @@ Sandy City publishes no licence for this data. There is no terms-of-use page on 
 This is a **mirror**. Sandy City produced the data; it is republished here unmodified except where noted below.
 
 - **Source**: [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Sandy_Future_Land_Use_Map_WFL1/FeatureServer/12](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Sandy_Future_Land_Use_Map_WFL1/FeatureServer/12)
-- **Mirrored**: 2026-10-06T19:01:44Z
+- **Mirrored**: 2026-10-06T19:21:37Z
 
 Converted with [gpio](https://github.com/developmentseed/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
 

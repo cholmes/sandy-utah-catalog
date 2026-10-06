@@ -7,9 +7,9 @@
   ],
   "id": "fault-zones",
   "title": "Earthquake Fault Zones",
-  "description": "Map of hazards in Sandy City, Utah. 14 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Map of hazards in Sandy City, Utah. 14 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -126,7 +126,7 @@
         "default"
       ],
       "file:size": 591,
-      "file:checksum": "122021d38feb392056c6f528c4c2a3ae74d0c5ebb05b5cc20f3caabd4acc41f0504b"
+      "file:checksum": "122095816423151009f5b1a8737e38b90dd89741bf3876c93b0b0d8b30e2f83df6f5"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2204,
-      "file:checksum": "12208c8f4a04bed76d26964d142607a1b1fbec21a8907d8773be934b4a5d3ba362db"
+      "file:size": 2198,
+      "file:checksum": "122053ab673e695fbd174a1221afe457ecf9b4f4f9f6776f489bfed7c6494da171b9"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 1938,
-      "file:checksum": "1220949bb093e78116d5aceb0867432343c6639f0cec9d56ff518a4384a48d5b1bf8"
+      "file:size": 1943,
+      "file:checksum": "1220aa70dc2f95f171de9fbe6c49ae03ddd2e3a8e323328131f3e56b257281bce93d"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Earthquake Fault Zones thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 36716,
+      "file:checksum": "12208789519501f1bf6ae1ed78635643d57b8828b80246b2d337667513cf91c05ddb"
     }
   },
   "table:columns": [

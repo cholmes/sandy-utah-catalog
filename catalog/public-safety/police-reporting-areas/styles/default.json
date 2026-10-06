@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Default",
+  "name": "Area type",
   "sources": {
     "data": {
       "type": "vector",
@@ -14,7 +14,24 @@
       "source": "data",
       "source-layer": "police-reporting-areas",
       "paint": {
-        "fill-color": "#e03131",
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "TYPE_DESC"
+          ],
+          "Residential",
+          "#ffd43b",
+          "Commercial",
+          "#e03131",
+          "Intersection",
+          "#868e96",
+          "Apt, Condo, Hotel, Motel",
+          "#f08c00",
+          "Park, Cemetery, Forest",
+          "#2f9e44",
+          "#ced4da"
+        ],
         "fill-opacity": 0.75
       }
     },
@@ -25,7 +42,7 @@
       "source-layer": "police-reporting-areas",
       "paint": {
         "line-color": "#ffffff",
-        "line-width": 0.4
+        "line-width": 0.2
       }
     }
   ]

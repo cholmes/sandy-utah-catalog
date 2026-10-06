@@ -7,9 +7,9 @@
   ],
   "id": "sewer-mains",
   "title": "Sewer Mains",
-  "description": "Sewer Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 16,250 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Sewer Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 16,250 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2578,
-      "file:checksum": "122086d9bf581545882830681df0d76439acf1f550306cf46a9d637a72d0375c7b0e"
+      "file:size": 2572,
+      "file:checksum": "12204aae5c974b9884807fc8fd3ef34542338c176e578757d4251ec7f16bdf66bb0e"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2873,
-      "file:checksum": "1220f57edf52c8bddd1225dbd2ddf6ec32bd76beca4ff13e147aab942c753a12fa21"
+      "file:size": 2878,
+      "file:checksum": "1220691d160a9f70619e705509c134e4457273578edc700b99334d03ae4c5d244c4a"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Sewer Mains thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 247267,
+      "file:checksum": "1220017171c7e76f3c81bae5b5155a6888d11ed521660b61760072d5c0732bcf3987"
     }
   },
   "table:columns": [

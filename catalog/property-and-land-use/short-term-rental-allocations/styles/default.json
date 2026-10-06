@@ -1,0 +1,48 @@
+{
+  "version": 8,
+  "name": "Permits still available",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../short-term-rental-allocations.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "short-term-rental-allocations-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "short-term-rental-allocations",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "to-number",
+            [
+              "get",
+              "Open_STR"
+            ]
+          ],
+          "#c92a2a",
+          1,
+          "#fd7e14",
+          5,
+          "#ffd43b",
+          10,
+          "#2f9e44"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "short-term-rental-allocations-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "short-term-rental-allocations",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

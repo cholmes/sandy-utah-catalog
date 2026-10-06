@@ -7,9 +7,9 @@
   ],
   "id": "street-lights",
   "title": "Street Lights",
-  "description": "Street Lights in Sandy City, Utah. The upstream service publishes no description for this layer. 8,727 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Street Lights in Sandy City, Utah. The upstream service publishes no description for this layer. 8,727 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -126,7 +126,7 @@
         "default"
       ],
       "file:size": 499,
-      "file:checksum": "12203d2f2273eabf50a8380ba82554f4659c69792efa1076ae0de47a24f360faba51"
+      "file:checksum": "1220eb48b698a4b9701055afa9178632fe49467f35f281eee7676b099823d5f6d064"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2345,
-      "file:checksum": "1220aec7fe26b946afff1301675a5c28df9af9fb08524a6759cca6a524f759bad47d"
+      "file:size": 2339,
+      "file:checksum": "12205397dd3ee84d2cd55d827477f3391a2e909fe6e0c0a0e81ab7e0327b8ea16f89"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3187,
-      "file:checksum": "122047ed092607bede015c250a485c7539bbb681c34d89b3770a8db3a1917ce194ac"
+      "file:size": 3192,
+      "file:checksum": "1220ca2042d4df6d79dedbded75a11c5dc131609b1387586c13ad3fbb66507b723df"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Street Lights thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 53877,
+      "file:checksum": "12205abb802a498210ff9e799858e7e60922fe0c7bf3cd6e75cff4c3d8ca0ef5810b"
     }
   },
   "table:columns": [

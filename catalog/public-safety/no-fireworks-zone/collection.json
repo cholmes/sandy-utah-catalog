@@ -7,9 +7,9 @@
   ],
   "id": "no-fireworks-zone",
   "title": "No Fireworks Zones",
-  "description": "No firework zone in Sandy City, Utah. 169 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "No firework zone in Sandy City, Utah. 169 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -126,7 +126,7 @@
         "default"
       ],
       "file:size": 621,
-      "file:checksum": "122057e6907acf4b801b11e66eeedefec907dd47b8ee760dff65ae58d7e6aadb617f"
+      "file:checksum": "122017f9646da72f59b34ba68f60c7f221020ef9db9659019b109158551f91ec085f"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2251,
-      "file:checksum": "1220ab0e6e057a1731c42c98206cfc132ad778616a5658837e9be8dd06f6bdd885d8"
+      "file:size": 2245,
+      "file:checksum": "122085fb027086371116fe8f7ab347d37301645299f2805f513cf5aef2c7da3137ac"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2049,
-      "file:checksum": "122004ddef0f184c91cab5bf43d2407c2e32da6ca6ab74986460968b6787a33ca04c"
+      "file:size": 2054,
+      "file:checksum": "122012f1d73393d403c0ad6b90241c120ff93e9a96d4f47ee123168cb26af72e489e"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "No Fireworks Zones thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 43633,
+      "file:checksum": "1220c36274e3aea268464545191d29d0a9238525f8df3fd4711b45a599769fa58f6e"
     }
   },
   "table:columns": [

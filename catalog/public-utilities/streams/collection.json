@@ -7,9 +7,9 @@
   ],
   "id": "streams",
   "title": "Streams",
-  "description": "Sandy Waterways Streams. 848 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Sandy Waterways Streams. 848 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2091,
-      "file:checksum": "12207abb10297200fef850490437b17e962b0fcb4eb6d65d475810bbbd330b1e2df9"
+      "file:size": 2085,
+      "file:checksum": "122004f8dd531db27c89e0a63b4056d8252cb064c7c44087fd1859247121a24fcb75"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2193,
-      "file:checksum": "12207e9f6e5d0e002018f416928415f8879821cad84e7bb66d049f6bda396f26b82a"
+      "file:size": 2198,
+      "file:checksum": "1220869fa215128ee2636c0793ad76acd7598e800e984f07bd3d40866807c1d4dd22"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Streams thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 66163,
+      "file:checksum": "12205306e3bb64e48a0393e70be2e60e363ebfbc3d6668f85a162289b408aeb2b7dd"
     }
   },
   "table:columns": [

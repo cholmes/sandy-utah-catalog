@@ -14,7 +14,7 @@
       "source": "data",
       "source-layer": "fault-zones",
       "paint": {
-        "fill-color": "#e03131",
+        "fill-color": "#862e9c",
         "fill-opacity": 0.75
       }
     },

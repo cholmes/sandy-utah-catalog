@@ -7,9 +7,9 @@
   ],
   "id": "landslide-risk",
   "title": "Potential Landslide Risk Areas",
-  "description": "Map of hazards in Sandy City, Utah. 289 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Map of hazards in Sandy City, Utah. 289 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -120,13 +120,13 @@
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "Default",
+      "title": "Hazard type",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 606,
-      "file:checksum": "1220437d3665906a06d500fbf36a65dce5b04683f16b5f73596a9b64c4b5f34b0391"
+      "file:size": 851,
+      "file:checksum": "12202ca1c79f7393f6c99f6026263a68300af1514bda682de96bd734e049b3560c70"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2238,
-      "file:checksum": "122031986cde19ffb582ac5db27fc418cbe2114c20957d6a774d424bbf6a10a8254b"
+      "file:size": 2232,
+      "file:checksum": "12204d602af83a66b347edb66a9e914023b9bf0bb40077d92525b560dc42cbefcdc8"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 1978,
-      "file:checksum": "12206af938cf6f08107452d4f3ff7a4e74391aa79ce111a99257f4479db211dad236"
+      "file:size": 2126,
+      "file:checksum": "12202a94f5cafa2817e220615774d80689d8b1e17631a47d8f7564285ac50f8bc123"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Potential Landslide Risk Areas thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 29288,
+      "file:checksum": "1220193293d37537f5e068f71c3603995e6d1d353ed6fddd14194ed8b03b3b3f35a5"
     }
   },
   "table:columns": [

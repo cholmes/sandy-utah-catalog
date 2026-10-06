@@ -7,9 +7,9 @@
   ],
   "id": "fire-hydrants",
   "title": "Fire Hydrants",
-  "description": "Fire Hydrants in Sandy City, Utah. The upstream service publishes no description for this layer. Sandy also publishes a hydrant layer under `Pub_Safety/Hydrants` with a different count (5,047 against 5,292). This mirrors the Public Utilities copy, which is the one maintained with the water system. 5,292 point features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Fire Hydrants in Sandy City, Utah. The upstream service publishes no description for this layer. Sandy also publishes a hydrant layer under `Pub_Safety/Hydrants` with a different count (5,047 against 5,292). This mirrors the Public Utilities copy, which is the one maintained with the water system. 5,292 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -126,7 +126,7 @@
         "default"
       ],
       "file:size": 499,
-      "file:checksum": "122017ea279c60865172cac2985d0e747ad2d37d78b1047c6d793af6354afc8f4aec"
+      "file:checksum": "12205dd63eb6c87198ed67c714be7399b8ee4432d2175eaf271487bacedf2bdaf4a9"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2798,
-      "file:checksum": "1220ccb3c70ce59f7bbcf1863c9ddfba9c1ec02245d52051dbd6d2ee2ba358c0a64a"
+      "file:size": 2792,
+      "file:checksum": "12208de4725beb816abf8dd34f044d3fc4e5c7c3b2cd181332d5d4d57acd71bef260"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 4536,
-      "file:checksum": "1220b5237997e87e9e0fba389122a2ea2bf891cdbacf4700844e52575d4e30839475"
+      "file:size": 4541,
+      "file:checksum": "12200dd818843c868236e7db24505594e911edf8dd11405c7be4d40140d6e8e1d4e1"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Fire Hydrants thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 47518,
+      "file:checksum": "12208d075db06a5580834e70cd2e6033ab1f415b89de0bfc0513a305b204879a40c3"
     }
   },
   "table:columns": [

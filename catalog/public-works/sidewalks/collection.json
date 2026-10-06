@@ -7,9 +7,9 @@
   ],
   "id": "sidewalks",
   "title": "Sidewalks",
-  "description": "Sidewalk Inventory (In Progress) This layer will be used to identify areas that are missing sidewalks and help calculate an estimated cost of adding sidewalks where needed. 8,586 multilinestring features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Sidewalk Inventory (In Progress) This layer will be used to identify areas that are missing sidewalks and help calculate an estimated cost of adding sidewalks where needed. 8,586 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2246,
-      "file:checksum": "1220b6d8cc3a78372d1bff106b80a8b2ea3598296ffafebfc1d352765456181432aa"
+      "file:size": 2240,
+      "file:checksum": "1220c18f88dc4c89469ea0e81363e6930ae76c8075b664ce1241c5285faf5749d47a"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3000,
-      "file:checksum": "1220a6742493911a825157e6ac1df3c150caaa3acfc78496eddf96c0b3c560a8d037"
+      "file:size": 3005,
+      "file:checksum": "12202e30eb3621931c2fd77a91f25981a0fce92c660101170af4a0ee636746f67fde"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Sidewalks thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 247750,
+      "file:checksum": "12201152a66f19daaa69b26bc7418f376d2502a4afc46a1041b42975f58051089a1b"
     }
   },
   "table:columns": [

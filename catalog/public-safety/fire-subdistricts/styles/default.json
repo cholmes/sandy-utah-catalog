@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "name": "Default",
+  "name": "First-due station",
   "sources": {
     "data": {
       "type": "vector",
@@ -14,7 +14,27 @@
       "source": "data",
       "source-layer": "fire-subdistricts",
       "paint": {
-        "fill-color": "#e03131",
+        "fill-color": [
+          "match",
+          [
+            "to-string",
+            [
+              "get",
+              "ID"
+            ]
+          ],
+          "31",
+          "#d6336c",
+          "32",
+          "#f76707",
+          "33",
+          "#f59f00",
+          "34",
+          "#74b816",
+          "35",
+          "#0ca678",
+          "#ced4da"
+        ],
         "fill-opacity": 0.75
       }
     },

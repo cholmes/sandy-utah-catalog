@@ -7,9 +7,9 @@
   ],
   "id": "police-beats",
   "title": "Police Beats",
-  "description": "Police beats in Sandy City, Utah. 4 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Police beats in Sandy City, Utah. 4 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -120,13 +120,13 @@
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "Default",
+      "title": "Police beat",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 596,
-      "file:checksum": "12202c238d0900f0be7c5e58702da0701ec9d2d70b741515fc821f593d60dfa60ba0"
+      "file:size": 879,
+      "file:checksum": "1220d2dbf0ccb03e91fe6f2f02cd4a3eec16488b3f910cd27f8a0d8b1e088c82b302"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2188,
-      "file:checksum": "1220f5fe32131e52bc9210a1a321ca2d8274979c2133195741bc9176e6bde1af9bb4"
+      "file:size": 2182,
+      "file:checksum": "1220cb3f5a28aa99391561e3b50758bdc7e662c6b22da1d540a4e9695b53f1a787ac"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 1933,
-      "file:checksum": "12207b36573c9000ae1e5be2d2f7954253dde9f9e0e6cf1c7a487b280b16213f77fc"
+      "file:size": 2087,
+      "file:checksum": "1220970140511ba79e3ea4c8abc2c0d7f2f5e454e61f830c0d7c1bf90020f6e33965"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Police Beats thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 43057,
+      "file:checksum": "12209f24bb0c34837f3f88457e2648655d05ee4ce2d8133cfe5ee172fffa3a7c5dfd"
     }
   },
   "table:columns": [

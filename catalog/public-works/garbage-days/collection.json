@@ -7,9 +7,9 @@
   ],
   "id": "garbage-days",
   "title": "Garbage Collection Days",
-  "description": "Garbage Collection Days in Sandy City, Utah. The upstream service publishes no description for this layer. 5 multipolygon features, mirrored from the city's ArcGIS Server as GeoParquet in EPSG:3566 (NAD83/HARN Utah Central, US survey feet) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "description": "Garbage Collection Days in Sandy City, Utah. The upstream service publishes no description for this layer. 5 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:01:44Z",
+  "updated": "2026-10-06T19:21:37Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -120,13 +120,13 @@
     "style-default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "Default",
+      "title": "Collection day",
       "roles": [
         "style",
         "default"
       ],
-      "file:size": 596,
-      "file:checksum": "12207c4527fc065993870937f7c59c0f2eacd0dab36ca1eba7e892739e5abaffa207"
+      "file:size": 922,
+      "file:checksum": "12201c778f8697ae417cba82e42d104289a1f7b84d27b85f0816b66b3b54087b4618"
     },
     "readme": {
       "href": "./README.md",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2414,
-      "file:checksum": "12208a9ec12846f00e921a9c794d1d52baab3a360157beffa699b437d28c31523525"
+      "file:size": 2408,
+      "file:checksum": "122076568d0061145f8ff21efe2c5174ae475311d95436637654517e9bf016ea118b"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,18 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 1966,
-      "file:checksum": "1220ae8f455740012131a5f5351b5811158ca744236afc9012cd4dce4a95466c3ee8"
+      "file:size": 2135,
+      "file:checksum": "12206429ff6042faf8c222f12de2a77f67b36ee6f1c2142da570b5c4c8e01bf837c3"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Garbage Collection Days thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 41822,
+      "file:checksum": "1220125c95fce154eb3480c890d2c3eb01b384f89be68d9e614266dcfb9b9e187122"
     }
   },
   "table:columns": [
