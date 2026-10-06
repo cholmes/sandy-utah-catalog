@@ -1,0 +1,268 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "detention-ponds",
+  "title": "Storm Detention Ponds",
+  "description": "Storm Detention Ponds in Sandy City, Utah. The upstream service publishes no description for this layer. 210 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.920505,
+          40.529759,
+          -111.790812,
+          40.62082
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Storm Detention Ponds README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Storm Detention Ponds agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StormDrain/FeatureServer/7",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/detention-ponds/detention-ponds.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "detention-ponds"
+      ],
+      "title": "Storm Detention Ponds vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/detention-ponds/detention-ponds.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Storm Detention Ponds (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 235928,
+      "file:checksum": "12204d9adbdb1157d8780ff36fc3b706c21a03bcb48b1654a494e6663d31fcd71471"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/detention-ponds/detention-ponds.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Storm Detention Ponds (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 81103,
+      "file:checksum": "1220e9d295ee7025a1a29ff8abbfe30f80623ff6066277c658dc791eec2609fba0f5"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 611,
+      "file:checksum": "12207170a551ee05d85d5f128fa25c30aff7c657b40ed21b89fee8312dbd5e2e3d0e"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Storm Detention Ponds README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2389,
+      "file:checksum": "12205d1dc63bd9735bd64f397db378bdd27c4470f3fc1bd3154419fd54cc4e5804aa"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Storm Detention Ponds agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2741,
+      "file:checksum": "12203a930c13a03e9468a8a5f1989b2737483d2098d075076535dda9b987561dbc40"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Storm Detention Ponds thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14616,
+      "file:checksum": "1220fba29a5d776dafc82c3fb7ee1eda59dcd02b4c08edacbad142d227b9c00cd47c"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "NAME",
+      "type": "string"
+    },
+    {
+      "name": "ADDRESS",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "FACILITYID",
+      "type": "string"
+    },
+    {
+      "name": "OWNERSHIP",
+      "type": "string"
+    },
+    {
+      "name": "MaintRating",
+      "type": "string"
+    },
+    {
+      "name": "FrameGrate",
+      "type": "string"
+    },
+    {
+      "name": "StructCond",
+      "type": "string"
+    },
+    {
+      "name": "FloorBench",
+      "type": "string"
+    },
+    {
+      "name": "InspDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "MaintSched",
+      "type": "string"
+    },
+    {
+      "name": "DamGopher",
+      "type": "string"
+    },
+    {
+      "name": "DamSinkHoles",
+      "type": "string"
+    },
+    {
+      "name": "SpillwayGopher",
+      "type": "string"
+    },
+    {
+      "name": "SpillwaySinkHoles",
+      "type": "string"
+    },
+    {
+      "name": "TYPE",
+      "type": "string"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 210,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "detention-ponds"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8558105,
+    40.5752061,
+    7
+  ]
+}

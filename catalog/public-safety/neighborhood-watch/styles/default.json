@@ -1,0 +1,32 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../neighborhood-watch.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "neighborhood-watch-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "neighborhood-watch",
+      "paint": {
+        "fill-color": "#e03131",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "neighborhood-watch-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "neighborhood-watch",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

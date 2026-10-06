@@ -1,0 +1,344 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "crime-incidents",
+  "title": "Crime Incidents",
+  "description": "Crime Incidents in Sandy City, Utah. The upstream service publishes no description for this layer. 29,572 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -112.184857,
+          40.433108,
+          -111.70137,
+          40.808153
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Crime Incidents README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Crime Incidents agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/PoliceCrimeData/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/crime-incidents/crime-incidents.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "crime-incidents"
+      ],
+      "title": "Crime Incidents vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/crime-incidents/crime-incidents.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Crime Incidents (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 2074554,
+      "file:checksum": "1220af48e4adc16ff94f317c2634d25d1ed38a2b4034aacef029d206aed17d02572c"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/crime-incidents/crime-incidents.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Crime Incidents (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 4909221,
+      "file:checksum": "1220609040c5997164c9a183dc94d5b9b6c71182238b8265979bc48090e1eb364984"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Time of day",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 877,
+      "file:checksum": "1220082296c99e01316a7c23df41a191c7ebd8c13aa19b5cb31eb4b8b18e5627f91b"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Crime Incidents README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2870,
+      "file:checksum": "122027ca5e6fb15d0132834ed758a9e8988fa167de18ebeb28c83f569c8fe31f8e2e"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Crime Incidents agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3132,
+      "file:checksum": "122057f92f790e4c7ef422cc0b937f4d2ef0f0161f04db79b2c045759eee12e19ee8"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Crime Incidents thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 91768,
+      "file:checksum": "1220907f32eb1715443667c7041300bdb99f4a76244359dcced73271747f461df15b"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "evt_reference",
+      "type": "string"
+    },
+    {
+      "name": "jurisdiction",
+      "type": "string"
+    },
+    {
+      "name": "evt_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "evt_time",
+      "type": "int16"
+    },
+    {
+      "name": "location",
+      "type": "string"
+    },
+    {
+      "name": "zone",
+      "type": "string"
+    },
+    {
+      "name": "grid",
+      "type": "string"
+    },
+    {
+      "name": "occ_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "occ_time",
+      "type": "int16"
+    },
+    {
+      "name": "to_occ_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "to_occ_time",
+      "type": "int16"
+    },
+    {
+      "name": "week_day_d",
+      "type": "string"
+    },
+    {
+      "name": "week_day",
+      "type": "int16"
+    },
+    {
+      "name": "rucr",
+      "type": "string"
+    },
+    {
+      "name": "rext",
+      "type": "string"
+    },
+    {
+      "name": "rucr_ext_d",
+      "type": "string"
+    },
+    {
+      "name": "rucr_ext_exp_d",
+      "type": "string"
+    },
+    {
+      "name": "location_code",
+      "type": "string"
+    },
+    {
+      "name": "location_code_d",
+      "type": "string"
+    },
+    {
+      "name": "weapon_type1",
+      "type": "string"
+    },
+    {
+      "name": "weapon_type1_d",
+      "type": "string"
+    },
+    {
+      "name": "ibr_code",
+      "type": "string"
+    },
+    {
+      "name": "operational_code",
+      "type": "string"
+    },
+    {
+      "name": "operational_code_d",
+      "type": "string"
+    },
+    {
+      "name": "sort_order",
+      "type": "int32"
+    },
+    {
+      "name": "evt_date_time_text",
+      "type": "string"
+    },
+    {
+      "name": "occ_date_time_text",
+      "type": "string"
+    },
+    {
+      "name": "to_occ_date_time_text",
+      "type": "string"
+    },
+    {
+      "name": "hour",
+      "type": "int32"
+    },
+    {
+      "name": "month",
+      "type": "int32"
+    },
+    {
+      "name": "day",
+      "type": "int32"
+    },
+    {
+      "name": "year",
+      "type": "int32"
+    },
+    {
+      "name": "unique_id",
+      "type": "double"
+    },
+    {
+      "name": "ORIG_FID",
+      "type": "int32"
+    },
+    {
+      "name": "CATEGORY",
+      "type": "string"
+    },
+    {
+      "name": "DESCRIPTION",
+      "type": "string"
+    },
+    {
+      "name": "TYPE",
+      "type": "string"
+    },
+    {
+      "name": "Extension",
+      "type": "string"
+    },
+    {
+      "name": "TimeOfDay",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 29572,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "crime-incidents"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.9443453,
+    40.6209083,
+    7
+  ]
+}

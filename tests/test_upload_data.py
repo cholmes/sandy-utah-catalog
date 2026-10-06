@@ -150,16 +150,12 @@ with tempfile.TemporaryDirectory() as tmp:
         "a data_dir that does not exist says so",
     )
 
-# --- the unedited template exits cleanly -------------------------------
-# The shipped catalog.publish.yaml sets no data_dir, so main() must report
-# that instead of raising a traceback.
-argv = sys.argv
-sys.argv = ["upload_data.py"]
-try:
-    message = exit_message(upload_data.main)
-finally:
-    sys.argv = argv
-check("data_dir" in message, f"the template exits on data_dir: {message!r}")
+# The template shipped an assertion here that main() must complain about a
+# missing data_dir. That holds only while the catalog is unconfigured. This
+# catalog stages data, so data_dir names a real directory and main() runs a
+# dry run instead. The contract it meant to check, that an absent data_dir
+# exits with a message rather than a traceback, is covered by the data_root
+# cases above.
 
 # --- the sentinel guard ------------------------------------------------
 check(

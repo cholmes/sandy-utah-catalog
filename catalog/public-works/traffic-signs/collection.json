@@ -1,0 +1,292 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "traffic-signs",
+  "title": "Traffic Signs",
+  "description": "Traffic Signs in Sandy City, Utah. The upstream service publishes no description for this layer. 8,403 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.916688,
+          40.52824,
+          -111.778109,
+          40.618053
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Traffic Signs README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Traffic Signs agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Sign_Locatons/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/traffic-signs/traffic-signs.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "traffic-signs"
+      ],
+      "title": "Traffic Signs vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/traffic-signs/traffic-signs.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Traffic Signs (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 748812,
+      "file:checksum": "1220895f466f616919937312e6282f358307528b2d1220df86c253ebf1caa64a2989"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/traffic-signs/traffic-signs.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Traffic Signs (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 1428935,
+      "file:checksum": "1220d929f97a9442169818b7ba65cc7cf4f9afa70c5d38d846f86cbb8a96d50366fd"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Sign type",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 735,
+      "file:checksum": "122001a9be8efd72160248fb0fd3b59b23dcd75c51bc88fc9a985b53e8281dadf0bb"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Traffic Signs README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2341,
+      "file:checksum": "1220824631b903de30857c96cf548f297981a1c8a4c540a686b1819c9e48019db4c6"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Traffic Signs agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 4336,
+      "file:checksum": "12200f619b6d2d323e7979702a2ad8a6922c5404400a02978ff79dd82faad88916d4"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Traffic Signs thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 42704,
+      "file:checksum": "12207a62553e085c3815d42921ac34780572f40264664a500b8341d3f42671c61214"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "AssetID",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Location",
+      "type": "string"
+    },
+    {
+      "name": "STREET_ON",
+      "type": "string"
+    },
+    {
+      "name": "STREET_AT",
+      "type": "string"
+    },
+    {
+      "name": "District",
+      "type": "string"
+    },
+    {
+      "name": "PMA_ID",
+      "type": "int16"
+    },
+    {
+      "name": "REMARKS",
+      "type": "string"
+    },
+    {
+      "name": "RETIRED",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Type",
+      "type": "string"
+    },
+    {
+      "name": "MUTCD",
+      "type": "string"
+    },
+    {
+      "name": "MUTCD_Desc",
+      "type": "string"
+    },
+    {
+      "name": "ARROW",
+      "type": "string"
+    },
+    {
+      "name": "SPEED_LIMIT",
+      "type": "string"
+    },
+    {
+      "name": "FACE_POSIT",
+      "type": "string"
+    },
+    {
+      "name": "SIZE_",
+      "type": "string"
+    },
+    {
+      "name": "MATERIAL",
+      "type": "string"
+    },
+    {
+      "name": "CONDITION",
+      "type": "string"
+    },
+    {
+      "name": "LastInspection",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "LastInspFY",
+      "type": "string"
+    },
+    {
+      "name": "InspectionNeeded",
+      "type": "string"
+    },
+    {
+      "name": "SignGraphic",
+      "type": "string"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 8403,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "traffic-signs"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8474751,
+    40.5731461,
+    7
+  ]
+}

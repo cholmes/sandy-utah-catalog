@@ -1,0 +1,220 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "recycle-weeks",
+  "title": "Recycling Weeks",
+  "description": "Recycling Weeks in Sandy City, Utah. The upstream service publishes no description for this layer. 10 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921268,
+          40.527839,
+          -111.777212,
+          40.618066
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Recycling Weeks README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Recycling Weeks agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/RecycleWeeks/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/recycle-weeks/recycle-weeks.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "recycle-weeks"
+      ],
+      "title": "Recycling Weeks vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/recycle-weeks/recycle-weeks.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Recycling Weeks (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 68400,
+      "file:checksum": "12206b2fd7729fafb593a3ca30f805cc50fa80b610347a897073a5bd9d0dcfa91864"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/recycle-weeks/recycle-weeks.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Recycling Weeks (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 52319,
+      "file:checksum": "1220b5035359a9a2a4e86ad8019ecd300dca4290cbfc2c6719527a1675f7a29c1dac"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 601,
+      "file:checksum": "122013c6409fb3db04e2930e32f66d4778c6e20219d159caef234fc577d5ad8e774c"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Recycling Weeks README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2417,
+      "file:checksum": "122057df8c304a8acd29d24e8f44f411c972212c3a007a6b1e5e404429c2f260264a"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Recycling Weeks agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2055,
+      "file:checksum": "1220c38638b5bead8e7638917ca77ea95f8e0c60febcad7a9dc8f6a04523bbeba916"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Recycling Weeks thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 51278,
+      "file:checksum": "12200dac1deafea94858a19dc4d69278205c5390ddade75864a042b18ab2b6eb8f65"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "WEEKDAY",
+      "type": "int16"
+    },
+    {
+      "name": "DAY_NAME",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Week",
+      "type": "string"
+    },
+    {
+      "name": "Color",
+      "type": "string"
+    },
+    {
+      "name": "HomeCount",
+      "type": "int16"
+    },
+    {
+      "name": "Shape.STArea()",
+      "type": "double"
+    },
+    {
+      "name": "Shape.STLength()",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 10,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "recycle-weeks"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492919,
+    40.5729592,
+    7
+  ]
+}

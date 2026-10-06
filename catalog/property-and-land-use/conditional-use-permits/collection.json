@@ -1,0 +1,228 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "conditional-use-permits",
+  "title": "Conditional Use Permits",
+  "description": "Conditional Use Permits in Sandy City, Utah. The upstream service publishes no description for this layer. 960 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921104,
+          40.52935,
+          -111.796318,
+          40.616751
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Conditional Use Permits README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Conditional Use Permits agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/CUP/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/conditional-use-permits/conditional-use-permits.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "conditional-use-permits"
+      ],
+      "title": "Conditional Use Permits vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/conditional-use-permits/conditional-use-permits.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Conditional Use Permits (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 150111,
+      "file:checksum": "12205989b06e8236455cb004ca824049abe3384a80417015061891d4da4a873c8e9c"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/conditional-use-permits/conditional-use-permits.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Conditional Use Permits (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 314702,
+      "file:checksum": "122086154db28f38b39403ec6a0e6a6ac7e13a3fca0a910f7df52ef7c36ad57562aa"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 651,
+      "file:checksum": "1220c463f97f194d6fc2497ff6ac228f8d6b595fac96b0cea48d9eb28c6a8a60e885"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Conditional Use Permits README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2476,
+      "file:checksum": "1220839939bcd179d8f851f7e1bee45cec52a14313b748d4fbf8301de864cc08b18e"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Conditional Use Permits agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2178,
+      "file:checksum": "12205f2493bec0263bebf3f90dbf45b3ccafa7e4fd674805471bb672e5193805e808"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Conditional Use Permits thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 44136,
+      "file:checksum": "1220f48eec82a546131bd7740a84b61d088e66419b2a5f4a33bad0e044e6d48c5313"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Id",
+      "type": "int32"
+    },
+    {
+      "name": "Res_or_Com",
+      "type": "string"
+    },
+    {
+      "name": "Use_or_Str",
+      "type": "string"
+    },
+    {
+      "name": "Detail",
+      "type": "string"
+    },
+    {
+      "name": "Bus_Name",
+      "type": "string"
+    },
+    {
+      "name": "App_Name",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "File_Num",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 960,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "conditional-use-permits"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8587388,
+    40.5730837,
+    7
+  ]
+}

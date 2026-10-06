@@ -1,0 +1,200 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "evacuation-routes",
+  "title": "Fire Evacuation Routes",
+  "description": "Fire Evacuation Routes in Sandy City, Utah. The upstream service publishes no description for this layer. 9 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.853188,
+          40.538678,
+          -111.776478,
+          40.588672
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Fire Evacuation Routes README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Fire Evacuation Routes agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Evacuation_Routes/MapServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/evacuation-routes/evacuation-routes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "evacuation-routes"
+      ],
+      "title": "Fire Evacuation Routes vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/evacuation-routes/evacuation-routes.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Fire Evacuation Routes (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 25400,
+      "file:checksum": "12204b34cb0597578b39d65fe68f7fce465e3e1c9b2ff9d0906923675764aa605078"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/evacuation-routes/evacuation-routes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Fire Evacuation Routes (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 17845,
+      "file:checksum": "12201360c44e6aaa8ca5e6d1801141536401eed0e89e45dbf9f0beb31d4783cc1fa2"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 421,
+      "file:checksum": "1220ec22fd4e97d5a22133e5ca71a04b6cc272cbf98959f702bca7ccc511cc1bb66e"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Fire Evacuation Routes README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2409,
+      "file:checksum": "1220a1273be637fd724107698aa38089cad6fe371ea9900d4e937693012e3aeab948"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Fire Evacuation Routes agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1969,
+      "file:checksum": "122013be4d7bc200a1ba2198eab198a3b4cd0912643b822e96b333ff584f1abb31f1"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Fire Evacuation Routes thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 32126,
+      "file:checksum": "12209023d227e1abceb679f96f4c7271619528e183e73a6fd5c977d8f5531acebf14"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "NAME",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.STLength()",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 9,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "evacuation-routes"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8148521,
+    40.5636951,
+    7
+  ]
+}

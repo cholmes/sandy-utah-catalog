@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../wells.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "wells-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "wells",
+      "paint": {
+        "circle-color": "#0b7285",
+        "circle-radius": 8.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

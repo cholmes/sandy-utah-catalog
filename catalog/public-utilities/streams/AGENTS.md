@@ -59,5 +59,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Streams/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Streams/FeatureServer/0) on 2026-10-06T19:54:13Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Streams/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Streams/FeatureServer/0) on 2026-10-06T20:20:34Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

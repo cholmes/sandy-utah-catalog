@@ -6,7 +6,7 @@
   ],
   "id": "sandy-city-open-data",
   "title": "Sandy City, Utah \u2014 Municipal Open Data",
-  "updated": "2026-10-06T19:01:57Z",
+  "updated": "2026-10-06T20:14:10Z",
   "description": "A cloud-native mirror of the public geospatial data published by Sandy City, Utah: parcels, zoning, addresses, boundaries, parks and trails, public safety districts, water and storm infrastructure, roads and transit. Sandy City serves this data from a public ArcGIS Server and an ArcGIS Online organization, but runs no open data portal, publishes no bulk downloads, and states no license. This catalog republishes the public-interest subset as GeoParquet and PMTiles so it can be queried, joined and mapped without reverse-engineering REST pagination. Sandy City produced the data; this catalog is an independent mirror and is not endorsed by the city. Read the [agent guide](AGENTS.md) before querying, and read each collection's README for what its columns mean and what is known to be wrong with them.",
   "links": [
     {
@@ -76,6 +76,12 @@
       "href": "./public-works/catalog.json",
       "type": "application/json",
       "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "child",
+      "href": "./historic/catalog.json",
+      "type": "application/json",
+      "title": "Historic Sandy"
     }
   ]
 }

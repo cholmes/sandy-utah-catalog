@@ -1,0 +1,360 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "police-calls",
+  "title": "Police Calls for Service",
+  "description": "Police Calls for Service in Sandy City, Utah. The upstream service publishes no description for this layer. 185,647 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -116.049189,
+          20.524344,
+          -111.642928,
+          40.821874
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Police Calls for Service README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Police Calls for Service agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/PoliceCallData/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-calls/police-calls.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "police-calls"
+      ],
+      "title": "Police Calls for Service vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-calls/police-calls.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Police Calls for Service (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 22400569,
+      "file:checksum": "1220fc98c81e4e7fb1877ce42947d15baeea689427765455fc56c095792c9c49b477"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-calls/police-calls.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Police Calls for Service (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 10339365,
+      "file:checksum": "1220be08d757f670ffc28495a40d6d6a00346db0c61d47463599d79d9f01a8542593"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "How the call arrived",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 803,
+      "file:checksum": "12205c28bd8d98513af086aeac34efb1377150a5c36727455c3019359e6eddb8bb66"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Police Calls for Service README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2779,
+      "file:checksum": "12207f8dc7ce0ae736d06d43b46b4b1ab394bc11ef301d4990dafef31fcbe9db791d"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Police Calls for Service agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3406,
+      "file:checksum": "122008101cbf48c80469ce628888d1896effe9c46f09cbcaf381d7a565f74925e19a"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Police Calls for Service thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 46736,
+      "file:checksum": "1220302d84ec77e57c6d4fe2b7a517881f22ee49fdc7b4852b59071b459e78e13b43"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "evt_rin",
+      "type": "string"
+    },
+    {
+      "name": "evt_reference",
+      "type": "string"
+    },
+    {
+      "name": "jurisdiction",
+      "type": "string"
+    },
+    {
+      "name": "evt_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "location",
+      "type": "string"
+    },
+    {
+      "name": "zone",
+      "type": "string"
+    },
+    {
+      "name": "grid",
+      "type": "string"
+    },
+    {
+      "name": "week_day",
+      "type": "int16"
+    },
+    {
+      "name": "week_day_d",
+      "type": "string"
+    },
+    {
+      "name": "received_dt",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "dispatch_dt",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "enroute_dt",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "at_scene_dt",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "clear_dt",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "case_type",
+      "type": "string"
+    },
+    {
+      "name": "case_type_d",
+      "type": "string"
+    },
+    {
+      "name": "priority",
+      "type": "int16"
+    },
+    {
+      "name": "how_received",
+      "type": "string"
+    },
+    {
+      "name": "how_received_d",
+      "type": "string"
+    },
+    {
+      "name": "cleared_by",
+      "type": "string"
+    },
+    {
+      "name": "cleared_by_d",
+      "type": "string"
+    },
+    {
+      "name": "final_case_type",
+      "type": "string"
+    },
+    {
+      "name": "final_case_type_d",
+      "type": "string"
+    },
+    {
+      "name": "agg_time_to_dispatch",
+      "type": "int32"
+    },
+    {
+      "name": "agg_travel_time",
+      "type": "int32"
+    },
+    {
+      "name": "agg_response_time",
+      "type": "int32"
+    },
+    {
+      "name": "agg_time_on_scene",
+      "type": "int32"
+    },
+    {
+      "name": "agg_service_time",
+      "type": "int32"
+    },
+    {
+      "name": "report_year",
+      "type": "int16"
+    },
+    {
+      "name": "year",
+      "type": "int32"
+    },
+    {
+      "name": "month",
+      "type": "int32"
+    },
+    {
+      "name": "hour",
+      "type": "int32"
+    },
+    {
+      "name": "agg_time_to_dispatch_minutes",
+      "type": "double"
+    },
+    {
+      "name": "agg_travel_time_minutes",
+      "type": "double"
+    },
+    {
+      "name": "agg_response_time_minutes",
+      "type": "double"
+    },
+    {
+      "name": "agg_service_time_minutes",
+      "type": "double"
+    },
+    {
+      "name": "received_date_text",
+      "type": "string"
+    },
+    {
+      "name": "dispatch_date_text",
+      "type": "string"
+    },
+    {
+      "name": "enroute_date_text",
+      "type": "string"
+    },
+    {
+      "name": "at_scene_date_text",
+      "type": "string"
+    },
+    {
+      "name": "clear_date_text",
+      "type": "string"
+    },
+    {
+      "name": "clear_date_text2",
+      "type": "string"
+    },
+    {
+      "name": "ORIG_FID",
+      "type": "int32"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 185647,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "police-calls"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -113.8458132,
+    30.6727845,
+    7
+  ]
+}

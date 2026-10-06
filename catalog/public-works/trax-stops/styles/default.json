@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../trax-stops.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "trax-stops-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "trax-stops",
+      "paint": {
+        "circle-color": "#845ef7",
+        "circle-radius": 6.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

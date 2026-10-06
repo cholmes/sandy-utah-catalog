@@ -1,0 +1,51 @@
+{
+  "version": 8,
+  "name": "Response time (minutes)",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../fire-response-times.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "fire-response-times-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "fire-response-times",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "Name"
+          ],
+          "0 - 2",
+          "#1a9850",
+          "2 - 3",
+          "#91cf60",
+          "3 - 4",
+          "#d9ef8b",
+          "4 - 5",
+          "#fee08b",
+          "5 - 7",
+          "#fc8d59",
+          "7 - 10",
+          "#d73027",
+          "#ced4da"
+        ],
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "fire-response-times-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "fire-response-times",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.3
+      }
+    }
+  ]
+}

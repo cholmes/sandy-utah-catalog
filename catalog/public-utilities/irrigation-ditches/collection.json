@@ -1,0 +1,220 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "irrigation-ditches",
+  "title": "Sandy Irrigation Ditches",
+  "description": "Sandy Irrigation Ditches in Sandy City, Utah. The upstream service publishes no description for this layer. 63 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.886449,
+          40.572063,
+          -111.798507,
+          40.605663
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sandy Irrigation Ditches README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sandy Irrigation Ditches agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/IrrigationDitches/FeatureServer/9",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/irrigation-ditches/irrigation-ditches.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "irrigation-ditches"
+      ],
+      "title": "Sandy Irrigation Ditches vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/irrigation-ditches/irrigation-ditches.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Sandy Irrigation Ditches (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 24797,
+      "file:checksum": "1220940b06e76ffe7b0c2557aa20f523b696b9ae59e0bd040899c3dffa740e532961"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/irrigation-ditches/irrigation-ditches.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Sandy Irrigation Ditches (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 23234,
+      "file:checksum": "122039b48e78c16d507a1c0161bd972b33f9d4d96f92a036dcb6c779f05bd74deb05"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 424,
+      "file:checksum": "12201f779e21b7e498664ccdaf29cfa0c3d1056a9fd32ce5f3d1d3964bfd30008a16"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sandy Irrigation Ditches README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2438,
+      "file:checksum": "122021b2c905f86210314287cdaab241f7ac344d35d0b0c8f9a3b157c9b561b79b02"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sandy Irrigation Ditches agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2146,
+      "file:checksum": "1220ac1c96d4f8b6f693a4c6614d1740e5540f186fe7dc760f96590e4f8279d82319"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Sandy Irrigation Ditches thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 33684,
+      "file:checksum": "1220e8f853a0e9380c024bcfea34db9cf20c97128402dc8ae28cfa1b0c8aa11280cc"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "NAME",
+      "type": "string"
+    },
+    {
+      "name": "SIZE",
+      "type": "int16"
+    },
+    {
+      "name": "HasAttachment",
+      "type": "int16"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 63,
+  "geoparquet:geometry_type": "MultiLineString",
+  "pmtiles:layers": [
+    "irrigation-ditches"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8424362,
+    40.5887611,
+    7
+  ]
+}

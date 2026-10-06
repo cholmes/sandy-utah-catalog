@@ -1,0 +1,32 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../water-pressure-zones.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "water-pressure-zones-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "water-pressure-zones",
+      "paint": {
+        "fill-color": "#9775fa",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "water-pressure-zones-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "water-pressure-zones",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

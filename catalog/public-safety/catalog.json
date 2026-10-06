@@ -6,7 +6,7 @@
   ],
   "id": "public-safety",
   "title": "Public Safety",
-  "description": "Fire and police service areas and stations, fireworks restrictions, and mapped geologic and flood hazards. 9 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "description": "Fire and police service areas and stations, fireworks restrictions, and mapped geologic and flood hazards. 15 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
   "links": [
     {
       "rel": "root",
@@ -34,9 +34,27 @@
     },
     {
       "rel": "child",
+      "href": "./crime-incidents/collection.json",
+      "type": "application/json",
+      "title": "Crime Incidents"
+    },
+    {
+      "rel": "child",
+      "href": "./evacuation-routes/collection.json",
+      "type": "application/json",
+      "title": "Fire Evacuation Routes"
+    },
+    {
+      "rel": "child",
       "href": "./fault-zones/collection.json",
       "type": "application/json",
       "title": "Earthquake Fault Zones"
+    },
+    {
+      "rel": "child",
+      "href": "./fire-response-times/collection.json",
+      "type": "application/json",
+      "title": "Approximate Fire Response Times"
     },
     {
       "rel": "child",
@@ -64,6 +82,18 @@
     },
     {
       "rel": "child",
+      "href": "./liquefaction/collection.json",
+      "type": "application/json",
+      "title": "Liquefaction Potential"
+    },
+    {
+      "rel": "child",
+      "href": "./neighborhood-watch/collection.json",
+      "type": "application/json",
+      "title": "Neighborhood Watch Groups"
+    },
+    {
+      "rel": "child",
       "href": "./no-fireworks-zone/collection.json",
       "type": "application/json",
       "title": "No Fireworks Zones"
@@ -73,6 +103,12 @@
       "href": "./police-beats/collection.json",
       "type": "application/json",
       "title": "Police Beats"
+    },
+    {
+      "rel": "child",
+      "href": "./police-calls/collection.json",
+      "type": "application/json",
+      "title": "Police Calls for Service"
     },
     {
       "rel": "child",

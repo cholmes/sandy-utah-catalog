@@ -1,0 +1,220 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "site-plan-review",
+  "title": "Site Plan Review Applications",
+  "description": "Site Plan Review Applications in Sandy City, Utah. The upstream service publishes no description for this layer. 1,549 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.92115,
+          40.525347,
+          -111.796476,
+          40.61705
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Site Plan Review Applications README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Site Plan Review Applications agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/SPR/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/site-plan-review/site-plan-review.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "site-plan-review"
+      ],
+      "title": "Site Plan Review Applications vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/site-plan-review/site-plan-review.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Site Plan Review Applications (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 244350,
+      "file:checksum": "12205bb64633aa992c02dbff2cf4377ed8a9b37c8cb2156a14e9683d8e1020acc197"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/site-plan-review/site-plan-review.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Site Plan Review Applications (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 442830,
+      "file:checksum": "1220a4b01d613ab7a1854fa94ac3908701d3725d004d47654addcfca40f1d5eac366"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 616,
+      "file:checksum": "1220c3ef468d691ee229a3ab44f6f37a584f6573df9c8cb8aa16e09e3f4bba9814fc"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Site Plan Review Applications README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2617,
+      "file:checksum": "1220c1e82267c430e9448f141135e7476a7652ebc4295bf4e3f3f00f1394add7a6d0"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Site Plan Review Applications agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2132,
+      "file:checksum": "122021e46f11d87e9c553d2cdaac907026c4fb5a66b485d3bad5202802529488adfb"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Site Plan Review Applications thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 73419,
+      "file:checksum": "1220cc6b657fab9f77ded5a0bad4c6eca8b30427dba42bbc46e43eee85d517d379e4"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "PROJECT_NAME",
+      "type": "string"
+    },
+    {
+      "name": "SPR_FILE",
+      "type": "string"
+    },
+    {
+      "name": "SITE_ADDRESS",
+      "type": "string"
+    },
+    {
+      "name": "FLAG_IND",
+      "type": "int16"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "DateApproved",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 1549,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "site-plan-review"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8588355,
+    40.571224,
+    7
+  ]
+}

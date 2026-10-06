@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../storm-inlets.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "storm-inlets-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "storm-inlets",
+      "paint": {
+        "circle-color": "#0ca678",
+        "circle-radius": 4.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

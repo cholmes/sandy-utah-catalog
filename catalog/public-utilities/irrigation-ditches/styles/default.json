@@ -1,0 +1,23 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../irrigation-ditches.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "irrigation-ditches-line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "irrigation-ditches",
+      "paint": {
+        "line-color": "#0c8599",
+        "line-width": 1.6,
+        "line-opacity": 0.9
+      }
+    }
+  ]
+}

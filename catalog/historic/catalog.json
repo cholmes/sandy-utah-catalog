@@ -1,0 +1,54 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ],
+  "id": "historic",
+  "title": "Historic Sandy",
+  "description": "The city's historic photograph collection, the historic walking tour, and the 2026 contributing-structures study. 3 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Historic Sandy README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Historic Sandy agent guide"
+    },
+    {
+      "rel": "child",
+      "href": "./contributing-structures/collection.json",
+      "type": "application/json",
+      "title": "Contributing Historic Structures (2026 Study)"
+    },
+    {
+      "rel": "child",
+      "href": "./historic-photos/collection.json",
+      "type": "application/json",
+      "title": "Historic Photographs"
+    },
+    {
+      "rel": "child",
+      "href": "./historic-walking-tour/collection.json",
+      "type": "application/json",
+      "title": "Historic Sandy Walking Tour"
+    }
+  ]
+}

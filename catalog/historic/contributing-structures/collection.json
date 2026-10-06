@@ -1,0 +1,228 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "contributing-structures",
+  "title": "Contributing Historic Structures (2026 Study)",
+  "description": "Contributing Historic Structures (2026 Study) in Sandy City, Utah. The upstream service publishes no description for this layer. 275 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.890599,
+          40.588375,
+          -111.873642,
+          40.596576
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Historic Sandy"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Contributing Historic Structures (2026 Study) README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Contributing Historic Structures (2026 Study) agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/2026_Contributing_Structures_Study/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/historic/contributing-structures/contributing-structures.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "contributing-structures"
+      ],
+      "title": "Contributing Historic Structures (2026 Study) vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/historic/contributing-structures/contributing-structures.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Contributing Historic Structures (2026 Study) (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 28867,
+      "file:checksum": "1220527688a56a94ad2fb52fce5965b0d41186b24ee452272fb5e1b27ab37ed356f4"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/historic/contributing-structures/contributing-structures.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Contributing Historic Structures (2026 Study) (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 61598,
+      "file:checksum": "1220e94f3abfc29f164454a0368089868cd34af8206cad1e446a804e301871f95b7b"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 529,
+      "file:checksum": "1220fd59ab828910026057fc170beca515b7836c1bc555529b07ad07815ada26e798"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Contributing Historic Structures (2026 Study) README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2530,
+      "file:checksum": "1220e39fd74b15d21e18d12c63aba32be548b2dc9a7ac70ead4c5889357316963393"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Contributing Historic Structures (2026 Study) agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2232,
+      "file:checksum": "1220b2cc566e328a22895d90b4c6f695199fe68a4396d489ede66dce818d524a617a"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Contributing Historic Structures (2026 Study) thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 44991,
+      "file:checksum": "12204814eddc21d1a936fc6ec2e95dd7f7e09cb1001630dc6eb7b56f85c37a896de9"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "House__",
+      "type": "int32"
+    },
+    {
+      "name": "Dir",
+      "type": "string"
+    },
+    {
+      "name": "Street",
+      "type": "string"
+    },
+    {
+      "name": "Eval_Code",
+      "type": "string"
+    },
+    {
+      "name": "Year_Built",
+      "type": "int32"
+    },
+    {
+      "name": "Individually_Listed",
+      "type": "int32"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "X_Coord",
+      "type": "double"
+    },
+    {
+      "name": "Y_Coord",
+      "type": "double"
+    },
+    {
+      "name": "Plaque",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 275,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "contributing-structures"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8821258,
+    40.5924646,
+    7
+  ]
+}

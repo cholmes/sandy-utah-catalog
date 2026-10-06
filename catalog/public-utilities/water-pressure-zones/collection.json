@@ -1,0 +1,244 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "water-pressure-zones",
+  "title": "Water Pressure Zones",
+  "description": "Water Pressure Zones in Sandy City, Utah. The upstream service publishes no description for this layer. 17 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921281,
+          40.527871,
+          -111.777276,
+          40.618219
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Pressure Zones README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Water Pressure Zones agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/WaterSystem/FeatureServer/46",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-pressure-zones/water-pressure-zones.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "water-pressure-zones"
+      ],
+      "title": "Water Pressure Zones vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-pressure-zones/water-pressure-zones.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Water Pressure Zones (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 44202,
+      "file:checksum": "12206ea99386ffabf5db69c0b9e330a1ecd3c4d47a8cd3a9896befe450c65d8f43d3"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-pressure-zones/water-pressure-zones.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Water Pressure Zones (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 65277,
+      "file:checksum": "12203cf935c76e9730ae452d3ad7d7fefffc93796a8282c7762bcccff34d46b68a3a"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 636,
+      "file:checksum": "1220b2d748cfb7bddd52e4121106669b11ad351a7b7f674b506796b44f88d9622459"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Pressure Zones README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2430,
+      "file:checksum": "122033a7f7006a7cf24f915985598424974180c43135100568272d56ba04159dea65"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Water Pressure Zones agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2325,
+      "file:checksum": "1220d516fdd1b6c0115b7efd6376e6b6c928347e9eaedb9b13d9e970228ff4527550"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Water Pressure Zones thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 49981,
+      "file:checksum": "1220ecac236191475777204c9a2feb23a00d6a9fb8d571abf72dc55f18fe877ca9bf"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "PubUtils.PU.PressureZones.AREA",
+      "type": "double"
+    },
+    {
+      "name": "PERIMETER",
+      "type": "double"
+    },
+    {
+      "name": "PRESSUREZONES_",
+      "type": "int32"
+    },
+    {
+      "name": "PRESSUREZONES_ID",
+      "type": "int32"
+    },
+    {
+      "name": "ZONE_",
+      "type": "string"
+    },
+    {
+      "name": "ELEV_ZONE",
+      "type": "string"
+    },
+    {
+      "name": "SOURCES",
+      "type": "string"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "ZONE_NAME",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 17,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "water-pressure-zones"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8493411,
+    40.5730524,
+    7
+  ]
+}

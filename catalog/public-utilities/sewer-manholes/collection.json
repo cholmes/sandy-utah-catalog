@@ -1,0 +1,252 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "sewer-manholes",
+  "title": "Sewer Manholes",
+  "description": "Sewer Manholes in Sandy City, Utah. The upstream service publishes no description for this layer. 16,020 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.938908,
+          40.514178,
+          -111.777133,
+          40.631804
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sewer Manholes README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sewer Manholes agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Sewer/MapServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/sewer-manholes/sewer-manholes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "sewer-manholes"
+      ],
+      "title": "Sewer Manholes vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/sewer-manholes/sewer-manholes.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Sewer Manholes (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1284195,
+      "file:checksum": "1220ca415820bfadf166d78135b7876bfc942aaecb2e69a4e05ad17ec7c27bbddc79"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/sewer-manholes/sewer-manholes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Sewer Manholes (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 2109505,
+      "file:checksum": "122032d8a4fc447dd2fbc229071b6e75213481d31b6d1e57c31b9129de35cf0bcbd4"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 502,
+      "file:checksum": "1220f2afbe3166da5dfe7cc24564a4505bbc0a0731a3f229b4fd18644288d7c7ab14"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sewer Manholes README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2342,
+      "file:checksum": "1220b535b0d33148ef15bd8e4af3197fd3371ecfef4ef0dd2e88b8715186422586b3"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sewer Manholes agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2599,
+      "file:checksum": "12206f165968deeae0ab307e51a4d948683fe9cafca33dd759dc6cf50c87e1eb70f7"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Sewer Manholes thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 64357,
+      "file:checksum": "12202a93e0803b6e426ab7b625e43c9c652df786b272d031bb461cee885f499089ce"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "Agency",
+      "type": "string"
+    },
+    {
+      "name": "DIAMETER",
+      "type": "double"
+    },
+    {
+      "name": "RIM_ELEV",
+      "type": "double"
+    },
+    {
+      "name": "X",
+      "type": "double"
+    },
+    {
+      "name": "Y",
+      "type": "double"
+    },
+    {
+      "name": "DepthToFlo",
+      "type": "double"
+    },
+    {
+      "name": "NumPipesIn",
+      "type": "int16"
+    },
+    {
+      "name": "InSizes",
+      "type": "string"
+    },
+    {
+      "name": "OutSize",
+      "type": "string"
+    },
+    {
+      "name": "MH_ID",
+      "type": "string"
+    },
+    {
+      "name": "NumLateral",
+      "type": "int16"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 16020,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "sewer-manholes"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8581071,
+    40.5730333,
+    7
+  ]
+}

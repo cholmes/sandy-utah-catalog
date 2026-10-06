@@ -1,0 +1,320 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "water-tanks",
+  "title": "Water Tanks",
+  "description": "Sandy Water Tank Points. 9 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.858158,
+          40.538437,
+          -111.788627,
+          40.597731
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Tanks README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Water Tanks agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/SandyTank_and_Well_Points/FeatureServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-tanks/water-tanks.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "water-tanks"
+      ],
+      "title": "Water Tanks vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-tanks/water-tanks.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Water Tanks (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 20087,
+      "file:checksum": "122059aa952ae7decb1be6b08fb666874eea31534efd249953f74662c2397fd1934f"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-tanks/water-tanks.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Water Tanks (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 37809,
+      "file:checksum": "122003bcd7c93c2fd2500d8a98280ab984b85a83175296fc9f539b99cd99e12eb663"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 493,
+      "file:checksum": "1220d32525e1303c77da6e5b6f60ec95f8ad28f382e2441930506a7493619efd27b2"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Tanks README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2146,
+      "file:checksum": "1220489f73d83dffa69993038238d64d650d0c014a6aee848c3149d2e2ad2879a355"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Water Tanks agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3079,
+      "file:checksum": "122066d3b2b84e1147d115b52de248c0eeacbed9a581d114031ba884d64a1100ec76"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Water Tanks thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6850,
+      "file:checksum": "122099afc94b7531c560c473d22c4e22f77eba84e4bdd0d08d124887244af6563080"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "PubUtils.PU.SandyTanks_Points.AREA",
+      "type": "double"
+    },
+    {
+      "name": "PERIMETER",
+      "type": "double"
+    },
+    {
+      "name": "SANDY_TANKS_",
+      "type": "int32"
+    },
+    {
+      "name": "SANDY_TANKS_ID",
+      "type": "int32"
+    },
+    {
+      "name": "TANK_NAME",
+      "type": "string"
+    },
+    {
+      "name": "LOCATION",
+      "type": "string"
+    },
+    {
+      "name": "CAPACITY",
+      "type": "string"
+    },
+    {
+      "name": "FLOOR_EL",
+      "type": "double"
+    },
+    {
+      "name": "GROUND_EL",
+      "type": "double"
+    },
+    {
+      "name": "OVER_EL",
+      "type": "double"
+    },
+    {
+      "name": "OVER_DEPTH",
+      "type": "double"
+    },
+    {
+      "name": "DIMENSIONS",
+      "type": "string"
+    },
+    {
+      "name": "ZONE_",
+      "type": "double"
+    },
+    {
+      "name": "CONST_TYPE",
+      "type": "string"
+    },
+    {
+      "name": "YEAR_CONST",
+      "type": "double"
+    },
+    {
+      "name": "MGCAPACITY",
+      "type": "double"
+    },
+    {
+      "name": "ENGINEER",
+      "type": "string"
+    },
+    {
+      "name": "CONTRACTOR",
+      "type": "string"
+    },
+    {
+      "name": "MAINT_DATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "MAINT_TYPE",
+      "type": "string"
+    },
+    {
+      "name": "X_COORD",
+      "type": "double"
+    },
+    {
+      "name": "Y_COORD",
+      "type": "double"
+    },
+    {
+      "name": "FACILITYID",
+      "type": "string"
+    },
+    {
+      "name": "POLYGONID",
+      "type": "int32"
+    },
+    {
+      "name": "SCALE",
+      "type": "double"
+    },
+    {
+      "name": "ANGLE",
+      "type": "double"
+    },
+    {
+      "name": "Enabled",
+      "type": "int16"
+    },
+    {
+      "name": "AncillaryRole",
+      "type": "int16"
+    },
+    {
+      "name": "CONST_STATUS",
+      "type": "string"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 9,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "water-tanks"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8234703,
+    40.5680707,
+    7
+  ]
+}

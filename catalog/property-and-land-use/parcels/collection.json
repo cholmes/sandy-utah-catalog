@@ -9,7 +9,7 @@
   "title": "Parcels",
   "description": "Parcels in and around Sandy City, Utah as of July, 2022. The service describes itself as current to July 2022, so it lags the county's live parcel fabric by more than three years. 106,087 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:54:13Z",
+  "updated": "2026-10-06T20:20:34Z",
   "providers": [
     {
       "name": "Salt Lake County Recorder",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2922,
-      "file:checksum": "1220ee1a7dd24b2d76d06aaccc322aa37b7dda56ff93c715a1f8fdbe70c4e434d347"
+      "file:checksum": "1220898e2011e0c0cb87804f9bea9b36db46af25f81f12750506ea4e95e22ec6f8cc"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 4138,
-      "file:checksum": "12206936af4bad974563c5f184868fea7938b47622cd13bee1151fb6177eb597f722"
+      "file:checksum": "12209124c10639a1238fe5644a949c1000e811ed43d9a122bd54eafacf8e8fd6c0d2"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

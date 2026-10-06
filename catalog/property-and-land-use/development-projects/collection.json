@@ -1,0 +1,248 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "development-projects",
+  "title": "Development Projects",
+  "description": "Development Projects in Sandy City, Utah. The upstream service publishes no description for this layer. 64 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.912695,
+          40.537123,
+          -111.787165,
+          40.613476
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Property and Land Use"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Development Projects README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Development Projects agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Development_Projects/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/development-projects/development-projects.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "development-projects"
+      ],
+      "title": "Development Projects vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/development-projects/development-projects.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Development Projects (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 60554,
+      "file:checksum": "1220c60ca260ee729eb2b01179bd152d36c776281d5ed9bbaa2791e47dcd6db3b307"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/development-projects/development-projects.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Development Projects (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 75018,
+      "file:checksum": "12205fd6a3ce291a67d6c1f57687cacf9d7ea1d28634fe6c2f9c27d380b54debd8b7"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 636,
+      "file:checksum": "122091d55bc5f7a838a2b13b3e09d7bb54fc3c59f35cf92caeb6995f1e8914de9840"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Development Projects README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2461,
+      "file:checksum": "1220dfbb2e7f2ce4f63fbce273fdc2bbf6aef54d477b338c53688f2d5cf7d951f2e6"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Development Projects agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3059,
+      "file:checksum": "1220992d900ba5a5701e79dff488d88fb7e2ea9472a92c1f86cfc4cee3c8c3cc3a16"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Development Projects thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 15995,
+      "file:checksum": "122018fb7b0e7644e66296fc3901bf9582a32642bc9d0bba575b02897bd6693b4ea6"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Project_Name",
+      "type": "string"
+    },
+    {
+      "name": "Description",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Project_Type",
+      "type": "string"
+    },
+    {
+      "name": "Key_Words",
+      "type": "string"
+    },
+    {
+      "name": "Case_Number",
+      "type": "string"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "DocumentsLink",
+      "type": "string"
+    },
+    {
+      "name": "Bond",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 64,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "development-projects"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8500066,
+    40.5753013,
+    7
+  ]
+}

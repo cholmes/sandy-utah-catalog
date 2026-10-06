@@ -9,7 +9,7 @@
   "title": "UTA Bus Stops",
   "description": "UTA Bus Stops in Sandy City, Utah. The upstream service publishes no description for this layer. 3,195 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:54:13Z",
+  "updated": "2026-10-06T20:20:34Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2296,
-      "file:checksum": "1220927b4f91681abad3788be1a5e267b5c8785cf1912d9bb8159e2fe9f7b9f6517e"
+      "file:checksum": "12207aefcc81491cb4a935cf37f075d735d39cfd6af5f6b70409137453cbca42192e"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2044,
-      "file:checksum": "12204c45f4584983121bc870102a526cbf995104af6d3790e9a76fab4f8fee3a8bae"
+      "file:checksum": "1220ec1500f559b9f30b7b36045715fc3265515f2d4fa0d217139d672e84ff517a13"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

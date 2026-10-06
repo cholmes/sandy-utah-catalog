@@ -1,0 +1,216 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "fire-response-times",
+  "title": "Approximate Fire Response Times",
+  "description": "Response Times for fire stations in and arouind Sandy City, Utah. 6 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.966786,
+          40.49477,
+          -111.734465,
+          40.683068
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Approximate Fire Response Times README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Approximate Fire Response Times agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Fire_Response_Times/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fire-response-times/fire-response-times.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "fire-response-times"
+      ],
+      "title": "Approximate Fire Response Times vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fire-response-times/fire-response-times.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Approximate Fire Response Times (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 316047,
+      "file:checksum": "12204c3ff228a3513a6eaab96fa1c4aae4373d3cd2c64a3df047ac1eccffb8d57d75"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fire-response-times/fire-response-times.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Approximate Fire Response Times (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 385537,
+      "file:checksum": "12207fc222f4cda97412bc9b85f6446a44d591a0cd6de0f59a7a061c2a5f2c1f512d"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Response time (minutes)",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 992,
+      "file:checksum": "1220855d245011cc7c90b7af1bc50adb0f14b6fb1ab3be4208e412fe07a62dfa022b"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Approximate Fire Response Times README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2317,
+      "file:checksum": "1220203a1a10372adc650c5dbd2d73cd529dbfe660f7f1fcda13cf63b11bf2acb05b"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Approximate Fire Response Times agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2268,
+      "file:checksum": "1220cb47bcd5d816c1690f0647a7360a34890a784617bbfaea9c290d716af769f856"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Approximate Fire Response Times thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 142582,
+      "file:checksum": "12201d75ca382e86e4ca5df4ff1ddefecdf9cb12b56bcdb8ccec13c62ecd5a7cad34"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "FacilityID",
+      "type": "int32"
+    },
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "FromBreak",
+      "type": "double"
+    },
+    {
+      "name": "ToBreak",
+      "type": "double"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 6,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "fire-response-times"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8507445,
+    40.5889876,
+    7
+  ]
+}

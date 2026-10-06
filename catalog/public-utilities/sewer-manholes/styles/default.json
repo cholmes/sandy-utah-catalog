@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../sewer-manholes.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "sewer-manholes-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "sewer-manholes",
+      "paint": {
+        "circle-color": "#a9682a",
+        "circle-radius": 4.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

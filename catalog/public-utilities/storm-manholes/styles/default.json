@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../storm-manholes.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "storm-manholes-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "storm-manholes",
+      "paint": {
+        "circle-color": "#5f3dc4",
+        "circle-radius": 4.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../historic-walking-tour.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "historic-walking-tour-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "historic-walking-tour",
+      "paint": {
+        "circle-color": "#a9682a",
+        "circle-radius": 8.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

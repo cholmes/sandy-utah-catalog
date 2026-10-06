@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../water-valves.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "water-valves-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "water-valves",
+      "paint": {
+        "circle-color": "#1c7ed6",
+        "circle-radius": 4.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

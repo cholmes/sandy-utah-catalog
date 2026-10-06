@@ -1,0 +1,328 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "water-valves",
+  "title": "Water Valves",
+  "description": "Water Valves in Sandy City, Utah. The upstream service publishes no description for this layer. 8,117 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.916921,
+          40.528334,
+          -111.777802,
+          40.616549
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Valves README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Water Valves agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/WaterSystem/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-valves/water-valves.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "water-valves"
+      ],
+      "title": "Water Valves vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-valves/water-valves.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Water Valves (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1120896,
+      "file:checksum": "1220aeee5c8913560aed92e37951d997c4f90d874ff6963503b8ebbbdf1caafd5bd8"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-valves/water-valves.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Water Valves (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 2911526,
+      "file:checksum": "1220d592cc140e8c1d33018c062a4fe48c007133742ab8d62331cd51af82282b642f"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 496,
+      "file:checksum": "12203f7568e92a96c54065371382a5a2895b391113900f0b60a474eca75e1612ab6c"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Water Valves README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2340,
+      "file:checksum": "1220301afd80a1d3feab795fb59d8eeea20260d9c54908fa0d5d432994894b532f67"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Water Valves agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 4186,
+      "file:checksum": "12206e6497763f9f3312b89fa59608038e3f5fb1323fe5cf23665806292851b470ae"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Water Valves thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 69092,
+      "file:checksum": "12202bbfa020cc9578188d58538165c3245cce3ef8562a0cc870b183d7119032fcef"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "WVALVES_ID",
+      "type": "string"
+    },
+    {
+      "name": "FACILITYID",
+      "type": "string"
+    },
+    {
+      "name": "NORTHING",
+      "type": "double"
+    },
+    {
+      "name": "EASTING",
+      "type": "double"
+    },
+    {
+      "name": "ELEVATION",
+      "type": "double"
+    },
+    {
+      "name": "ENABLED",
+      "type": "int16"
+    },
+    {
+      "name": "DATEINSPECTED",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "INSPECTED_BY",
+      "type": "string"
+    },
+    {
+      "name": "COMMENTS",
+      "type": "string"
+    },
+    {
+      "name": "MAP_NO",
+      "type": "string"
+    },
+    {
+      "name": "ADDRESS",
+      "type": "string"
+    },
+    {
+      "name": "LAND_TIES",
+      "type": "string"
+    },
+    {
+      "name": "VALVE_SIZE",
+      "type": "int16"
+    },
+    {
+      "name": "VALVE_DEPTH",
+      "type": "double"
+    },
+    {
+      "name": "VALVE_TYPE",
+      "type": "string"
+    },
+    {
+      "name": "VALVE_FUNCTION",
+      "type": "string"
+    },
+    {
+      "name": "VALVE_MANU",
+      "type": "string"
+    },
+    {
+      "name": "TURNS_TO_CLOSE",
+      "type": "double"
+    },
+    {
+      "name": "DIRECTION",
+      "type": "string"
+    },
+    {
+      "name": "INSTALL_DATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "COLLECTED_BY",
+      "type": "string"
+    },
+    {
+      "name": "DATE_COLLECTED",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "MANFAC_DATE",
+      "type": "int32"
+    },
+    {
+      "name": "SHUT_DOWN",
+      "type": "string"
+    },
+    {
+      "name": "OTHER_INFO",
+      "type": "string"
+    },
+    {
+      "name": "PWTYPE",
+      "type": "string"
+    },
+    {
+      "name": "LOCATION",
+      "type": "string"
+    },
+    {
+      "name": "OPERATION_MODE",
+      "type": "string"
+    },
+    {
+      "name": "WATER_ENTITY",
+      "type": "string"
+    },
+    {
+      "name": "CONST_STATUS",
+      "type": "string"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "GPS_DATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 8117,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "water-valves"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8474124,
+    40.5724403,
+    7
+  ]
+}

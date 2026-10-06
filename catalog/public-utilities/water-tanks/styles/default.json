@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../water-tanks.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "water-tanks-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "water-tanks",
+      "paint": {
+        "circle-color": "#862e9c",
+        "circle-radius": 8.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

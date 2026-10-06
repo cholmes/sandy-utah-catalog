@@ -1,0 +1,308 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "wells",
+  "title": "Sandy Water Wells",
+  "description": "Drinking Water Source Protection Other Well Points. 24 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.892764,
+          40.544257,
+          -111.78965,
+          40.626698
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sandy Water Wells README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sandy Water Wells agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/SourceProtectionWells/FeatureServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/wells/wells.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "wells"
+      ],
+      "title": "Sandy Water Wells vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/wells/wells.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Sandy Water Wells (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 19662,
+      "file:checksum": "12200cf440d306b8e734362f4f8ecc134b2cf560e65a1c65dd6a1510694ebfa552dc"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/wells/wells.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Sandy Water Wells (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 43608,
+      "file:checksum": "1220934d88843fdfc296f1bba26e167df62420faf400d86a4686a93b87f281e4e14c"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 475,
+      "file:checksum": "122079e7078ac969292928751f220089560819950175389c6dfad334d4da52d29f11"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Sandy Water Wells README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2124,
+      "file:checksum": "12207680269cfb40edeba171c0edc6bc130c6f83bc7da2a0750de737ec015ba03d92"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Sandy Water Wells agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2532,
+      "file:checksum": "1220ccc4bf9699fd4c2cfcd82ea08e59bb71135e055b8db0b27ab264b23f4f4b26aa"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Sandy Water Wells thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 10642,
+      "file:checksum": "1220eb7e6e5b3cb36c57717dc0fb5524d999f92f1db3e7e0b20e9001d31329b3b1e5"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "SYSNUM",
+      "type": "int32"
+    },
+    {
+      "name": "SORNUM",
+      "type": "int16"
+    },
+    {
+      "name": "EPAID",
+      "type": "string"
+    },
+    {
+      "name": "SOWN",
+      "type": "string"
+    },
+    {
+      "name": "SNAM",
+      "type": "string"
+    },
+    {
+      "name": "GPM3",
+      "type": "int32"
+    },
+    {
+      "name": "STYP",
+      "type": "string"
+    },
+    {
+      "name": "DIAM",
+      "type": "int16"
+    },
+    {
+      "name": "CODE",
+      "type": "int16"
+    },
+    {
+      "name": "LABEL",
+      "type": "string"
+    },
+    {
+      "name": "STATE_ID",
+      "type": "string"
+    },
+    {
+      "name": "DESCR",
+      "type": "string"
+    },
+    {
+      "name": "OLD_LABEL",
+      "type": "string"
+    },
+    {
+      "name": "NEW_LABEL",
+      "type": "string"
+    },
+    {
+      "name": "UHDID",
+      "type": "string"
+    },
+    {
+      "name": "GREG_",
+      "type": "double"
+    },
+    {
+      "name": "GREG_ID",
+      "type": "double"
+    },
+    {
+      "name": "HDDWS_ALL_",
+      "type": "double"
+    },
+    {
+      "name": "HDDWS_ALL1",
+      "type": "double"
+    },
+    {
+      "name": "COMMENT",
+      "type": "string"
+    },
+    {
+      "name": "CH2MGRID_",
+      "type": "double"
+    },
+    {
+      "name": "CH2MGRID_I",
+      "type": "double"
+    },
+    {
+      "name": "CH2MCELL",
+      "type": "int32"
+    },
+    {
+      "name": "CH2MROW",
+      "type": "int16"
+    },
+    {
+      "name": "CH2MCOL",
+      "type": "int16"
+    },
+    {
+      "name": "CH2MAREA",
+      "type": "double"
+    },
+    {
+      "name": "OWNER",
+      "type": "int32"
+    },
+    {
+      "name": "Q_",
+      "type": "string"
+    },
+    {
+      "name": "Q_COMMENT",
+      "type": "string"
+    },
+    {
+      "name": "TC_COMMENT",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 24,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "wells"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8412479,
+    40.5854537,
+    7
+  ]
+}

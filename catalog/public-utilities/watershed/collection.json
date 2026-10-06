@@ -1,0 +1,220 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "watershed",
+  "title": "Watershed",
+  "description": "Watershed in Sandy City, Utah. The upstream service publishes no description for this layer. 13 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.813108,
+          40.518549,
+          -111.749262,
+          40.58611
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Watershed README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Watershed agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Watershed/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/watershed/watershed.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "watershed"
+      ],
+      "title": "Watershed vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/watershed/watershed.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Watershed (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 21626,
+      "file:checksum": "12205f2773a18b510834773d74ffdc713f81b9204e86c6ca1979806364105f225a9f"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/watershed/watershed.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Watershed (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 30335,
+      "file:checksum": "1220e15a6cbb1f73d76d93daad26a1238417c3370fb9025ee6cc39416e026c062dcb"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 581,
+      "file:checksum": "1220e8660857da7c7e99e408a12d955c71243e004d417b6f6d2902ba4ae4f32e51b0"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Watershed README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2313,
+      "file:checksum": "1220347c16bbc00d2964340bd419c3a81805cc0ebf343aaacd39bd5cffab0b659af1"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Watershed agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2066,
+      "file:checksum": "1220c0079ef98e6fe1745cfec7d8ade25ff37f72dc60733b7faf799caa8b7c589993"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Watershed thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 38524,
+      "file:checksum": "1220976f37fbbfb5dd8e18ba44fa837912c98ac24008587ab002be8ab7f73491fb3b"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "PubUtils.PU.watershed.AREA",
+      "type": "double"
+    },
+    {
+      "name": "PERIMETER",
+      "type": "double"
+    },
+    {
+      "name": "WATERSHED_",
+      "type": "int32"
+    },
+    {
+      "name": "WATERSHED_ID",
+      "type": "int32"
+    },
+    {
+      "name": "ID",
+      "type": "int32"
+    },
+    {
+      "name": "WATERSHED",
+      "type": "string"
+    },
+    {
+      "name": "Shape__Area",
+      "type": "double"
+    },
+    {
+      "name": "Shape__Length",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 13,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "watershed"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.7811649,
+    40.5523217,
+    7
+  ]
+}

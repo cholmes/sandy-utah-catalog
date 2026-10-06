@@ -218,5 +218,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Golf_Courses/MapServer/1](https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Golf_Courses/MapServer/1) on 2026-10-06T19:54:13Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Golf_Courses/MapServer/1](https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Golf_Courses/MapServer/1) on 2026-10-06T20:20:34Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

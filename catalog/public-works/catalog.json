@@ -6,7 +6,7 @@
   ],
   "id": "public-works",
   "title": "Public Works and Transportation",
-  "description": "Maintained roads, speed limits, sidewalks, pavement condition, transit and waste collection. 7 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "description": "Maintained roads, speed limits, sidewalks, pavement condition, transit and waste collection. 13 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
   "links": [
     {
       "rel": "root",
@@ -34,6 +34,12 @@
     },
     {
       "rel": "child",
+      "href": "./bulk-waste-areas/collection.json",
+      "type": "application/json",
+      "title": "Bulk Waste Areas"
+    },
+    {
+      "rel": "child",
       "href": "./bus-routes/collection.json",
       "type": "application/json",
       "title": "UTA Bus Routes"
@@ -58,6 +64,12 @@
     },
     {
       "rel": "child",
+      "href": "./recycle-weeks/collection.json",
+      "type": "application/json",
+      "title": "Recycling Weeks"
+    },
+    {
+      "rel": "child",
       "href": "./sandy-maintained-roads/collection.json",
       "type": "application/json",
       "title": "Sandy-Maintained Roads"
@@ -70,9 +82,33 @@
     },
     {
       "rel": "child",
+      "href": "./snow-removal-areas/collection.json",
+      "type": "application/json",
+      "title": "Snow Removal Areas"
+    },
+    {
+      "rel": "child",
       "href": "./speed-limits/collection.json",
       "type": "application/json",
       "title": "Speed Limits"
+    },
+    {
+      "rel": "child",
+      "href": "./traffic-signs/collection.json",
+      "type": "application/json",
+      "title": "Traffic Signs"
+    },
+    {
+      "rel": "child",
+      "href": "./traffic-studies/collection.json",
+      "type": "application/json",
+      "title": "Traffic Studies"
+    },
+    {
+      "rel": "child",
+      "href": "./trax-stops/collection.json",
+      "type": "application/json",
+      "title": "UTA TRAX Stops"
     }
   ]
 }

@@ -9,7 +9,7 @@
   "title": "Approximate 100-Year Floodplain",
   "description": "Map of hazards in Sandy City, Utah. 828 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:54:13Z",
+  "updated": "2026-10-06T20:20:34Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2220,
-      "file:checksum": "1220ba47cbaf766ba23f0673f9da0ee2c60079edce2a87f67194460ca76bafedf0c5"
+      "file:checksum": "12204be383a855c734a87b360acaba87fc48911ac987e617b0088381897b2dbfa42c"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2528,
-      "file:checksum": "122066ac8c5ed258ab2acb248cf259109418874b0f317440635db254c5e13c36b26e"
+      "file:checksum": "1220508383eb92986b624ce9da32c51af574e6e9d2c40f61f29b06db921b4b5704d2"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

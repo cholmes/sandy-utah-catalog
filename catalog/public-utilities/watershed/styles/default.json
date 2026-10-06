@@ -1,0 +1,32 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../watershed.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "watershed-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "watershed",
+      "paint": {
+        "fill-color": "#3bc9db",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "watershed-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "watershed",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "historic-walking-tour",
+  "title": "Historic Sandy Walking Tour",
+  "description": "Historical sites in Sandy City, Utah. 17 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.888601,
+          40.592257,
+          -111.882695,
+          40.596512
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Historic Sandy"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Historic Sandy Walking Tour README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Historic Sandy Walking Tour agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Historic/Historic_Tour/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/historic/historic-walking-tour/historic-walking-tour.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "historic-walking-tour"
+      ],
+      "title": "Historic Sandy Walking Tour vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/historic/historic-walking-tour/historic-walking-tour.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Historic Sandy Walking Tour (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 16059,
+      "file:checksum": "122099cbf218b80c9a8f4806ddc8567e5ea5e08341a95ae3d2cbb50b41f31bd3f663"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/historic/historic-walking-tour/historic-walking-tour.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Historic Sandy Walking Tour (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 26016,
+      "file:checksum": "1220e3a18d7db2ef083bad71783a1f42309ed0f4c062c51f2587fa7964bf9ac40a25"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 523,
+      "file:checksum": "1220266b72eb876c65876f3b98784278571ccc68fba651fb940c648f9fcee204f901"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Historic Sandy Walking Tour README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2259,
+      "file:checksum": "1220a91c94693f7f73cbb48bd402369415e4d4c6edd627dcf8092be501d358a80c29"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Historic Sandy Walking Tour agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2138,
+      "file:checksum": "12205381a568e3db2db50a07c75430a54ed3321adb46ca97abb57a2e16147e8720ab"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Historic Sandy Walking Tour thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 8815,
+      "file:checksum": "12201626036c661f4bac73d775f25bca0e9b95556472d1379e181084dc1445363bd3"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "SiteID",
+      "type": "string"
+    },
+    {
+      "name": "Name",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "URL",
+      "type": "string"
+    },
+    {
+      "name": "Walking_Tour_Seq",
+      "type": "int16"
+    },
+    {
+      "name": "Bus_Tour_Seq",
+      "type": "int16"
+    },
+    {
+      "name": "Thumb_URL",
+      "type": "string"
+    },
+    {
+      "name": "Icon_color",
+      "type": "string"
+    },
+    {
+      "name": "Description",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 17,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "historic-walking-tour"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8856497,
+    40.5943836,
+    7
+  ]
+}

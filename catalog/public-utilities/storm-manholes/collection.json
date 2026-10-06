@@ -1,0 +1,348 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "storm-manholes",
+  "title": "Storm Drain Manholes",
+  "description": "Storm Drain Manholes in Sandy City, Utah. The upstream service publishes no description for this layer. 8,402 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.920222,
+          40.52728,
+          -111.778147,
+          40.621536
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Manholes README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Manholes agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StormDrain/FeatureServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-manholes/storm-manholes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "storm-manholes"
+      ],
+      "title": "Storm Drain Manholes vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-manholes/storm-manholes.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Storm Drain Manholes (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 679018,
+      "file:checksum": "1220977b468d71d2510c2ddb9fe9ce2ac01b33905a719f11f001eaa7e86cee3416fa"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-manholes/storm-manholes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Storm Drain Manholes (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 1270209,
+      "file:checksum": "1220cbe699bd7e3dd92919286785494df8f8d06a6ee28b4ae298985c38abbf532bae"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 502,
+      "file:checksum": "12204ab2385b834cb021e511cb9575524a14fc08a7e1266e5bfd8b6b6f911113fde0"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Manholes README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2369,
+      "file:checksum": "1220c353dee8d4b1ce3466a8df3546fa73ac4175828196ab49d3b81e9aefe60f6777"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Manholes agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3857,
+      "file:checksum": "1220ab03f13fdbaef495e5e64fbfc95c7e319e3b5505bfa5d000633a6ed1dda608a2"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Storm Drain Manholes thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 54927,
+      "file:checksum": "1220fd27af2a116595d35c71a8f4cad93716d91044188f5abf68524e2bc681c277c6"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "FacilityID",
+      "type": "string"
+    },
+    {
+      "name": "NORTHING",
+      "type": "double"
+    },
+    {
+      "name": "EASTING",
+      "type": "double"
+    },
+    {
+      "name": "ELEVATION",
+      "type": "double"
+    },
+    {
+      "name": "PIPE_TYPE",
+      "type": "string"
+    },
+    {
+      "name": "OWNERSHIP",
+      "type": "string"
+    },
+    {
+      "name": "PIPE_SIZE",
+      "type": "double"
+    },
+    {
+      "name": "INVERT1",
+      "type": "double"
+    },
+    {
+      "name": "INVERT2",
+      "type": "double"
+    },
+    {
+      "name": "INVERT3",
+      "type": "double"
+    },
+    {
+      "name": "INVERT4",
+      "type": "double"
+    },
+    {
+      "name": "INVERT_OUT",
+      "type": "double"
+    },
+    {
+      "name": "GPSDATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "BOX_DEPTH",
+      "type": "double"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "string"
+    },
+    {
+      "name": "Comments",
+      "type": "string"
+    },
+    {
+      "name": "RuleID",
+      "type": "int32"
+    },
+    {
+      "name": "LADDER_1",
+      "type": "string"
+    },
+    {
+      "name": "SANDTRAP",
+      "type": "string"
+    },
+    {
+      "name": "PROJECT",
+      "type": "string"
+    },
+    {
+      "name": "DATEINSTALLED",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "Orifice",
+      "type": "int16"
+    },
+    {
+      "name": "INVERT5",
+      "type": "int32"
+    },
+    {
+      "name": "InvertNum",
+      "type": "int32"
+    },
+    {
+      "name": "Terrain_ELEVATION",
+      "type": "double"
+    },
+    {
+      "name": "INVESTIGATE",
+      "type": "string"
+    },
+    {
+      "name": "COMMENT_SUMMARY",
+      "type": "string"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "string"
+    },
+    {
+      "name": "STATUS",
+      "type": "string"
+    },
+    {
+      "name": "InspDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "StructCond",
+      "type": "string"
+    },
+    {
+      "name": "FrameLid",
+      "type": "string"
+    },
+    {
+      "name": "FloorBenchCond",
+      "type": "string"
+    },
+    {
+      "name": "MaintRating",
+      "type": "string"
+    },
+    {
+      "name": "MaintSched",
+      "type": "string"
+    },
+    {
+      "name": "InspectionZone",
+      "type": "int16"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 8402,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "storm-manholes"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8493453,
+    40.5743537,
+    7
+  ]
+}

@@ -6,7 +6,7 @@
   ],
   "id": "public-utilities",
   "title": "Public Utilities",
-  "description": "Water distribution, sewer and storm drain networks, street lights, streams and the lead service line inventory. 7 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "description": "Water distribution, sewer and storm drain networks, street lights, streams and the lead service line inventory. 17 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
   "links": [
     {
       "rel": "root",
@@ -34,9 +34,21 @@
     },
     {
       "rel": "child",
+      "href": "./detention-ponds/collection.json",
+      "type": "application/json",
+      "title": "Storm Detention Ponds"
+    },
+    {
+      "rel": "child",
       "href": "./fire-hydrants/collection.json",
       "type": "application/json",
       "title": "Fire Hydrants"
+    },
+    {
+      "rel": "child",
+      "href": "./irrigation-ditches/collection.json",
+      "type": "application/json",
+      "title": "Sandy Irrigation Ditches"
     },
     {
       "rel": "child",
@@ -52,9 +64,27 @@
     },
     {
       "rel": "child",
+      "href": "./sewer-manholes/collection.json",
+      "type": "application/json",
+      "title": "Sewer Manholes"
+    },
+    {
+      "rel": "child",
       "href": "./storm-drain-pipes/collection.json",
       "type": "application/json",
       "title": "Storm Drain Pipes"
+    },
+    {
+      "rel": "child",
+      "href": "./storm-inlets/collection.json",
+      "type": "application/json",
+      "title": "Storm Drain Inlets"
+    },
+    {
+      "rel": "child",
+      "href": "./storm-manholes/collection.json",
+      "type": "application/json",
+      "title": "Storm Drain Manholes"
     },
     {
       "rel": "child",
@@ -73,6 +103,36 @@
       "href": "./water-distribution-mains/collection.json",
       "type": "application/json",
       "title": "Water Distribution Mains"
+    },
+    {
+      "rel": "child",
+      "href": "./water-pressure-zones/collection.json",
+      "type": "application/json",
+      "title": "Water Pressure Zones"
+    },
+    {
+      "rel": "child",
+      "href": "./water-tanks/collection.json",
+      "type": "application/json",
+      "title": "Water Tanks"
+    },
+    {
+      "rel": "child",
+      "href": "./water-valves/collection.json",
+      "type": "application/json",
+      "title": "Water Valves"
+    },
+    {
+      "rel": "child",
+      "href": "./watershed/collection.json",
+      "type": "application/json",
+      "title": "Watershed"
+    },
+    {
+      "rel": "child",
+      "href": "./wells/collection.json",
+      "type": "application/json",
+      "title": "Sandy Water Wells"
     }
   ]
 }

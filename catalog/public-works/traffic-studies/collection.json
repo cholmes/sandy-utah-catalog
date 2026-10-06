@@ -1,0 +1,220 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "traffic-studies",
+  "title": "Traffic Studies",
+  "description": "Traffic Studies in Sandy City, Utah. The upstream service publishes no description for this layer. 150 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.918331,
+          40.539902,
+          -111.798662,
+          40.621222
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Traffic Studies README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Traffic Studies agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Traffic_Studies/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/traffic-studies/traffic-studies.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "traffic-studies"
+      ],
+      "title": "Traffic Studies vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/traffic-studies/traffic-studies.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Traffic Studies (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 24147,
+      "file:checksum": "1220a94d3713ddd1c37aaf20f0f403b4302e8fbbc73ded7f0391c52d37bc52c7a8ce"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/traffic-studies/traffic-studies.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Traffic Studies (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 87287,
+      "file:checksum": "122015fac7786c8a5c89bc583a23fe693f9d9e7721be9c2bc5e7940b7cb4bde67d30"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 505,
+      "file:checksum": "12202692a2dea5a6de7350be434d35312ab6fe3248ee5f80f6c62ed12d3b15b32caf"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Traffic Studies README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2354,
+      "file:checksum": "1220c9cf12c32a8b0c4f93eaf5333a472625959fdaccaff58f290fcdbd725fde1aab"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Traffic Studies agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2063,
+      "file:checksum": "1220dffef70e23a50f0697ab812a128633d5341e4c870008fdf5bb0308c1273c5bfc"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Traffic Studies thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 21737,
+      "file:checksum": "1220e6314f89454705c2634b6ae9749dffca40d4898c16eb0a8e3d74b116641d7037"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "LOCATION",
+      "type": "string"
+    },
+    {
+      "name": "ADDRESS",
+      "type": "string"
+    },
+    {
+      "name": "ZIPCODE",
+      "type": "string"
+    },
+    {
+      "name": "DATE_",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "COMPANY",
+      "type": "string"
+    },
+    {
+      "name": "URL",
+      "type": "string"
+    },
+    {
+      "name": "ReportType",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 150,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "traffic-studies"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8585824,
+    40.580529,
+    7
+  ]
+}

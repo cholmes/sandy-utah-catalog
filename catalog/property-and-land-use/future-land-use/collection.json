@@ -9,7 +9,7 @@
   "title": "Future Land Use",
   "description": "Future Land Use Map from Sandy City General Plan. 979 multipolygon features, mirrored as GeoParquet in EPSG:3857 (WGS 84 / Pseudo-Mercator) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:54:13Z",
+  "updated": "2026-10-06T20:20:34Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2306,
-      "file:checksum": "122053e63bcc77eefeaf769370f42d7f067b2cfac0097539c1da0463b216f22b1bd1"
+      "file:checksum": "122083d62269845881b8b4b186d347cc3c682e44143584f786adbc4a3c83733c050b"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2347,
-      "file:checksum": "12205670e8cf01233943ef606e31b234654bbbf82203d4d01d85f1913cd99442ed70"
+      "file:checksum": "1220381a0ef37ce3a5b098f684107682efcda90ea6f0623c0cb0afd010d49c00b225"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

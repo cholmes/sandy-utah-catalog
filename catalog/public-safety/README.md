@@ -2,15 +2,21 @@
 
 Fire and police service areas and stations, fireworks restrictions, and mapped geologic and flood hazards.
 
-9 collections, mirrored from Sandy City, Utah.
+15 collections, mirrored from Sandy City, Utah.
 
+- [Crime Incidents](./crime-incidents/) — see its README for columns and caveats
+- [Fire Evacuation Routes](./evacuation-routes/) — see its README for columns and caveats
 - [Earthquake Fault Zones](./fault-zones/) — see its README for columns and caveats
+- [Approximate Fire Response Times](./fire-response-times/) — see its README for columns and caveats
 - [Fire Stations](./fire-stations/) — see its README for columns and caveats
 - [Fire Dispatch Subdistricts](./fire-subdistricts/) — see its README for columns and caveats
 - [Approximate 100-Year Floodplain](./flood-100yr/) — see its README for columns and caveats
 - [Potential Landslide Risk Areas](./landslide-risk/) — see its README for columns and caveats
+- [Liquefaction Potential](./liquefaction/) — see its README for columns and caveats
+- [Neighborhood Watch Groups](./neighborhood-watch/) — see its README for columns and caveats
 - [No Fireworks Zones](./no-fireworks-zone/) — see its README for columns and caveats
 - [Police Beats](./police-beats/) — see its README for columns and caveats
+- [Police Calls for Service](./police-calls/) — see its README for columns and caveats
 - [Police Reporting Areas](./police-reporting-areas/) — see its README for columns and caveats
 - [Wildland Urban Interface](./wildland-urban-interface/) — see its README for columns and caveats
 

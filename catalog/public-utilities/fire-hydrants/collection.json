@@ -9,7 +9,7 @@
   "title": "Fire Hydrants",
   "description": "Fire Hydrants in Sandy City, Utah. The upstream service publishes no description for this layer. Sandy also publishes a hydrant layer under `Pub_Safety/Hydrants` with a different count (5,047 against 5,292). This mirrors the Public Utilities copy, which is the one maintained with the water system. 5,292 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:54:13Z",
+  "updated": "2026-10-06T20:20:34Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -126,7 +126,7 @@
         "default"
       ],
       "file:size": 499,
-      "file:checksum": "12205dd63eb6c87198ed67c714be7399b8ee4432d2175eaf271487bacedf2bdaf4a9"
+      "file:checksum": "12207eef3ea7a06ae6de4b9cdeaa07c828f74772b0cd33597c4891a78018e7cbae48"
     },
     "readme": {
       "href": "./README.md",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2804,
-      "file:checksum": "122096d5fe4acf76882dd9828ed1876f5c2e8b58bf7f53c7d80f5b3d5e97dc666939"
+      "file:checksum": "12206192402ea2bd496c7528ed2c866f4572f772d7163fb7533c8831ade89ef725a1"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 4549,
-      "file:checksum": "12201c2d40d9556d8308f12a16339763556ed9433ceae9e65a3f839da461f0a29ddf"
+      "file:checksum": "1220eab3a6b317be7eccd1051d7de0bffd48e46c3fa86d0af527d4cabaa7e0f96aa0"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -155,8 +155,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 47518,
-      "file:checksum": "12208d075db06a5580834e70cd2e6033ab1f415b89de0bfc0513a305b204879a40c3"
+      "file:size": 44846,
+      "file:checksum": "1220932ad8760e5481653fe124fe4007f6a12cb25bbf4d32293e8d01be44d5fabda9"
     }
   },
   "table:columns": [

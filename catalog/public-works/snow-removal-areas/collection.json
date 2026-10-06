@@ -1,0 +1,236 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "snow-removal-areas",
+  "title": "Snow Removal Areas",
+  "description": "Snow Removal Areas in Sandy City, Utah. The upstream service publishes no description for this layer. 20 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.921268,
+          40.527839,
+          -111.777213,
+          40.61822
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Snow Removal Areas README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Snow Removal Areas agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Snow_Removal_Areas/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/snow-removal-areas/snow-removal-areas.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "snow-removal-areas"
+      ],
+      "title": "Snow Removal Areas vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/snow-removal-areas/snow-removal-areas.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Snow Removal Areas (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 85851,
+      "file:checksum": "12201888a6a614d45d6ecea1863dffeadb99a900cea26acc5547f145c89848ae8fe5"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/snow-removal-areas/snow-removal-areas.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Snow Removal Areas (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 69969,
+      "file:checksum": "12208b77a25dd4e9ae841f9e884d516e94457871778d0b6e27360f8a7f41ea20c23b"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 626,
+      "file:checksum": "12200821e748b61176d7abde7579ac33676f4ed82a551859080c360eaaae989fd66c"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Snow Removal Areas README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2401,
+      "file:checksum": "1220fd11c27d281fac5b210ed44cbe71051532be1f9a999b62358cc65d3a23429083"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Snow Removal Areas agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2193,
+      "file:checksum": "12200bb4150d5f9d55af56c042f959d70a73ea9714730acf3a9b16392b9309d65aac"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Snow Removal Areas thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 55744,
+      "file:checksum": "1220288749054d159772babb3bd32a25a1f720199b5358f069ae870de6c3766affe1"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "AssetID",
+      "type": "string"
+    },
+    {
+      "name": "SNOW_ID",
+      "type": "double"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Location",
+      "type": "string"
+    },
+    {
+      "name": "Road_Miles",
+      "type": "double"
+    },
+    {
+      "name": "Dead_Ends",
+      "type": "double"
+    },
+    {
+      "name": "Page",
+      "type": "string"
+    },
+    {
+      "name": "ROTATION",
+      "type": "double"
+    },
+    {
+      "name": "LS_Rotation",
+      "type": "int16"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.STArea()",
+      "type": "double"
+    },
+    {
+      "name": "Shape.STLength()",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 20,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "snow-removal-areas"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8492919,
+    40.5730367,
+    7
+  ]
+}

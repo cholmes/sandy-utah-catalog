@@ -1,0 +1,260 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "neighborhood-watch",
+  "title": "Neighborhood Watch Groups",
+  "description": "Neighborhood watch groups in Sandy City, Utah. 42 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.91151,
+          40.527877,
+          -111.805721,
+          40.613379
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Neighborhood Watch Groups README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Neighborhood Watch Groups agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Neighborhood_Watch/MapServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/neighborhood-watch/neighborhood-watch.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "neighborhood-watch"
+      ],
+      "title": "Neighborhood Watch Groups vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/neighborhood-watch/neighborhood-watch.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Neighborhood Watch Groups (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 41342,
+      "file:checksum": "1220427661c5805f8ef1f8d2c6f8690c5f274fa747f700085fc77816f45fd5ee9b83"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/neighborhood-watch/neighborhood-watch.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Neighborhood Watch Groups (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 76119,
+      "file:checksum": "122060c5bfd9cb7324b24fdbdf39a15c6c3088405d7146cba2694460c9a3f80f039c"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 626,
+      "file:checksum": "122083f9c0ced70b41cde160cc66684d954dd7b2a4d13f4952c0449ec6bf53c64ae8"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Neighborhood Watch Groups README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2298,
+      "file:checksum": "1220d23fddc5b2f54cab36ed79f2ea4c27ce67662cefc7f3475ad609f0e984ae34f9"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Neighborhood Watch Groups agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2373,
+      "file:checksum": "12208416c236bb58df4a848555e7994bc18d9beb71fa6a4c2fb9f911f13489b40b7a"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Neighborhood Watch Groups thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 29219,
+      "file:checksum": "1220b6c31f14a32761a9b273c5ee4c55959a0b0d1bed30584ea6d7eef648c163323a"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "Quadrant",
+      "type": "string"
+    },
+    {
+      "name": "Community",
+      "type": "int16"
+    },
+    {
+      "name": "Police_Beat",
+      "type": "string"
+    },
+    {
+      "name": "NW_Group",
+      "type": "string"
+    },
+    {
+      "name": "Alt_Area_Name",
+      "type": "string"
+    },
+    {
+      "name": "AreaLeader",
+      "type": "string"
+    },
+    {
+      "name": "Leader_Address",
+      "type": "string"
+    },
+    {
+      "name": "Email",
+      "type": "string"
+    },
+    {
+      "name": "Hm_Phone",
+      "type": "string"
+    },
+    {
+      "name": "Cell_Phone",
+      "type": "string"
+    },
+    {
+      "name": "Wk_Phone",
+      "type": "string"
+    },
+    {
+      "name": "Prefered_Phone",
+      "type": "string"
+    },
+    {
+      "name": "Color",
+      "type": "string"
+    },
+    {
+      "name": "Include",
+      "type": "string"
+    },
+    {
+      "name": "Last_Active",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 42,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "neighborhood-watch"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8586975,
+    40.5706255,
+    7
+  ]
+}

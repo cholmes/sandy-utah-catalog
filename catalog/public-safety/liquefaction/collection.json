@@ -1,0 +1,208 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "liquefaction",
+  "title": "Liquefaction Potential",
+  "description": "Map of hazards in Sandy City, Utah. 10 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -112.253308,
+          40.41271,
+          -111.553491,
+          40.923052
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Safety"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Liquefaction Potential README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Liquefaction Potential agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Hazards/MapServer/7",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/liquefaction/liquefaction.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "liquefaction"
+      ],
+      "title": "Liquefaction Potential vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/liquefaction/liquefaction.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Liquefaction Potential (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 201865,
+      "file:checksum": "1220f60f5d61a03c83b13e26c468dca3ff361492b3a6b683e17a52aa4d5114ed0470"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/liquefaction/liquefaction.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Liquefaction Potential (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 286482,
+      "file:checksum": "122039b69090ba6ee9e0374e4986757d982e2a5f4b808825f5eab873c76f681cff88"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 596,
+      "file:checksum": "1220cda0d912fe30a869a13385f55bb2fb26c8f70a28f1c9268eeaec6d78e25625b0"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Liquefaction Potential README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2217,
+      "file:checksum": "12202e7d0c6258da504edbda8f1e8d3ebd0b990830be516f53dbdae5fa08470d5648"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Liquefaction Potential agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1974,
+      "file:checksum": "1220f5e441d54efa2f178a33029be239ea45a61dfac9a8fbbfa112ba4fedb6c9b96b"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Liquefaction Potential thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 50020,
+      "file:checksum": "1220726fedc82ae3c1f6f4f3c36a6b797e0639ab7abf70b7d34d57298ffd1be07fda"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "LIQ27_ID",
+      "type": "double"
+    },
+    {
+      "name": "LABEL",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "Shape.area",
+      "type": "double"
+    },
+    {
+      "name": "Shape.len",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 10,
+  "geoparquet:geometry_type": "MultiPolygon",
+  "pmtiles:layers": [
+    "liquefaction"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.9052476,
+    40.6681004,
+    7
+  ]
+}

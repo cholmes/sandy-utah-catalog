@@ -1,0 +1,344 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "storm-inlets",
+  "title": "Storm Drain Inlets",
+  "description": "Storm Drain Inlets in Sandy City, Utah. The upstream service publishes no description for this layer. 12,312 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -111.920148,
+          40.528442,
+          -111.781043,
+          40.621529
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Utilities"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Inlets README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Inlets agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StormDrain/FeatureServer/0",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-inlets/storm-inlets.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "storm-inlets"
+      ],
+      "title": "Storm Drain Inlets vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-inlets/storm-inlets.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Storm Drain Inlets (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1029570,
+      "file:checksum": "1220f4ee5021fe78f0a0420755cf3acd7fb31c450750cb34a82f9946d3aaa22e6863"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-inlets/storm-inlets.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Storm Drain Inlets (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 1843463,
+      "file:checksum": "1220f9bd0f254ddbf0bcb2eb2ddeef09c193d02c95262bf265914caad4aac907f952"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 496,
+      "file:checksum": "122061e607c4db6a5f6d52edb4919b279e6a6324c8ae1f45e713c11a1eb3f9bc29d1"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Inlets README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2483,
+      "file:checksum": "1220f55dcd7f7c8351d1c6fc98727d74064f46d05ef4a818024e962b7ea80bbeacb4"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Storm Drain Inlets agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3688,
+      "file:checksum": "12202a3b9df13377bd8921d32df48db7a46663ab993a1d36045181d0f50cf1cd81e8"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Storm Drain Inlets thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 73086,
+      "file:checksum": "1220a99b911026c548a0fd0bc8d3f88dd3da486653418c5bac2892b7085b3b4e1923"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "FACILITYID",
+      "type": "string"
+    },
+    {
+      "name": "NORTHING",
+      "type": "double"
+    },
+    {
+      "name": "EASTING",
+      "type": "double"
+    },
+    {
+      "name": "ELEVATION",
+      "type": "double"
+    },
+    {
+      "name": "CURB_INLET",
+      "type": "string"
+    },
+    {
+      "name": "BOX_DEPTH",
+      "type": "double"
+    },
+    {
+      "name": "PIPE_TYPE",
+      "type": "string"
+    },
+    {
+      "name": "INVERT1",
+      "type": "double"
+    },
+    {
+      "name": "INVERT2",
+      "type": "double"
+    },
+    {
+      "name": "INVERT3",
+      "type": "double"
+    },
+    {
+      "name": "INVERT4",
+      "type": "double"
+    },
+    {
+      "name": "INVERT_OUT",
+      "type": "double"
+    },
+    {
+      "name": "PIPE_SIZE",
+      "type": "int16"
+    },
+    {
+      "name": "GPSDATE",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "ACTIVE",
+      "type": "string"
+    },
+    {
+      "name": "Comments",
+      "type": "string"
+    },
+    {
+      "name": "RuleID",
+      "type": "int32"
+    },
+    {
+      "name": "SCOUTS",
+      "type": "int16"
+    },
+    {
+      "name": "PROJECT",
+      "type": "string"
+    },
+    {
+      "name": "OWNERSHIP",
+      "type": "string"
+    },
+    {
+      "name": "DATEINSTALLED",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "ORIFICE",
+      "type": "int16"
+    },
+    {
+      "name": "INVERT5",
+      "type": "int32"
+    },
+    {
+      "name": "InvertNum",
+      "type": "int32"
+    },
+    {
+      "name": "INVESTIGATE",
+      "type": "string"
+    },
+    {
+      "name": "COMMENT_SUMMARY",
+      "type": "string"
+    },
+    {
+      "name": "PRIORITY",
+      "type": "string"
+    },
+    {
+      "name": "STATUS",
+      "type": "string"
+    },
+    {
+      "name": "InspDate",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "StructCond",
+      "type": "string"
+    },
+    {
+      "name": "FrameGrate",
+      "type": "string"
+    },
+    {
+      "name": "FloorBench",
+      "type": "string"
+    },
+    {
+      "name": "MaintRating",
+      "type": "string"
+    },
+    {
+      "name": "MaintSched",
+      "type": "string"
+    },
+    {
+      "name": "InspectionZone",
+      "type": "int16"
+    },
+    {
+      "name": "created_user",
+      "type": "string"
+    },
+    {
+      "name": "created_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "last_edited_user",
+      "type": "string"
+    },
+    {
+      "name": "last_edited_date",
+      "type": "timestamp[ms]"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 12312,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "storm-inlets"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.8507512,
+    40.574954,
+    7
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "How the call arrived",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../police-calls.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "police-calls-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "police-calls",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "how_received_d"
+          ],
+          "911 SYSTEM",
+          "#c92a2a",
+          "TELEPHONE",
+          "#1c7ed6",
+          "ON VIEW",
+          "#2f9e44",
+          "RECURRING CALL",
+          "#f08c00",
+          "#ced4da"
+        ],
+        "circle-radius": 2.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

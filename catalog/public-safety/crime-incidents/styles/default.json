@@ -1,0 +1,44 @@
+{
+  "version": 8,
+  "name": "Time of day",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../crime-incidents.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "crime-incidents-circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "crime-incidents",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "TimeOfDay"
+          ],
+          "Morning",
+          "#ffd43b",
+          "Mid-Day",
+          "#fab005",
+          "Afternoon",
+          "#f76707",
+          "Evening",
+          "#e8590c",
+          "Late Night",
+          "#c2255c",
+          "Overnight",
+          "#5f3dc4",
+          "#ced4da"
+        ],
+        "circle-radius": 2.6,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 0.5,
+        "circle-opacity": 0.85
+      }
+    }
+  ]
+}

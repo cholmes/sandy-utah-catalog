@@ -6,7 +6,7 @@
   ],
   "id": "property-and-land-use",
   "title": "Property and Land Use",
-  "description": "Parcels, zoning, subdivisions, address points, future land use and overlay zones. 7 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
+  "description": "Parcels, zoning, subdivisions, address points, future land use and overlay zones. 10 collections mirrored from Sandy City, Utah. See the [catalog README](../README.md) for licence and provenance, which are the same for every collection here.",
   "links": [
     {
       "rel": "root",
@@ -40,6 +40,18 @@
     },
     {
       "rel": "child",
+      "href": "./conditional-use-permits/collection.json",
+      "type": "application/json",
+      "title": "Conditional Use Permits"
+    },
+    {
+      "rel": "child",
+      "href": "./development-projects/collection.json",
+      "type": "application/json",
+      "title": "Development Projects"
+    },
+    {
+      "rel": "child",
       "href": "./future-land-use/collection.json",
       "type": "application/json",
       "title": "Future Land Use"
@@ -61,6 +73,12 @@
       "href": "./short-term-rental-allocations/collection.json",
       "type": "application/json",
       "title": "Short-Term Rental Allocations"
+    },
+    {
+      "rel": "child",
+      "href": "./site-plan-review/collection.json",
+      "type": "application/json",
+      "title": "Site Plan Review Applications"
     },
     {
       "rel": "child",

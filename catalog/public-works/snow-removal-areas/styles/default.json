@@ -1,0 +1,32 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "../snow-removal-areas.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "snow-removal-areas-fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "snow-removal-areas",
+      "paint": {
+        "fill-color": "#845ef7",
+        "fill-opacity": 0.75
+      }
+    },
+    {
+      "id": "snow-removal-areas-line-1",
+      "type": "line",
+      "source": "data",
+      "source-layer": "snow-removal-areas",
+      "paint": {
+        "line-color": "#ffffff",
+        "line-width": 0.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "id": "trax-stops",
+  "title": "UTA TRAX Stops",
+  "description": "UTA TRAX Stops in Sandy City, Utah. The upstream service publishes no description for this layer. 111 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
+  "license": "other",
+  "updated": "2026-10-06T20:20:34Z",
+  "providers": [
+    {
+      "name": "Sandy City, Utah \u2014 GIS Division",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://gis.sandy.utah.gov/WebApplications/gismaps.html"
+    },
+    {
+      "name": "Chris Holmes \u2014 Portolan mirrors",
+      "roles": [
+        "host"
+      ],
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -112.024523,
+          40.524868,
+          -111.836521,
+          40.78486
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "proj:epsg": 3566,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Sandy City, Utah \u2014 Municipal Open Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Public Works and Transportation"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "UTA TRAX Stops README"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "UTA TRAX Stops agent guide"
+    },
+    {
+      "rel": "via",
+      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/UTA_Routes/MapServer/1",
+      "type": "text/html",
+      "title": "Upstream ArcGIS service layer"
+    },
+    {
+      "rel": "license",
+      "href": "../../LICENSE.md",
+      "type": "text/markdown",
+      "title": "Licence status: Sandy City states no licence"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/trax-stops/trax-stops.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "pmtiles:layers": [
+        "trax-stops"
+      ],
+      "title": "UTA TRAX Stops vector tiles"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/trax-stops/trax-stops.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "UTA TRAX Stops (GeoParquet, EPSG:3566)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 17801,
+      "file:checksum": "12209baa152cc6ff1f3fcc5dca84194268897109c77a1ee30a5890077c35a35f7fe7"
+    },
+    "tiles": {
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/trax-stops/trax-stops.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "UTA TRAX Stops (vector tiles, Web Mercator)",
+      "roles": [
+        "visual"
+      ],
+      "proj:epsg": 3857,
+      "file:size": 49865,
+      "file:checksum": "12200b4d37e3c79f65c58e66ed0732a5c58540e4f9f3ff4b357082ebeaa6fe3ffa31"
+    },
+    "style-default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 490,
+      "file:checksum": "1220cac2c8b8d7db88d589da95f2fd8fa4e4b381a6e8a93ba0b07916bd3f13dc5da9"
+    },
+    "readme": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "UTA TRAX Stops README",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2301,
+      "file:checksum": "12207d359fc9d07582f58b14db2fc86ee7833dddd81369518f7ce9de34a5b7fa343c"
+    },
+    "agents": {
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "UTA TRAX Stops agent guide",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2047,
+      "file:checksum": "122088a936e80f1cd4c6741035523d4fbdbabc7a559e7d2c6b70f007562f6c92e4a8"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "UTA TRAX Stops thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 17601,
+      "file:checksum": "122096dde5a866ccac30619eb9fa788e6e27c3f8b3e5e3709ada0d247150d73e06de"
+    }
+  },
+  "table:columns": [
+    {
+      "name": "OBJECTID",
+      "type": "int64"
+    },
+    {
+      "name": "stopabbr_j",
+      "type": "string"
+    },
+    {
+      "name": "uta_stopid",
+      "type": "int32"
+    },
+    {
+      "name": "avgboard",
+      "type": "int32"
+    },
+    {
+      "name": "avgalight",
+      "type": "int32"
+    },
+    {
+      "name": "route",
+      "type": "string"
+    },
+    {
+      "name": "mode",
+      "type": "string"
+    },
+    {
+      "name": "county",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "Shape",
+      "type": "binary"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "geoparquet:feature_count": 111,
+  "geoparquet:geometry_type": "Point",
+  "pmtiles:layers": [
+    "trax-stops"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 14,
+  "pmtiles:center": [
+    -111.9306395,
+    40.654923,
+    7
+  ]
+}
