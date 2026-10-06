@@ -9,7 +9,7 @@
   "title": "Water Service Line Material Inventory",
   "description": "Water Service Line Material Inventory in Sandy City, Utah. The upstream service publishes no description for this layer. Published by Sandy City to meet the service line inventory requirement of the US EPA Lead and Copper Rule Revisions. The inventory is incomplete: most lines are still classified Unknown. 26,213 point features, mirrored as GeoParquet in EPSG:2850 (NAD83(HARN) / Utah Central) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/lead-service-lines/lead-service-lines.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "lead-service-lines"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/lead-service-lines/lead-service-lines.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Water Service Line Material Inventory (GeoParquet, EPSG:2850)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220740ab5a62dcdd160e1b44f64460e819bcc81926e0d3d00f0d2b2a01b4bad95a5"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/lead-service-lines/lead-service-lines.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Water Service Line Material Inventory (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3548,
-      "file:checksum": "1220aee24096a49c9609b23c0f75966060357259490385119247a7cea0c11aadee7b"
+      "file:size": 3560,
+      "file:checksum": "122077df098a3306904ae600f7ca6c81a31740627a32175409ff695914fdeda3f47d"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 6748,
-      "file:checksum": "12208c93b7da2692cc741fc642df26b7f098e740d01d5183c1ea9b7cf973912229e1"
+      "file:size": 6760,
+      "file:checksum": "1220c033948ff6e7c70f07e2b75e96a9a24ec76d19fff406f387737b56addac6a156"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

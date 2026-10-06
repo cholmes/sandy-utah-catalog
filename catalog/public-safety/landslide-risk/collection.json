@@ -9,7 +9,7 @@
   "title": "Potential Landslide Risk Areas",
   "description": "Map of hazards in Sandy City, Utah. 289 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/landslide-risk/landslide-risk.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/landslide-risk/landslide-risk.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "landslide-risk"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/landslide-risk/landslide-risk.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/landslide-risk/landslide-risk.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Potential Landslide Risk Areas (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "122065b0eeb3a645c5e156e50138e39c9514c09609729498cc7b438e8436ec685ed8"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/landslide-risk/landslide-risk.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/landslide-risk/landslide-risk.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Potential Landslide Risk Areas (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2232,
-      "file:checksum": "12207dbac4951544188b20dbd730ace0574e9def36eac7a880be5f1e05ae542f5302"
+      "file:size": 2244,
+      "file:checksum": "122049185023c0beaabd3dc40abfaa5b74fc65f48064cee2c9c846dab203cb8f5a0c"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2126,
-      "file:checksum": "12209dfa9ec24d45035ab2b3d5c3dfbaaf58d011fee33c4a3646a472f3412ae9b249"
+      "file:size": 2138,
+      "file:checksum": "1220323040930dc59d6f21df2ed0550898fbb9b81015f8c9c68910e71a2101cd6839"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

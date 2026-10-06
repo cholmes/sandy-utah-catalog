@@ -1,4 +1,4 @@
-# sandy-portolan
+# sandy-utah-catalog
 
 A git-backed [Portolan](https://www.portolan-sdi.org/) catalog mirroring the
 public geospatial data of **Sandy City, Utah** — 42 collections covering
@@ -7,7 +7,7 @@ districts, water and storm infrastructure, roads and transit.
 
 Metadata lives in this repository and is validated by `rashid` on every pull
 request. The data itself lives on Source Cooperative at
-[portolan-mirrors/sandy-portolan](https://source.coop/portolan-mirrors/sandy-portolan).
+[portolan-mirrors/sandy-utah-catalog](https://source.coop/portolan-mirrors/sandy-utah-catalog).
 
 **Sandy City produced this data. This catalog is an independent mirror and is
 not endorsed by or affiliated with the city.**

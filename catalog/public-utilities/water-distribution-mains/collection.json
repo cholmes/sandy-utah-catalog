@@ -9,7 +9,7 @@
   "title": "Water Distribution Mains",
   "description": "Water Distribution Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 15,249 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/water-distribution-mains/water-distribution-mains.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-distribution-mains/water-distribution-mains.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "water-distribution-mains"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/water-distribution-mains/water-distribution-mains.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-distribution-mains/water-distribution-mains.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Water Distribution Mains (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12206bd2f64c80dd69acfe8fe148bee3099cad2144109afba37be235860f9d7eb561"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/water-distribution-mains/water-distribution-mains.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/water-distribution-mains/water-distribution-mains.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Water Distribution Mains (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2721,
-      "file:checksum": "1220fa8d552eda844927e7918462d73aa075133cc319db7c41a31b74c0e3c4ee2940"
+      "file:size": 2733,
+      "file:checksum": "122001d9f67c094cc1fc1e7524d9603e9e7eb6e5bfafa15360432ea1ac3336650c7d"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3638,
-      "file:checksum": "1220f3ea5b3f3e5110d35979a64c22a7e9d80779b63d5dbe3249dcd2b0795071f586"
+      "file:size": 3650,
+      "file:checksum": "122021262db02205ed531bad6c18601e99cb8a55fdb6fac6e0a39a2a6c34afec49e9"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

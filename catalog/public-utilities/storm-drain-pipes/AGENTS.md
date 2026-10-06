@@ -8,7 +8,7 @@ The GeoParquet is in **EPSG:3566** (NAD83(HARN) / Utah Central (ftUS)). Linear u
 
 ```sql
 SELECT ST_Transform(geometry, 'EPSG:3566', 'EPSG:4326') AS geom_wgs84
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/storm-drain-pipes/storm-drain-pipes.parquet';
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-drain-pipes/storm-drain-pipes.parquet';
 ```
 
 There is a `bbox` struct column on every row, written by gpio for spatial pruning. It is in EPSG:3566 too.
@@ -178,14 +178,14 @@ These are the code lists the ArcGIS layer publishes as field domains. They are t
 
 ```sql
 INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;
-SELECT * FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/storm-drain-pipes/storm-drain-pipes.parquet' LIMIT 5;
+SELECT * FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-drain-pipes/storm-drain-pipes.parquet' LIMIT 5;
 ```
 
 Count by the column the default style uses:
 
 ```sql
 SELECT "OWNERSHIP", count(*) AS n
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/storm-drain-pipes/storm-drain-pipes.parquet'
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-drain-pipes/storm-drain-pipes.parquet'
 GROUP BY 1 ORDER BY n DESC;
 ```
 
@@ -200,5 +200,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StormDrain/FeatureServer/6](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StormDrain/FeatureServer/6) on 2026-10-06T19:24:57Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StormDrain/FeatureServer/6](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StormDrain/FeatureServer/6) on 2026-10-06T19:54:13Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

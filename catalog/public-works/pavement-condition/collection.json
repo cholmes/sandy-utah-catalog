@@ -9,7 +9,7 @@
   "title": "Pavement Condition",
   "description": "Pavement Condition in Sandy City, Utah. The upstream service publishes no description for this layer. 2,165 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/pavement-condition/pavement-condition.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/pavement-condition/pavement-condition.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "pavement-condition"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/pavement-condition/pavement-condition.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/pavement-condition/pavement-condition.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Pavement Condition (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12204c6ee72248785b9c2b6b767a5101f7b5d7dce10d50be6441a94258ad1a7242a8"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/pavement-condition/pavement-condition.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/pavement-condition/pavement-condition.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Pavement Condition (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2398,
-      "file:checksum": "12207e3904a61791205c60e699b7a545a1859fdd2f848717439eecbc5e0e6cd965aa"
+      "file:size": 2410,
+      "file:checksum": "1220c367af73b7f215388d96605590624aa80dc450526fc1be114d1ee22cd6fe8e88"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3030,
-      "file:checksum": "1220d3167a32559fd7480f00752413a31d063d96efc60f92c5315bd1ca768c3383c4"
+      "file:size": 3042,
+      "file:checksum": "1220e5b57b3ac8df0e42344234d007ab1dd5a4d0c9c8190c7257bf97b40ed085e328"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

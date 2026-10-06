@@ -11,7 +11,7 @@
   "links": [
     {
       "rel": "self",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/catalog.json",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/catalog.json",
       "type": "application/json"
     },
     {
@@ -33,12 +33,12 @@
     },
     {
       "rel": "vcs",
-      "href": "https://github.com/cholmes/sandy-portolan",
+      "href": "https://github.com/cholmes/sandy-utah-catalog",
       "title": "Source repository"
     },
     {
       "rel": "issues",
-      "href": "https://github.com/cholmes/sandy-portolan/issues",
+      "href": "https://github.com/cholmes/sandy-utah-catalog/issues",
       "title": "Issue tracker"
     },
     {

@@ -9,7 +9,7 @@
   "title": "Street and Park Trees",
   "description": "An inventory of trees in Sandy City, Utah. The same tree inventory is published twice by the city, as `Parks/Grounds_and_Forestry` and as `Pub_Works/ParksDeptTrees`, both reporting the same feature count. This mirrors the Parks copy. 7,997 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/street-trees/street-trees.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/street-trees/street-trees.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "street-trees"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/street-trees/street-trees.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/street-trees/street-trees.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Street and Park Trees (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220297bca3754333d2583702075891a1ff8ffc8638013ccb1aa2416775811fb244c"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/street-trees/street-trees.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/street-trees/street-trees.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Street and Park Trees (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2792,
-      "file:checksum": "12201bbdadf8e5963112a041ed9e88370fce9c5e436466e48419f952c1be06749942"
+      "file:size": 2804,
+      "file:checksum": "1220fbdcf5ad2933d10d772056a517a980ebc1e1aab4f58801e76636d5f44f284234"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2504,
-      "file:checksum": "122035d3e4faca9eb4ea0cb7a3865f675abf66afdfbca283975d0b0b74cda210bf74"
+      "file:size": 2512,
+      "file:checksum": "1220cbbc7dbcccf235f1ce135acd7503e684a08b5730eb37fa64308f3ae80e30dd76"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

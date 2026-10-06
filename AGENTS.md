@@ -1,8 +1,8 @@
-# sandy-portolan
+# sandy-utah-catalog
 
 A git-backed Portolan catalog mirroring Sandy City, Utah's public geospatial
 data. Metadata lives here. Data bytes live on Source Cooperative under
-`portolan-mirrors/sandy-portolan`.
+`portolan-mirrors/sandy-utah-catalog`.
 
 ## The publish boundary
 

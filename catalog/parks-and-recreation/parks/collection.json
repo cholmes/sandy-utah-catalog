@@ -9,7 +9,7 @@
   "title": "Parks",
   "description": "Parks in Sandy City, Utah. 41 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/parks/parks.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/parks/parks.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "parks"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/parks/parks.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/parks/parks.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Parks (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220398779eb148a0af97df8bdb591c05c2473b2946cbff539c0ba5d7b321c5f23ef"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/parks/parks.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/parks/parks.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Parks (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2384,
-      "file:checksum": "1220179f5ad4f6b594316df3ceffdc9b351980e9ee53905e0eb52c3833a60c319f44"
+      "file:size": 2396,
+      "file:checksum": "1220937a95fb2a818bf41b4cc9efcb3a77fcce1da38e42eff4e0b84ae6f840f8eabd"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 5918,
-      "file:checksum": "1220e22c5c3ed271bbcefe708e1e6973ace352c7642798fabe031a371aab0d35d898"
+      "file:size": 5926,
+      "file:checksum": "1220cbeeb891de71f4e01dccd0727826f455c6e1c09d286e921ac13fcb4125487c09"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

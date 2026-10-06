@@ -9,7 +9,7 @@
   "title": "Earthquake Fault Zones",
   "description": "Map of hazards in Sandy City, Utah. 14 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fault-zones/fault-zones.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fault-zones/fault-zones.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "fault-zones"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fault-zones/fault-zones.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fault-zones/fault-zones.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Earthquake Fault Zones (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220eada952bdd3aa3cd1fe2fe44bc6a46d3ca28f2b555113ae82cc907a741e4145c"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fault-zones/fault-zones.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fault-zones/fault-zones.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Earthquake Fault Zones (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2198,
-      "file:checksum": "1220bfb7c45bff0c03cdee65bca7f2166f01e813c59533104f28d0de9fbd1d469a25"
+      "file:size": 2210,
+      "file:checksum": "12208fbc7ee6d0e5d8837292ae88af6799c6b6eab81734546ef2cd120e88a045d943"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 1943,
-      "file:checksum": "122005832116a7d9ca370d4f822e5c177b7a4cf4c34ed59dc0ed63f0c8044edd83de"
+      "file:size": 1951,
+      "file:checksum": "1220f7215d5b1905b4f7dfc49ae2142b9941e31bc2d86f0c53012386e2e72078071e"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

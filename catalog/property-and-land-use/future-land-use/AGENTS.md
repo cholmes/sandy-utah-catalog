@@ -8,7 +8,7 @@ The GeoParquet is in **EPSG:3857** (WGS 84 / Pseudo-Mercator). Linear units are 
 
 ```sql
 SELECT ST_Transform(geometry, 'EPSG:3857', 'EPSG:4326') AS geom_wgs84
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/future-land-use/future-land-use.parquet';
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/future-land-use/future-land-use.parquet';
 ```
 
 There is a `bbox` struct column on every row, written by gpio for spatial pruning. It is in EPSG:3857 too.
@@ -34,14 +34,14 @@ The upstream layer publishes no field domains, so no column in this collection h
 
 ```sql
 INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;
-SELECT * FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/future-land-use/future-land-use.parquet' LIMIT 5;
+SELECT * FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/future-land-use/future-land-use.parquet' LIMIT 5;
 ```
 
 Count by the column the default style uses:
 
 ```sql
 SELECT "Future_Land_Use", count(*) AS n
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/future-land-use/future-land-use.parquet'
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/future-land-use/future-land-use.parquet'
 GROUP BY 1 ORDER BY n DESC;
 ```
 
@@ -61,5 +61,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Sandy_Future_Land_Use_Map_WFL1/FeatureServer/12](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Sandy_Future_Land_Use_Map_WFL1/FeatureServer/12) on 2026-10-06T19:24:57Z.
+Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Sandy_Future_Land_Use_Map_WFL1/FeatureServer/12](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Sandy_Future_Land_Use_Map_WFL1/FeatureServer/12) on 2026-10-06T19:54:13Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

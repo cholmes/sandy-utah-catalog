@@ -9,7 +9,7 @@
   "title": "Sensitive Area Overlay Zone",
   "description": "Sensitive Area Overlay Zone in Sandy City, Utah. The upstream service publishes no description for this layer. 34 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/sensitive-overlay-zone/sensitive-overlay-zone.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/sensitive-overlay-zone/sensitive-overlay-zone.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "sensitive-overlay-zone"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/sensitive-overlay-zone/sensitive-overlay-zone.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/sensitive-overlay-zone/sensitive-overlay-zone.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Sensitive Area Overlay Zone (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "122043f0b2d842790da297c746916d0bc4650bee31c3599d24fbf0b816fa19d214da"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/sensitive-overlay-zone/sensitive-overlay-zone.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/sensitive-overlay-zone/sensitive-overlay-zone.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Sensitive Area Overlay Zone (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2475,
-      "file:checksum": "12204b939a4706cb1404970e5970a79ef4052273a880cb6fe6f30f17449728406ce3"
+      "file:size": 2487,
+      "file:checksum": "1220f03efabb49264b4aef2e5e0b413cfecc75f4411610965f01977183f748f0ba36"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2010,
-      "file:checksum": "122019d5395ab8d57f4a4a0d700a2ed808556737ea47fa01a35515e8fdc09b2d0ced"
+      "file:size": 2018,
+      "file:checksum": "12209ecbc562c27e6c14ea4d69a8f43c6c4760fd714cc1ec08b9ea89b7924ed62dbe"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

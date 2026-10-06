@@ -9,7 +9,7 @@
   "title": "Sandy City Cemetery Graves",
   "description": "Provides access to the Sandy City, Utah Cemetery data. 11,695 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/cemetery-graves/cemetery-graves.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/cemetery-graves/cemetery-graves.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "cemetery-graves"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/cemetery-graves/cemetery-graves.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/cemetery-graves/cemetery-graves.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Sandy City Cemetery Graves (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12203a91ea331a4271a0781efb8cd3155237bc20506b03b40c0b4f36172b4f7bc191"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/cemetery-graves/cemetery-graves.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/cemetery-graves/cemetery-graves.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Sandy City Cemetery Graves (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2383,
-      "file:checksum": "12207a1a8a8437ddb2bc9994597bba50fd2d767af991546243a9dcf073849e15ca9f"
+      "file:size": 2395,
+      "file:checksum": "1220bb9478353d8463ccf7f27d0bc7e6f0f1328f32c62fb56c5a78fccdd9d02535b0"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3867,
-      "file:checksum": "1220e4b83e72f3934b29086fdd1aa9fc476f102ee595e4829d9db38290dd248c4e4c"
+      "file:size": 3879,
+      "file:checksum": "1220bc759a353a151e0bc87ff596f1ecd45f26a1707fc250058276cf3d536ddee4c9"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

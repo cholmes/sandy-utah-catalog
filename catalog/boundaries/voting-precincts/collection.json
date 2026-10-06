@@ -9,7 +9,7 @@
   "title": "Voting Precincts",
   "description": "Voting Precincts in Sandy City, Utah. The upstream service publishes no description for this layer. 102 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/voting-precincts/voting-precincts.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/voting-precincts/voting-precincts.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "voting-precincts"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/voting-precincts/voting-precincts.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/voting-precincts/voting-precincts.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Voting Precincts (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220f01287536566a339b997890b71811b55b84befdebc1e1b510f23b63b5708a315"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/voting-precincts/voting-precincts.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/voting-precincts/voting-precincts.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Voting Precincts (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2364,
-      "file:checksum": "12204ec711e6d9a83f2b61396a1b81aa45a9a4159f7fc932622d7715a450605ebcf7"
+      "file:size": 2376,
+      "file:checksum": "12204397ba1633b02b00623ee7190d5742925bff802770f4702785a3e73a727973f9"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2344,
-      "file:checksum": "1220b3d8a05e8cd3e7ae297b9445087c10777b4c1d40ec2842e75e817e55b73d1362"
+      "file:size": 2356,
+      "file:checksum": "122026865832bf08da3816e3941a06548268f9cc747106dd27dce75adc42fe427139"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

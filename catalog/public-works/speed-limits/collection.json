@@ -9,7 +9,7 @@
   "title": "Speed Limits",
   "description": "Speed Limits in Sandy City, Utah. The upstream service publishes no description for this layer. 5,072 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/speed-limits/speed-limits.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/speed-limits/speed-limits.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "speed-limits"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/speed-limits/speed-limits.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/speed-limits/speed-limits.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Speed Limits (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12204cf40ab6933e19183c90b20a1a30ccad36ba7c9b3bdfa0876c16a7d914e7d912"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/speed-limits/speed-limits.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/speed-limits/speed-limits.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Speed Limits (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2582,
-      "file:checksum": "12207793b83c71cfda73600254ff43b54ceb7c2a112af784d91891c6f5439253b45f"
+      "file:size": 2594,
+      "file:checksum": "1220b35b4363d59c2fb988ae3c00316d9fdd148ebeb1c66df0501e5a3ae99c4de942"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 4239,
-      "file:checksum": "12200cd9dab1965035308821f4cf9ac419585110c546902cd3a7884b25160c608513"
+      "file:size": 4251,
+      "file:checksum": "122020c35cf31476c8e169f2fcd370f2155b69d6b7fbdb643a27cb9d3727317c3f6e"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

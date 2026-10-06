@@ -9,7 +9,7 @@
   "title": "Streams",
   "description": "Sandy Waterways Streams. 848 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/streams/streams.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/streams/streams.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "streams"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/streams/streams.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/streams/streams.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Streams (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "122012c894eb9aa12b8bbec3b8380215f87b4b0703d06f2473ef73d2ef0800ee7e8e"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/streams/streams.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/streams/streams.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Streams (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2085,
-      "file:checksum": "1220c04326de63751017caea8de45a89c86d919566c6bc7916f71b5f74a849985bee"
+      "file:size": 2097,
+      "file:checksum": "122041d0c24762ea8606f7641bf56a8cf4ea7d34134aca33a942452d92158611b279"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2198,
-      "file:checksum": "122066cfb9c95d2c34e0036e122f6f72abfc0c38e429a5bc1300ad773b66a8465d7a"
+      "file:size": 2210,
+      "file:checksum": "1220a6c8faea5d5804b44652549706bb17a4b5a3dea47413dc06d06ccf4d233e8e94"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

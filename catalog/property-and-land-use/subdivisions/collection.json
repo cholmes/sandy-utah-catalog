@@ -9,7 +9,7 @@
   "title": "Subdivisions",
   "description": "Subdivisions in Sandy City, Utah. 1,699 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/subdivisions/subdivisions.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/subdivisions/subdivisions.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "subdivisions"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/subdivisions/subdivisions.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/subdivisions/subdivisions.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Subdivisions (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12200554b7570b745ec5f00848a08c59902a2f854f21185e26d8eedce726054cd4cb"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/subdivisions/subdivisions.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/subdivisions/subdivisions.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Subdivisions (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2209,
-      "file:checksum": "12202d4f6e538d48f96734cd75cdbf28a36f212926f3e5a55fe46bc03d9a4c70b6ea"
+      "file:size": 2221,
+      "file:checksum": "1220eac574cfa480aff02b7a71d452f0d4720cd171b19bdde6c7ad0150e28f397619"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2184,
-      "file:checksum": "1220aa1ad3f794c1f4df0582ee0a2df2c8fe560b7fb277429333c1663f654c48b40e"
+      "file:size": 2192,
+      "file:checksum": "12205680d9fd292c185558a3e68853c788efedc600ea29f2b27f63cead1466c8f4c8"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

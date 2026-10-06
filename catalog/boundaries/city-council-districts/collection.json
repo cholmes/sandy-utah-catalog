@@ -9,7 +9,7 @@
   "title": "City Council Districts",
   "description": "City Council Districts in Sandy City, Utah. 4 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-council-districts/city-council-districts.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/city-council-districts/city-council-districts.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "city-council-districts"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-council-districts/city-council-districts.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/city-council-districts/city-council-districts.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "City Council Districts (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "122052afb60d006a93fe29a06cc76cba40a2cf8ac35c423fd90f42268dd2f5f6d831"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-council-districts/city-council-districts.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/city-council-districts/city-council-districts.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "City Council Districts (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2287,
-      "file:checksum": "1220290f3e1c0961ecbf9a0df6f7d60b5f860bc002e349acc4528ddd325d718b66a8"
+      "file:size": 2299,
+      "file:checksum": "1220b3fd514027b4374f7a65806b8787ecfce7378225b7dd6d76c1b7bdef458528b0"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2280,
-      "file:checksum": "1220d6aa451942735aaa9f05fc18becbb0c3dea987108708c45b2cbfaf0660c9cac1"
+      "file:size": 2292,
+      "file:checksum": "1220b3f5c88720abfe555e3c9adf7d3eb62a4390d3793c53ce33c38440b81ca36402"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

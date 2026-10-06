@@ -9,7 +9,7 @@
   "title": "Communities",
   "description": "Communities in Sandy City, Utah. 30 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/communities/communities.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/communities/communities.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "communities"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/communities/communities.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/communities/communities.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Communities (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220700e7c5bf526e68716096592f70a14822ca718be83ab07faecf79402037ae430"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/communities/communities.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/communities/communities.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Communities (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2530,
-      "file:checksum": "122062ea7d309e487d541a926db0dee1d7a180109b3b58f59939ac8b7c347761d793"
+      "file:size": 2542,
+      "file:checksum": "122096291a0faeb80ad9d4609f3c41bed51684f67d7648dc87bf5cefdc78ac70f272"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2370,
-      "file:checksum": "1220a600a55e0903d9c1d7021cff9ba0a5e291accdeaa8138cb6dc570182379e45e6"
+      "file:size": 2378,
+      "file:checksum": "12201a60d77c6bb2548150da44a6e1e8950c30f35295e0a8f651d230ff20a3989029"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

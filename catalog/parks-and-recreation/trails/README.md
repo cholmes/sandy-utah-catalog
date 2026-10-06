@@ -17,21 +17,21 @@ Sandy City publishes no licence for this data. There is no terms-of-use page on 
 This is a **mirror**. Sandy City produced the data; it is republished here unmodified except where noted below.
 
 - **Source**: [https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Trails/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Trails/MapServer/0)
-- **Mirrored**: 2026-10-06T19:24:57Z
+- **Mirrored**: 2026-10-06T19:54:13Z
 - **Attribution, as the service states it**: Sandy City GIS
 
 Converted with [gpio](https://github.com/developmentseed/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
 
 ## Files
 
-- [`trails.parquet`](https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trails/trails.parquet) — GeoParquet, EPSG:3566
-- [`trails.pmtiles`](https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trails/trails.pmtiles) — vector tiles, Web Mercator
+- [`trails.parquet`](https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/trails/trails.parquet) — GeoParquet, EPSG:3566
+- [`trails.pmtiles`](https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/trails/trails.pmtiles) — vector tiles, Web Mercator
 
 ## Reading it
 
 ```sql
 INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;
-SELECT count(*) FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trails/trails.parquet';
+SELECT count(*) FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/trails/trails.parquet';
 ```
 
 ## Known issues

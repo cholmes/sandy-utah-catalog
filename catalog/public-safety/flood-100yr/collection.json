@@ -9,7 +9,7 @@
   "title": "Approximate 100-Year Floodplain",
   "description": "Map of hazards in Sandy City, Utah. 828 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/flood-100yr/flood-100yr.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/flood-100yr/flood-100yr.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "flood-100yr"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/flood-100yr/flood-100yr.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/flood-100yr/flood-100yr.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Approximate 100-Year Floodplain (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12203962691f0311c22d83610e1cfeb97fc68021249e17983b324054699f90182cd4"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/flood-100yr/flood-100yr.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/flood-100yr/flood-100yr.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Approximate 100-Year Floodplain (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2208,
-      "file:checksum": "1220d80c32aebf4a812915fae3137a790b817c5919ce9dbf6f84149fc26678a2b2f0"
+      "file:size": 2220,
+      "file:checksum": "1220ba47cbaf766ba23f0673f9da0ee2c60079edce2a87f67194460ca76bafedf0c5"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2516,
-      "file:checksum": "122046a78197f70b29447f559f069095ab33935775c18e94999bc411e19fc1a42a38"
+      "file:size": 2528,
+      "file:checksum": "122066ac8c5ed258ab2acb248cf259109418874b0f317440635db254c5e13c36b26e"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -8,7 +8,7 @@ The GeoParquet is in **EPSG:3566** (NAD83(HARN) / Utah Central (ftUS)). Linear u
 
 ```sql
 SELECT ST_Transform(geometry, 'EPSG:3566', 'EPSG:4326') AS geom_wgs84
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/wildland-urban-interface/wildland-urban-interface.parquet';
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/wildland-urban-interface/wildland-urban-interface.parquet';
 ```
 
 There is a `bbox` struct column on every row, written by gpio for spatial pruning. It is in EPSG:3566 too.
@@ -35,7 +35,7 @@ The upstream layer publishes no field domains, so no column in this collection h
 
 ```sql
 INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;
-SELECT * FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/wildland-urban-interface/wildland-urban-interface.parquet' LIMIT 5;
+SELECT * FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/wildland-urban-interface/wildland-urban-interface.parquet' LIMIT 5;
 ```
 
 Count by the column the default style uses:
@@ -44,5 +44,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Urban_Wildland_Interface/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Urban_Wildland_Interface/MapServer/0) on 2026-10-06T19:24:57Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Urban_Wildland_Interface/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Urban_Wildland_Interface/MapServer/0) on 2026-10-06T19:54:13Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

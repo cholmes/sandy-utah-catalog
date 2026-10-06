@@ -9,7 +9,7 @@
   "title": "Storm Drain Pipes",
   "description": "Storm Drain Pipes in Sandy City, Utah. The upstream service publishes no description for this layer. 19,492 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/storm-drain-pipes/storm-drain-pipes.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-drain-pipes/storm-drain-pipes.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "storm-drain-pipes"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/storm-drain-pipes/storm-drain-pipes.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-drain-pipes/storm-drain-pipes.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Storm Drain Pipes (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12206a9eb47285ba982da17d50da52fe2b350936a0cc6442059433c229d59e5157a0"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/storm-drain-pipes/storm-drain-pipes.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/storm-drain-pipes/storm-drain-pipes.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Storm Drain Pipes (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2650,
-      "file:checksum": "1220d805be40c5e4595b16f5791fac057753d988746f565f26375dbb9bdcb806322d"
+      "file:size": 2662,
+      "file:checksum": "12205b55eecfa5a67b7c5391da068432630d6d2efa8823a2a2b6c64ab11e709d7a55"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 5209,
-      "file:checksum": "1220e15e4d0db8dd4ba2cb94d7f3392479645ebaebeea7b6e6fea63a315662509ea3"
+      "file:size": 5221,
+      "file:checksum": "1220b701e6cb50d4720cc1c6883f2f9a5ccce6d6842581295ca97652549a36365dc4"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

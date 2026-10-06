@@ -9,7 +9,7 @@
   "title": "Trailheads",
   "description": "Trailheads in Sandy, Utah area. 20 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trailheads/trailheads.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/trailheads/trailheads.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "trailheads"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trailheads/trailheads.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/trailheads/trailheads.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Trailheads (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220e23d3cb00a79c46b5a7edfa901d6e9a614ee3abd04d243d1d28e29bf0c5a9d4b"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trailheads/trailheads.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/trailheads/trailheads.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Trailheads (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2171,
-      "file:checksum": "1220e9926c5e43b4135d190f509b546db184f1cafa8434aa1d907150c5c4eeb57f31"
+      "file:size": 2183,
+      "file:checksum": "1220b0eae220badcdc4eac6520582377a0328e6fa1e5b505e09ba55cc024080b80ea"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2081,
-      "file:checksum": "12207afbb67b5b9146e3e1fa35c088b697ae495cc5c10075bb5ed1915ff002df17d0"
+      "file:size": 2089,
+      "file:checksum": "1220d8dbe1321f0da61edae7071ee97d86ef6c6ef01fb72e6af1ce01c84135bad96e"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

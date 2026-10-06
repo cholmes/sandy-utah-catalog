@@ -9,7 +9,7 @@
   "title": "Sandy-Maintained Roads",
   "description": "Sandy-Maintained Roads in Sandy City, Utah. The upstream service publishes no description for this layer. 4,916 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/sandy-maintained-roads/sandy-maintained-roads.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/sandy-maintained-roads/sandy-maintained-roads.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "sandy-maintained-roads"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/sandy-maintained-roads/sandy-maintained-roads.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/sandy-maintained-roads/sandy-maintained-roads.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Sandy-Maintained Roads (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12209bff2bd5b5a047e66e136c38666fc1fbb6fd5df0df7a8b93d754b58c085a644b"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/sandy-maintained-roads/sandy-maintained-roads.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/sandy-maintained-roads/sandy-maintained-roads.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Sandy-Maintained Roads (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2450,
-      "file:checksum": "12201fdc5decc523babf20626de5fb2caba206c3430c0d5584f6bf47e885a176c4b3"
+      "file:size": 2462,
+      "file:checksum": "122043e670457c911e59b7e3ee1992703a844b05a63facef161ae1e7653a9b7d5589"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 1986,
-      "file:checksum": "12202855e535e01140adbabe72cb4b9d0ac69162fc73e9ffd2595b95b559975f3a03"
+      "file:size": 1994,
+      "file:checksum": "1220d50e32cfe177c98bb85b7664f44385bf922bea589d455e02aa0cf48daaddb1c8"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

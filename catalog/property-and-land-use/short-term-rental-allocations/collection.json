@@ -9,7 +9,7 @@
   "title": "Short-Term Rental Allocations",
   "description": "Community Count for Short Term Rentals in Sandy City\nThis map contains a polygon layer of the Sandy City Communities. With attributes of the allocated short term rental space. This layer holds the per-community short-term-rental permit cap, not the location of individual rentals. Each of the 30 community areas carries `Max_STR` (the cap), `Current_STR` (permits issued) and `Open_STR` (permits still available). One community is at -1, meaning it is over its cap. 30 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "short-term-rental-allocations"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Short-Term Rental Allocations (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220a243800f7343a78687fe01dec154cb11e129e11e835fbec39b719e4350444892"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Short-Term Rental Allocations (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2801,
-      "file:checksum": "122069425c8a83d7746469e86afca960825b9cefdb3a8893a7e589d7e784cb115ad7"
+      "file:size": 2813,
+      "file:checksum": "1220dcd71e32a80802a470df4e054a3dc1e8151fcafe13cea5f3df3576156d89c78a"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2621,
-      "file:checksum": "122073723558574596cbb30ce2ba5eee9128c3603d0ef1a50601d074204f1f08aac2"
+      "file:size": 2633,
+      "file:checksum": "1220bb36456a2358e6e8f102114958d7e38daeb7650475d17088193fde0a6ca919f6"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

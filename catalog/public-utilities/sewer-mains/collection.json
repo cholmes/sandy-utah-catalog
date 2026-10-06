@@ -9,7 +9,7 @@
   "title": "Sewer Mains",
   "description": "Sewer Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 16,250 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/sewer-mains/sewer-mains.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/sewer-mains/sewer-mains.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "sewer-mains"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/sewer-mains/sewer-mains.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/sewer-mains/sewer-mains.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Sewer Mains (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220163205da2f5be423912a0202b3d36637480c0cf49e7ce3166fdf07a2c19d4879"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/sewer-mains/sewer-mains.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/sewer-mains/sewer-mains.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Sewer Mains (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2572,
-      "file:checksum": "1220d08da948861e7572d076206573a6d8c615487aaaf5bea83a1c04ed3474ef2a2e"
+      "file:size": 2584,
+      "file:checksum": "1220849ba4a473fd6e9651e2ee8937f2c9c80a3b934c83df56ad420ae48107e83c53"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2878,
-      "file:checksum": "1220f013c141d904e130fe103b27eb1a629293c7ef5aa58c464f2beff96416f39c7c"
+      "file:size": 2890,
+      "file:checksum": "1220818cf37187790034c5675b3ca8a8434ea92598b4c10f1dbcc3ab3b6f34e33bc3"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -9,7 +9,7 @@
   "title": "Future Land Use",
   "description": "Future Land Use Map from Sandy City General Plan. 979 multipolygon features, mirrored as GeoParquet in EPSG:3857 (WGS 84 / Pseudo-Mercator) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/future-land-use/future-land-use.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/future-land-use/future-land-use.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "future-land-use"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/future-land-use/future-land-use.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/future-land-use/future-land-use.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Future Land Use (GeoParquet, EPSG:3857)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12200f4482ad6ab150985d06ea4598499af4fa234927af80ec1f28de9d01da7c76c8"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/future-land-use/future-land-use.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/future-land-use/future-land-use.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Future Land Use (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2294,
-      "file:checksum": "122081e9c86780ff81fd5e1454bc8acd757426764f5fe96059742bc3616fba778e4c"
+      "file:size": 2306,
+      "file:checksum": "122053e63bcc77eefeaf769370f42d7f067b2cfac0097539c1da0463b216f22b1bd1"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2335,
-      "file:checksum": "12204f8b2fb40d093c76c37e0ca76f385aea557edc4312ac8b3d86ac6b0ddf7984ac"
+      "file:size": 2347,
+      "file:checksum": "12205670e8cf01233943ef606e31b234654bbbf82203d4d01d85f1913cd99442ed70"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

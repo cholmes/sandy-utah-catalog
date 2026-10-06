@@ -9,7 +9,7 @@
   "title": "Garbage Collection Days",
   "description": "Garbage Collection Days in Sandy City, Utah. The upstream service publishes no description for this layer. 5 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/garbage-days/garbage-days.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/garbage-days/garbage-days.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "garbage-days"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/garbage-days/garbage-days.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/garbage-days/garbage-days.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Garbage Collection Days (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220ea82cd442013ed77aebf0f1c617888d8462f11dd0c704afae3f2ede8a076df67"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/garbage-days/garbage-days.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/garbage-days/garbage-days.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Garbage Collection Days (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2408,
-      "file:checksum": "1220a4ac3f3494257535c51382ec3ee04285565b3f34f936175a0900c4dda0ded0cb"
+      "file:size": 2420,
+      "file:checksum": "122006a1727b7000ebb905b0ce08796158f2a9482399408e91adb1029d327fbf17df"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2135,
-      "file:checksum": "1220e3a62eb011ba412290469516ac98aeb051284f4867c871f8d8e612d21d2c5047"
+      "file:size": 2147,
+      "file:checksum": "1220714830b413ff8d99241e183982d7c428868a5273b316b755cb6481f6a4779403"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

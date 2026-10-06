@@ -9,7 +9,7 @@
   "title": "Police Beats",
   "description": "Police beats in Sandy City, Utah. 4 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/police-beats/police-beats.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-beats/police-beats.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "police-beats"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/police-beats/police-beats.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-beats/police-beats.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Police Beats (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220480888f1fff1efeb522c21afe4806b57f62a33fa385f22a6a2011b29b482a71f"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/police-beats/police-beats.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-beats/police-beats.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Police Beats (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2182,
-      "file:checksum": "12201382e80a5635bca43e245f304d0412c6d7e1b1c627f7263364fcfae7bc07846a"
+      "file:size": 2194,
+      "file:checksum": "12205e935074043e278aa0e3e254857eb4d4445ca6dfbb05246d7caa2510a7b8ba00"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2087,
-      "file:checksum": "122014bb8b518d13b1458b383700837f7c33e2384194c2faa3efbdc777b2704b4de8"
+      "file:size": 2099,
+      "file:checksum": "1220a550bb2c308b04e256cc1365437208338a982be14039f9aab4604022741543a6"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -9,7 +9,7 @@
   "title": "Street Lights",
   "description": "Street Lights in Sandy City, Utah. The upstream service publishes no description for this layer. 8,727 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/street-lights/street-lights.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/street-lights/street-lights.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "street-lights"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/street-lights/street-lights.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/street-lights/street-lights.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Street Lights (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220ff23a7b3bd478cb476e44727007fba942744cf609145c168c501831f5aa4efb3"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/street-lights/street-lights.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/street-lights/street-lights.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Street Lights (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2339,
-      "file:checksum": "122015518864a629ccbdc9c97c5fb84f0351aab7d88f92759440d0e9eb7503d17883"
+      "file:size": 2351,
+      "file:checksum": "1220b11eb8fdf503745eca5b996c06698a664044cfbc0bdcea6413fb1ec8881272da"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3192,
-      "file:checksum": "1220f1c3a00f60720839c6d9d9e3de6238b25a8b98de9221aea3b9ce7bffab8d848e"
+      "file:size": 3200,
+      "file:checksum": "12206f8205d12f747e30aa1f8d4bb561b667312c5ac231485f68647d652e1f3d2182"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

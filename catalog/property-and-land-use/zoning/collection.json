@@ -9,7 +9,7 @@
   "title": "Zoning Districts",
   "description": "Sandy Zoning districts for consumption by SLCo. 454 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/zoning/zoning.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/zoning/zoning.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "zoning"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/zoning/zoning.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/zoning/zoning.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Zoning Districts (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220651c64397f8da336c5a928a347365e0b382457cea61b11f7c76fe2c26b7c14bc"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/zoning/zoning.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/zoning/zoning.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Zoning Districts (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2513,
-      "file:checksum": "1220a7eae5a813e79959c856e5cb9e28953c43275dc484c27146fbb08428bba15d1a"
+      "file:size": 2525,
+      "file:checksum": "12200f390fcfca73a0952335c4baa41fe89767a75dfe67bdbf0d13c39156d6c4ea24"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2342,
-      "file:checksum": "1220f547597a86cfca132ecd89004bfde21fa6582d2600028c824b499768b029b50b"
+      "file:size": 2354,
+      "file:checksum": "12201a6182e8183da153d2164e8794e777f2a418d6e3835f802c33188d4130af6eb1"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

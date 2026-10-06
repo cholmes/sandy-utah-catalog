@@ -9,7 +9,7 @@
   "title": "Golf Courses",
   "description": "Golf courses in Sandy City, Utah. 4 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/golf-courses/golf-courses.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/golf-courses/golf-courses.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "golf-courses"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/golf-courses/golf-courses.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/golf-courses/golf-courses.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Golf Courses (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12205a2b84f7cacb277d0484eeeea1ceb37e304c6191d6ffea5ace95945972139b58"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/golf-courses/golf-courses.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/golf-courses/golf-courses.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Golf Courses (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2464,
-      "file:checksum": "12204ff07ee269172a7f49234c0781b7fbba795e199a8d2fb5574f819365bfbf27be"
+      "file:size": 2476,
+      "file:checksum": "1220bf6671cd153d5ae6febf87362318567e34d4d4e9d2a1b0b794c11e379430ab9d"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 5966,
-      "file:checksum": "1220e02df56f7ef3bc69eba422144989a63723fedf010c120b779a618aae9a1f63d9"
+      "file:size": 5974,
+      "file:checksum": "12202034f7c8e1c0daf6ab954cf6fc37b8b824a4a4c0420abcfaadf0c9b78f22524d"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

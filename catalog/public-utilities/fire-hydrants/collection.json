@@ -9,7 +9,7 @@
   "title": "Fire Hydrants",
   "description": "Fire Hydrants in Sandy City, Utah. The upstream service publishes no description for this layer. Sandy also publishes a hydrant layer under `Pub_Safety/Hydrants` with a different count (5,047 against 5,292). This mirrors the Public Utilities copy, which is the one maintained with the water system. 5,292 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/fire-hydrants/fire-hydrants.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/fire-hydrants/fire-hydrants.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "fire-hydrants"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/fire-hydrants/fire-hydrants.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/fire-hydrants/fire-hydrants.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Fire Hydrants (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "12208f128ba28a1b47356fe969350cebb363abf69c0527a7e2d8a4136bfd28892875"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/fire-hydrants/fire-hydrants.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/fire-hydrants/fire-hydrants.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Fire Hydrants (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2792,
-      "file:checksum": "122008f59cc9277f065eeaf3e81f6f403d5aaefbada223625c172f2da73208cacf70"
+      "file:size": 2804,
+      "file:checksum": "122096d5fe4acf76882dd9828ed1876f5c2e8b58bf7f53c7d80f5b3d5e97dc666939"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 4541,
-      "file:checksum": "122052b7e081bde8891cb2a208ef012e0071c6ded7ed1804426f792ea88efbee8084"
+      "file:size": 4549,
+      "file:checksum": "12201c2d40d9556d8308f12a16339763556ed9433ceae9e65a3f839da461f0a29ddf"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

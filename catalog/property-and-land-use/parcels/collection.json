@@ -9,7 +9,7 @@
   "title": "Parcels",
   "description": "Parcels in and around Sandy City, Utah as of July, 2022. The service describes itself as current to July 2022, so it lags the county's live parcel fabric by more than three years. 106,087 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Salt Lake County Recorder",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/parcels/parcels.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/parcels/parcels.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "parcels"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/parcels/parcels.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/parcels/parcels.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Parcels (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220d8b00f6210e5ca1570cc2cabab882319f42c21bd9777f4f34ef1e57e6855feff"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/parcels/parcels.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/parcels/parcels.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Parcels (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2910,
-      "file:checksum": "122083cec04367c852523de7fe39a022416f0677c654192aa3185156ef0e885e5aea"
+      "file:size": 2922,
+      "file:checksum": "1220ee1a7dd24b2d76d06aaccc322aa37b7dda56ff93c715a1f8fdbe70c4e434d347"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 4130,
-      "file:checksum": "122077a757e878b761a5b6d5c4df8279cae73844769dc2be1bbaf2aecc1ee5cce3d6"
+      "file:size": 4138,
+      "file:checksum": "12206936af4bad974563c5f184868fea7938b47622cd13bee1151fb6177eb597f722"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -9,7 +9,7 @@
   "title": "Address Points",
   "description": "Address points from Sandy Utility Billing, Subdivision plats, parcel data. 60,400 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/address-points/address-points.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/address-points/address-points.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "address-points"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/address-points/address-points.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/address-points/address-points.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Address Points (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220c3af49512b15d282bfeb40708c0830025c89b94b2268f272a73175180896f6a8"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/address-points/address-points.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/address-points/address-points.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Address Points (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2400,
-      "file:checksum": "1220388173ef704c932f8ab2c635d74cabe3c591da19e88c5505c4a0a0fe5b574052"
+      "file:size": 2412,
+      "file:checksum": "1220dadf7191b4f17757d6ae0612bb51f3c97002cba1cae08b9d8cca8f237cbdc920"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3807,
-      "file:checksum": "1220e806a47c82ec1a28bd4fde07d1bf8d54f6b0499024fbf1981dc15bf49ff73cb2"
+      "file:size": 3815,
+      "file:checksum": "122060c9a6d597487048ca4d63abb62f7bb98b694b1f2c3a6be690265dbdd12dc026"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

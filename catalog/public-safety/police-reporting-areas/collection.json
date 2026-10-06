@@ -9,7 +9,7 @@
   "title": "Police Reporting Areas",
   "description": "Police reporting areas in Sandy City, Utah. 439 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/police-reporting-areas/police-reporting-areas.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-reporting-areas/police-reporting-areas.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "police-reporting-areas"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/police-reporting-areas/police-reporting-areas.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-reporting-areas/police-reporting-areas.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Police Reporting Areas (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220fb57a0adbe33af2fef2de0540dacafc50126407a1c44d4b23a148f11fdae970f"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/police-reporting-areas/police-reporting-areas.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-reporting-areas/police-reporting-areas.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Police Reporting Areas (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2308,
-      "file:checksum": "1220859150d45a26d725455422933fe6a928075575418493de10c6e7836a5275dd36"
+      "file:size": 2320,
+      "file:checksum": "12209a4d090ee7e94b3d1c2b2c0020019575432c648831ace62347735b91abb7ba16"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2575,
-      "file:checksum": "1220d91a8f6896689cef79306158c1172dfde8207acba3c16e61b3b6c8704c69b7b1"
+      "file:size": 2587,
+      "file:checksum": "1220b4022dea242923cf4184f40ade5f575787472c7dfdd754c240a12f7995cf3c26"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

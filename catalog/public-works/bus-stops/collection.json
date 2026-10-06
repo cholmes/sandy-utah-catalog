@@ -9,7 +9,7 @@
   "title": "UTA Bus Stops",
   "description": "UTA Bus Stops in Sandy City, Utah. The upstream service publishes no description for this layer. 3,195 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-stops/bus-stops.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/bus-stops/bus-stops.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "bus-stops"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-stops/bus-stops.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/bus-stops/bus-stops.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "UTA Bus Stops (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "122060cdf0547b940f36de8d80c730319fb3600e1b850d4b6c8f5bf552e2626d92b0"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-stops/bus-stops.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/bus-stops/bus-stops.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "UTA Bus Stops (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2284,
-      "file:checksum": "12200d92931aebf06929baa71cff1647956faaa815a7ee1f7e169413d0fc79152bf0"
+      "file:size": 2296,
+      "file:checksum": "1220927b4f91681abad3788be1a5e267b5c8785cf1912d9bb8159e2fe9f7b9f6517e"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2036,
-      "file:checksum": "12208a05912e495b995e5a1980134306af8b76e39065cd1cf90d209eaa65256e4766"
+      "file:size": 2044,
+      "file:checksum": "12204c45f4584983121bc870102a526cbf995104af6d3790e9a76fab4f8fee3a8bae"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

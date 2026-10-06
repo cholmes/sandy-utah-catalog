@@ -9,7 +9,7 @@
   "title": "Fire Stations",
   "description": "Fire Stations in and around Sandy City, Utah. 68 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-stations/fire-stations.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fire-stations/fire-stations.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "fire-stations"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-stations/fire-stations.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fire-stations/fire-stations.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Fire Stations (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "122020f352d277750f168f0d9884ddd5c007726df7c37b17b0c51474a9b0eb87a969"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-stations/fire-stations.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fire-stations/fire-stations.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Fire Stations (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2405,
-      "file:checksum": "1220b02fdecbf9a345471cd2fbeec491befdefb82e2a597e621470fa69e6afd75ecc"
+      "file:size": 2417,
+      "file:checksum": "12206199669cb4a04f1031b1bbe123f075ac2dd9463ccd03ffb5e37a0ab8b0e62a86"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2363,
-      "file:checksum": "1220f279a51f0e0c141f8409e510bfec65d86cdd6776e05dff0f9dedde582e695ca3"
+      "file:size": 2375,
+      "file:checksum": "1220f504abb75ca02ced806af5dba9f46f27e0b5bbd46f9e25375fbd4242040d0697"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

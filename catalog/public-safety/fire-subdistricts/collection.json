@@ -9,7 +9,7 @@
   "title": "Fire Dispatch Subdistricts",
   "description": "Fire subdistricts in Sandy City, Utah. 39 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-subdistricts/fire-subdistricts.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fire-subdistricts/fire-subdistricts.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "fire-subdistricts"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-subdistricts/fire-subdistricts.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fire-subdistricts/fire-subdistricts.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Fire Dispatch Subdistricts (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "122013cdcd1da124a73da9bee88a805c469bb41eacdb9680467bb398797550388a69"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-safety/fire-subdistricts/fire-subdistricts.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/fire-subdistricts/fire-subdistricts.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Fire Dispatch Subdistricts (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2526,
-      "file:checksum": "12200f6de38e7ec2f30053cf72f1f66ef6fa939920a6d4e65eeb2b799954228cc45b"
+      "file:size": 2538,
+      "file:checksum": "12208d348f6b0f76adddc1dc39be65f14d48ad65801ae0cb2a1e46c509efe73b8eed"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2343,
-      "file:checksum": "12205e7017036cb961de29df98b480111b23a3fa3bc1fcf850b741bfeed9ccf4516c"
+      "file:size": 2355,
+      "file:checksum": "12203fa6aa540007c95b533a3f6d85723e385ac120e48929eea3b6a71eb57ac0d544"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

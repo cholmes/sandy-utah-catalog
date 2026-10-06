@@ -4,18 +4,18 @@
 # never placed under publish_dir, so they cannot be published by accident.
 #
 # The S3 URI uploads are written to. Copy it from your storage provider.
-write_prefix: s3://us-west-2.opendata.source.coop/portolan-mirrors/sandy-portolan
+write_prefix: s3://portolan-mirrors/sandy-utah-catalog
 
 # The public base URL that serves write_prefix. Every href in the catalog is
 # built from this, so it goes in the STAC JSON and write_prefix does not.
-public_base: https://data.source.coop/portolan-mirrors/sandy-portolan
+public_base: https://data.source.coop/portolan-mirrors/sandy-utah-catalog
 
 region: us-west-2
 
 # The named AWS profile the publisher uses. Optional. Leave it commented out
 # to use the default boto3 session. Source Cooperative issues per-account
 # credentials, so set the profile name you stored them under.
-profile: portolan-mirrors
+profile: source-coop
 
 # The directory that IS the published catalog, synced 1:1 to write_prefix.
 # Nothing outside it is ever uploaded.

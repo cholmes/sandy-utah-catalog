@@ -47,10 +47,10 @@ collection.
 
 This catalog is an independent mirror. It is not endorsed by or affiliated
 with Sandy City. The metadata, documentation and styles written for it live in
-[github.com/cholmes/sandy-portolan](https://github.com/cholmes/sandy-portolan)
+[github.com/cholmes/sandy-utah-catalog](https://github.com/cholmes/sandy-utah-catalog)
 and are offered under the repository's own licence. They do not extend any
 grant over the underlying city data, which is not ours to license.
 
 If Sandy City publishes licence terms, please
-[open an issue](https://github.com/cholmes/sandy-portolan/issues) so this can
+[open an issue](https://github.com/cholmes/sandy-utah-catalog/issues) so this can
 be corrected.

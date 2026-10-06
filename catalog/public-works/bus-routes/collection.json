@@ -9,7 +9,7 @@
   "title": "UTA Bus Routes",
   "description": "UTA Bus Routes in Sandy City, Utah. The upstream service publishes no description for this layer. 49 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-routes/bus-routes.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/bus-routes/bus-routes.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "bus-routes"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-routes/bus-routes.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/bus-routes/bus-routes.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "UTA Bus Routes (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220e50d33da45a970ba3169ef5147d4f3ad0c8e26663580aab5b1e56c5bf7afeda7"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/public-works/bus-routes/bus-routes.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-works/bus-routes/bus-routes.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "UTA Bus Routes (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2307,
-      "file:checksum": "12200fdea5867ca107bd8ecb8d5bcbbcd64b502426c8ec9b0cb145075cb2ce30e361"
+      "file:size": 2319,
+      "file:checksum": "122053ce227985a5323e688107c8f3b30a42c9bf627657919a1c0b3bf9e11a7a26a3"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2142,
-      "file:checksum": "1220723a93d188703df294b29e72d5378bc0a94a50f1edbdf29bf49870a64f09f447"
+      "file:size": 2154,
+      "file:checksum": "1220bf4942a54d42d3067936eac235da2e2360950f9815b101d2ca1c5163c2bb3f3e"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

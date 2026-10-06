@@ -16,7 +16,7 @@ that follow the city's own ArcGIS folder names: `boundaries`,
 `public-utilities`, `public-works`.
 
 Public root:
-`https://data.source.coop/portolan-mirrors/sandy-portolan/catalog.json`
+`https://data.source.coop/portolan-mirrors/sandy-utah-catalog/catalog.json`
 
 Every collection ships two data assets — a GeoParquet (`data` role) and a
 PMTiles archive (`visual` role) — plus its own `README.md` and `AGENTS.md`.
@@ -52,7 +52,7 @@ Consequences:
 INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;
 
 SELECT ST_Transform(geometry, 'EPSG:3566', 'EPSG:4326') AS geom_wgs84
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/parks-and-recreation/trails/trails.parquet'
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/parks-and-recreation/trails/trails.parquet'
 LIMIT 5;   -- trails is 3566; check proj:epsg for the collection you query
 ```
 
@@ -72,8 +72,8 @@ collections, which is the trap:
 
 ```sql
 SELECT a.Address, p.parcel_id, p.parcel_acres
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/address-points/address-points.parquet' a
-JOIN 'https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/parcels/parcels.parquet' p
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/address-points/address-points.parquet' a
+JOIN 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/parcels/parcels.parquet' p
   ON a.Parcel_Id = p.parcel_id;
 ```
 
@@ -86,8 +86,8 @@ text, so it needs normalising and it is lossy:
 
 ```sql
 SELECT s.bothsidesstatus, s.utilmaterial, a.Parcel_Id
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.parquet' s
-JOIN 'https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/address-points/address-points.parquet' a
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/lead-service-lines/lead-service-lines.parquet' s
+JOIN 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/address-points/address-points.parquet' a
   ON upper(trim(s.address)) = upper(trim(a.Address));
 ```
 

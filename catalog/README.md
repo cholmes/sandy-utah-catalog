@@ -84,7 +84,7 @@ Everything is queryable in place, with no download:
 INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;
 
 SELECT ZONE, LEGEND_COD, count(*) AS n
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/property-and-land-use/zoning/zoning.parquet'
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/zoning/zoning.parquet'
 GROUP BY 1, 2
 ORDER BY n DESC
 LIMIT 10;

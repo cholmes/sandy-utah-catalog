@@ -9,7 +9,7 @@
   "title": "Sandy City Boundary",
   "description": "Sandy City, Utah Border Outline. 1 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T19:24:57Z",
+  "updated": "2026-10-06T19:54:13Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -24,7 +24,7 @@
       "roles": [
         "host"
       ],
-      "url": "https://github.com/cholmes/sandy-portolan/issues"
+      "url": "https://github.com/cholmes/sandy-utah-catalog/issues"
     }
   ],
   "extent": {
@@ -87,7 +87,7 @@
     },
     {
       "rel": "pmtiles",
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-boundary/city-boundary.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/city-boundary/city-boundary.pmtiles",
       "type": "application/vnd.pmtiles",
       "pmtiles:layers": [
         "city-boundary"
@@ -97,7 +97,7 @@
   ],
   "assets": {
     "data": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-boundary/city-boundary.parquet",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/city-boundary/city-boundary.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Sandy City Boundary (GeoParquet, EPSG:3566)",
       "roles": [
@@ -107,7 +107,7 @@
       "file:checksum": "1220c958512a64870ba773f0cd149b329217fee6505d873492c3e401f7ea03fd9fdc"
     },
     "tiles": {
-      "href": "https://data.source.coop/portolan-mirrors/sandy-portolan/boundaries/city-boundary/city-boundary.pmtiles",
+      "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/boundaries/city-boundary/city-boundary.pmtiles",
       "type": "application/vnd.pmtiles",
       "title": "Sandy City Boundary (vector tiles, Web Mercator)",
       "roles": [
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2193,
-      "file:checksum": "122054eeab4760c0c01575aea52806f16e1f8f408b32e3d4f5b503ea8265125a3640"
+      "file:size": 2205,
+      "file:checksum": "122041adedd6fb80f3713663b01f0053ea3aba4e6c724b7559d92327ec598ca043fd"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 1974,
-      "file:checksum": "1220aadf7b4dd55d3aeab42e36611914baa51441777c9364fbd9ec9eaebf8238be06"
+      "file:size": 1982,
+      "file:checksum": "12205cbea10de96d05e90cb51286a1b2a7262c0a1e469091a6f4ec2ce5f9da3542bb"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

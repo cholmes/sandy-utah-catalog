@@ -8,7 +8,7 @@ The GeoParquet is in **EPSG:2850** (NAD83(HARN) / Utah Central). Linear units ar
 
 ```sql
 SELECT ST_Transform(geometry, 'EPSG:2850', 'EPSG:4326') AS geom_wgs84
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.parquet';
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/lead-service-lines/lead-service-lines.parquet';
 ```
 
 There is a `bbox` struct column on every row, written by gpio for spatial pruning. It is in EPSG:2850 too.
@@ -175,14 +175,14 @@ These are the code lists the ArcGIS layer publishes as field domains. They are t
 
 ```sql
 INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;
-SELECT * FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.parquet' LIMIT 5;
+SELECT * FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/lead-service-lines/lead-service-lines.parquet' LIMIT 5;
 ```
 
 Count by the column the default style uses:
 
 ```sql
 SELECT "utilmaterial", count(*) AS n
-FROM 'https://data.source.coop/portolan-mirrors/sandy-portolan/public-utilities/lead-service-lines/lead-service-lines.parquet'
+FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/lead-service-lines/lead-service-lines.parquet'
 GROUP BY 1 ORDER BY n DESC;
 ```
 
@@ -197,5 +197,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0) on 2026-10-06T19:24:57Z.
+Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0) on 2026-10-06T19:54:13Z.
 Sandy City publishes no licence for this data; see the [README](README.md).
