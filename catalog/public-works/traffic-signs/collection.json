@@ -9,7 +9,7 @@
   "title": "Traffic Signs",
   "description": "Traffic Signs in Sandy City, Utah. The upstream service publishes no description for this layer. 8,403 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 1428935,
       "file:checksum": "1220d929f97a9442169818b7ba65cc7cf4f9afa70c5d38d846f86cbb8a96d50366fd"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2341,
-      "file:checksum": "1220824631b903de30857c96cf548f297981a1c8a4c540a686b1819c9e48019db4c6"
+      "file:checksum": "1220a9fa0eacfbdc0dff5f52b478fc4c1db1808c7d36d63ab3bcf958731f579ebd93"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 4336,
-      "file:checksum": "12200f619b6d2d323e7979702a2ad8a6922c5404400a02978ff79dd82faad88916d4"
+      "file:checksum": "12208cd9b0b4261388ebb82d1b6d29977e92423fd771daf085beb1ec73671e84d2dc"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

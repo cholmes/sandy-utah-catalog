@@ -9,7 +9,7 @@
   "title": "Historic Sandy Walking Tour",
   "description": "Historical sites in Sandy City, Utah. 17 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 26016,
       "file:checksum": "1220e3a18d7db2ef083bad71783a1f42309ed0f4c062c51f2587fa7964bf9ac40a25"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2259,
-      "file:checksum": "1220a91c94693f7f73cbb48bd402369415e4d4c6edd627dcf8092be501d358a80c29"
+      "file:checksum": "1220777e1b6ae6de404581ce69ee68fb8ae02c8b9886236091ca0ecf34743751ba80"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2138,
-      "file:checksum": "12205381a568e3db2db50a07c75430a54ed3321adb46ca97abb57a2e16147e8720ab"
+      "file:checksum": "1220d21ccdbbcbf04bf85eee12d4b6fa6066ed7ad5c5016b5aeffef31a281d8580dd"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

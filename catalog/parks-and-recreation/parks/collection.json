@@ -9,7 +9,7 @@
   "title": "Parks",
   "description": "Parks in Sandy City, Utah. 41 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 102133,
       "file:checksum": "1220c374c308589e58aaf3ac607e5c7cc1c87cd21e845d003194a58c9f07a986e21f"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2396,
-      "file:checksum": "1220c52dc81605168bb39a09d2060ef2de212d58df07b53a98654b60a8ceac1d5069"
+      "file:checksum": "1220ffb7a6393840dbe76e02f450c9b668551d4c3628ce8f62ca24dc034e98926e63"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 5926,
-      "file:checksum": "1220363afae9e4aa4ee05c97d33df652d2da664bad0f98b8b72e696d4e97bcaf1f6e"
+      "file:checksum": "1220677036f855d972ccc68572fd252477ac3434043d46d013f48b2048eb30856ddc"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -9,7 +9,7 @@
   "title": "Fire Evacuation Routes",
   "description": "Fire Evacuation Routes in Sandy City, Utah. The upstream service publishes no description for this layer. 9 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 17845,
       "file:checksum": "12201360c44e6aaa8ca5e6d1801141536401eed0e89e45dbf9f0beb31d4783cc1fa2"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2409,
-      "file:checksum": "1220a1273be637fd724107698aa38089cad6fe371ea9900d4e937693012e3aeab948"
+      "file:checksum": "122050db840d216c7c1cecf87187ee4971429a9239e970f4f9b0e9e9506b087132fe"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 1969,
-      "file:checksum": "122013be4d7bc200a1ba2198eab198a3b4cd0912643b822e96b333ff584f1abb31f1"
+      "file:checksum": "12208b68d7f906ef940fa3572d1b1cff2391651c3b227dd0e5d440da5347e50d56cf"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

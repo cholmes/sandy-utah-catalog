@@ -9,7 +9,7 @@
   "title": "Sandy Irrigation Ditches",
   "description": "Sandy Irrigation Ditches in Sandy City, Utah. The upstream service publishes no description for this layer. 63 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 23234,
       "file:checksum": "122039b48e78c16d507a1c0161bd972b33f9d4d96f92a036dcb6c779f05bd74deb05"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2438,
-      "file:checksum": "122021b2c905f86210314287cdaab241f7ac344d35d0b0c8f9a3b157c9b561b79b02"
+      "file:checksum": "1220a0f4c05e451fab532fc7d5915d97aa586e456b4865484e19ec6540531f2d38a4"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2146,
-      "file:checksum": "1220ac1c96d4f8b6f693a4c6614d1740e5540f186fe7dc760f96590e4f8279d82319"
+      "file:checksum": "122032cd6b8ed0d47b2a58e1445ce3d093c6f89fe6df0adacb10521cf5ef5ab63002"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

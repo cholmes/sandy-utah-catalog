@@ -9,7 +9,7 @@
   "title": "Address Points",
   "description": "Address points from Sandy Utility Billing, Subdivision plats, parcel data. 60,400 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 2914562,
       "file:checksum": "12202991920db1dc318d4b6a46f458434d27794f43c3a2c3c1cca7568c897aa315a1"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2412,
-      "file:checksum": "12203c4564b650c4f09cdc214460b2b9c5bc0ae90e73d247e576b463458ab9dc5b53"
+      "file:checksum": "1220f20b62c7358c59772a2840ad892361ed69eb451eada3e28e538f52b4e8574114"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3815,
-      "file:checksum": "1220fdd41cf9d2f9bd08c5859671cccfa272ab080a0d5ea070ff4c1b5de5b5319c6a"
+      "file:checksum": "122088f686d53bb91ccd62710c6ba1b09edcf38f00740a30bfd9c514f0c3cf180b2d"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -9,7 +9,7 @@
   "title": "Snow Removal Areas",
   "description": "Snow Removal Areas in Sandy City, Utah. The upstream service publishes no description for this layer. 20 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 69969,
       "file:checksum": "12208b77a25dd4e9ae841f9e884d516e94457871778d0b6e27360f8a7f41ea20c23b"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2401,
-      "file:checksum": "1220fd11c27d281fac5b210ed44cbe71051532be1f9a999b62358cc65d3a23429083"
+      "file:checksum": "1220e96979ff84640a311d068174b6caf358dab85929b401e6033b5fd804e2755d59"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2193,
-      "file:checksum": "12200bb4150d5f9d55af56c042f959d70a73ea9714730acf3a9b16392b9309d65aac"
+      "file:checksum": "1220b1596b22b40a54730877f5fda8b30c9b2e694ade7458c489f80b233d605bb03c"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

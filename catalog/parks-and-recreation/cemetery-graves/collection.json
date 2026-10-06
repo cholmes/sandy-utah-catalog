@@ -9,7 +9,7 @@
   "title": "Sandy City Cemetery Graves",
   "description": "Provides access to the Sandy City, Utah Cemetery data. 11,695 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 75156,
       "file:checksum": "1220a2a7224e72ac4f565ac158248095a4312045bc7904cce92e5f48f35256961aa7"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2395,
-      "file:checksum": "1220cc11c17ea66b455a46d79f9df237dc8ec2c33b8e08835307a59b087e1566721b"
+      "file:checksum": "1220a81c29444eedb5733f4466b055e97b55cc15bcff475fcfe8b1de6544168e32bb"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3879,
-      "file:checksum": "12205ad638be3cffadffbdab0102a181a3d1a5381fa230ac3cb5f101b8f835ac817e"
+      "file:checksum": "1220fb83161acb9df19b8b4607bcaf57e3e4ee348a48e08e188e2f5301f706a11602"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

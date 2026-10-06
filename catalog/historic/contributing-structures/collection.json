@@ -9,7 +9,7 @@
   "title": "Contributing Historic Structures (2026 Study)",
   "description": "Contributing Historic Structures (2026 Study) in Sandy City, Utah. The upstream service publishes no description for this layer. 275 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 61598,
       "file:checksum": "1220e94f3abfc29f164454a0368089868cd34af8206cad1e446a804e301871f95b7b"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2530,
-      "file:checksum": "1220e39fd74b15d21e18d12c63aba32be548b2dc9a7ac70ead4c5889357316963393"
+      "file:checksum": "1220d7cad102139ae0e81da91093ae3661482f3bd69158e7a22d086fb7f9f5d8f86f"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2232,
-      "file:checksum": "1220b2cc566e328a22895d90b4c6f695199fe68a4396d489ede66dce818d524a617a"
+      "file:checksum": "1220bf973ed7c451b3e608052efca1ad74c30be1c9598dd256069e9ebd5049991b89"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

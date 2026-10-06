@@ -9,7 +9,7 @@
   "title": "Development Projects",
   "description": "Development Projects in Sandy City, Utah. The upstream service publishes no description for this layer. 64 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 75018,
       "file:checksum": "12205fd6a3ce291a67d6c1f57687cacf9d7ea1d28634fe6c2f9c27d380b54debd8b7"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2461,
-      "file:checksum": "1220dfbb2e7f2ce4f63fbce273fdc2bbf6aef54d477b338c53688f2d5cf7d951f2e6"
+      "file:checksum": "12207b698c7da8e4e2b1cb6b82d52652629a25d1652574328849958ab5facb5b679f"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3059,
-      "file:checksum": "1220992d900ba5a5701e79dff488d88fb7e2ea9472a92c1f86cfc4cee3c8c3cc3a16"
+      "file:checksum": "12209ac800de5f1e8e2ab4a548257342ffd3224a525f266faae69b119f9ce4feb36e"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

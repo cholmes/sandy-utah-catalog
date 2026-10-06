@@ -9,7 +9,7 @@
   "title": "Voting Precincts",
   "description": "Voting Precincts in Sandy City, Utah. The upstream service publishes no description for this layer. 102 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T20:20:34Z",
+  "updated": "2026-10-06T20:37:26Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -113,7 +113,7 @@
       "roles": [
         "visual"
       ],
-      "proj:epsg": 3857,
+      "proj:epsg": 4326,
       "file:size": 149207,
       "file:checksum": "12202007e74282b049a7face5b6d6960f16307f63e1837f88109dcaee1e9b8febddb"
     },
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2376,
-      "file:checksum": "1220707cb616b5e233a157dd3b2a4867b38607d9d1b05e6ba806937b8d519f8abf39"
+      "file:checksum": "122080fe96e9399f3e25704e72860448e8a8b13a1e2a98f6891758a8b5fcfe7566ef"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2356,
-      "file:checksum": "1220f54b215ef78be0a4968c7521bcdc81ab6c3ff06a6d4114cd9e24a19e72063438"
+      "file:checksum": "1220f9f0ec742679d266cf1824d7aadfdcdc5dfd38ec244cc6946b1e68ee1d3b79e1"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
