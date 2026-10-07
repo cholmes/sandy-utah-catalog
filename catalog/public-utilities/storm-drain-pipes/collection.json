@@ -9,7 +9,7 @@
   "title": "Storm Drain Pipes",
   "description": "Storm Drain Pipes in Sandy City, Utah. The upstream service publishes no description for this layer. 19,492 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2940,
-      "file:checksum": "1220f542942f358b1f8298e4275f44dfc043b6d557774f123f35b1243db95fed558e"
+      "file:checksum": "12207e646d39f392aee02642d262108497c209bdb047b1b64b8555514ae2a2fdb604"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -156,7 +156,7 @@
         "metadata"
       ],
       "file:size": 13862,
-      "file:checksum": "1220fcc35e9689d4791c817f82fed735525882702382c5065dde373ca4f56ab37d1d"
+      "file:checksum": "12204e0b60c2fbb6a090a7ea35880b10c4a693827d2eda56524c6ec5c8dcc942a8d3"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

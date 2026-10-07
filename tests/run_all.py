@@ -17,6 +17,7 @@ TESTS = [       # delete this one once setup is done
     "test_publish.py",
     "test_upload_data.py",
     "test_stac_valid.py",
+    "test_no_pii.py",
     "test_conformance.py",
 ]
 

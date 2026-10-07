@@ -9,7 +9,7 @@
   "title": "Potential Landslide Risk Areas",
   "description": "Map of hazards in Sandy City, Utah. 289 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2522,
-      "file:checksum": "1220475a7ccddef7924802c2794e228195280221242b6a1e978b39df4b464121c98e"
+      "file:checksum": "12200c740aa1f01f884085c59005fb666e68a17ad4de064d50987e13e31285c9dc8f"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3518,
-      "file:checksum": "122023c85f13508606f024d1710083e129df55f615e66282df4c2ad034c561a998ae"
+      "file:checksum": "122057e6a65e8692ae3275519ffe98e2df0a79c4618cbb0533cb704f757fc155fcf6"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -9,7 +9,7 @@
   "title": "Pavement Condition",
   "description": "Pavement Condition in Sandy City, Utah. The upstream service publishes no description for this layer. 2,165 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -156,7 +156,7 @@
         "metadata"
       ],
       "file:size": 2688,
-      "file:checksum": "1220fa6c379ad1c8898266af1d0530ffe007a83d4aca1454e39883a9f4fc5689c6ba"
+      "file:checksum": "12205aa7094a3757f2d57d4075254a3054beaa6c55a0bcd8a4495f80963620f729c2"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -166,7 +166,7 @@
         "metadata"
       ],
       "file:size": 9749,
-      "file:checksum": "122056cb1270f201a06e9541b7f6bac8ac8870006a97af2ea8690f336e2bffed2895"
+      "file:checksum": "12201760ac155bc60efe06da9ed3eb84b1a3c30bdac102de95f1f082cf9a1caaf8bf"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

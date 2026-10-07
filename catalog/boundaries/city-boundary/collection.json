@@ -9,7 +9,7 @@
   "title": "Sandy City Boundary",
   "description": "Sandy City, Utah Border Outline. 1 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2483,
-      "file:checksum": "12200b9e35b4fa11813172fe3fd6e044ff9b77bd1689c31e37db0f5d99f3f0432465"
+      "file:checksum": "12205f0356c4321545cd9505858a5b3d7325ef20d005cbc5b87a6023ded51a28598c"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3282,
-      "file:checksum": "12201e77ad6efc929ae691b6f6c8a4ad94d8f9ffb4af6015b573b66fb5274e79bc0c"
+      "file:checksum": "12201a11b15673d327e5f5e46fe10ebfdc48f2598041d3690d593b5e3fb2ba419c23"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

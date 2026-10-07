@@ -9,7 +9,7 @@
   "title": "Water Service Line Material Inventory",
   "description": "Water Service Line Material Inventory in Sandy City, Utah. The upstream service publishes no description for this layer. Published by Sandy City to meet the service line inventory requirement of the US EPA Lead and Copper Rule Revisions. The inventory is incomplete: most lines are still classified Unknown. 26,213 point features, mirrored as GeoParquet in EPSG:2850 (NAD83(HARN) / Utah Central) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -156,7 +156,7 @@
         "metadata"
       ],
       "file:size": 3838,
-      "file:checksum": "122010be446038387709c11ba2e3eacb8adbd68e5be67b3ae65024fedb906f308b6b"
+      "file:checksum": "1220068b53a8cfe9b0e219adb9b261eff5208b188d73a2e8d7b32c91ce65b6eac669"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -166,7 +166,7 @@
         "metadata"
       ],
       "file:size": 10145,
-      "file:checksum": "1220c9c28913d11ddf3ec15651eec4ece5c95061a6f4ba4e09185db0e76f1aa34bef"
+      "file:checksum": "12202c72d3aa1386ac903b58df39847c0990f816c695489ddba1f2fc804d2ec7e740"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

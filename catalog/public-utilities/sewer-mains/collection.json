@@ -9,7 +9,7 @@
   "title": "Sewer Mains",
   "description": "Sewer Mains in Sandy City, Utah. The upstream service publishes no description for this layer. 16,250 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2862,
-      "file:checksum": "122066db28c5f788590123bfbfe70c721b35b425f9d4b9fb2aff374a5a1ee10e25dc"
+      "file:checksum": "122011981a633d52f38f94323698a876f13dee41b0ea8f11922808201260cd606156"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -156,7 +156,7 @@
         "metadata"
       ],
       "file:size": 6438,
-      "file:checksum": "1220372fa8d05a851e2c135ca8ff9389031d9ee1fc04574611fd8c45ab015443d38c"
+      "file:checksum": "1220168602a570d61e17d09f1daa1a8298f2fb4c188bd6766693924954673c4396fa"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

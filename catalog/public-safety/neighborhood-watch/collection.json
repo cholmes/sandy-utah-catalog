@@ -9,7 +9,7 @@
   "title": "Neighborhood Watch Groups",
   "description": "Neighborhood watch groups in Sandy City, Utah. 42 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2900,
-      "file:checksum": "1220fd7ed1804f64a76987b7213ff45a585d061398226467e0dee7b618678407b75b"
+      "file:checksum": "122037e45e9d662db7f56bd5540dba58b4c3adc5fe2e6e894113cc501fd7739495e2"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 5072,
-      "file:checksum": "1220123c0f390be398b6fc94cdd39fc46622d9c491333715d440618b12771baf257c"
+      "file:size": 4065,
+      "file:checksum": "1220e635e71a019f5628b632eb526fa5ff68edafa2af116955364d63153e68327f4b"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -196,36 +196,6 @@
       "description": "Volunteer who leads the group. Their address, email and telephone numbers were removed before publication."
     },
     {
-      "name": "Leader_Address",
-      "type": "string",
-      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
-    },
-    {
-      "name": "Email",
-      "type": "string",
-      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
-    },
-    {
-      "name": "Hm_Phone",
-      "type": "string",
-      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
-    },
-    {
-      "name": "Cell_Phone",
-      "type": "string",
-      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
-    },
-    {
-      "name": "Wk_Phone",
-      "type": "string",
-      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
-    },
-    {
-      "name": "Prefered_Phone",
-      "type": "string",
-      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
-    },
-    {
       "name": "Color",
       "type": "string",
       "description": "Cartographic fill index so neighbouring areas differ on the city's own maps. It carries no meaning about the area."
@@ -239,11 +209,6 @@
       "name": "Last_Active",
       "type": "string",
       "description": "When the group was last recorded as active."
-    },
-    {
-      "name": "Shape",
-      "type": "binary",
-      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "Shape.area",

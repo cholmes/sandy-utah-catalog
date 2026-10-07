@@ -9,7 +9,7 @@
   "title": "Police Reporting Areas",
   "description": "Police reporting areas in Sandy City, Utah. 439 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 2598,
-      "file:checksum": "122073a8faae8fddc5350132d8d4663d81253eb9f117c3c9287e1216e0cd3f4e3a04"
+      "file:checksum": "12203f5b3967bb00253005fc034d72d08e4bb286a1f5370c1f1cec258c187ca4e233"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -156,7 +156,7 @@
         "metadata"
       ],
       "file:size": 5503,
-      "file:checksum": "12209f5ed0014410f3c8020698e40cfeee5aff5f32cc358605fcc256e2d6edd6fb7d"
+      "file:checksum": "1220b514d52bae6a3760352c5afd567f461db6583158ead7884e7f778c6a5b4cda3a"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

@@ -17,7 +17,7 @@ Sandy City publishes no licence for this data. There is no terms-of-use page on 
 This is a **mirror**. Sandy City produced the data; it is republished here unmodified except where noted below.
 
 - **Source**: [https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Sandy_Cemetery/FeatureServer/37](https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Sandy_Cemetery/FeatureServer/37?f=json) (the city's server answers 403 on the plain endpoint, so this links the `f=json` form it does serve)
-- **Mirrored**: 2026-10-07T21:00:33Z
+- **Mirrored**: 2026-10-07T21:32:21Z
 - **Attribution, as the service states it**: Sandy City Parks & Rec
 
 Converted with [gpio](https://github.com/geoparquet/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
@@ -40,4 +40,6 @@ SELECT count(*) FROM 'https://data.source.coop/portolan-mirrors/sandy-utah-catal
 
 ## Known issues
 
+- 69 telephone numbers were redacted from the `Comments` and `On_the_Headstone` columns, where they sat inside free-text notes alongside the names of living relatives. The note is kept and the number is replaced with `[phone redacted]`. The redaction is pattern-based, so report anything it missed on the issue tracker.
+- The register records a person's race in the language of the period it was written in, which is not current usage.
 - The vector tiles carry four display columns; the GeoParquet carries all 60.

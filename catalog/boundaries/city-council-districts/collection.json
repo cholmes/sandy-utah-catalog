@@ -9,7 +9,7 @@
   "title": "City Council Districts",
   "description": "City Council Districts in Sandy City, Utah. 4 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2577,
-      "file:checksum": "122095b1985df1820bdfbb4b1ab81b04d84966bd24befbda383e2d0461fb6e3be854"
+      "file:checksum": "12200386097bc94ae6cfa8fb29269b0060cdeaecc71aa2d1e901c272422429492e5b"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 4262,
-      "file:checksum": "122055f12f18bde229bf93cfe3b62aaf1469bb370aad87d54db5b56d9743c3c1195a"
+      "file:checksum": "1220bf643a9da291cf2fa855b7f30012417d191ff3e91c5ea72dcf02037824eca2c6"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

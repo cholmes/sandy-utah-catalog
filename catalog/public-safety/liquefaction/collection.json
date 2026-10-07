@@ -9,7 +9,7 @@
   "title": "Liquefaction Potential",
   "description": "Map of hazards in Sandy City, Utah. 10 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2495,
-      "file:checksum": "1220e72d067a5f2eb76dab7cb00f150b127440c1a7884b7140e00d84edfbed7dd8e0"
+      "file:checksum": "1220198cbef496909094cc93f4d566b74f62dab2ffa8b5c562ed5d49d4c89db2db53"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3385,
-      "file:checksum": "122060524fc9d6364cecdba6533da6c0cc821bf17d3318bd756da19801fa9df3f7f4"
+      "file:checksum": "122009830044cce727db37eae8bb53ee0884561e1b8dd1d159e8ae99c0e9442a155b"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

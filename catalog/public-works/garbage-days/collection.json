@@ -9,7 +9,7 @@
   "title": "Garbage Collection Days",
   "description": "Garbage Collection Days in Sandy City, Utah. The upstream service publishes no description for this layer. 5 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2698,
-      "file:checksum": "12206a427de8cd63a2434422602cc51021a3f5e7f21a66acba0acc7e97c1a339e622"
+      "file:checksum": "1220b0911ed8769646460ff14b7085b58a54657dc8f24b5450ad5f9abd01dbb24472"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3451,
-      "file:checksum": "122026beff1d8c5a5279afa7e0b1244d365e670800e739b05f2832b403a1da28e1e1"
+      "file:checksum": "1220c10d9ccba563e620595f09a88946b58b9701382269b0f3833772116cdaad2902"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

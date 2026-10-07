@@ -94,5 +94,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2?f=json) on 2026-10-07T21:00:33Z.
+Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2?f=json) on 2026-10-07T21:32:21Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

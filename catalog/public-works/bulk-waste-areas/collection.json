@@ -9,7 +9,7 @@
   "title": "Bulk Waste Areas",
   "description": "Bulk Waste Eligible Areas. 20 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2444,
-      "file:checksum": "122002482f3c50811fd3f0f48a187c6b69bb9790bc67962689ea58d518c0904b018c"
+      "file:checksum": "1220f1ca89b6e014aa35261fb1d88c973eec65902f1aeca9ca332179ba3027e82983"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3607,
-      "file:checksum": "122066a78ca6f4fbfba5c17e52ed8bb8d5d958e7455476084ecc6ad10a644ccff15f"
+      "file:checksum": "12203b915d335d1b16af6ac68c908d5ec59aa5cdf0406742505e424c8b56fec07042"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

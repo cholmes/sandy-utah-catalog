@@ -9,7 +9,7 @@
   "title": "Subdivisions",
   "description": "Subdivisions in Sandy City, Utah. 1,699 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2499,
-      "file:checksum": "1220887f48ea7fe120d197ce76696f1e2e26d7cf912b423a4b6e7d3f09e3028e6e48"
+      "file:checksum": "1220cfb6322caa05fda17fbd1faae28f0882afebe9daee90f6c377feef214150770b"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 5078,
-      "file:checksum": "122095030bd14201aee54469d9020118ae2d3d18d15ca8219f7b6556407faa8245c4"
+      "file:checksum": "1220d224a3e17b5ae75144699a2f9506b38218fa5310ed59e44df22e055bc718e0b2"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

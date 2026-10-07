@@ -9,7 +9,7 @@
   "title": "Sandy-Maintained Roads",
   "description": "Sandy-Maintained Roads in Sandy City, Utah. The upstream service publishes no description for this layer. 4,916 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2740,
-      "file:checksum": "12206f3e77384900825c123d8d7a9afcbc7acdd3c2dbd13bed992c2cadfb3ee158c0"
+      "file:checksum": "1220866ea6ab249af46086bf346490c8eb0d2a70c394a4091baa57d04b4f385b27be"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3056,
-      "file:checksum": "12208e17e68d0e8da8bcc6581d23140874c7b7fb93160abd8877fba3df90d5e1227c"
+      "file:checksum": "1220e0bcf284c64aeaa5f277d8e50228b9fc8cd857dfdb5721593c7cb001d9a27fd7"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

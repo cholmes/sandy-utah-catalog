@@ -9,7 +9,7 @@
   "title": "Fire Hydrants",
   "description": "Fire Hydrants in Sandy City, Utah. The upstream service publishes no description for this layer. Sandy also publishes a hydrant layer under `Pub_Safety/Hydrants` with a different count (5,047 against 5,292). This mirrors the Public Utilities copy, which is the one maintained with the water system. 5,292 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -156,7 +156,7 @@
         "metadata"
       ],
       "file:size": 3082,
-      "file:checksum": "1220d0aa001ec4190431ae649daa49fc22660d65896c852e4ecb4982f7e000c7b45f"
+      "file:checksum": "1220073ce2912a17848a8972067c7c9735b9d3848e7bc4cce7665030db75d8620725"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -166,7 +166,7 @@
         "metadata"
       ],
       "file:size": 12201,
-      "file:checksum": "1220358a08f7c77a1b8aafb9783a765dca829b8d08d7cf09a5fdee494d3b4322d888"
+      "file:checksum": "1220491b73eff1c6276295f42a06c23ec1f336b0901dd4ebefa63f9b9eb9aa6e748b"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

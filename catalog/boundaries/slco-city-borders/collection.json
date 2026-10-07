@@ -9,7 +9,7 @@
   "title": "Salt Lake County City Borders",
   "description": "Border outlines for cities in Salt Lake County, Utah. County-wide context rather than Sandy data: the municipal boundaries of every city in Salt Lake County. 69 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Utah Geospatial Resource Center (AGRC)",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2629,
-      "file:checksum": "1220091228a262c37df530bdf890043d98bae34ef1d148f69e6c78e6a03e5f8ff609"
+      "file:checksum": "1220e7be3c7a30cc885a13673acebfb38bd4dc2b31d9fc5ec1cb5c57bfd870b01ce1"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 3558,
-      "file:checksum": "1220ee17b4facc874f0b4327e3f277656e07ecca0b6287f7b0a940f45f56f5952a0b"
+      "file:checksum": "1220a877d76c01529c5cf2c38a53155d37377c67fbe44bc51e44023536c9afad5d00"
     },
     "thumbnail": {
       "href": "./thumbnail.png",

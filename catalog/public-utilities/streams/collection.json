@@ -9,7 +9,7 @@
   "title": "Streams",
   "description": "Sandy Waterways Streams. 848 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-07T21:00:33Z",
+  "updated": "2026-10-07T21:32:21Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -136,7 +136,7 @@
         "metadata"
       ],
       "file:size": 2375,
-      "file:checksum": "122033524604bf5b9212fae24d10839af7e687247089ad4c44c3c00d7dd48dad91c2"
+      "file:checksum": "1220855d10a6add01b30fcca422e0effdac1c8936ec3943dc4179de025823a925a20"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -146,7 +146,7 @@
         "metadata"
       ],
       "file:size": 4089,
-      "file:checksum": "122058b38f4d12bd7b68a2caa46377c978ec52a06af971db608c21ea852089439006"
+      "file:checksum": "1220f4aab228b1ae32430339fc1a32ca63c9d9b907b0c27766f6de2cfcb003184592"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
