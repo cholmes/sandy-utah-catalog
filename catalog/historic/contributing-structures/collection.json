@@ -9,7 +9,7 @@
   "title": "Contributing Historic Structures (2026 Study)",
   "description": "Contributing Historic Structures (2026 Study) in Sandy City, Utah. The upstream service publishes no description for this layer. 275 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -77,7 +77,7 @@
       "rel": "via",
       "href": "https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/2026_Contributing_Structures_Study/FeatureServer/0",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Upstream ArcGIS Online layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2530,
-      "file:checksum": "1220e2129c53c8eb5e6021c4e38e2e6793916dc35d53875aa0bd2cb5426be1f23170"
+      "file:size": 2808,
+      "file:checksum": "1220dcfa80a53557835bc489fd8160f723b18d6e01ab292a3ad7cac1e2076f3aaac0"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2232,
-      "file:checksum": "12201fc547abc4efb9836f1e87ca67f613c521b16e6afd9c46e48c0d56104ec0d010"
+      "file:size": 4586,
+      "file:checksum": "12204be7e950e0ce43f5fbee47bcc99ecaa5660e9890075befb2493dedcf449ac77d"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,55 +162,68 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "House__",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 275 rows, 223 distinct values, ranging 10 to 8984."
     },
     {
       "name": "Dir",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 275 rows, 2 distinct values."
     },
     {
       "name": "Street",
-      "type": "string"
+      "type": "string",
+      "description": "Street the feature lies on. Measured in the published file: Populated on 100% of 275 rows, 29 distinct values."
     },
     {
       "name": "Eval_Code",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 275 rows, 1 distinct values."
     },
     {
       "name": "Year_Built",
-      "type": "int32"
+      "type": "int32",
+      "description": "Year the feature was built. Measured in the published file: Populated on 100% of 275 rows, 45 distinct values, ranging 1874 to 1959."
     },
     {
       "name": "Individually_Listed",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 17% of 275 rows, 1 distinct values."
     },
     {
       "name": "Address",
-      "type": "string"
+      "type": "string",
+      "description": "Street address of the feature. Measured in the published file: Populated on 100% of 275 rows, 273 distinct values."
     },
     {
       "name": "X_Coord",
-      "type": "double"
+      "type": "double",
+      "description": "X coordinate copied into an attribute. The geometry column is authoritative. Measured in the published file: Populated on 100% of 275 rows, 274 distinct values, ranging 1.53193e+06 to 1.53665e+06."
     },
     {
       "name": "Y_Coord",
-      "type": "double"
+      "type": "double",
+      "description": "Y coordinate copied into an attribute. The geometry column is authoritative. Measured in the published file: Populated on 100% of 275 rows, 273 distinct values, ranging 7.38329e+06 to 7.38626e+06."
     },
     {
       "name": "Plaque",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Empty in all 275 rows of the published file."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 275,

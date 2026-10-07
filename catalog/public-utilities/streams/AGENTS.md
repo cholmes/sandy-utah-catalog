@@ -17,18 +17,37 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 10 columns, 848 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `CLASS` | string |
-| `NAME` | string |
-| `CHANNEL_TYPE` | string |
-| `CLASS___TYPE` | string |
-| `Municipality` | string |
-| `InPark` | string |
-| `Shape__Length` | double |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+6 of 10 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`CLASS`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 848 rows, 5 distinct values.
+
+**`NAME`** — *string*  
+Name of the feature. Measured in the published file: Populated on 93% of 848 rows, 29 distinct values.
+
+**`CHANNEL_TYPE`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 848 rows, 2 distinct values.
+
+**`CLASS___TYPE`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 848 rows, 9 distinct values.
+
+**`Municipality`** — *string*  
+Municipality the feature falls in. Several Sandy layers extend into neighbouring cities, so this is how to select Sandy's own. Measured in the published file: Populated on 100% of 848 rows, 10 distinct values.
+
+**`InPark`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 848 rows, 2 distinct values.
+
+**`Shape__Length`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -59,5 +78,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Streams/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Streams/FeatureServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Streams/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Streams/FeatureServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

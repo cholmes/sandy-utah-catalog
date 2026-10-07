@@ -17,19 +17,40 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 11 columns, 63 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `NAME` | string |
-| `SIZE` | int16 |
-| `HasAttachment` | int16 |
-| `Shape__Length` | double |
-| `created_user` | string |
-| `created_date` | timestamp[ms] |
-| `last_edited_user` | string |
-| `last_edited_date` | timestamp[ms] |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+9 of 11 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`NAME`** — *string*  
+Name of the feature. Measured in the published file: Populated on 100% of 63 rows, 1 distinct values.
+
+**`SIZE`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 2% of 63 rows, 1 distinct values.
+
+**`HasAttachment`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 63 rows, 2 distinct values, ranging 0 to 1.
+
+**`Shape__Length`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`created_user`** — *string*  
+Username of the staff member who created the row, from the geodatabase editor tracking.
+
+**`created_date`** — *timestamp[ms]*  
+Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world.
+
+**`last_edited_user`** — *string*  
+Username of the staff member who last edited the row, from the geodatabase editor tracking.
+
+**`last_edited_date`** — *timestamp[ms]*  
+Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -48,5 +69,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/IrrigationDitches/FeatureServer/9](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/IrrigationDitches/FeatureServer/9) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/IrrigationDitches/FeatureServer/9](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/IrrigationDitches/FeatureServer/9?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

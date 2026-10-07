@@ -9,7 +9,7 @@
   "title": "Police Beats",
   "description": "Police beats in Sandy City, Utah. 4 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/PoliceBeats/MapServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2194,
-      "file:checksum": "1220ad4bc3811194252da9ae7a5d284dfa3f62f4d6fe95b8919b07c874bd342dce42"
+      "file:size": 2472,
+      "file:checksum": "1220692fa438f34d0bce1f91152f37abe14f9831e636b8ee94e67db50031df4824dd"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2099,
-      "file:checksum": "12205d7e7e71f9825ae868445f88040a6f69a94f834d6a859b837dfcea2b107d1336"
+      "file:size": 3273,
+      "file:checksum": "12204c67f7d2ae8d753501e95b1acac0df51e7f4ab822bee19979c716f58eeb59efd"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,31 +162,38 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "NAME",
-      "type": "string"
+      "type": "string",
+      "description": "Name of the feature. Measured in the published file: Populated on 100% of 4 rows, 4 distinct values."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "Shape.area",
-      "type": "double"
+      "type": "double",
+      "description": "Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited."
     },
     {
       "name": "Shape.len",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 4,

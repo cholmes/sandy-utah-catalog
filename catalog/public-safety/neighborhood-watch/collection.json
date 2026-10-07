@@ -9,7 +9,7 @@
   "title": "Neighborhood Watch Groups",
   "description": "Neighborhood watch groups in Sandy City, Utah. 42 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Neighborhood_Watch/MapServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -103,8 +103,8 @@
       "roles": [
         "data"
       ],
-      "file:size": 41342,
-      "file:checksum": "1220427661c5805f8ef1f8d2c6f8690c5f274fa747f700085fc77816f45fd5ee9b83"
+      "file:size": 41427,
+      "file:checksum": "1220eb44e6f1ee87cf4afee4c5172347637efe0382e8a81a5d980507a2c3371e1ad6"
     },
     "tiles": {
       "href": "https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/neighborhood-watch/neighborhood-watch.pmtiles",
@@ -114,8 +114,8 @@
         "visual"
       ],
       "proj:epsg": 4326,
-      "file:size": 76119,
-      "file:checksum": "122060c5bfd9cb7324b24fdbdf39a15c6c3088405d7146cba2694460c9a3f80f039c"
+      "file:size": 53435,
+      "file:checksum": "1220fc26b6187e508d57687d026643f6e023783971e6780e5bc8211b9f82a4bada23"
     },
     "style-default": {
       "href": "./styles/default.json",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2298,
-      "file:checksum": "12206800ffe10462f5c8c6a823f2451a04ac2be58db4c2e293bd01362fdcb4636a97"
+      "file:size": 2900,
+      "file:checksum": "1220fd7ed1804f64a76987b7213ff45a585d061398226467e0dee7b618678407b75b"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2373,
-      "file:checksum": "1220de1f55ab89b7d92a498d7c1ecbdbd6fff5cfa5c5bdfec8566b915ad8d2daeea9"
+      "file:size": 5072,
+      "file:checksum": "1220123c0f390be398b6fc94cdd39fc46622d9c491333715d440618b12771baf257c"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,87 +162,108 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "Quadrant",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy addressing and policing quadrant. Measured in the published file: Populated on 100% of 42 rows, 6 distinct values."
     },
     {
       "name": "Community",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy community area the group sits in, joining to the `communities` collection."
     },
     {
       "name": "Police_Beat",
-      "type": "string"
+      "type": "string",
+      "description": "Police beat the area falls in, joining to the `police-beats` collection."
     },
     {
       "name": "NW_Group",
-      "type": "string"
+      "type": "string",
+      "description": "Name or number of the neighbourhood watch group."
     },
     {
       "name": "Alt_Area_Name",
-      "type": "string"
+      "type": "string",
+      "description": "Alternative name the area is known by."
     },
     {
       "name": "AreaLeader",
-      "type": "string"
+      "type": "string",
+      "description": "Volunteer who leads the group. Their address, email and telephone numbers were removed before publication."
     },
     {
       "name": "Leader_Address",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
     },
     {
       "name": "Email",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
     },
     {
       "name": "Hm_Phone",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
     },
     {
       "name": "Cell_Phone",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
     },
     {
       "name": "Wk_Phone",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
     },
     {
       "name": "Prefered_Phone",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. "
     },
     {
       "name": "Color",
-      "type": "string"
+      "type": "string",
+      "description": "Cartographic fill index so neighbouring areas differ on the city's own maps. It carries no meaning about the area."
     },
     {
       "name": "Include",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the city includes the group on its published map."
     },
     {
       "name": "Last_Active",
-      "type": "string"
+      "type": "string",
+      "description": "When the group was last recorded as active."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "Shape.area",
-      "type": "double"
+      "type": "double",
+      "description": "Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited."
     },
     {
       "name": "Shape.len",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 42,

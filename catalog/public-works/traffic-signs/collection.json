@@ -9,7 +9,7 @@
   "title": "Traffic Signs",
   "description": "Traffic Signs in Sandy City, Utah. The upstream service publishes no description for this layer. 8,403 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Sign_Locatons/FeatureServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -155,8 +155,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2341,
-      "file:checksum": "122092549172b086b5e578e963dd06236814ffb8835c6c12a1926438062983258146"
+      "file:size": 2619,
+      "file:checksum": "1220967fbf3de4c9068525018ee9d3248ddfbd1b967d125e66109dba9e90f9c57135"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -165,8 +165,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 4336,
-      "file:checksum": "12200f5ac5fe2fd974bde8d3ad7ee2cda183ebd4638540494ad8ee22f6ac36478517"
+      "file:size": 8383,
+      "file:checksum": "12207ff14128af2da3015bb3d97e8e6069005d12275248a3e34f10907f8fc05b47c6"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -182,119 +182,148 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "AssetID",
-      "type": "string"
+      "type": "string",
+      "description": "Identifier of the asset in the city's maintenance management system. Measured in the published file: Populated on 100% of 8,403 rows, 8,386 distinct values."
     },
     {
       "name": "Address",
-      "type": "string"
+      "type": "string",
+      "description": "Street address of the feature. Measured in the published file: Populated on 100% of 8,403 rows, 7,770 distinct values."
     },
     {
       "name": "Location",
-      "type": "string"
+      "type": "string",
+      "description": "Street address or place description of the feature. Measured in the published file: Populated on 100% of 8,403 rows, 7,769 distinct values."
     },
     {
       "name": "STREET_ON",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 8,403 rows, 1,542 distinct values."
     },
     {
       "name": "STREET_AT",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 8,403 rows, 3,033 distinct values."
     },
     {
       "name": "District",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 96% of 8,403 rows, 21 distinct values."
     },
     {
       "name": "PMA_ID",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 8,403 rows, 1,685 distinct values, ranging 0 to 7899."
     },
     {
       "name": "REMARKS",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 87% of 8,403 rows, 2,296 distinct values."
     },
     {
       "name": "RETIRED",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Empty in all 8,403 rows of the published file."
     },
     {
       "name": "Type",
-      "type": "string"
+      "type": "string",
+      "description": "Type of feature. See the measured values below, because the source layer declares no code list for it. Measured in the published file: Populated on 100% of 8,403 rows, 3 distinct values."
     },
     {
       "name": "MUTCD",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `D11-1`, `D13`, `D19`, `D3`, `D9-2`, `DFBS`, `HazardMarker`, `I-7`, `M1-4`, `M3-1`, and 131 more."
     },
     {
       "name": "MUTCD_Desc",
-      "type": "string"
+      "type": "string",
+      "description": "Coded value. The source layer's domain allows: `Bike Route`, `Entrance Only`, `Exit Only`, `Street Name`, `Hospital (symbol)`, `DFBS`, `Hazard Marker`, `Train Station`, `US Numbered Route (2 digit)`, `North`, and 133 more. Codes: `D11-1` = Bike Route, `D13` = Entrance Only, `D19` = Exit Only, `D3` = Street Name, `D9-2` = Hospital (symbol), `DFBS` = DFBS, `HazardMarker` = Hazard Marker, `I-7` = Train Station, `M1-4` = US Numbered Route (2 digit), `M3-1` = North, `M5-1L` = Advance Turn Arrow Auxiliary (90 degree) (left), `M5-1R` = Advance Turn Arrow Auxiliary (90 degree) (right)."
     },
     {
       "name": "ARROW",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `Left`, `Right`, `Double`, `None`."
     },
     {
       "name": "SPEED_LIMIT",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `5`, `10`, `15`, `20`, `25`, `30`, `35`, `40`, `45`, `50`, and 1 more."
     },
     {
       "name": "FACE_POSIT",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `North`, `North/South`, `South`, `East`, `East/West`, `West`."
     },
     {
       "name": "SIZE_",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 98% of 8,403 rows, 80 distinct values."
     },
     {
       "name": "MATERIAL",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `High Intensity`, `Engineering Grade`."
     },
     {
       "name": "CONDITION",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `Excellent`, `Good`, `Good - Tree Trim`, `Good - Rivet`, `Poor`, `Poor - Burnt`, `Poor - Bent`."
     },
     {
       "name": "LastInspection",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 98% of 8,403 rows, 4,700 distinct values."
     },
     {
       "name": "LastInspFY",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 98% of 8,403 rows, 6 distinct values."
     },
     {
       "name": "InspectionNeeded",
-      "type": "string"
+      "type": "string",
+      "description": "Coded value. The source layer's domain allows: `Yes`, `No`. Codes: `Y` = Yes, `N` = No."
     },
     {
       "name": "SignGraphic",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 97% of 8,403 rows, 98 distinct values."
     },
     {
       "name": "created_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who created the row, from the geodatabase editor tracking."
     },
     {
       "name": "created_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world."
     },
     {
       "name": "last_edited_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who last edited the row, from the geodatabase editor tracking."
     },
     {
       "name": "last_edited_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 8403,

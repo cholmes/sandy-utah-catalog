@@ -9,7 +9,7 @@
   "title": "Approximate 100-Year Floodplain",
   "description": "Map of hazards in Sandy City, Utah. 828 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Hazards/MapServer/5",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2220,
-      "file:checksum": "1220bbde3258c9437fee061b71693ae175ad28c7f505bfeb98fa7398587fc15ca572"
+      "file:size": 2498,
+      "file:checksum": "12209bfee8872eb36daa0505e587b0dcd34b09743659d4c9c73603a7dd747fe37d2f"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2528,
-      "file:checksum": "12202c37c6696d08586f968dd438c1d4d14eb48e523184df028a8b0429ddaf2f83c4"
+      "file:size": 5309,
+      "file:checksum": "12207a75bca896860eac1622be20ce764d5254c7e9385304c4ab888241a92517e32e"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,103 +162,128 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "DFIRM_ID",
-      "type": "string"
+      "type": "string",
+      "description": "Identifier of the Digital Flood Insurance Rate Map study this polygon belongs to."
     },
     {
       "name": "VERSION_ID",
-      "type": "string"
+      "type": "string",
+      "description": "Version of the FEMA database schema the record follows."
     },
     {
       "name": "FLD_AR_ID",
-      "type": "string"
+      "type": "string",
+      "description": "Identifier of the flood area polygon within the study."
     },
     {
       "name": "STUDY_TYP",
-      "type": "string"
+      "type": "string",
+      "description": "Type of flood study the mapping rests on."
     },
     {
       "name": "FLD_ZONE",
-      "type": "string"
+      "type": "string",
+      "description": "FEMA flood zone designation. Zone A and AE are the one-percent-annual-chance floodplain, commonly called the 100-year floodplain."
     },
     {
       "name": "ZONE_SUBTY",
-      "type": "string"
+      "type": "string",
+      "description": "Zone subtype. `FLOODWAY` marks the channel plus the adjoining land that must stay clear to carry the one-percent flood without raising its level."
     },
     {
       "name": "SFHA_TF",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the polygon is a Special Flood Hazard Area. Federally backed mortgages on property here require flood insurance."
     },
     {
       "name": "STATIC_BFE",
-      "type": "double"
+      "type": "double",
+      "description": "Base flood elevation, the height the one-percent flood is expected to reach, where a single value applies."
     },
     {
       "name": "V_DATUM",
-      "type": "string"
+      "type": "string",
+      "description": "Vertical datum the elevation is measured against."
     },
     {
       "name": "DEPTH",
-      "type": "double"
+      "type": "double",
+      "description": "Flood depth where the zone is mapped by depth rather than elevation."
     },
     {
       "name": "LEN_UNIT",
-      "type": "string"
+      "type": "string",
+      "description": "Unit the elevation and depth values are in."
     },
     {
       "name": "VELOCITY",
-      "type": "double"
+      "type": "double",
+      "description": "Flood velocity, where measured."
     },
     {
       "name": "VEL_UNIT",
-      "type": "string"
+      "type": "string",
+      "description": "Unit the velocity is in."
     },
     {
       "name": "AR_REVERT",
-      "type": "string"
+      "type": "string",
+      "description": "Zone the area reverts to if a flood control structure is restored, for a Zone AR area behind one under repair."
     },
     {
       "name": "AR_SUBTRV",
-      "type": "string"
+      "type": "string",
+      "description": "Zone subtype the area reverts to."
     },
     {
       "name": "BFE_REVERT",
-      "type": "double"
+      "type": "double",
+      "description": "Base flood elevation the area reverts to."
     },
     {
       "name": "DEP_REVERT",
-      "type": "double"
+      "type": "double",
+      "description": "Depth the area reverts to."
     },
     {
       "name": "DUAL_ZONE",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the area carries two zone designations."
     },
     {
       "name": "SOURCE_CIT",
-      "type": "string"
+      "type": "string",
+      "description": "Citation pointing to the study the mapping came from, within FEMA's own source table."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "Shape.STArea()",
-      "type": "double"
+      "type": "double",
+      "description": "Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited."
     },
     {
       "name": "Shape.STLength()",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 828,

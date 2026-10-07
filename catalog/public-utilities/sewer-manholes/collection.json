@@ -9,7 +9,7 @@
   "title": "Sewer Manholes",
   "description": "Sewer Manholes in Sandy City, Utah. The upstream service publishes no description for this layer. 16,020 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Sewer/MapServer/1",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2342,
-      "file:checksum": "1220eb0bd193bbe062e5ac6a379c1f0360794903e84f72edbb0d56a9482cddd04932"
+      "file:size": 2620,
+      "file:checksum": "12204531bde44ce34f71540905b141b3218cacece8af1b4ac05e1cdefb046fc8fed2"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2599,
-      "file:checksum": "1220692f7dbccfa8c4d20182606ae06addd0b62e99f7647f9692ed3008f295573392"
+      "file:size": 5741,
+      "file:checksum": "1220b4bab978f5dfcd8534e03286da2541b64f35e1ccf18c2379f89262d0c6a4f007"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,79 +162,98 @@
   "table:columns": [
     {
       "name": "Agency",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `Cottonwood Improvement District`, `Midvale City`, `Midvalley Improvement District`, `Sandy Suburban Improvement District`, `South Valley Sewer District`, `Other/Unknown`."
     },
     {
       "name": "DIAMETER",
-      "type": "double"
+      "type": "double",
+      "description": "Nominal diameter, in inches. Measured in the published file: Populated on 68% of 16,020 rows, 10 distinct values, ranging 0 to 60."
     },
     {
       "name": "RIM_ELEV",
-      "type": "double"
+      "type": "double",
+      "description": "Elevation of the structure rim at ground level. Measured in the published file: Populated on 100% of 16,020 rows, 14,444 distinct values, ranging 0 to 4.89188e+06."
     },
     {
       "name": "X",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 16,020 rows, 13,767 distinct values, ranging -111.898 to 7.38729e+06."
     },
     {
       "name": "Y",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 16,020 rows, 14,029 distinct values, ranging -111.884 to 7.63885e+06."
     },
     {
       "name": "DepthToFlo",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 56% of 16,020 rows, 3,560 distinct values, ranging 0 to 1911."
     },
     {
       "name": "NumPipesIn",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 24% of 16,020 rows, 5 distinct values, ranging 0 to 5."
     },
     {
       "name": "InSizes",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 24% of 16,020 rows, 18 distinct values."
     },
     {
       "name": "OutSize",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 24% of 16,020 rows, 12 distinct values."
     },
     {
       "name": "MH_ID",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 16,020 rows, 14,969 distinct values."
     },
     {
       "name": "NumLateral",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 24% of 16,020 rows, 5 distinct values, ranging 0 to 15."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "created_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who created the row, from the geodatabase editor tracking."
     },
     {
       "name": "created_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world."
     },
     {
       "name": "last_edited_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who last edited the row, from the geodatabase editor tracking."
     },
     {
       "name": "last_edited_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world."
     },
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 16020,

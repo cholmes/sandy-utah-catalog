@@ -9,7 +9,7 @@
   "title": "Streams",
   "description": "Sandy Waterways Streams. 848 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Streams/FeatureServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2097,
-      "file:checksum": "1220702e2d5c13b7f8f6f832eec102542b89c89e9e7e58afe458c553fcea12d68e6e"
+      "file:size": 2375,
+      "file:checksum": "122033524604bf5b9212fae24d10839af7e687247089ad4c44c3c00d7dd48dad91c2"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2210,
-      "file:checksum": "12207e931b3664837e9fba5827557dfe664d4068bef4542c0d578b42a376465e6482"
+      "file:size": 4089,
+      "file:checksum": "122058b38f4d12bd7b68a2caa46377c978ec52a06af971db608c21ea852089439006"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,43 +162,53 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "CLASS",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 848 rows, 5 distinct values."
     },
     {
       "name": "NAME",
-      "type": "string"
+      "type": "string",
+      "description": "Name of the feature. Measured in the published file: Populated on 93% of 848 rows, 29 distinct values."
     },
     {
       "name": "CHANNEL_TYPE",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 848 rows, 2 distinct values."
     },
     {
       "name": "CLASS___TYPE",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 848 rows, 9 distinct values."
     },
     {
       "name": "Municipality",
-      "type": "string"
+      "type": "string",
+      "description": "Municipality the feature falls in. Several Sandy layers extend into neighbouring cities, so this is how to select Sandy's own. Measured in the published file: Populated on 100% of 848 rows, 10 distinct values."
     },
     {
       "name": "InPark",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 848 rows, 2 distinct values."
     },
     {
       "name": "Shape__Length",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 848,

@@ -9,7 +9,7 @@
   "title": "Crime Incidents",
   "description": "Crime Incidents in Sandy City, Utah. The upstream service publishes no description for this layer. 29,572 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/PoliceCrimeData/FeatureServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -155,8 +155,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2870,
-      "file:checksum": "1220c632ec7ffc9dfb12894ca06e3dabd614f6d55f05437a60c3ca8e8b36113f6cec"
+      "file:size": 3148,
+      "file:checksum": "1220ddc74476d42a0a783579d09fd305e70cd8d703d68120cebeae38df30150411c5"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -165,8 +165,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3132,
-      "file:checksum": "12205520ad46782ffb018b1c2febcfc2e4a941de56a1e4f4a27bbaa811000f13fb30"
+      "file:size": 10003,
+      "file:checksum": "122046d1d5fe486dccc11b4d50a7cac186cd1b6d8c2cd7fac95bb0c3f42c12b591f3"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -182,171 +182,213 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "evt_reference",
-      "type": "string"
+      "type": "string",
+      "description": "Case reference number in the police records system."
     },
     {
       "name": "jurisdiction",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 1 distinct values."
     },
     {
       "name": "evt_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the event was reported."
     },
     {
       "name": "evt_time",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 1,437 distinct values, ranging 0 to 2359."
     },
     {
       "name": "location",
-      "type": "string"
+      "type": "string",
+      "description": "Street-level address of the incident. The unit or apartment number was removed before publication."
     },
     {
       "name": "zone",
-      "type": "string"
+      "type": "string",
+      "description": "Police zone the incident falls in."
     },
     {
       "name": "grid",
-      "type": "string"
+      "type": "string",
+      "description": "Police reporting grid cell, joining to the `police-reporting-areas` collection."
     },
     {
       "name": "occ_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the offence is believed to have occurred, which can precede the report date."
     },
     {
       "name": "occ_time",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 1,436 distinct values, ranging 0 to 2359."
     },
     {
       "name": "to_occ_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "End of the window the offence is believed to have occurred in, where the exact time is unknown."
     },
     {
       "name": "to_occ_time",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 11% of 29,572 rows, 702 distinct values, ranging 0 to 2359."
     },
     {
       "name": "week_day_d",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 7 distinct values."
     },
     {
       "name": "week_day",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 7 distinct values, ranging 1 to 7."
     },
     {
       "name": "rucr",
-      "type": "string"
+      "type": "string",
+      "description": "Offence code in the agency's records system."
     },
     {
       "name": "rext",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 50 distinct values."
     },
     {
       "name": "rucr_ext_d",
-      "type": "string"
+      "type": "string",
+      "description": "Offence description, the readable form of `rucr`."
     },
     {
       "name": "rucr_ext_exp_d",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 245 distinct values."
     },
     {
       "name": "location_code",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 99% of 29,572 rows, 43 distinct values."
     },
     {
       "name": "location_code_d",
-      "type": "string"
+      "type": "string",
+      "description": "Type of place the offence occurred at."
     },
     {
       "name": "weapon_type1",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 10% of 29,572 rows, 16 distinct values."
     },
     {
       "name": "weapon_type1_d",
-      "type": "string"
+      "type": "string",
+      "description": "Weapon involved, where one is recorded."
     },
     {
       "name": "ibr_code",
-      "type": "string"
+      "type": "string",
+      "description": "NIBRS offence code reported to the FBI."
     },
     {
       "name": "operational_code",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 13 distinct values."
     },
     {
       "name": "operational_code_d",
-      "type": "string"
+      "type": "string",
+      "description": "Case disposition, such as closed by arrest."
     },
     {
       "name": "sort_order",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 1 distinct values."
     },
     {
       "name": "evt_date_time_text",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 29,049 distinct values."
     },
     {
       "name": "occ_date_time_text",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 28,725 distinct values."
     },
     {
       "name": "to_occ_date_time_text",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 11% of 29,572 rows, 3,239 distinct values."
     },
     {
       "name": "hour",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 24 distinct values, ranging 0 to 23."
     },
     {
       "name": "month",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 12 distinct values, ranging 1 to 12."
     },
     {
       "name": "day",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 31 distinct values, ranging 1 to 31."
     },
     {
       "name": "year",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 4 distinct values, ranging 2023 to 2026."
     },
     {
       "name": "unique_id",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 29,572 distinct values, ranging 1 to 38649."
     },
     {
       "name": "ORIG_FID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 29,572 rows, 1 distinct values."
     },
     {
       "name": "CATEGORY",
-      "type": "string"
+      "type": "string",
+      "description": "Grouped offence category."
     },
     {
       "name": "DESCRIPTION",
-      "type": "string"
+      "type": "string",
+      "description": "Description of the feature, entered by city staff. Measured in the published file: Populated on 58% of 29,572 rows, 61 distinct values."
     },
     {
       "name": "TYPE",
-      "type": "string"
+      "type": "string",
+      "description": "Type of feature. See the measured values below, because the source layer declares no code list for it. Measured in the published file: Populated on 18% of 29,572 rows, 2 distinct values."
     },
     {
       "name": "Extension",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 6% of 29,572 rows, 1 distinct values."
     },
     {
       "name": "TimeOfDay",
-      "type": "string"
+      "type": "string",
+      "description": "Band the event time falls in, derived by the city."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 29572,

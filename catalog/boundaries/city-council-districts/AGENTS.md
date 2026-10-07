@@ -17,19 +17,40 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 11 columns, 4 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `City_Counc` | string |
-| `Name` | string |
-| `Shape` | binary |
-| `Shape.area` | double |
-| `Shape.len` | double |
-| `Council_Member` | string |
-| `Link_to_Photo` | string |
-| `Link_To_Bio` | string |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+7 of 11 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`City_Counc`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 4 rows, 4 distinct values.
+
+**`Name`** — *string*  
+Name of the feature. Measured in the published file: Populated on 100% of 4 rows, 4 distinct values.
+
+**`Shape`** — *binary*  
+Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column.
+
+**`Shape.area`** — *double*  
+Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited.
+
+**`Shape.len`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`Council_Member`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 4 rows, 4 distinct values.
+
+**`Link_to_Photo`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 4 rows, 4 distinct values.
+
+**`Link_To_Bio`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 75% of 4 rows, 3 distinct values.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -59,5 +80,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Common/City_Council_Districts/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Common/City_Council_Districts/MapServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Common/City_Council_Districts/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Common/City_Council_Districts/MapServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

@@ -16,15 +16,19 @@ Sandy City publishes no licence for this data. There is no terms-of-use page on 
 
 This is a **mirror**. Sandy City produced the data; it is republished here unmodified except where noted below.
 
-- **Source**: [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Watershed/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Watershed/FeatureServer/0)
-- **Mirrored**: 2026-10-06T22:11:04Z
+- **Source**: [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Watershed/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Watershed/FeatureServer/0?f=json) (the city's server answers 403 on the plain endpoint, so this links the `f=json` form it does serve)
+- **Mirrored**: 2026-10-07T21:00:33Z
 
-Converted with [gpio](https://github.com/developmentseed/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
+Converted with [gpio](https://github.com/geoparquet/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
 
 ## Files
 
 - [`watershed.parquet`](https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/watershed/watershed.parquet) — GeoParquet, EPSG:3566
 - [`watershed.pmtiles`](https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-utilities/watershed/watershed.pmtiles) — vector tiles, Web Mercator
+
+## Columns
+
+The [agent guide](AGENTS.md) documents every column, with the source of each definition. Columns Sandy City does not define say so, rather than carrying a guess.
 
 ## Reading it
 

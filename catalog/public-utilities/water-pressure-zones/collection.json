@@ -9,7 +9,7 @@
   "title": "Water Pressure Zones",
   "description": "Water Pressure Zones in Sandy City, Utah. The upstream service publishes no description for this layer. 17 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/WaterSystem/FeatureServer/46",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2430,
-      "file:checksum": "1220b89a5afe90aa25515214f044c1db293fcc8d7802f68e4f55260380333a2bc8f4"
+      "file:size": 2708,
+      "file:checksum": "1220e2ab9936b99322bd51ad3e1f8d2615f630af2fd93527824b9dc4224f0cee1ce1"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2325,
-      "file:checksum": "1220727426aac5cd70496a6c0580a3322e780b27cf53312f0b00515aa1ca790494eb"
+      "file:size": 5443,
+      "file:checksum": "12200e31ede6d89db59d68e1af4f57256740486d63a69dca956031c3ee7dce7b7c85"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,71 +162,88 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "PubUtils.PU.PressureZones.AREA",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 47% of 17 rows, 8 distinct values, ranging 2.6653e+07 to 1.39474e+08."
     },
     {
       "name": "PERIMETER",
-      "type": "double"
+      "type": "double",
+      "description": "Polygon perimeter carried as an attribute, in the units of the source coordinate system. Recompute from the geometry rather than trusting it. Measured in the published file: Populated on 47% of 17 rows, 8 distinct values, ranging 36312.3 to 99757.8."
     },
     {
       "name": "PRESSUREZONES_",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 47% of 17 rows, 8 distinct values, ranging 3 to 17."
     },
     {
       "name": "PRESSUREZONES_ID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 47% of 17 rows, 1 distinct values."
     },
     {
       "name": "ZONE_",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 76% of 17 rows, 13 distinct values."
     },
     {
       "name": "ELEV_ZONE",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 47% of 17 rows, 6 distinct values."
     },
     {
       "name": "SOURCES",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Empty in all 17 rows of the published file."
     },
     {
       "name": "created_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who created the row, from the geodatabase editor tracking."
     },
     {
       "name": "created_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world."
     },
     {
       "name": "last_edited_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who last edited the row, from the geodatabase editor tracking."
     },
     {
       "name": "last_edited_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world."
     },
     {
       "name": "ZONE_NAME",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values."
     },
     {
       "name": "Shape__Area",
-      "type": "double"
+      "type": "double",
+      "description": "Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited."
     },
     {
       "name": "Shape__Length",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 17,

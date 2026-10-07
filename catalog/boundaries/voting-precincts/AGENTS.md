@@ -17,23 +17,52 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 15 columns, 102 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `Precinct` | string |
-| `Congress` | int32 |
-| `StateHouse` | int32 |
-| `StateSenate` | int32 |
-| `StateSchool` | int32 |
-| `CountyCoun` | int32 |
-| `LocalSchool` | string |
-| `Municipality` | string |
-| `CityCouncil` | string |
-| `Shape_Leng` | double |
-| `Shape__Area` | double |
-| `Shape__Length` | double |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+7 of 15 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`Precinct`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 102 rows, 102 distinct values.
+
+**`Congress`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 102 rows, 2 distinct values, ranging 3 to 4.
+
+**`StateHouse`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 102 rows, 5 distinct values, ranging 39 to 45.
+
+**`StateSenate`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 102 rows, 2 distinct values, ranging 15 to 19.
+
+**`StateSchool`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 102 rows, 2 distinct values, ranging 7 to 9.
+
+**`CountyCoun`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 102 rows, 1 distinct values.
+
+**`LocalSchool`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 102 rows, 6 distinct values.
+
+**`Municipality`** — *string*  
+Municipality the feature falls in. Several Sandy layers extend into neighbouring cities, so this is how to select Sandy's own. Measured in the published file: Populated on 100% of 102 rows, 1 distinct values.
+
+**`CityCouncil`** — *string*  
+Sandy city council district the feature falls in. Measured in the published file: Populated on 100% of 102 rows, 4 distinct values.
+
+**`Shape_Leng`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 102 rows, 102 distinct values, ranging 405.082 to 53903.7.
+
+**`Shape__Area`** — *double*  
+Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited.
+
+**`Shape__Length`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -63,5 +92,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Common/Voting_Precincts/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Common/Voting_Precincts/FeatureServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Common/Voting_Precincts/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Common/Voting_Precincts/FeatureServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

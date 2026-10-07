@@ -17,23 +17,52 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 15 columns, 1,699 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `Full_Name` | string |
-| `Lots` | int16 |
-| `Acres` | double |
-| `Year_` | double |
-| `Final_Approval` | timestamp[ms] |
-| `SLCO_Rec_Numb` | string |
-| `SLCO_Book_Page` | string |
-| `Easements_Digitized` | string |
-| `Georeferenced_Plat` | string |
-| `Shape` | binary |
-| `Shape.area` | double |
-| `Shape.len` | double |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+7 of 15 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`Full_Name`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 1,699 rows, 1,696 distinct values.
+
+**`Lots`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 93% of 1,699 rows, 112 distinct values, ranging 0 to 1602.
+
+**`Acres`** — *double*  
+Area in acres. Measured in the published file: Populated on 99% of 1,699 rows, 1,675 distinct values, ranging 0.0006887 to 298.056.
+
+**`Year_`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 1,699 rows, 84 distinct values, ranging 0 to 2026.
+
+**`Final_Approval`** — *timestamp[ms]*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 95% of 1,699 rows, 1,419 distinct values.
+
+**`SLCO_Rec_Numb`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 95% of 1,699 rows, 1,577 distinct values.
+
+**`SLCO_Book_Page`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 95% of 1,699 rows, 1,578 distinct values.
+
+**`Easements_Digitized`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 1,699 rows, 2 distinct values.
+
+**`Georeferenced_Plat`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 95% of 1,699 rows, 1,571 distinct values.
+
+**`Shape`** — *binary*  
+Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column.
+
+**`Shape.area`** — *double*  
+Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited.
+
+**`Shape.len`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -52,5 +81,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Common/Subdivisions/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Common/Subdivisions/MapServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Common/Subdivisions/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Common/Subdivisions/MapServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

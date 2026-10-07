@@ -9,7 +9,7 @@
   "title": "Trailheads",
   "description": "Trailheads in Sandy, Utah area. 20 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Trailheads/MapServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2183,
-      "file:checksum": "12206fd871497b604f1854e18954106dc638f9666c9913c21e49e40823af2748a5a1"
+      "file:size": 2461,
+      "file:checksum": "1220baaa9c511336ac8adbaa4ab5add00300c237beb7c84720afabdf6c22a223a100"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2089,
-      "file:checksum": "12206f9e91ed37843a8dd709a15b41d038713c2e9f373acf6d1f5e86916d6fe3d79d"
+      "file:size": 4412,
+      "file:checksum": "1220ff673af20ce63960c820e3b69735ca17f63cc922621f7598b833c352c9be70fa"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,55 +162,68 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "Name",
-      "type": "string"
+      "type": "string",
+      "description": "Name of the feature. Measured in the published file: Populated on 100% of 20 rows, 18 distinct values."
     },
     {
       "name": "Address",
-      "type": "string"
+      "type": "string",
+      "description": "Street address of the feature. Measured in the published file: Populated on 100% of 20 rows, 20 distinct values."
     },
     {
       "name": "Maintenance",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 20 rows, 3 distinct values."
     },
     {
       "name": "Parking_Stalls",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 20 rows, 16 distinct values, ranging 0 to 131."
     },
     {
       "name": "Elevation",
-      "type": "int32"
+      "type": "int32",
+      "description": "Elevation of the feature. Measured in the published file: Populated on 100% of 20 rows, 20 distinct values, ranging 4309 to 5390."
     },
     {
       "name": "Brochure_ID",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 20 rows, 20 distinct values, ranging 1 to 20."
     },
     {
       "name": "Status",
-      "type": "string"
+      "type": "string",
+      "description": "Operational status of the feature. See the measured values below, because the source layer declares no code list. Measured in the published file: Populated on 100% of 20 rows, 2 distinct values."
     },
     {
       "name": "Latitude",
-      "type": "double"
+      "type": "double",
+      "description": "Latitude copied into an attribute. The geometry column is authoritative and is not in degrees for most of this catalog. Measured in the published file: Populated on 100% of 20 rows, 20 distinct values, ranging 40.54 to 40.5894."
     },
     {
       "name": "Longitude",
-      "type": "double"
+      "type": "double",
+      "description": "Longitude copied into an attribute. The geometry column is authoritative. Measured in the published file: Populated on 100% of 20 rows, 20 distinct values, ranging -111.917 to -111.775."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 20,

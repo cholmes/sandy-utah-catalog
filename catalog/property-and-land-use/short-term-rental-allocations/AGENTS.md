@@ -17,19 +17,40 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 11 columns, 30 rows.
 
-| column | type |
-| --- | --- |
-| `Alloted_Status` | string |
-| `OBJECTID` | int64 |
-| `COMMUNITY_ID` | double |
-| `COMMUNITY_NAME` | string |
-| `Max_STR` | int16 |
-| `Current_STR` | int16 |
-| `Open_STR` | int16 |
-| `Shape__Area` | double |
-| `Shape__Length` | double |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+7 of 11 columns carry a definition. The rest say so rather than guess.
+
+**`Alloted_Status`** — *string*  
+Open. Coded value. The source layer's domain allows: `Available STRs`, `FULL: Next application will be waitlisted.`, `Waitlist has been placed.`. Codes: `Open` = Available STRs, `Full` = FULL: Next application will be waitlisted., `Wait` = Waitlist has been placed..
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`COMMUNITY_ID`** — *double*  
+Sandy community area number, joining to the `communities` collection. Measured in the published file: Populated on 100% of 30 rows, 30 distinct values, ranging 1 to 30.
+
+**`COMMUNITY_NAME`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 30 rows, 30 distinct values.
+
+**`Max_STR`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 30 rows, 15 distinct values, ranging 2 to 23.
+
+**`Current_STR`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 30 rows, 13 distinct values, ranging 0 to 14.
+
+**`Open_STR`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 30 rows, 15 distinct values, ranging -1 to 16.
+
+**`Shape__Area`** — *double*  
+Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited.
+
+**`Shape__Length`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -73,5 +94,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2) on 2026-10-06T22:11:04Z.
+Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

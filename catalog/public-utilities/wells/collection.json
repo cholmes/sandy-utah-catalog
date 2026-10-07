@@ -9,7 +9,7 @@
   "title": "Sandy Water Wells",
   "description": "Drinking Water Source Protection Other Well Points. 24 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/SourceProtectionWells/FeatureServer/1",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2124,
-      "file:checksum": "122038def5dd74171cbc65b7b1e2b5f3c3c0b6c40941e05112e27d78da313630327c"
+      "file:size": 2402,
+      "file:checksum": "12207da7a7b8ab64708ae5f6bd350912fe6d7a88e91731bb0fa61814171557ffbf20"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2532,
-      "file:checksum": "122009572648c32fee37935cddbee0e084016f8e66b209c74ee76a53bd2e2e033e99"
+      "file:size": 9120,
+      "file:checksum": "1220439d989822bbf3c37094060f24578b523e7184dc05b8c60402fa75be8d35a9f3"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,135 +162,168 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "SYSNUM",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 2 distinct values, ranging 0 to 18028."
     },
     {
       "name": "SORNUM",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 19 distinct values, ranging 0 to 28."
     },
     {
       "name": "EPAID",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 88% of 24 rows, 17 distinct values."
     },
     {
       "name": "SOWN",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 92% of 24 rows, 1 distinct values."
     },
     {
       "name": "SNAM",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 92% of 24 rows, 22 distinct values."
     },
     {
       "name": "GPM3",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 15 distinct values, ranging 0 to 3000."
     },
     {
       "name": "STYP",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 88% of 24 rows, 1 distinct values."
     },
     {
       "name": "DIAM",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 3 distinct values, ranging 0 to 2."
     },
     {
       "name": "CODE",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 2 distinct values, ranging 0 to 6."
     },
     {
       "name": "LABEL",
-      "type": "string"
+      "type": "string",
+      "description": "Short label used on the city's own maps. Measured in the published file: Populated on 96% of 24 rows, 22 distinct values."
     },
     {
       "name": "STATE_ID",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 75% of 24 rows, 16 distinct values."
     },
     {
       "name": "DESCR",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Empty in all 24 rows of the published file."
     },
     {
       "name": "OLD_LABEL",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 88% of 24 rows, 19 distinct values."
     },
     {
       "name": "NEW_LABEL",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 24 distinct values."
     },
     {
       "name": "UHDID",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 92% of 24 rows, 20 distinct values."
     },
     {
       "name": "GREG_",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 235."
     },
     {
       "name": "GREG_ID",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 323."
     },
     {
       "name": "HDDWS_ALL_",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 243."
     },
     {
       "name": "HDDWS_ALL1",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 1 distinct values."
     },
     {
       "name": "COMMENT",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note entered by city staff. Unstructured and inconsistently populated."
     },
     {
       "name": "CH2MGRID_",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 110042."
     },
     {
       "name": "CH2MGRID_I",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 110041."
     },
     {
       "name": "CH2MCELL",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 110041."
     },
     {
       "name": "CH2MROW",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 17 distinct values, ranging 0 to 401."
     },
     {
       "name": "CH2MCOL",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 19 distinct values, ranging 0 to 261."
     },
     {
       "name": "CH2MAREA",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 5 distinct values, ranging 0 to 9287.09."
     },
     {
       "name": "OWNER",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 1 distinct values."
     },
     {
       "name": "Q_",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Empty in all 24 rows of the published file."
     },
     {
       "name": "Q_COMMENT",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 4% of 24 rows, 1 distinct values."
     },
     {
       "name": "TC_COMMENT",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 4% of 24 rows, 1 distinct values."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 24,

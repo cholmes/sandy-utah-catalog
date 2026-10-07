@@ -9,7 +9,7 @@
   "title": "Street and Park Trees",
   "description": "An inventory of trees in Sandy City, Utah. The same tree inventory is published twice by the city, as `Parks/Grounds_and_Forestry` and as `Pub_Works/ParksDeptTrees`, both reporting the same feature count. This mirrors the Parks copy. 7,966 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Grounds_and_Forestry/FeatureServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2804,
-      "file:checksum": "12202387aa6c16f244d7b342fd1431e93c84a1f6987cb62f75e09e0888729d5f2d0c"
+      "file:size": 3082,
+      "file:checksum": "1220d657cb0f9d6e369f7578475aaeb7ce6c3d3bad848be02ac2afbbb8c4b1209983"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2512,
-      "file:checksum": "122046bd6cf5e713c3ac3dc3393968417189fd0737191b4ee318046e250df832c2a2"
+      "file:size": 5036,
+      "file:checksum": "1220014f2fe5202bf64eba01f4dedfd0ef96815403631c7cab7e6ebcd6567b3b4981"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,107 +162,133 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "Address",
-      "type": "string"
+      "type": "string",
+      "description": "Street address of the feature. Measured in the published file: Populated on 99% of 7,966 rows, 170 distinct values."
     },
     {
       "name": "Species",
-      "type": "string"
+      "type": "string",
+      "description": "Tree species."
     },
     {
       "name": "Other_Spec",
-      "type": "string"
+      "type": "string",
+      "description": "Species written in free text where it is not on the pick list."
     },
     {
       "name": "Tree_ID_",
-      "type": "int32"
+      "type": "int32",
+      "description": "Identifier of the tree in the inventory."
     },
     {
       "name": "Caliper",
-      "type": "string"
+      "type": "string",
+      "description": "Trunk diameter, in inches. Arborists measure caliper at a standard height above ground."
     },
     {
       "name": "Height",
-      "type": "string"
+      "type": "string",
+      "description": "Tree height, in feet."
     },
     {
       "name": "Condition",
-      "type": "string"
+      "type": "string",
+      "description": "Condition assessed at the last inspection."
     },
     {
       "name": "Max_PDOP",
-      "type": "double"
+      "type": "double",
+      "description": "Positional dilution of precision at capture. A GPS quality measure where a lower number means a better fix."
     },
     {
       "name": "Collection_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the tree was surveyed in the field."
     },
     {
       "name": "Status",
-      "type": "string"
+      "type": "string",
+      "description": "Operational status of the feature. See the measured values below, because the source layer declares no code list. Measured in the published file: Populated on 49% of 7,966 rows, 4 distinct values."
     },
     {
       "name": "Comments",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note entered by city staff. Unstructured and inconsistently populated."
     },
     {
       "name": "Photo",
-      "type": "string"
+      "type": "string",
+      "description": "Reference to a field photograph of the tree."
     },
     {
       "name": "AssetID",
-      "type": "string"
+      "type": "string",
+      "description": "Identifier of the asset in the city's maintenance management system. Measured in the published file: Populated on 99% of 7,966 rows, 7,899 distinct values."
     },
     {
       "name": "Location",
-      "type": "string"
+      "type": "string",
+      "description": "Street address or place description of the feature. Measured in the published file: Populated on 100% of 7,966 rows, 153 distinct values."
     },
     {
       "name": "Disease_Abiotic",
-      "type": "string"
+      "type": "string",
+      "description": "Non-living stress affecting the tree, such as drought or soil compaction."
     },
     {
       "name": "Disease_Biotic",
-      "type": "string"
+      "type": "string",
+      "description": "Living agent affecting the tree, such as an insect or a fungus."
     },
     {
       "name": "Disease_Comment",
-      "type": "string"
+      "type": "string",
+      "description": "Note on the tree's health."
     },
     {
       "name": "Disease_Date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the health problem was recorded."
     },
     {
       "name": "Hazard",
-      "type": "string"
+      "type": "string",
+      "description": "Type of hazard mapped. Empty in all 7,966 rows of the published file."
     },
     {
       "name": "Hazard_Date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the tree was recorded as a hazard."
     },
     {
       "name": "Pruning_Needs",
-      "type": "string"
+      "type": "string",
+      "description": "Pruning the tree requires."
     },
     {
       "name": "Pruning_Date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the tree was last pruned."
     },
     {
       "name": "Tree_Value",
-      "type": "string"
+      "type": "string",
+      "description": "Appraised value of the tree, in dollars. Municipal tree inventories carry this to support claims when a tree is damaged."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 7966,

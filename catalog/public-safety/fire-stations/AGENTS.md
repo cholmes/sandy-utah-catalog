@@ -17,24 +17,55 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 16 columns, 68 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `Address` | string |
-| `Telephone` | string |
-| `Jurisdiction` | string |
-| `Name` | string |
-| `Type` | string |
-| `Map_Label` | string |
-| `Status` | string |
-| `Fire_Equipment` | string |
-| `Medical_Equip` | string |
-| `Specialties` | string |
-| `Longitude` | double |
-| `Latitude` | double |
-| `Shape` | binary |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+10 of 16 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`Address`** — *string*  
+Street address of the feature. Measured in the published file: Populated on 100% of 68 rows, 68 distinct values.
+
+**`Telephone`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 68 rows, 48 distinct values.
+
+**`Jurisdiction`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 68 rows, 16 distinct values.
+
+**`Name`** — *string*  
+Name of the feature. Measured in the published file: Populated on 100% of 68 rows, 68 distinct values.
+
+**`Type`** — *string*  
+Type of feature. See the measured values below, because the source layer declares no code list for it. Measured in the published file: Populated on 100% of 68 rows, 7 distinct values.
+
+**`Map_Label`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 68 rows, 68 distinct values.
+
+**`Status`** — *string*  
+Operational status of the feature. See the measured values below, because the source layer declares no code list. Measured in the published file: Populated on 100% of 68 rows, 2 distinct values.
+
+**`Fire_Equipment`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 94% of 68 rows, 10 distinct values.
+
+**`Medical_Equip`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 69% of 68 rows, 7 distinct values.
+
+**`Specialties`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 50% of 68 rows, 22 distinct values.
+
+**`Longitude`** — *double*  
+Longitude copied into an attribute. The geometry column is authoritative. Measured in the published file: Populated on 100% of 68 rows, 68 distinct values, ranging -112.098 to -111.581.
+
+**`Latitude`** — *double*  
+Latitude copied into an attribute. The geometry column is authoritative and is not in degrees for most of this catalog. Measured in the published file: Populated on 100% of 68 rows, 68 distinct values, ranging 40.4808 to 40.7929.
+
+**`Shape`** — *binary*  
+Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -68,5 +99,5 @@ DFD` — 1
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Fire_Stations/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Fire_Stations/MapServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Fire_Stations/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Fire_Stations/MapServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

@@ -53,7 +53,7 @@ publishes. Most read `Sandy City GIS`; parcels read `Salt Lake County
 Recorder` and the county-wide boundary layer reads `AGRC`.
 
 The data was converted with
-[gpio](https://github.com/developmentseed/geoparquet-io) using
+[gpio](https://github.com/geoparquet/geoparquet-io) using
 `extract arcgis --output-crs native`, which preserves the city's own
 projection, and tiled with
 [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.

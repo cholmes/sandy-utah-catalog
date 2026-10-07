@@ -9,7 +9,7 @@
   "title": "Street Lights",
   "description": "Street Lights in Sandy City, Utah. The upstream service publishes no description for this layer. 8,727 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StreetLights/FeatureServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -155,8 +155,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2351,
-      "file:checksum": "1220a4bb2996a5e2ec767f84e7e863c24f99cac2e022dac6de906235796236ecbe2f"
+      "file:size": 2629,
+      "file:checksum": "122039d898d94da85b4e6145c9aed7b24542e77e36935ef017038bd7a7decd9b3e59"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -165,8 +165,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3200,
-      "file:checksum": "1220ca9ffffc80ac311e1da4424fb418077910536ac6257f268d37f69e11270c4411"
+      "file:size": 8685,
+      "file:checksum": "1220e3bb5e7fa34e46b5c61528e259a1f3073a790930c863aadffddd70bea3e97f1c"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -182,139 +182,173 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "POLE_NUM",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 98% of 8,727 rows, 8,451 distinct values, ranging 0 to 1.1402e+08."
     },
     {
       "name": "COMMENTS",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note entered by city staff. Unstructured and inconsistently populated."
     },
     {
       "name": "GPS_DATE",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the location was captured by GPS in the field. Measured in the published file: Populated on 93% of 8,727 rows, 554 distinct values."
     },
     {
       "name": "NORTHING",
-      "type": "double"
+      "type": "double",
+      "description": "Y coordinate copied into an attribute. The geometry column is authoritative; this copy is not always consistent with it."
     },
     {
       "name": "EASTING",
-      "type": "double"
+      "type": "double",
+      "description": "X coordinate copied into an attribute. The geometry column is authoritative; this copy is not always consistent with it."
     },
     {
       "name": "JURISDICTI",
-      "type": "string"
+      "type": "string",
+      "description": "Jurisdiction. Measured in the published file: Populated on 98% of 8,727 rows, 4 distinct values."
     },
     {
       "name": "FIXTURE_TY",
-      "type": "string"
+      "type": "string",
+      "description": "Fixture Type. Measured in the published file: Populated on 100% of 8,727 rows, 11 distinct values."
     },
     {
       "name": "LAMP_TYPE",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 99% of 8,727 rows, 5 distinct values."
     },
     {
       "name": "WATTS",
-      "type": "double"
+      "type": "double",
+      "description": "Watts (1). Measured in the published file: Populated on 100% of 8,727 rows, 45 distinct values, ranging 15 to 300."
     },
     {
       "name": "LUMEN",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 80% of 8,727 rows, 23 distinct values, ranging 0 to 50000."
     },
     {
       "name": "NUM_HEADS",
-      "type": "int32"
+      "type": "int32",
+      "description": "# Heads. Measured in the published file: Populated on 99% of 8,727 rows, 2 distinct values, ranging 1 to 2."
     },
     {
       "name": "RATE",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 98% of 8,727 rows, 2 distinct values."
     },
     {
       "name": "POLE_TYPES",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 97% of 8,727 rows, 23 distinct values."
     },
     {
       "name": "FEATURE_ID",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 97% of 8,727 rows, 8,459 distinct values, ranging 7143 to 4.45574e+06."
     },
     {
       "name": "DATE_INSTA",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Install Date. Measured in the published file: Populated on 94% of 8,727 rows, 1,007 distinct values."
     },
     {
       "name": "POLESUFFIX",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 97% of 8,727 rows, 8,366 distinct values, ranging 0 to 3.27076e+06."
     },
     {
       "name": "LOCATION",
-      "type": "string"
+      "type": "string",
+      "description": "Street address or place description of the feature. Measured in the published file: Populated on 99% of 8,727 rows, 8,015 distinct values."
     },
     {
       "name": "EPOLE_NUM",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 98% of 8,727 rows, 8,450 distinct values."
     },
     {
       "name": "FacilityID",
-      "type": "string"
+      "type": "string",
+      "description": "Identifier of the asset in the city's maintenance management system. Stable within that system, and the key field crews use. Measured in the published file: Populated on 100% of 8,727 rows, 8,723 distinct values."
     },
     {
       "name": "FIXTURE_INSTALL",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Fixture Install Date. Measured in the published file: Populated on 23% of 8,727 rows, 1,188 distinct values."
     },
     {
       "name": "SANDY_NUMBER",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 98% of 8,727 rows, 8,495 distinct values."
     },
     {
       "name": "created_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who created the row, from the geodatabase editor tracking."
     },
     {
       "name": "created_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world."
     },
     {
       "name": "last_edited_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who last edited the row, from the geodatabase editor tracking."
     },
     {
       "name": "last_edited_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world."
     },
     {
       "name": "STATUS",
-      "type": "string"
+      "type": "string",
+      "description": "Operational status of the feature. See the measured values below, because the source layer declares no code list. Measured in the published file: Populated on 100% of 8,727 rows, 4 distinct values."
     },
     {
       "name": "LampInstall",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Lamp Install Date. Measured in the published file: Populated on 73% of 8,727 rows, 6,262 distinct values."
     },
     {
       "name": "PoleReplace",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Pole Replace Date. Measured in the published file: Populated on 3% of 8,727 rows, 300 distinct values."
     },
     {
       "name": "WATTS_2",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 2% of 8,727 rows, 5 distinct values, ranging 45 to 105."
     },
     {
       "name": "Lamp_Temperature",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `4000K`, `3000K`, `NA`."
     },
     {
       "name": "POLE_OWNER",
-      "type": "string"
+      "type": "string",
+      "description": "Coded value. The source layer's domain allows: `Sandy City`, `Rocky Mountain Power`, `Private`, `UDOT`, `Salt Lake County`, `Communications`. Codes: `Sandy City` = Sandy City, `RMP` = Rocky Mountain Power, `Private` = Private, `UDOT` = UDOT, `Salt Lake County` = Salt Lake County, `Communications` = Communications."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 8727,

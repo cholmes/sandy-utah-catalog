@@ -9,7 +9,7 @@
   "title": "Historic Photographs",
   "description": "<DIV STYLE=\"text-align:Left;\"><DIV><DIV><P><SPAN>Sandy City Historic Photo clickable point locations from which photos were taken. Clicking brings up the images.</SPAN></P></DIV></DIV></DIV>. 159 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Historic/Historic_Photos/MapServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2413,
-      "file:checksum": "12205a94c2e1accd5e7a12b58aa0db3cf36a604ec1dd1bf1a8d2b8a091809bb744df"
+      "file:size": 2691,
+      "file:checksum": "12201fb1f3d25869c65aba4e51ffb3d9fea74ac83b8957998399bd60fbb51aaa288e"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2096,
-      "file:checksum": "1220741b684bd31588356b1688e066c0977aa88af58317a50fc04fa44961eadf944e"
+      "file:size": 3944,
+      "file:checksum": "12201ceaf17129b0ac21e8a3ed63f16ae0c1ead8702af37fc8d5fd237c15d0c08cda"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,51 +162,63 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "Description",
-      "type": "string"
+      "type": "string",
+      "description": "Description of the feature, entered by city staff. Measured in the published file: Populated on 100% of 159 rows, 110 distinct values."
     },
     {
       "name": "Date_Taken",
-      "type": "string"
+      "type": "string",
+      "description": "Date. Measured in the published file: Populated on 100% of 159 rows, 32 distinct values."
     },
     {
       "name": "Angle",
-      "type": "int16"
+      "type": "int16",
+      "description": "Rotation angle of the symbol on the city's own maps. Measured in the published file: Populated on 100% of 159 rows, 61 distinct values, ranging 0 to 358."
     },
     {
       "name": "Notes",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note entered by city staff. Unstructured and inconsistently populated."
     },
     {
       "name": "People_in_Photo",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 19% of 159 rows, 30 distinct values."
     },
     {
       "name": "Building_Still_Exists",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 91% of 159 rows, 2 distinct values."
     },
     {
       "name": "Publish",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 159 rows, 1 distinct values."
     },
     {
       "name": "URL",
-      "type": "string"
+      "type": "string",
+      "description": "Link to a page about this feature on a city or partner website."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 159,

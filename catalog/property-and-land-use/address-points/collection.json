@@ -9,7 +9,7 @@
   "title": "Address Points",
   "description": "Address points from Sandy Utility Billing, Subdivision plats, parcel data. 60,400 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Address_Points/MapServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -155,8 +155,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2412,
-      "file:checksum": "1220fdad31bace54a8e1a1cbfc4bf892392f5dc32f50ef0898d3032c75b38688a800"
+      "file:size": 2690,
+      "file:checksum": "1220ab9020622105c5c6f4e86630d22efdaef901b19d9bf7fd71d3760ab742636c6e"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -165,8 +165,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3815,
-      "file:checksum": "12201a627060b93f29df418ce27d7efb798c5394f3efa5f7396b4a866e5ccfcf84f6"
+      "file:size": 10480,
+      "file:checksum": "1220d8eff86b7fd93f53959492e981f2fa1e7457968df25ac8019e1a9522271428e0"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -182,151 +182,188 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "Parcel_Id",
-      "type": "string"
+      "type": "string",
+      "description": "County parcel number, joining to `parcels.parcel_id`. 54,000 of 60,400 address points match a parcel."
     },
     {
       "name": "Address",
-      "type": "string"
+      "type": "string",
+      "description": "Full address string. Joins to `lead-service-lines.address` after upper-casing and trimming; 22,597 of 26,213 service lines match."
     },
     {
       "name": "HSNO",
-      "type": "int32"
+      "type": "int32",
+      "description": "House number component of the address."
     },
     {
       "name": "DIR",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 97% of 60,400 rows, 9 distinct values."
     },
     {
       "name": "STREET",
-      "type": "string"
+      "type": "string",
+      "description": "Street the feature lies on. Measured in the published file: Populated on 100% of 60,400 rows, 2,703 distinct values."
     },
     {
       "name": "SFX",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 79% of 60,400 rows, 32 distinct values."
     },
     {
       "name": "STREET_DIR",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 21% of 60,400 rows, 13 distinct values."
     },
     {
       "name": "APT",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 16% of 60,400 rows, 2,326 distinct values."
     },
     {
       "name": "Municipality",
-      "type": "string"
+      "type": "string",
+      "description": "Municipality the feature falls in. Several Sandy layers extend into neighbouring cities, so this is how to select Sandy's own. Measured in the published file: Populated on 100% of 60,400 rows, 9 distinct values."
     },
     {
       "name": "Zip",
-      "type": "string"
+      "type": "string",
+      "description": "Postal ZIP code. Measured in the published file: Populated on 100% of 60,400 rows, 13 distinct values."
     },
     {
       "name": "Zip_Four",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 44% of 60,400 rows, 5,173 distinct values."
     },
     {
       "name": "InSandy",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the address is inside the Sandy city limit. The layer covers neighbouring municipalities too, so filter on this to get Sandy only: 38,854 of 60,400 rows are inside."
     },
     {
       "name": "Prop_Type",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 60,400 rows, 11 distinct values."
     },
     {
       "name": "Prop_Subtype",
-      "type": "string"
+      "type": "string",
+      "description": "Coded value. The source layer's domain allows: `Apartment`, `Condominium`, `Duplex`, `Mobile Home`, `Elderly Housing`, `Commercial`, `Educational`, `Medical`, `Religious`, `Government`, and 8 more. Codes: `Apartment` = Apartment, `Condominium` = Condominium, `Duplex` = Duplex, `Mobile Home` = Mobile Home, `Elderly Housing` = Elderly Housing, `Commercial` = Commercial, `Educational` = Educational, `Medical` = Medical, `Religious` = Religious, `Government` = Government, `Land` = Land, `Townhome` = Townhome."
     },
     {
       "name": "IsRental",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the property is registered as a rental. Carries both Yes/No and 1/0 forms, so normalise before grouping."
     },
     {
       "name": "Building_Units",
-      "type": "int16"
+      "type": "int16",
+      "description": "Number of dwelling units at the address."
     },
     {
       "name": "Complex_Name",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 39% of 60,400 rows, 660 distinct values."
     },
     {
       "name": "Alias_ID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 93% of 60,400 rows, 56,179 distinct values, ranging 1 to 83281."
     },
     {
       "name": "Alias_Street",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 77% of 60,400 rows, 1,573 distinct values."
     },
     {
       "name": "Alias_Suffix_Dir",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 77% of 60,400 rows, 3 distinct values."
     },
     {
       "name": "Updated_Date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 60,400 rows, 389 distinct values."
     },
     {
       "name": "Updated_By",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 60,400 rows, 13 distinct values."
     },
     {
       "name": "Year_Built",
-      "type": "string"
+      "type": "string",
+      "description": "Year the feature was built. Measured in the published file: Populated on 100% of 60,400 rows, 154 distinct values."
     },
     {
       "name": "Comment",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note entered by city staff. Unstructured and inconsistently populated."
     },
     {
       "name": "Source",
-      "type": "string"
+      "type": "string",
+      "description": "Where the record came from. Measured in the published file: Populated on 100% of 60,400 rows, 70 distinct values."
     },
     {
       "name": "Placement",
-      "type": "string"
+      "type": "string",
+      "description": "Coded value. The source layer's domain allows: `Placed Photo Verified`, `Placed Field Verified`, `Empty Parcel`, `Unplaced`, `Unplaced Examined`, `Duplicate`. Codes: `0` = Placed Photo Verified, `1` = Placed Field Verified, `2` = Empty Parcel, `3` = Unplaced, `4` = Unplaced Examined, `5` = Duplicate."
     },
     {
       "name": "X_Coord",
-      "type": "double"
+      "type": "double",
+      "description": "X coordinate copied into an attribute. The geometry column is authoritative. Measured in the published file: Populated on 100% of 60,400 rows, 58,854 distinct values, ranging 1.50894e+06 to 1.56345e+06."
     },
     {
       "name": "Y_Coord",
-      "type": "double"
+      "type": "double",
+      "description": "Y coordinate copied into an attribute. The geometry column is authoritative. Measured in the published file: Populated on 100% of 60,400 rows, 58,989 distinct values, ranging 7.33612e+06 to 7.39852e+06."
     },
     {
       "name": "Addy_ID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 60,400 rows, 60,391 distinct values, ranging 1 to 66640."
     },
     {
       "name": "Addy_ID_Text",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 60,400 rows, 60,391 distinct values."
     },
     {
       "name": "PPH_Approx",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 99% of 60,400 rows, 1,049 distinct values, ranging 0 to 48."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "Municipality_Code",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 89% of 60,400 rows, 11 distinct values."
     },
     {
       "name": "New_Municipality_Code",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 89% of 60,400 rows, 7 distinct values."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 60400,

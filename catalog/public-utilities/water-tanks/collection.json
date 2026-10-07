@@ -9,7 +9,7 @@
   "title": "Water Tanks",
   "description": "Sandy Water Tank Points. 9 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/SandyTank_and_Well_Points/FeatureServer/1",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2146,
-      "file:checksum": "1220c783b9c8503cbb2aeeb1025a7682c1488d43a3c50c845e56f9f72d995829eeb7"
+      "file:size": 2424,
+      "file:checksum": "1220f1bf58e6279c057a930f4530504e133fec183c17ce51a57158c66002ba02a40a"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3079,
-      "file:checksum": "1220aab0a4a30497b4bb41d3b0474a4ff8fcb76ed8c50871a8c12a92cdd7396bcd16"
+      "file:size": 6965,
+      "file:checksum": "122058c341021e36e73f3747d01783f543ee4fe3274f2d7e73ae92b792d1e91e4d79"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,147 +162,183 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "PubUtils.PU.SandyTanks_Points.AREA",
-      "type": "double"
+      "type": "double",
+      "description": "AREA. Measured in the published file: Populated on 78% of 9 rows, 1 distinct values."
     },
     {
       "name": "PERIMETER",
-      "type": "double"
+      "type": "double",
+      "description": "Polygon perimeter carried as an attribute, in the units of the source coordinate system. Recompute from the geometry rather than trusting it. Measured in the published file: Populated on 78% of 9 rows, 1 distinct values."
     },
     {
       "name": "SANDY_TANKS_",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 9 rows, 9 distinct values, ranging 2 to 12."
     },
     {
       "name": "SANDY_TANKS_ID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 9 rows, 9 distinct values, ranging 2 to 12."
     },
     {
       "name": "TANK_NAME",
-      "type": "string"
+      "type": "string",
+      "description": "Name of the storage tank."
     },
     {
       "name": "LOCATION",
-      "type": "string"
+      "type": "string",
+      "description": "Street address or place description of the feature. Measured in the published file: Populated on 100% of 9 rows, 9 distinct values."
     },
     {
       "name": "CAPACITY",
-      "type": "string"
+      "type": "string",
+      "description": "Nominal capacity, written with its unit, such as `5 MG` for five million gallons."
     },
     {
       "name": "FLOOR_EL",
-      "type": "double"
+      "type": "double",
+      "description": "Elevation of the tank floor, in feet."
     },
     {
       "name": "GROUND_EL",
-      "type": "double"
+      "type": "double",
+      "description": "Ground elevation at the tank, in feet."
     },
     {
       "name": "OVER_EL",
-      "type": "double"
+      "type": "double",
+      "description": "Overflow elevation, in feet. The difference from ground level sets the pressure the tank delivers."
     },
     {
       "name": "OVER_DEPTH",
-      "type": "double"
+      "type": "double",
+      "description": "Water depth at overflow, in feet."
     },
     {
       "name": "DIMENSIONS",
-      "type": "string"
+      "type": "string",
+      "description": "Physical dimensions of the tank."
     },
     {
       "name": "ZONE_",
-      "type": "double"
+      "type": "double",
+      "description": "Water pressure zone the tank serves, joining to `water-pressure-zones`."
     },
     {
       "name": "CONST_TYPE",
-      "type": "string"
+      "type": "string",
+      "description": "Construction type of the tank, such as concrete or steel."
     },
     {
       "name": "YEAR_CONST",
-      "type": "double"
+      "type": "double",
+      "description": "Year the tank was built."
     },
     {
       "name": "MGCAPACITY",
-      "type": "double"
+      "type": "double",
+      "description": "Capacity in millions of gallons, as a number."
     },
     {
       "name": "ENGINEER",
-      "type": "string"
+      "type": "string",
+      "description": "Engineering firm that designed the tank."
     },
     {
       "name": "CONTRACTOR",
-      "type": "string"
+      "type": "string",
+      "description": "Contractor that built the tank."
     },
     {
       "name": "MAINT_DATE",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date of the last recorded maintenance."
     },
     {
       "name": "MAINT_TYPE",
-      "type": "string"
+      "type": "string",
+      "description": "Type of the last recorded maintenance."
     },
     {
       "name": "X_COORD",
-      "type": "double"
+      "type": "double",
+      "description": "X coordinate copied into an attribute. The geometry is authoritative."
     },
     {
       "name": "Y_COORD",
-      "type": "double"
+      "type": "double",
+      "description": "Y coordinate copied into an attribute."
     },
     {
       "name": "FACILITYID",
-      "type": "string"
+      "type": "string",
+      "description": "Identifier of the asset in the city's maintenance management system. Stable within that system, and the key field crews use. Measured in the published file: Populated on 100% of 9 rows, 9 distinct values."
     },
     {
       "name": "POLYGONID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Identifier carried over from an earlier coverage format. Measured in the published file: Populated on 78% of 9 rows, 1 distinct values."
     },
     {
       "name": "SCALE",
-      "type": "double"
+      "type": "double",
+      "description": "Cartographic scale the symbol is drawn at on the city's own maps. Measured in the published file: Populated on 78% of 9 rows, 1 distinct values."
     },
     {
       "name": "ANGLE",
-      "type": "double"
+      "type": "double",
+      "description": "Rotation angle of the symbol on the city's own maps. Measured in the published file: Populated on 78% of 9 rows, 1 distinct values."
     },
     {
       "name": "Enabled",
-      "type": "int16"
+      "type": "int16",
+      "description": "Coded value. The source layer's domain allows: `False`, `True`. Codes: `0` = False, `1` = True."
     },
     {
       "name": "AncillaryRole",
-      "type": "int16"
+      "type": "int16",
+      "description": "Coded value. The source layer's domain allows: `None`, `Source`, `Sink`. Codes: `0` = None, `1` = Source, `2` = Sink."
     },
     {
       "name": "CONST_STATUS",
-      "type": "string"
+      "type": "string",
+      "description": "Construction status of the asset. Measured in the published file: Populated on 11% of 9 rows, 1 distinct values."
     },
     {
       "name": "created_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who created the row, from the geodatabase editor tracking."
     },
     {
       "name": "created_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world."
     },
     {
       "name": "last_edited_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who last edited the row, from the geodatabase editor tracking."
     },
     {
       "name": "last_edited_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 9,

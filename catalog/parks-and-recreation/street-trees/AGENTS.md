@@ -17,34 +17,88 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 26 columns, 7,966 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `Address` | string |
-| `Species` | string |
-| `Other_Spec` | string |
-| `Tree_ID_` | int32 |
-| `Caliper` | string |
-| `Height` | string |
-| `Condition` | string |
-| `Max_PDOP` | double |
-| `Collection_date` | timestamp[ms] |
-| `Status` | string |
-| `Comments` | string |
-| `Photo` | string |
-| `AssetID` | string |
-| `Location` | string |
-| `Disease_Abiotic` | string |
-| `Disease_Biotic` | string |
-| `Disease_Comment` | string |
-| `Disease_Date` | timestamp[ms] |
-| `Hazard` | string |
-| `Hazard_Date` | timestamp[ms] |
-| `Pruning_Needs` | string |
-| `Pruning_Date` | timestamp[ms] |
-| `Tree_Value` | string |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+
+**Where these meanings come from.** Public tree inventory maintained by Sandy City Parks and Recreation, collected in the field with GPS.
+
+26 of 26 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`Address`** — *string*  
+Street address of the feature. Measured in the published file: Populated on 99% of 7,966 rows, 170 distinct values.
+
+**`Species`** — *string*  
+Tree species.
+
+**`Other_Spec`** — *string*  
+Species written in free text where it is not on the pick list.
+
+**`Tree_ID_`** — *int32*  
+Identifier of the tree in the inventory.
+
+**`Caliper`** — *string*  
+Trunk diameter, in inches. Arborists measure caliper at a standard height above ground.
+
+**`Height`** — *string*  
+Tree height, in feet.
+
+**`Condition`** — *string*  
+Condition assessed at the last inspection.
+
+**`Max_PDOP`** — *double*  
+Positional dilution of precision at capture. A GPS quality measure where a lower number means a better fix.
+
+**`Collection_date`** — *timestamp[ms]*  
+Date the tree was surveyed in the field.
+
+**`Status`** — *string*  
+Operational status of the feature. See the measured values below, because the source layer declares no code list. Measured in the published file: Populated on 49% of 7,966 rows, 4 distinct values.
+
+**`Comments`** — *string*  
+Free-text note entered by city staff. Unstructured and inconsistently populated.
+
+**`Photo`** — *string*  
+Reference to a field photograph of the tree.
+
+**`AssetID`** — *string*  
+Identifier of the asset in the city's maintenance management system. Measured in the published file: Populated on 99% of 7,966 rows, 7,899 distinct values.
+
+**`Location`** — *string*  
+Street address or place description of the feature. Measured in the published file: Populated on 100% of 7,966 rows, 153 distinct values.
+
+**`Disease_Abiotic`** — *string*  
+Non-living stress affecting the tree, such as drought or soil compaction.
+
+**`Disease_Biotic`** — *string*  
+Living agent affecting the tree, such as an insect or a fungus.
+
+**`Disease_Comment`** — *string*  
+Note on the tree's health.
+
+**`Disease_Date`** — *timestamp[ms]*  
+Date the health problem was recorded.
+
+**`Hazard`** — *string*  
+Type of hazard mapped. Empty in all 7,966 rows of the published file.
+
+**`Hazard_Date`** — *timestamp[ms]*  
+Date the tree was recorded as a hazard.
+
+**`Pruning_Needs`** — *string*  
+Pruning the tree requires.
+
+**`Pruning_Date`** — *timestamp[ms]*  
+Date the tree was last pruned.
+
+**`Tree_Value`** — *string*  
+Appraised value of the tree, in dollars. Municipal tree inventories carry this to support claims when a tree is damaged.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -63,5 +117,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Grounds_and_Forestry/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Grounds_and_Forestry/FeatureServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Grounds_and_Forestry/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Grounds_and_Forestry/FeatureServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

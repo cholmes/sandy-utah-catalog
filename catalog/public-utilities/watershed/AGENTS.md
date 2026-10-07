@@ -17,19 +17,40 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 11 columns, 13 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `PubUtils.PU.watershed.AREA` | double |
-| `PERIMETER` | double |
-| `WATERSHED_` | int32 |
-| `WATERSHED_ID` | int32 |
-| `ID` | int32 |
-| `WATERSHED` | string |
-| `Shape__Area` | double |
-| `Shape__Length` | double |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+7 of 11 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`PubUtils.PU.watershed.AREA`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 13 rows, 13 distinct values, ranging 210.466 to 6.12176e+07.
+
+**`PERIMETER`** — *double*  
+Polygon perimeter carried as an attribute, in the units of the source coordinate system. Recompute from the geometry rather than trusting it. Measured in the published file: Populated on 100% of 13 rows, 13 distinct values, ranging 125.284 to 46801.8.
+
+**`WATERSHED_`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 13 rows, 13 distinct values, ranging 2 to 14.
+
+**`WATERSHED_ID`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 13 rows, 9 distinct values, ranging 0 to 8.
+
+**`ID`** — *int32*  
+Identifier assigned by the source layer. Measured in the published file: Populated on 100% of 13 rows, 1 distinct values.
+
+**`WATERSHED`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 69% of 13 rows, 8 distinct values.
+
+**`Shape__Area`** — *double*  
+Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited.
+
+**`Shape__Length`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -48,5 +69,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Watershed/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Watershed/FeatureServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Watershed/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Watershed/FeatureServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

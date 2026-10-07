@@ -9,7 +9,7 @@
   "title": "Historic Sandy Walking Tour",
   "description": "Historical sites in Sandy City, Utah. 17 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Historic/Historic_Tour/MapServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2259,
-      "file:checksum": "1220ecd5877d437046f40b5ceb60ca3c94b8c8bd089afea81c3d4f2ac4f5257d6ade"
+      "file:size": 2537,
+      "file:checksum": "12208e16480c6bca804a084dbba0311360670e94efa740f7c2fc9fed9d49225c6fd4"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2138,
-      "file:checksum": "12206c886e0314249380e11c73064684a3250afa894f866c788f82793877a17bd2b0"
+      "file:size": 4303,
+      "file:checksum": "122010fec745991a1c4ff79b65b05a748978a7dc980aa066c6541bf0ab95bf7c48a7"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,55 +162,68 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "SiteID",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values."
     },
     {
       "name": "Name",
-      "type": "string"
+      "type": "string",
+      "description": "Name of the feature. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values."
     },
     {
       "name": "Address",
-      "type": "string"
+      "type": "string",
+      "description": "Street address of the feature. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values."
     },
     {
       "name": "URL",
-      "type": "string"
+      "type": "string",
+      "description": "Link to a page about this feature on a city or partner website."
     },
     {
       "name": "Walking_Tour_Seq",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values, ranging 1 to 17."
     },
     {
       "name": "Bus_Tour_Seq",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 88% of 17 rows, 15 distinct values, ranging 2 to 99."
     },
     {
       "name": "Thumb_URL",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values."
     },
     {
       "name": "Icon_color",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 17 rows, 1 distinct values."
     },
     {
       "name": "Description",
-      "type": "string"
+      "type": "string",
+      "description": "Description of the feature, entered by city staff. Measured in the published file: Populated on 59% of 17 rows, 10 distinct values."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 17,

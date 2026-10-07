@@ -9,7 +9,7 @@
   "title": "Storm Drain Pipes",
   "description": "Storm Drain Pipes in Sandy City, Utah. The upstream service publishes no description for this layer. 19,492 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/StormDrain/FeatureServer/6",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2662,
-      "file:checksum": "1220917505ec6293b7682f4ab9f8ce1ce00f2d6d34f801f901800d7a0dac9763b9d7"
+      "file:size": 2940,
+      "file:checksum": "1220f542942f358b1f8298e4275f44dfc043b6d557774f123f35b1243db95fed558e"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -155,8 +155,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 5221,
-      "file:checksum": "122058277aba56eb43bfd5f6fb82f4d65dd50f7107569b74e3d8c2209e4f38fa9de7"
+      "file:size": 13862,
+      "file:checksum": "1220fcc35e9689d4791c817f82fed735525882702382c5065dde373ca4f56ab37d1d"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -172,199 +172,248 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "FacilityID",
-      "type": "string"
+      "type": "string",
+      "description": "Identifier of the asset in the city's maintenance management system. Stable within that system, and the key field crews use. Measured in the published file: Populated on 100% of 19,492 rows, 19,484 distinct values."
     },
     {
       "name": "PIPE_TYPE",
-      "type": "string"
+      "type": "string",
+      "description": "Coded value. The source layer's domain allows: `RCP`, `CMP`, `ADS`, `PVC`, `DIP`, `SMP`, `Open Ditch`, `Combo Box`, `Box Culvert`, `CCCP`, and 6 more. Codes: `RCP` = RCP, `CMP` = CMP, `ADS` = ADS, `PVC` = PVC, `DIP` = DIP, `SMP` = SMP, `OD` = Open Ditch, `CB` = Combo Box, `BC` = Box Culvert, `CCCP` = CCCP, `HDP` = HDPE, `SUM` = Sump."
     },
     {
       "name": "IRRIGATION",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 19,492 rows, 5 distinct values, ranging 0 to 4."
     },
     {
       "name": "PIPE_SIZE",
-      "type": "double"
+      "type": "double",
+      "description": "Nominal pipe diameter, in inches. Measured in the published file: Populated on 92% of 19,492 rows, 57 distinct values, ranging 0 to 144."
     },
     {
       "name": "INVERT_IN",
-      "type": "double"
+      "type": "double",
+      "description": "Elevation of the pipe invert where flow enters the structure. The invert is the inside bottom of the pipe. Measured in the published file: Populated on 44% of 19,492 rows, 7,958 distinct values, ranging 0 to 5778.25."
     },
     {
       "name": "INVERT_OUT",
-      "type": "double"
+      "type": "double",
+      "description": "Elevation of the pipe invert where flow leaves the structure. Measured in the published file: Populated on 36% of 19,492 rows, 5,015 distinct values, ranging 0 to 450728."
     },
     {
       "name": "DIP_IN",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 44% of 19,492 rows, 526 distinct values, ranging -1 to 4472.54."
     },
     {
       "name": "DIP_OUT",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 36% of 19,492 rows, 427 distinct values, ranging -1 to 671."
     },
     {
       "name": "ACTIVE",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the asset is in service. Measured in the published file: Populated on 64% of 19,492 rows, 3 distinct values."
     },
     {
       "name": "RuleID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Esri symbology rule identifier. It selects a renderer class in the city's own map documents and carries no meaning about the feature itself."
     },
     {
       "name": "Comments",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note entered by city staff. Unstructured and inconsistently populated."
     },
     {
       "name": "link",
-      "type": "string"
+      "type": "string",
+      "description": "Link to a page about this feature on a city or partner website."
     },
     {
       "name": "PROJECT",
-      "type": "string"
+      "type": "string",
+      "description": "Capital project the asset was built or replaced under. Measured in the published file: Populated on 25% of 19,492 rows, 316 distinct values."
     },
     {
       "name": "OWNERSHIP",
-      "type": "string"
+      "type": "string",
+      "description": "Who owns the asset. Sandy's utility layers include assets owned by other cities, the county, UDOT and private parties. Measured in the published file: Populated on 100% of 19,492 rows, 6 distinct values."
     },
     {
       "name": "DATEINSTALLED",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the asset was installed. Measured in the published file: Populated on 29% of 19,492 rows, 189 distinct values."
     },
     {
       "name": "InvertNum",
-      "type": "int32"
+      "type": "int32",
+      "description": "Identifier of the invert within the structure, where a structure has more than one connecting pipe. Measured in the published file: Populated on 5% of 19,492 rows, 2 distinct values, ranging 0 to 1."
     },
     {
       "name": "PRIORITY",
-      "type": "string"
+      "type": "string",
+      "description": "Maintenance or response priority assigned by the city. Measured in the published file: Populated on 0% of 19,492 rows, 1 distinct values."
     },
     {
       "name": "STATUS",
-      "type": "string"
+      "type": "string",
+      "description": "Operational status of the feature. See the measured values below, because the source layer declares no code list. Measured in the published file: Populated on 100% of 19,492 rows, 4 distinct values."
     },
     {
       "name": "INVESTIGATE",
-      "type": "string"
+      "type": "string",
+      "description": "Flag set by staff where the record needs field verification. Measured in the published file: Populated on 66% of 19,492 rows, 10 distinct values."
     },
     {
       "name": "CONDITION",
-      "type": "int32"
+      "type": "int32",
+      "description": "One of. The source layer's domain allows: `0`, `1`, `2`, `3`, `4`, `5`."
     },
     {
       "name": "CRITICALITY",
-      "type": "int32"
+      "type": "int32",
+      "description": "One of. The source layer's domain allows: `0`, `1`, `2`, `3`, `4`, `5`."
     },
     {
       "name": "Cond_Age",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 5% of 19,492 rows, 1 distinct values."
     },
     {
       "name": "Cond_Inspection",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 5% of 19,492 rows, 1 distinct values."
     },
     {
       "name": "Cond_Material",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 14% of 19,492 rows, 4 distinct values, ranging 0 to 100."
     },
     {
       "name": "Crit_Size",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 9% of 19,492 rows, 11 distinct values, ranging 0 to 105."
     },
     {
       "name": "Crit_Loc",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 9% of 19,492 rows, 11 distinct values, ranging 0 to 105."
     },
     {
       "name": "Crit_Irr",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 9% of 19,492 rows, 6 distinct values, ranging -2 to 105."
     },
     {
       "name": "Total_Score",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 8% of 19,492 rows, 18 distinct values, ranging 0 to 209."
     },
     {
       "name": "InspDate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date of the most recent inspection. Measured in the published file: Populated on 9% of 19,492 rows, 936 distinct values."
     },
     {
       "name": "PipeCond",
-      "type": "string"
+      "type": "string",
+      "description": "Pipe Condition. Coded value. The source layer's domain allows: `0 - New or Perfect Condition`, `1 - Excellent Condition`, `2 - Good Condition (Minor Defects Only)`, `3 - Fair Condition (Moderate Deterioration)`, `4 - Poor Condition (Significant Deterioration)`, `5 - Failing or Failed`. Codes: `0` = 0 - New or Perfect Condition, `1` = 1 - Excellent Condition, `2` = 2 - Good Condition (Minor Defects Only), `3` = 3 - Fair Condition (Moderate Deterioration), `4` = 4 - Poor Condition (Significant Deterioration), `5` = 5 - Failing or Failed."
     },
     {
       "name": "MaintRating",
-      "type": "string"
+      "type": "string",
+      "description": "Maintenance condition rating assigned at the last inspection. The source layer declares no code list, so the scale is not documented. Measured in the published file: Populated on 4% of 19,492 rows, 5 distinct values."
     },
     {
       "name": "MaintSched",
-      "type": "string"
+      "type": "string",
+      "description": "How often the asset is scheduled for maintenance. Measured in the published file: Populated on 68% of 19,492 rows, 2 distinct values."
     },
     {
       "name": "InspectionZone",
-      "type": "int16"
+      "type": "int16",
+      "description": "Inspection zone the asset is grouped into for scheduling. Measured in the published file: Populated on 67% of 19,492 rows, 6 distinct values, ranging 0 to 5."
     },
     {
       "name": "Shape__Length",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "PIPE_SHAPE",
-      "type": "string"
+      "type": "string",
+      "description": "Coded value. The source layer's domain allows: `Arched`, `Barrel`, `Circular`, `Egg-shaped`, `Horseshoe`, `Other`, `Oval`, `Rectangle`, `Square`, `Trapezoidal`, and 2 more. Codes: `Arched` = Arched, `Barrel` = Barrel, `Circular` = Circular, `Egg` = Egg-shaped, `Horseshoe` = Horseshoe, `Other` = Other, `Oval` = Oval, `Rectangle` = Rectangle, `Square` = Square, `Trapezoidal` = Trapezoidal, `U-shaped with flat top` = U-shaped with flat top, `Unknown` = Unknown."
     },
     {
       "name": "created_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who created the row, from the geodatabase editor tracking."
     },
     {
       "name": "created_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world."
     },
     {
       "name": "last_edited_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who last edited the row, from the geodatabase editor tracking."
     },
     {
       "name": "last_edited_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world."
     },
     {
       "name": "IrrigationLine",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 1% of 19,492 rows, 4 distinct values."
     },
     {
       "name": "CUES_SCORE",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 7% of 19,492 rows, 55 distinct values, ranging 0 to 100."
     },
     {
       "name": "CUES_ADJ_SCORE",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 7% of 19,492 rows, 20 distinct values, ranging 0 to 5."
     },
     {
       "name": "VideoDate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 10% of 19,492 rows, 1,500 distinct values."
     },
     {
       "name": "AssetStatus",
-      "type": "string"
+      "type": "string",
+      "description": "Where the asset sits in the capital planning cycle. Measured in the published file: Populated on 46% of 19,492 rows, 7 distinct values."
     },
     {
       "name": "VerifiedDate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 4% of 19,492 rows, 850 distinct values."
     },
     {
       "name": "VerifiedBy",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 4% of 19,492 rows, 12 distinct values."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 19492,

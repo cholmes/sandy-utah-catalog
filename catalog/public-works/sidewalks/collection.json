@@ -9,7 +9,7 @@
   "title": "Sidewalks",
   "description": "Sidewalk Inventory (In Progress) This layer will be used to identify areas that are missing sidewalks and help calculate an estimated cost of adding sidewalks where needed. 8,586 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Sidewalks/MapServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2252,
-      "file:checksum": "12207171de1bb7868a988f34734975107abdbbd2e2fea8d0b27dc3989348464843f0"
+      "file:size": 2530,
+      "file:checksum": "1220d90b454c29289ffd4688fcca541f6f95ad8c6e89a33eb01854300d708687aa41"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3017,
-      "file:checksum": "12208bbc8c5e7d0e0d5b95c63c85bb49441228c73d2ce6443ceb761b7b22e49a057c"
+      "file:size": 8305,
+      "file:checksum": "12203d84bed444ed564722a8f2a2f7ea9882834a6ba06111edc118f7600df2ef2d91"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,151 +162,188 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "PMA",
-      "type": "string"
+      "type": "string",
+      "description": "Pavement management area the segment belongs to."
     },
     {
       "name": "PWA",
-      "type": "string"
+      "type": "string",
+      "description": "Public works area the segment belongs to."
     },
     {
       "name": "CityCouncil",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy city council district the feature falls in. Measured in the published file: Populated on 100% of 8,586 rows, 4 distinct values."
     },
     {
       "name": "Description",
-      "type": "string"
+      "type": "string",
+      "description": "Description of the feature, entered by city staff. Measured in the published file: Populated on 100% of 8,586 rows, 5 distinct values."
     },
     {
       "name": "Width",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sidewalk width, in feet."
     },
     {
       "name": "ApproxSqFt",
-      "type": "int32"
+      "type": "int32",
+      "description": "Approximate surface area, in square feet."
     },
     {
       "name": "Miles",
-      "type": "double"
+      "type": "double",
+      "description": "Segment length, in miles."
     },
     {
       "name": "PubRightofWay",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the sidewalk sits in the public right of way."
     },
     {
       "name": "Jurisdiction",
-      "type": "string"
+      "type": "string",
+      "description": "Jurisdiction the sidewalk falls in."
     },
     {
       "name": "MaintainedBy",
-      "type": "string"
+      "type": "string",
+      "description": "Who maintains the sidewalk."
     },
     {
       "name": "SideOfStreet",
-      "type": "string"
+      "type": "string",
+      "description": "Which side of the street the segment runs along."
     },
     {
       "name": "ApproxSections",
-      "type": "int16"
+      "type": "int16",
+      "description": "Approximate number of concrete sections in the segment."
     },
     {
       "name": "OverallCondition",
-      "type": "double"
+      "type": "double",
+      "description": "Overall condition assigned at the last survey."
     },
     {
       "name": "CrackedSections_1",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "CrackedSections_2",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "CrackedSections_3",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "CrackedSections_4",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "SpallingSections_1",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "SpallingSections_2",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "SpallingSections_3",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "SpallingSections_4",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "SunkSections_1",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "SunkSections_2",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "SunkSections_3",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "SunkSections_4",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "RaisedSections_1",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "RaisedSections_2",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "RaisedSections_3",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "RaisedSections_4",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 0% of 8,586 rows, 1 distinct values."
     },
     {
       "name": "QualityRating",
-      "type": "double"
+      "type": "double",
+      "description": "Quality rating derived from the defect counts."
     },
     {
       "name": "EstReplacementCost",
-      "type": "double"
+      "type": "double",
+      "description": "Estimated replacement cost, in dollars."
     },
     {
       "name": "Comments",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note entered by city staff. Unstructured and inconsistently populated."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "Shape.STLength()",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 8586,

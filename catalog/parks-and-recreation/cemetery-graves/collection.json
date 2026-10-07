@@ -9,7 +9,7 @@
   "title": "Sandy City Cemetery Graves",
   "description": "Provides access to the Sandy City, Utah Cemetery data. 11,695 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Parks/Sandy_Cemetery/FeatureServer/37",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2395,
-      "file:checksum": "12208baf877250447dbe800cecae216df0c7d91c8099fd0a39b876e351256b8aa31f"
+      "file:size": 2673,
+      "file:checksum": "1220a3598b2c7f4fb2392d0207b668d2530ee5582f232a9e1727dfe7bd1bf64a9b89"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -155,8 +155,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3879,
-      "file:checksum": "1220359a239ddb1da9c5fe2cfe4fe700ff58031ed3b1200bdc79e37563f650801d07"
+      "file:size": 8567,
+      "file:checksum": "1220a56e14c1d720476d84cb03c4b47faca12e4112ce1dbb7327ead9ade55e00913d"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -172,243 +172,303 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "Grave_ID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Identifier of the grave plot within the cemetery."
     },
     {
       "name": "BurialID",
-      "type": "double"
+      "type": "double",
+      "description": "Identifier of the burial record."
     },
     {
       "name": "Section",
-      "type": "string"
+      "type": "string",
+      "description": "Cemetery section the plot lies in."
     },
     {
       "name": "Section_Lot",
-      "type": "string"
+      "type": "string",
+      "description": "Section and lot, concatenated."
     },
     {
       "name": "Section_Lot_Grave",
-      "type": "string"
+      "type": "string",
+      "description": "Full plot address as section, lot and grave."
     },
     {
       "name": "Status",
-      "type": "int16"
+      "type": "int16",
+      "description": "Operational status of the feature. See the measured values below, because the source layer declares no code list. Measured in the published file: Populated on 100% of 11,695 rows, 6 distinct values, ranging 1 to 9."
     },
     {
       "name": "Deceased",
-      "type": "string"
+      "type": "string",
+      "description": "Name of the person buried, as recorded in the register."
     },
     {
       "name": "LastName",
-      "type": "string"
+      "type": "string",
+      "description": "Surname of the person buried."
     },
     {
       "name": "FirstMidName",
-      "type": "string"
+      "type": "string",
+      "description": "Given and middle names of the person buried."
     },
     {
       "name": "Death_Place",
-      "type": "string"
+      "type": "string",
+      "description": "Place of death, as recorded."
     },
     {
       "name": "Race",
-      "type": "string"
+      "type": "string",
+      "description": "Race as written in the register. This is a historical record and reflects the categories and language of the time it was written, not current usage. Populated on 65% of rows."
     },
     {
       "name": "Birthplace",
-      "type": "string"
+      "type": "string",
+      "description": "Place of birth, as recorded."
     },
     {
       "name": "Father",
-      "type": "string"
+      "type": "string",
+      "description": "Father's name, as recorded."
     },
     {
       "name": "Father_Nationality",
-      "type": "string"
+      "type": "string",
+      "description": "Father's nationality, as recorded."
     },
     {
       "name": "Mother",
-      "type": "string"
+      "type": "string",
+      "description": "Mother's name, as recorded."
     },
     {
       "name": "Mother_Nationality",
-      "type": "string"
+      "type": "string",
+      "description": "Mother's nationality, as recorded."
     },
     {
       "name": "BIRTH_MO",
-      "type": "int16"
+      "type": "int16",
+      "description": "Month of birth as a number. Zero where unrecorded."
     },
     {
       "name": "BIRTH_DAY",
-      "type": "int16"
+      "type": "int16",
+      "description": "Day of birth. Zero where unrecorded."
     },
     {
       "name": "BIRTH_YEAR",
-      "type": "int16"
+      "type": "int16",
+      "description": "Year of birth. Zero where the register does not record it; 4,889 of 11,695 rows carry a usable year, ranging 1800 to 2015."
     },
     {
       "name": "BirthDate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date of birth as a single value, where the register records a complete date."
     },
     {
       "name": "DEATH_MO",
-      "type": "int16"
+      "type": "int16",
+      "description": "Month of death as a number. Zero where unrecorded."
     },
     {
       "name": "DEATH_DAY",
-      "type": "int16"
+      "type": "int16",
+      "description": "Day of death. Zero where unrecorded."
     },
     {
       "name": "DEATH_YEAR",
-      "type": "int16"
+      "type": "int16",
+      "description": "Year of death. Zero where unrecorded."
     },
     {
       "name": "DeathDate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date of death as a single value."
     },
     {
       "name": "BURIAL_MO",
-      "type": "int16"
+      "type": "int16",
+      "description": "Month of burial as a number. Zero where unrecorded."
     },
     {
       "name": "BURIAL_DAY",
-      "type": "int16"
+      "type": "int16",
+      "description": "Day of burial. Zero where unrecorded."
     },
     {
       "name": "BURIAL_YEAR",
-      "type": "int16"
+      "type": "int16",
+      "description": "Year of burial. Zero where unrecorded."
     },
     {
       "name": "BurialDate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date of burial as a single value."
     },
     {
       "name": "Burial_Receipt_Num",
-      "type": "string"
+      "type": "string",
+      "description": "Receipt number for the burial fee. Some values resemble telephone numbers; they are receipt numbers."
     },
     {
       "name": "Burial_Amount_Paid",
-      "type": "double"
+      "type": "double",
+      "description": "Fee paid for the burial, in dollars."
     },
     {
       "name": "Social_Status_old",
-      "type": "string"
+      "type": "string",
+      "description": "Earlier value of the status field, kept from a previous version of the register."
     },
     {
       "name": "Social_Status",
-      "type": "int16"
+      "type": "int16",
+      "description": "Marital or family status at death."
     },
     {
       "name": "Gender",
-      "type": "string"
+      "type": "string",
+      "description": "Sex of the person buried, as recorded."
     },
     {
       "name": "Cause_of_Death",
-      "type": "string"
+      "type": "string",
+      "description": "Cause of death, as written in the register."
     },
     {
       "name": "Veteran",
-      "type": "int16"
+      "type": "int16",
+      "description": "Veteran marker. 1 indicates a veteran burial, 0 indicates not, and -1 indicates the register does not say. Populated on 67% of rows."
     },
     {
       "name": "Service",
-      "type": "string"
+      "type": "string",
+      "description": "Branch of military service, where the person served."
     },
     {
       "name": "Rank",
-      "type": "string"
+      "type": "string",
+      "description": "Military rank, where recorded."
     },
     {
       "name": "Unit",
-      "type": "string"
+      "type": "string",
+      "description": "Unit of the adjacent measurement column. Measured in the published file: Populated on 0% of 11,695 rows, 44 distinct values."
     },
     {
       "name": "Conflict",
-      "type": "string"
+      "type": "string",
+      "description": "Conflict the person served in, where recorded."
     },
     {
       "name": "EnteredBy",
-      "type": "string"
+      "type": "string",
+      "description": "Staff member who entered the record."
     },
     {
       "name": "Last_Update",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "When the register row was last updated."
     },
     {
       "name": "Comments",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note entered by city staff. Unstructured and inconsistently populated."
     },
     {
       "name": "On_the_Headstone",
-      "type": "string"
+      "type": "string",
+      "description": "Inscription transcribed from the headstone."
     },
     {
       "name": "Notes_Landmarks",
-      "type": "string"
+      "type": "string",
+      "description": "Note describing how to find the plot on the ground."
     },
     {
       "name": "Mortuary",
-      "type": "string"
+      "type": "string",
+      "description": "Mortuary that handled the burial."
     },
     {
       "name": "Mortuary_Phone",
-      "type": "string"
+      "type": "string",
+      "description": "Business telephone number of the mortuary."
     },
     {
       "name": "Ownership",
-      "type": "string"
+      "type": "string",
+      "description": "Who owns the asset. Sandy's utility layers include assets owned by other cities, the county, UDOT and private parties. Empty in all 11,695 rows of the published file."
     },
     {
       "name": "CremationFlag",
-      "type": "int16"
+      "type": "int16",
+      "description": "Whether the interment is a cremation."
     },
     {
       "name": "Spouse",
-      "type": "string"
+      "type": "string",
+      "description": "Spouse's name, as recorded."
     },
     {
       "name": "LocatedBy",
-      "type": "string"
+      "type": "string",
+      "description": "Staff member who located the plot on the ground."
     },
     {
       "name": "VerifiedBy",
-      "type": "string"
+      "type": "string",
+      "description": "Staff member who verified the record."
     },
     {
       "name": "Headstone_Mon_Placed_YN",
-      "type": "int16"
+      "type": "int16",
+      "description": "Whether a headstone or monument has been placed on the plot."
     },
     {
       "name": "Headstone_Mon_Placed_Date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the headstone or monument was placed."
     },
     {
       "name": "Monument_Co",
-      "type": "string"
+      "type": "string",
+      "description": "Company that supplied the headstone or monument."
     },
     {
       "name": "Monument_Co_Phone",
-      "type": "string"
+      "type": "string",
+      "description": "Business telephone number of that company."
     },
     {
       "name": "Shape__Area",
-      "type": "double"
+      "type": "double",
+      "description": "Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited."
     },
     {
       "name": "Shape__Length",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 11695,

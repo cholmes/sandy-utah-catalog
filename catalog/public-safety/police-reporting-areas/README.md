@@ -16,16 +16,20 @@ Sandy City publishes no licence for this data. There is no terms-of-use page on 
 
 This is a **mirror**. Sandy City produced the data; it is republished here unmodified except where noted below.
 
-- **Source**: [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Reporting_Areas/MapServer/1](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Reporting_Areas/MapServer/1)
-- **Mirrored**: 2026-10-06T22:11:04Z
+- **Source**: [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Reporting_Areas/MapServer/1](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Reporting_Areas/MapServer/1?f=json) (the city's server answers 403 on the plain endpoint, so this links the `f=json` form it does serve)
+- **Mirrored**: 2026-10-07T21:00:33Z
 - **Attribution, as the service states it**: Sandy City GIS
 
-Converted with [gpio](https://github.com/developmentseed/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
+Converted with [gpio](https://github.com/geoparquet/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
 
 ## Files
 
 - [`police-reporting-areas.parquet`](https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-reporting-areas/police-reporting-areas.parquet) — GeoParquet, EPSG:3566
 - [`police-reporting-areas.pmtiles`](https://data.source.coop/portolan-mirrors/sandy-utah-catalog/public-safety/police-reporting-areas/police-reporting-areas.pmtiles) — vector tiles, Web Mercator
+
+## Columns
+
+The [agent guide](AGENTS.md) documents every column, with the source of each definition. Columns Sandy City does not define say so, rather than carrying a guess.
 
 ## Reading it
 

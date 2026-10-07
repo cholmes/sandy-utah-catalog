@@ -17,33 +17,85 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 25 columns, 828 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `DFIRM_ID` | string |
-| `VERSION_ID` | string |
-| `FLD_AR_ID` | string |
-| `STUDY_TYP` | string |
-| `FLD_ZONE` | string |
-| `ZONE_SUBTY` | string |
-| `SFHA_TF` | string |
-| `STATIC_BFE` | double |
-| `V_DATUM` | string |
-| `DEPTH` | double |
-| `LEN_UNIT` | string |
-| `VELOCITY` | double |
-| `VEL_UNIT` | string |
-| `AR_REVERT` | string |
-| `AR_SUBTRV` | string |
-| `BFE_REVERT` | double |
-| `DEP_REVERT` | double |
-| `DUAL_ZONE` | string |
-| `SOURCE_CIT` | string |
-| `Shape` | binary |
-| `Shape.STArea()` | double |
-| `Shape.STLength()` | double |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+
+**Where these meanings come from.** Flood hazard areas on FEMA's Digital Flood Insurance Rate Map schema, the database design behind the [National Flood Hazard Layer](https://www.fema.gov/flood-maps/national-flood-hazard-layer). The column names are FEMA's, not Sandy's.
+
+25 of 25 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`DFIRM_ID`** — *string*  
+Identifier of the Digital Flood Insurance Rate Map study this polygon belongs to.
+
+**`VERSION_ID`** — *string*  
+Version of the FEMA database schema the record follows.
+
+**`FLD_AR_ID`** — *string*  
+Identifier of the flood area polygon within the study.
+
+**`STUDY_TYP`** — *string*  
+Type of flood study the mapping rests on.
+
+**`FLD_ZONE`** — *string*  
+FEMA flood zone designation. Zone A and AE are the one-percent-annual-chance floodplain, commonly called the 100-year floodplain.
+
+**`ZONE_SUBTY`** — *string*  
+Zone subtype. `FLOODWAY` marks the channel plus the adjoining land that must stay clear to carry the one-percent flood without raising its level.
+
+**`SFHA_TF`** — *string*  
+Whether the polygon is a Special Flood Hazard Area. Federally backed mortgages on property here require flood insurance.
+
+**`STATIC_BFE`** — *double*  
+Base flood elevation, the height the one-percent flood is expected to reach, where a single value applies.
+
+**`V_DATUM`** — *string*  
+Vertical datum the elevation is measured against.
+
+**`DEPTH`** — *double*  
+Flood depth where the zone is mapped by depth rather than elevation.
+
+**`LEN_UNIT`** — *string*  
+Unit the elevation and depth values are in.
+
+**`VELOCITY`** — *double*  
+Flood velocity, where measured.
+
+**`VEL_UNIT`** — *string*  
+Unit the velocity is in.
+
+**`AR_REVERT`** — *string*  
+Zone the area reverts to if a flood control structure is restored, for a Zone AR area behind one under repair.
+
+**`AR_SUBTRV`** — *string*  
+Zone subtype the area reverts to.
+
+**`BFE_REVERT`** — *double*  
+Base flood elevation the area reverts to.
+
+**`DEP_REVERT`** — *double*  
+Depth the area reverts to.
+
+**`DUAL_ZONE`** — *string*  
+Whether the area carries two zone designations.
+
+**`SOURCE_CIT`** — *string*  
+Citation pointing to the study the mapping came from, within FEMA's own source table.
+
+**`Shape`** — *binary*  
+Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column.
+
+**`Shape.STArea()`** — *double*  
+Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited.
+
+**`Shape.STLength()`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -71,5 +123,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Hazards/MapServer/5](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Hazards/MapServer/5) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Hazards/MapServer/5](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Hazards/MapServer/5?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

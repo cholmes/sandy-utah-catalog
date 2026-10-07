@@ -9,7 +9,7 @@
   "title": "Police Calls for Service",
   "description": "Police Calls for Service in Sandy City, Utah. The upstream service publishes no description for this layer. 185,647 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/PoliceCallData/FeatureServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -155,8 +155,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2779,
-      "file:checksum": "1220908d3d85a40597764e2e34f1c9ff258645427fa7b05e55e0b0ae859bf9475c4d"
+      "file:size": 3057,
+      "file:checksum": "12204759b1c24e942f7da9dfae435ad34eac19fb487004e440b3a2d4f70d55f24f74"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -165,8 +165,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3406,
-      "file:checksum": "12200fcabdc4fa180fec6ee65c70288d394a654724c5be88e0152f4139e9bf8b9151"
+      "file:size": 6659,
+      "file:checksum": "1220a1f2f4d49a32baffb18649650e2558b43d2fe885f472991f2c7f7870a95fd3d5"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -182,187 +182,233 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "evt_rin",
-      "type": "string"
+      "type": "string",
+      "description": "Dispatch record identifier."
     },
     {
       "name": "evt_reference",
-      "type": "string"
+      "type": "string",
+      "description": "Case reference number, which joins a call to an offence record in `crime-incidents` where one was written."
     },
     {
       "name": "jurisdiction",
-      "type": "string"
+      "type": "string",
+      "description": "Agency code for the responding jurisdiction."
     },
     {
       "name": "evt_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date of the call."
     },
     {
       "name": "location",
-      "type": "string"
+      "type": "string",
+      "description": "Street address or place description of the feature. Measured in the published file: Populated on 100% of 185,647 rows, 29,425 distinct values."
     },
     {
       "name": "zone",
-      "type": "string"
+      "type": "string",
+      "description": "Police zone the call falls in."
     },
     {
       "name": "grid",
-      "type": "string"
+      "type": "string",
+      "description": "Police reporting grid cell, joining to `police-reporting-areas`."
     },
     {
       "name": "week_day",
-      "type": "int16"
+      "type": "int16",
+      "description": "Day of week as a number."
     },
     {
       "name": "week_day_d",
-      "type": "string"
+      "type": "string",
+      "description": "Day of week as a name."
     },
     {
       "name": "received_dt",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Time dispatch received the call."
     },
     {
       "name": "dispatch_dt",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Time a unit was dispatched."
     },
     {
       "name": "enroute_dt",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Time the unit started travelling."
     },
     {
       "name": "at_scene_dt",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Time the unit arrived."
     },
     {
       "name": "clear_dt",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Time the unit cleared the call."
     },
     {
       "name": "case_type",
-      "type": "string"
+      "type": "string",
+      "description": "Initial call-type code assigned by the dispatcher."
     },
     {
       "name": "case_type_d",
-      "type": "string"
+      "type": "string",
+      "description": "Call type as first coded by the dispatcher."
     },
     {
       "name": "priority",
-      "type": "int16"
+      "type": "int16",
+      "description": "Dispatch priority. 1 is the most urgent. Priority 9 is the largest group at 69,639 rows and covers routine and administrative calls."
     },
     {
       "name": "how_received",
-      "type": "string"
+      "type": "string",
+      "description": "Code for how the call reached dispatch. `how_received_d` is the readable form."
     },
     {
       "name": "how_received_d",
-      "type": "string"
+      "type": "string",
+      "description": "How the call reached dispatch: by telephone, through the 911 system, or on view, meaning an officer observed it directly."
     },
     {
       "name": "cleared_by",
-      "type": "string"
+      "type": "string",
+      "description": "Code for how the call was closed."
     },
     {
       "name": "cleared_by_d",
-      "type": "string"
+      "type": "string",
+      "description": "How the call was closed."
     },
     {
       "name": "final_case_type",
-      "type": "string"
+      "type": "string",
+      "description": "Final call-type code after the officer cleared the call."
     },
     {
       "name": "final_case_type_d",
-      "type": "string"
+      "type": "string",
+      "description": "Call type after the officer cleared the call. This differs from the initial type whenever the reported problem was not what was found."
     },
     {
       "name": "agg_time_to_dispatch",
-      "type": "int32"
+      "type": "int32",
+      "description": "Elapsed seconds from receipt to dispatch."
     },
     {
       "name": "agg_travel_time",
-      "type": "int32"
+      "type": "int32",
+      "description": "Elapsed seconds from dispatch to arrival."
     },
     {
       "name": "agg_response_time",
-      "type": "int32"
+      "type": "int32",
+      "description": "Elapsed seconds from receipt to arrival. Negative values occur in the source data and should be filtered before use."
     },
     {
       "name": "agg_time_on_scene",
-      "type": "int32"
+      "type": "int32",
+      "description": "Elapsed seconds on scene."
     },
     {
       "name": "agg_service_time",
-      "type": "int32"
+      "type": "int32",
+      "description": "Elapsed seconds from receipt to the unit clearing."
     },
     {
       "name": "report_year",
-      "type": "int16"
+      "type": "int16",
+      "description": "Year the call was reported, as carried by the records system."
     },
     {
       "name": "year",
-      "type": "int32"
+      "type": "int32",
+      "description": "Year of the call."
     },
     {
       "name": "month",
-      "type": "int32"
+      "type": "int32",
+      "description": "Month of the call as a number."
     },
     {
       "name": "hour",
-      "type": "int32"
+      "type": "int32",
+      "description": "Hour of the call, 0 to 23."
     },
     {
       "name": "agg_time_to_dispatch_minutes",
-      "type": "double"
+      "type": "double",
+      "description": "Time to dispatch, in minutes."
     },
     {
       "name": "agg_travel_time_minutes",
-      "type": "double"
+      "type": "double",
+      "description": "Travel time in minutes."
     },
     {
       "name": "agg_response_time_minutes",
-      "type": "double"
+      "type": "double",
+      "description": "Response time in minutes, the same measure as `agg_response_time` divided by sixty."
     },
     {
       "name": "agg_service_time_minutes",
-      "type": "double"
+      "type": "double",
+      "description": "Total service time, in minutes."
     },
     {
       "name": "received_date_text",
-      "type": "string"
+      "type": "string",
+      "description": "Receipt timestamp as text, kept from the export."
     },
     {
       "name": "dispatch_date_text",
-      "type": "string"
+      "type": "string",
+      "description": "Dispatch timestamp as text."
     },
     {
       "name": "enroute_date_text",
-      "type": "string"
+      "type": "string",
+      "description": "En-route timestamp as text."
     },
     {
       "name": "at_scene_date_text",
-      "type": "string"
+      "type": "string",
+      "description": "Arrival timestamp as text."
     },
     {
       "name": "clear_date_text",
-      "type": "string"
+      "type": "string",
+      "description": "Clear timestamp as text."
     },
     {
       "name": "clear_date_text2",
-      "type": "string"
+      "type": "string",
+      "description": "Second clear timestamp as text, kept from the export."
     },
     {
       "name": "ORIG_FID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Row identifier from the table this layer was built from."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 185647,

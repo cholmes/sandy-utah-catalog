@@ -9,7 +9,7 @@
   "title": "Parcels",
   "description": "Parcels in and around Sandy City, Utah as of July, 2022. The service describes itself as current to July 2022, so it lags the county's live parcel fabric by more than three years. 106,087 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Salt Lake County Recorder",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Parcels/FeatureServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -165,8 +165,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2922,
-      "file:checksum": "1220578e55e1500bc647c11ca8ea1705728adfa0b8b91d69b4e8de0c109a321f76b7"
+      "file:size": 3200,
+      "file:checksum": "122049cefe25a1447276ab642a21ce47974bb8603f19d8a41eecb4c47f64f0b1a230"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -175,8 +175,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 4138,
-      "file:checksum": "1220fd102a7dd984e043da3f236a31b9b10d751c5945e38ec6d69063ab44c61040f4"
+      "file:size": 11374,
+      "file:checksum": "12208af80e063352fc9a83c04aa51c5f7b060fc19d68b3c35cf220abaea9a649abc4"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -192,339 +192,423 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "RECORDER_DATA_AS_OF",
-      "type": "string"
+      "type": "string",
+      "description": "Date the recorder's ownership data in this row was current."
     },
     {
       "name": "parcel_id",
-      "type": "string"
+      "type": "string",
+      "description": "County parcel identification number. Unique across the 106,087 rows here, and the key that joins to `address-points.Parcel_Id`. Note the capitalisation differs between the two collections."
     },
     {
       "name": "parent_parcel",
-      "type": "string"
+      "type": "string",
+      "description": "Parcel this one was split from, where it is a subdivision of an earlier parcel."
     },
     {
       "name": "num_old_prcls",
-      "type": "int32"
+      "type": "int32",
+      "description": "Number of earlier parcels merged into this one."
     },
     {
       "name": "source_doc",
-      "type": "string"
+      "type": "string",
+      "description": "Recorded document the current ownership derives from."
     },
     {
       "name": "date_created",
-      "type": "string"
+      "type": "string",
+      "description": "Date the parcel was created in the recorder's system."
     },
     {
       "name": "last_vesting",
-      "type": "int32"
+      "type": "int32",
+      "description": "Reference to the document that last vested title."
     },
     {
       "name": "parcel_acres",
-      "type": "double"
+      "type": "double",
+      "description": "Parcel area in acres as carried on the assessment roll."
     },
     {
       "name": "own_name",
-      "type": "string"
+      "type": "string",
+      "description": "Owner of record. Property ownership is public record under the county recorder. This column is in the GeoParquet and deliberately not in the vector tiles."
     },
     {
       "name": "multi_names",
-      "type": "int32"
+      "type": "int32",
+      "description": "Count of owners of record, where title is held jointly."
     },
     {
       "name": "tax_dist",
-      "type": "string"
+      "type": "string",
+      "description": "Tax district code. A district is the unique overlap of taxing entities that applies to the parcel."
     },
     {
       "name": "care_of",
-      "type": "string"
+      "type": "string",
+      "description": "Care-of line on the owner's mailing address."
     },
     {
       "name": "own_addr",
-      "type": "string"
+      "type": "string",
+      "description": "Owner's mailing address, which is often not the property address. Public record, GeoParquet only."
     },
     {
       "name": "own_apt_num",
-      "type": "string"
+      "type": "string",
+      "description": "Apartment or unit number in the owner's mailing address."
     },
     {
       "name": "own_citystate",
-      "type": "string"
+      "type": "string",
+      "description": "City and state of the owner's mailing address."
     },
     {
       "name": "own_country_code",
-      "type": "string"
+      "type": "string",
+      "description": "Country of the owner's mailing address. Blank for most rows; `USA` where set explicitly."
     },
     {
       "name": "own_zip",
-      "type": "string"
+      "type": "string",
+      "description": "ZIP code of the owner's mailing address."
     },
     {
       "name": "own_zip_four",
-      "type": "string"
+      "type": "string",
+      "description": "ZIP+4 extension of the owner's mailing address."
     },
     {
       "name": "prop_location",
-      "type": "string"
+      "type": "string",
+      "description": "Situs address of the parcel itself."
     },
     {
       "name": "HouseNum",
-      "type": "string"
+      "type": "string",
+      "description": "House number of the property address."
     },
     {
       "name": "PreDir",
-      "type": "string"
+      "type": "string",
+      "description": "Directional prefix of the street name, such as S or E. Measured in the published file: Populated on 99% of 106,087 rows, 3 distinct values."
     },
     {
       "name": "StreetName",
-      "type": "string"
+      "type": "string",
+      "description": "Street name component of the address. Measured in the published file: Populated on 99% of 106,087 rows, 4,941 distinct values."
     },
     {
       "name": "StreetType",
-      "type": "string"
+      "type": "string",
+      "description": "Street type component of the address, such as ST or AVE. Measured in the published file: Populated on 73% of 106,087 rows, 19 distinct values."
     },
     {
       "name": "StreetDir",
-      "type": "string"
+      "type": "string",
+      "description": "Directional component of the property street name."
     },
     {
       "name": "exempt_type",
-      "type": "string"
+      "type": "string",
+      "description": "Exemption class, where the parcel is exempt from property tax."
     },
     {
       "name": "property_type",
-      "type": "string"
+      "type": "string",
+      "description": "Assessment property-type code."
     },
     {
       "name": "Property_Type_Desc",
-      "type": "string"
+      "type": "string",
+      "description": "Full assessment property-type description. `Property_Type_Simple_Desc` is the grouped form."
     },
     {
       "name": "Property_Type_Simple_Desc",
-      "type": "string"
+      "type": "string",
+      "description": "Grouped property type: Residential, Commercial, Condos, Land or Other."
     },
     {
       "name": "Community",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy community area number, joining to the `communities` collection. Populated on 35% of rows."
     },
     {
       "name": "Quadrant",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy addressing and policing quadrant. Measured in the published file: Populated on 31% of 106,087 rows, 4 distinct values."
     },
     {
       "name": "CityCouncil",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy city council district the feature falls in. Measured in the published file: Populated on 31% of 106,087 rows, 4 distinct values."
     },
     {
       "name": "Abnormal",
-      "type": "string"
+      "type": "string",
+      "description": "Marker the assessor sets on a parcel that does not fit normal valuation, such as an odd shape or a split use."
     },
     {
       "name": "Mun_Tax_Agency",
-      "type": "string"
+      "type": "string",
+      "description": "Municipality that levies property tax on the parcel. The layer covers parcels around Sandy as well as in it, so this is how to select Sandy's own."
     },
     {
       "name": "Township",
-      "type": "string"
+      "type": "string",
+      "description": "Township of the Public Land Survey System description."
     },
     {
       "name": "Range",
-      "type": "string"
+      "type": "string",
+      "description": "Range of the Public Land Survey System description."
     },
     {
       "name": "Section",
-      "type": "int16"
+      "type": "int16",
+      "description": "Section of the Public Land Survey System description."
     },
     {
       "name": "Annexation",
-      "type": "string"
+      "type": "string",
+      "description": "Annexation that brought the parcel into the city."
     },
     {
       "name": "Lot",
-      "type": "string"
+      "type": "string",
+      "description": "Lot number within the recorded subdivision."
     },
     {
       "name": "Subdivision",
-      "type": "string"
+      "type": "string",
+      "description": "Recorded subdivision the parcel lies in."
     },
     {
       "name": "ASSESSOR_DATA_VALID_FOR",
-      "type": "string"
+      "type": "string",
+      "description": "Tax year the assessor's valuation columns apply to."
     },
     {
       "name": "neighborhood_code",
-      "type": "int32"
+      "type": "int32",
+      "description": "Assessor's neighbourhood code. Comparable sales are drawn from within a neighbourhood when valuing a parcel."
     },
     {
       "name": "nbhrd_low_sale",
-      "type": "int32"
+      "type": "int32",
+      "description": "Lowest comparable sale price in the assessor's neighbourhood, in dollars."
     },
     {
       "name": "nbhrd_high_sale",
-      "type": "int32"
+      "type": "int32",
+      "description": "Highest comparable sale price in the neighbourhood."
     },
     {
       "name": "nbhrd_av_sale",
-      "type": "int32"
+      "type": "int32",
+      "description": "Average comparable sale price in the neighbourhood."
     },
     {
       "name": "new_growth_value",
-      "type": "int32"
+      "type": "int32",
+      "description": "Value attributed to new construction in the assessment year, which a taxing entity may levy on outside its certified rate."
     },
     {
       "name": "nbrhd_av_home_sf",
-      "type": "int32"
+      "type": "int32",
+      "description": "Average home floor area in the neighbourhood, in square feet."
     },
     {
       "name": "abv_grnd_sf",
-      "type": "int32"
+      "type": "int32",
+      "description": "Above-ground floor area in square feet, excluding basements."
     },
     {
       "name": "multi_structure",
-      "type": "string"
+      "type": "string",
+      "description": "Marker for a parcel carrying more than one structure."
     },
     {
       "name": "tax_year",
-      "type": "string"
+      "type": "string",
+      "description": "Tax year the valuation columns apply to."
     },
     {
       "name": "greenbelt_acres",
-      "type": "double"
+      "type": "double",
+      "description": "Acres assessed under Utah's Farmland Assessment Act, which values qualifying agricultural land on its productive value rather than its market value."
     },
     {
       "name": "full_mkt_prcl_total",
-      "type": "double"
+      "type": "double",
+      "description": "Full market value of the parcel, land and buildings, in dollars."
     },
     {
       "name": "full_mkt_total_land",
-      "type": "double"
+      "type": "double",
+      "description": "Full market value of the land alone."
     },
     {
       "name": "adjusted_prcl_total",
-      "type": "double"
+      "type": "double",
+      "description": "Parcel value after adjustments such as the residential exemption."
     },
     {
       "name": "adjusted_total_land",
-      "type": "double"
+      "type": "double",
+      "description": "Land value after adjustments."
     },
     {
       "name": "full_mkt_total_bldg",
-      "type": "double"
+      "type": "double",
+      "description": "Full market value of the buildings alone."
     },
     {
       "name": "adjusted_total_bldg",
-      "type": "double"
+      "type": "double",
+      "description": "Building value after adjustments."
     },
     {
       "name": "total_full_mkt",
-      "type": "double"
+      "type": "double",
+      "description": "Total full market value carried on the roll."
     },
     {
       "name": "total_adjusted",
-      "type": "double"
+      "type": "double",
+      "description": "Total adjusted value carried on the roll."
     },
     {
       "name": "total_assessed",
-      "type": "double"
+      "type": "double",
+      "description": "Assessed value in dollars before exemptions."
     },
     {
       "name": "taxable_value",
-      "type": "double"
+      "type": "double",
+      "description": "Taxable value in dollars for the stated tax year, after exemptions."
     },
     {
       "name": "year_built",
-      "type": "double"
+      "type": "double",
+      "description": "Year the principal building was constructed. Zero or null where the parcel carries no building."
     },
     {
       "name": "total_sq_ft",
-      "type": "double"
+      "type": "double",
+      "description": "Building floor area in square feet, where a building is assessed on the parcel."
     },
     {
       "name": "num_housing_units",
-      "type": "double"
+      "type": "double",
+      "description": "Number of dwelling units on the parcel."
     },
     {
       "name": "lot_use",
-      "type": "string"
+      "type": "string",
+      "description": "Assessor's land-use code for the lot."
     },
     {
       "name": "zip_two",
-      "type": "string"
+      "type": "string",
+      "description": "Secondary ZIP code, where the parcel spans two."
     },
     {
       "name": "tax_class1",
-      "type": "string"
+      "type": "string",
+      "description": "Primary tax class code."
     },
     {
       "name": "Tax_Class1_Desc",
-      "type": "string"
+      "type": "string",
+      "description": "Description of the primary tax class."
     },
     {
       "name": "tax_class2",
-      "type": "string"
+      "type": "string",
+      "description": "Second tax class code, where a parcel carries more than one."
     },
     {
       "name": "Tax_Class2_Desc",
-      "type": "string"
+      "type": "string",
+      "description": "Description of the second tax class."
     },
     {
       "name": "tax_class3",
-      "type": "string"
+      "type": "string",
+      "description": "Third tax class code."
     },
     {
       "name": "Tax_Class3_Desc",
-      "type": "string"
+      "type": "string",
+      "description": "Description of the third tax class."
     },
     {
       "name": "tax_rate",
-      "type": "double"
+      "type": "double",
+      "description": "Combined tax rate applied to the parcel."
     },
     {
       "name": "Garbage",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the parcel receives Sandy City garbage collection."
     },
     {
       "name": "Legal_Description",
-      "type": "string"
+      "type": "string",
+      "description": "Recorded legal description of the parcel."
     },
     {
       "name": "Shape__Area",
-      "type": "double"
+      "type": "double",
+      "description": "Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited."
     },
     {
       "name": "Shape__Length",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "Tax_District_2022",
-      "type": "string"
+      "type": "string",
+      "description": "Tax district as of the 2022 roll."
     },
     {
       "name": "Sensitive_Overlay",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the parcel falls in the Sensitive Area Overlay zone, which constrains development on the mountain front."
     },
     {
       "name": "Historic_Tiers",
-      "type": "string"
+      "type": "string",
+      "description": "Historic designation tier applying to the parcel."
     },
     {
       "name": "Wildland_Interface",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the parcel falls in the wildland urban interface, where wildfire risk governs building standards."
     },
     {
       "name": "Floodplain",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the parcel intersects the mapped floodplain."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 106087,

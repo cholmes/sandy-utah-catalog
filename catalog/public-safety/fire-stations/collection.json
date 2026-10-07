@@ -9,7 +9,7 @@
   "title": "Fire Stations",
   "description": "Fire Stations in and around Sandy City, Utah. 68 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Fire_Stations/MapServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2417,
-      "file:checksum": "1220e4e90270e60a0a61fb5ed062d29c352a61ea187ca225faf95feb1cb5b19e07c0"
+      "file:size": 2695,
+      "file:checksum": "1220af1dee43618270a9471630be5ebfcd28574db5cf847d6f6446c377db2747934f"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2375,
-      "file:checksum": "1220f04ffc5d128f4065f9f6143cc2dfc52cbf78a992a8b2b6b0416aecb27fc644fb"
+      "file:size": 5319,
+      "file:checksum": "1220dddc07b8c0f33c6aa57e6d8bc24d145b9f2967d0fcb3ce7efd68ac4937411d27"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,67 +162,83 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "Address",
-      "type": "string"
+      "type": "string",
+      "description": "Street address of the feature. Measured in the published file: Populated on 100% of 68 rows, 68 distinct values."
     },
     {
       "name": "Telephone",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 68 rows, 48 distinct values."
     },
     {
       "name": "Jurisdiction",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 68 rows, 16 distinct values."
     },
     {
       "name": "Name",
-      "type": "string"
+      "type": "string",
+      "description": "Name of the feature. Measured in the published file: Populated on 100% of 68 rows, 68 distinct values."
     },
     {
       "name": "Type",
-      "type": "string"
+      "type": "string",
+      "description": "Type of feature. See the measured values below, because the source layer declares no code list for it. Measured in the published file: Populated on 100% of 68 rows, 7 distinct values."
     },
     {
       "name": "Map_Label",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 68 rows, 68 distinct values."
     },
     {
       "name": "Status",
-      "type": "string"
+      "type": "string",
+      "description": "Operational status of the feature. See the measured values below, because the source layer declares no code list. Measured in the published file: Populated on 100% of 68 rows, 2 distinct values."
     },
     {
       "name": "Fire_Equipment",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 94% of 68 rows, 10 distinct values."
     },
     {
       "name": "Medical_Equip",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 69% of 68 rows, 7 distinct values."
     },
     {
       "name": "Specialties",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 50% of 68 rows, 22 distinct values."
     },
     {
       "name": "Longitude",
-      "type": "double"
+      "type": "double",
+      "description": "Longitude copied into an attribute. The geometry column is authoritative. Measured in the published file: Populated on 100% of 68 rows, 68 distinct values, ranging -112.098 to -111.581."
     },
     {
       "name": "Latitude",
-      "type": "double"
+      "type": "double",
+      "description": "Latitude copied into an attribute. The geometry column is authoritative and is not in degrees for most of this catalog. Measured in the published file: Populated on 100% of 68 rows, 68 distinct values, ranging 40.4808 to 40.7929."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 68,

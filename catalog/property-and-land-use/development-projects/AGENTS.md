@@ -17,68 +17,65 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 18 columns, 64 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `Project_Name` | string |
-| `Description` | string |
-| `Address` | string |
-| `Project_Type` | string |
-| `Key_Words` | string |
-| `Case_Number` | string |
-| `created_user` | string |
-| `created_date` | timestamp[ms] |
-| `last_edited_user` | string |
-| `last_edited_date` | timestamp[ms] |
-| `DocumentsLink` | string |
-| `Bond` | string |
-| `Status` | string |
-| `Shape__Area` | double |
-| `Shape__Length` | double |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+15 of 18 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`Project_Name`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 64 rows, 64 distinct values.
+
+**`Description`** — *string*  
+Description of the feature, entered by city staff. Measured in the published file: Populated on 56% of 64 rows, 35 distinct values.
+
+**`Address`** — *string*  
+Street address of the feature. Measured in the published file: Populated on 95% of 64 rows, 58 distinct values.
+
+**`Project_Type`** — *string*  
+One of. The source layer's domain allows: `Subdivision Plat`, `Site Plan Review`, `Residential`, `Special Event`, `Other`.
+
+**`Key_Words`** — *string*  
+One of. The source layer's domain allows: `Plat`, `Site Plan`, `Deed`, `Permit`, `Event`, `Project`, `Other`.
+
+**`Case_Number`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 64 rows, 64 distinct values.
+
+**`created_user`** — *string*  
+Username of the staff member who created the row, from the geodatabase editor tracking.
+
+**`created_date`** — *timestamp[ms]*  
+Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world.
+
+**`last_edited_user`** — *string*  
+Username of the staff member who last edited the row, from the geodatabase editor tracking.
+
+**`last_edited_date`** — *timestamp[ms]*  
+Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world.
+
+**`DocumentsLink`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 47% of 64 rows, 30 distinct values.
+
+**`Bond`** — *string*  
+One of. The source layer's domain allows: `Not Calc`, `Waiting`, `Posted`, `Warranty`, `Refunded`, `N/A`.
+
+**`Status`** — *string*  
+Operational status of the feature. See the measured values below, because the source layer declares no code list. Measured in the published file: Populated on 48% of 64 rows, 6 distinct values.
+
+**`Shape__Area`** — *double*  
+Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited.
+
+**`Shape__Length`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
-These are the code lists the ArcGIS layer publishes as field domains. They are the only column documentation Sandy City provides, and they are reproduced verbatim.
-
-**`Project_Type` — Project Type**
-
-- `Subdivision Plat` = Subdivision Plat
-- `Site Plan Review` = Site Plan Review
-- `Residential` = Residential
-- `Special Event` = Special Event
-- `Other` = Other
-
-**`Key_Words` — Key Words**
-
-- `Plat` = Plat
-- `Site Plan` = Site Plan
-- `Deed` = Deed
-- `Permit` = Permit
-- `Event` = Event
-- `Project` = Project
-- `Other` = Other
-
-**`Bond`**
-
-- `Not Calc` = Not Calc
-- `Waiting` = Waiting
-- `Posted` = Posted
-- `Warranty` = Warranty
-- `Refunded` = Refunded
-- `N/A` = N/A
-
-**`Status`**
-
-- `Prelim` = Prelim
-- `Review` = Review
-- `Final Review` = Final Review
-- `Pre-Construct` = Pre-Construct
-- `Construction` = Construction
-- `Inspection` = Inspection
-- `Complete` = Complete
-- `N/A` = N/A
+The upstream layer publishes no field domains, so no column in this collection has a documented code list. Where a column holds opaque codes, their meaning is unknown rather than omitted.
 
 ## A query that runs
 
@@ -93,5 +90,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Development_Projects/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Development_Projects/FeatureServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Development_Projects/FeatureServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Development_Projects/FeatureServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

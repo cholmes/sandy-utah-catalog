@@ -17,21 +17,46 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 13 columns, 17 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `SiteID` | string |
-| `Name` | string |
-| `Address` | string |
-| `URL` | string |
-| `Walking_Tour_Seq` | int16 |
-| `Bus_Tour_Seq` | int16 |
-| `Thumb_URL` | string |
-| `Icon_color` | string |
-| `Description` | string |
-| `Shape` | binary |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+8 of 13 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`SiteID`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values.
+
+**`Name`** — *string*  
+Name of the feature. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values.
+
+**`Address`** — *string*  
+Street address of the feature. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values.
+
+**`URL`** — *string*  
+Link to a page about this feature on a city or partner website.
+
+**`Walking_Tour_Seq`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values, ranging 1 to 17.
+
+**`Bus_Tour_Seq`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 88% of 17 rows, 15 distinct values, ranging 2 to 99.
+
+**`Thumb_URL`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 17 rows, 17 distinct values.
+
+**`Icon_color`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 17 rows, 1 distinct values.
+
+**`Description`** — *string*  
+Description of the feature, entered by city staff. Measured in the published file: Populated on 59% of 17 rows, 10 distinct values.
+
+**`Shape`** — *binary*  
+Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -50,5 +75,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Historic/Historic_Tour/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Historic/Historic_Tour/MapServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Historic/Historic_Tour/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Historic/Historic_Tour/MapServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

@@ -9,7 +9,7 @@
   "title": "Water Service Line Material Inventory",
   "description": "Water Service Line Material Inventory in Sandy City, Utah. The upstream service publishes no description for this layer. Published by Sandy City to meet the service line inventory requirement of the US EPA Lead and Copper Rule Revisions. The inventory is incomplete: most lines are still classified Unknown. 26,213 point features, mirrored as GeoParquet in EPSG:2850 (NAD83(HARN) / Utah Central) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -77,7 +77,7 @@
       "rel": "via",
       "href": "https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/ServiceLine_viewing_7fe7c6729fd949afb34452df1ba78945/FeatureServer/0",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Upstream ArcGIS Online layer"
     },
     {
       "rel": "license",
@@ -155,8 +155,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 3560,
-      "file:checksum": "12208fb0bd8eeaadce537c677fc038533871405955ba3280f419dcdc0364aa9b054b"
+      "file:size": 3838,
+      "file:checksum": "122010be446038387709c11ba2e3eacb8adbd68e5be67b3ae65024fedb906f308b6b"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -165,8 +165,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 6760,
-      "file:checksum": "122091d4a516321743ddaeb7a6ab75f041579448005c958dc74e9e89b4a5d0d400e3"
+      "file:size": 10145,
+      "file:checksum": "1220c9c28913d11ddf3ec15651eec4ece5c95061a6f4ba4e09185db0e76f1aa34bef"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -182,191 +182,238 @@
   "table:columns": [
     {
       "name": "address",
-      "type": "string"
+      "type": "string",
+      "description": "Street address of the service line. The rule requires the publicly accessible inventory to identify each service line by street address, or by another locational identifier where no address exists."
     },
     {
       "name": "location",
-      "type": "string"
+      "type": "string",
+      "description": "Street address or place description of the feature. Measured in the published file: Populated on 100% of 26,213 rows, 26,135 distinct values."
     },
     {
       "name": "sensitivepop",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the service line serves a sensitive population, such as a school or a child care facility. EPA directs systems to prioritise these for replacement."
     },
     {
       "name": "disadvantaged",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the service line is in a neighbourhood the system has identified as disadvantaged, which affects prioritisation and funding eligibility."
     },
     {
       "name": "utilassetid",
-      "type": "string"
+      "type": "string",
+      "description": "Utility Asset ID. Measured in the published file: Populated on 100% of 26,213 rows, 26,120 distinct values."
     },
     {
       "name": "utilmaterial",
-      "type": "string"
+      "type": "string",
+      "description": "Material of the **utility-owned** portion of the service line, from the main to the property line."
     },
     {
       "name": "everlead",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the service line is known to have ever been lead, including a line since replaced."
     },
     {
       "name": "utilinstalldate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Installation date of the utility-owned portion. A date after the local lead ban is itself accepted evidence of a non-lead line."
     },
     {
       "name": "utildiameter",
-      "type": "double"
+      "type": "double",
+      "description": "Diameter of the utility-owned portion. A line over two inches is accepted evidence of a non-lead line."
     },
     {
       "name": "utilsource",
-      "type": "string"
+      "type": "string",
+      "description": "Evidence the classification of the utility-owned portion rests on. The rule requires non-lead to rest on an evidence-based record, method or technique."
     },
     {
       "name": "utilverified",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the utility-owned material was verified rather than inferred."
     },
     {
       "name": "utilverifmethod",
-      "type": "string"
+      "type": "string",
+      "description": "How the utility-owned material was verified."
     },
     {
       "name": "utilverifdate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Utility Verification Date. Measured in the published file: Populated on 2% of 26,213 rows, 130 distinct values."
     },
     {
       "name": "utilstatus",
-      "type": "int16"
+      "type": "int16",
+      "description": "Classification of the utility-owned portion into the rule's four categories."
     },
     {
       "name": "utilnotes",
-      "type": "string"
+      "type": "string",
+      "description": "Utility Side Notes. Measured in the published file: Populated on 2% of 26,213 rows, 107 distinct values."
     },
     {
       "name": "custassetid",
-      "type": "string"
+      "type": "string",
+      "description": "Customer Asset ID. Measured in the published file: Populated on 0% of 26,213 rows, 1 distinct values."
     },
     {
       "name": "custmaterial",
-      "type": "string"
+      "type": "string",
+      "description": "Material of the **customer-owned** portion of the service line, from the property line to the building. The rule requires both portions to be inventoried even where the system owns neither."
     },
     {
       "name": "custinstalldate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Installation date of the customer-owned portion."
     },
     {
       "name": "custdiameter",
-      "type": "double"
+      "type": "double",
+      "description": "Diameter of the customer-owned portion."
     },
     {
       "name": "custsource",
-      "type": "string"
+      "type": "string",
+      "description": "Evidence the classification of the customer-owned portion rests on."
     },
     {
       "name": "custverified",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the customer-owned material was verified rather than inferred."
     },
     {
       "name": "custverifmethod",
-      "type": "string"
+      "type": "string",
+      "description": "How the customer-owned material was verified."
     },
     {
       "name": "custverifdate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Customer Verification Date. Measured in the published file: Populated on 4% of 26,213 rows, 362 distinct values."
     },
     {
       "name": "custstatus",
-      "type": "int16"
+      "type": "int16",
+      "description": "Classification of the customer-owned portion into the rule's four categories."
     },
     {
       "name": "custnotes",
-      "type": "string"
+      "type": "string",
+      "description": "Customer Side Notes. Measured in the published file: Populated on 0% of 26,213 rows, 93 distinct values."
     },
     {
       "name": "bothsidesstatus",
-      "type": "string"
+      "type": "string",
+      "description": "Classification of the service line as a whole. This is the field that determines replacement obligation."
     },
     {
       "name": "leadconnector",
-      "type": "string"
+      "type": "string",
+      "description": "Whether a lead connector, also called a gooseneck or pigtail, is present. EPA defines a connector as a bendable segment of three feet or less; a documented lead segment longer than that is treated as a lead service line."
     },
     {
       "name": "leadsolder",
-      "type": "string"
+      "type": "string",
+      "description": "Whether lead solder is known to be present at the connection."
     },
     {
       "name": "otherfittings",
-      "type": "string"
+      "type": "string",
+      "description": "Other Fittings Containing Lead. Empty in all 26,213 rows of the published file."
     },
     {
       "name": "buildingtype",
-      "type": "string"
+      "type": "string",
+      "description": "Type of building the service line serves."
     },
     {
       "name": "pointofentry",
-      "type": "string"
+      "type": "string",
+      "description": "Whether a point-of-entry treatment device is installed."
     },
     {
       "name": "copperwithlead",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the line is copper with lead solder, which is not a lead service line but is a lead source."
     },
     {
       "name": "samplingsite",
-      "type": "string"
+      "type": "string",
+      "description": "Whether this location is used as a tap sampling site for compliance monitoring."
     },
     {
       "name": "replacestatus",
-      "type": "string"
+      "type": "string",
+      "description": "Where the line stands in the replacement programme."
     },
     {
       "name": "scheddate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Utility Side Scheduled Replacement Date. Empty in all 26,213 rows of the published file."
     },
     {
       "name": "utilreplacedate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the utility-owned portion was replaced."
     },
     {
       "name": "custscheddate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Customer Side Scheduled Replacement Date. Empty in all 26,213 rows of the published file."
     },
     {
       "name": "custreplacedate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Customer Side Replacement Date. Empty in all 26,213 rows of the published file."
     },
     {
       "name": "replacereason",
-      "type": "string"
+      "type": "string",
+      "description": "Why the line is scheduled for replacement."
     },
     {
       "name": "custnotified",
-      "type": "string"
+      "type": "string",
+      "description": "Whether the customer has been notified, which the rule requires for a lead, galvanized-requiring-replacement or unknown line."
     },
     {
       "name": "notifydate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Notification Date. Empty in all 26,213 rows of the published file."
     },
     {
       "name": "yearstructbuilt",
-      "type": "int16"
+      "type": "int16",
+      "description": "Year the building was constructed. Used as evidence where no installation record survives."
     },
     {
       "name": "CreationDate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world."
     },
     {
       "name": "EditDate",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world."
     },
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 26213,

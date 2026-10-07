@@ -17,40 +17,68 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 19 columns, 16,020 rows.
 
-| column | type |
-| --- | --- |
-| `Agency` | string |
-| `DIAMETER` | double |
-| `RIM_ELEV` | double |
-| `X` | double |
-| `Y` | double |
-| `DepthToFlo` | double |
-| `NumPipesIn` | int16 |
-| `InSizes` | string |
-| `OutSize` | string |
-| `MH_ID` | string |
-| `NumLateral` | int16 |
-| `Shape` | binary |
-| `created_user` | string |
-| `created_date` | timestamp[ms] |
-| `last_edited_user` | string |
-| `last_edited_date` | timestamp[ms] |
-| `OBJECTID` | int64 |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+11 of 19 columns carry a definition. The rest say so rather than guess.
+
+**`Agency`** — *string*  
+One of. The source layer's domain allows: `Cottonwood Improvement District`, `Midvale City`, `Midvalley Improvement District`, `Sandy Suburban Improvement District`, `South Valley Sewer District`, `Other/Unknown`.
+
+**`DIAMETER`** — *double*  
+Nominal diameter, in inches. Measured in the published file: Populated on 68% of 16,020 rows, 10 distinct values, ranging 0 to 60.
+
+**`RIM_ELEV`** — *double*  
+Elevation of the structure rim at ground level. Measured in the published file: Populated on 100% of 16,020 rows, 14,444 distinct values, ranging 0 to 4.89188e+06.
+
+**`X`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 16,020 rows, 13,767 distinct values, ranging -111.898 to 7.38729e+06.
+
+**`Y`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 16,020 rows, 14,029 distinct values, ranging -111.884 to 7.63885e+06.
+
+**`DepthToFlo`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 56% of 16,020 rows, 3,560 distinct values, ranging 0 to 1911.
+
+**`NumPipesIn`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 24% of 16,020 rows, 5 distinct values, ranging 0 to 5.
+
+**`InSizes`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 24% of 16,020 rows, 18 distinct values.
+
+**`OutSize`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 24% of 16,020 rows, 12 distinct values.
+
+**`MH_ID`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 16,020 rows, 14,969 distinct values.
+
+**`NumLateral`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 24% of 16,020 rows, 5 distinct values, ranging 0 to 15.
+
+**`Shape`** — *binary*  
+Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column.
+
+**`created_user`** — *string*  
+Username of the staff member who created the row, from the geodatabase editor tracking.
+
+**`created_date`** — *timestamp[ms]*  
+Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world.
+
+**`last_edited_user`** — *string*  
+Username of the staff member who last edited the row, from the geodatabase editor tracking.
+
+**`last_edited_date`** — *timestamp[ms]*  
+Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
-These are the code lists the ArcGIS layer publishes as field domains. They are the only column documentation Sandy City provides, and they are reproduced verbatim.
-
-**`Agency`**
-
-- `Cottonwood Improvement District` = Cottonwood Improvement District
-- `Midvale City` = Midvale City
-- `Midvalley Improvement District` = Midvalley Improvement District
-- `Sandy Suburban Improvement District` = Sandy Suburban Improvement District
-- `South Valley Sewer District` = South Valley Sewer District
-- `Other/Unknown` = Other/Unknown
+The upstream layer publishes no field domains, so no column in this collection has a documented code list. Where a column holds opaque codes, their meaning is unknown rather than omitted.
 
 ## A query that runs
 
@@ -65,5 +93,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Sewer/MapServer/1](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Sewer/MapServer/1) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Sewer/MapServer/1](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/Sewer/MapServer/1?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

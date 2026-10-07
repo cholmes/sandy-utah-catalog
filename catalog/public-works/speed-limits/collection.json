@@ -9,7 +9,7 @@
   "title": "Speed Limits",
   "description": "Speed Limits in Sandy City, Utah. The upstream service publishes no description for this layer. 5,072 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/Speed_Limits/MapServer/1",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2594,
-      "file:checksum": "12203ec7d93ce940f3d3aec68c424afb06e3027181e3d034427d9cf1f1bdb02587f8"
+      "file:size": 2872,
+      "file:checksum": "1220144c432725371cd73f722d0bf368b867e226b983dc129e274d1b3c6ac2004380"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 4251,
-      "file:checksum": "1220596851cd632ae7c6a1288c9a8d7149742fbc99e87d9c7db931fe404eac38cf18"
+      "file:size": 7639,
+      "file:checksum": "12201e119c30b142876240d8aed511bc5f5ee37973a1fd14598edfa9a0ef5a313368"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,203 +162,253 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "L_F_ADD",
-      "type": "double"
+      "type": "double",
+      "description": "fromleft. Measured in the published file: Populated on 100% of 5,072 rows, 1,839 distinct values, ranging 0 to 12231."
     },
     {
       "name": "L_T_ADD",
-      "type": "double"
+      "type": "double",
+      "description": "toleft. Measured in the published file: Populated on 100% of 5,072 rows, 1,994 distinct values, ranging 0 to 12339."
     },
     {
       "name": "R_F_ADD",
-      "type": "double"
+      "type": "double",
+      "description": "fromright. Measured in the published file: Populated on 100% of 5,072 rows, 1,816 distinct values, ranging 0 to 12230."
     },
     {
       "name": "R_T_ADD",
-      "type": "double"
+      "type": "double",
+      "description": "toright. Measured in the published file: Populated on 100% of 5,072 rows, 2,070 distinct values, ranging 0 to 12338."
     },
     {
       "name": "PRE_DIR",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `N`, `E`, `W`, `S`."
     },
     {
       "name": "S_NAME",
-      "type": "string"
+      "type": "string",
+      "description": "Street name of the segment."
     },
     {
       "name": "S_TYPE",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `ALY`, `AVE`, `BAY`, `BLVD`, `CIR`, `COL`, `CON`, `CT`, `CTR`, `CV`, and 26 more."
     },
     {
       "name": "SUF_DIR",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `N`, `E`, `W`, `S`."
     },
     {
       "name": "ACS_ALIAS",
-      "type": "string"
+      "type": "string",
+      "description": "Address system alias for the street."
     },
     {
       "name": "ACS_STREET",
-      "type": "string"
+      "type": "string",
+      "description": "Address system street name."
     },
     {
       "name": "ACS_SUFDIR",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `N`, `E`, `W`, `S`."
     },
     {
       "name": "LABEL",
-      "type": "string"
+      "type": "string",
+      "description": "Short label used on the city's own maps. Measured in the published file: Populated on 100% of 5,072 rows, 1,414 distinct values."
     },
     {
       "name": "L_CITYCD",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `ALT`, `BLU`, `COP`, `COT`, `DRA`, `HER`, `HOL`, `INT`, `KEA`, `MAG`, and 11 more."
     },
     {
       "name": "R_CITYCD",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `ALT`, `BLU`, `COP`, `COT`, `DRA`, `HER`, `HOL`, `INT`, `KEA`, `MAG`, and 11 more."
     },
     {
       "name": "LS_ZONE",
-      "type": "string"
+      "type": "string",
+      "description": "Speed zone on the left side."
     },
     {
       "name": "FS_ZONE",
-      "type": "string"
+      "type": "string",
+      "description": "Speed zone on the right side."
     },
     {
       "name": "LZIP",
-      "type": "string"
+      "type": "string",
+      "description": "ZIP code on the left side of the segment."
     },
     {
       "name": "RZIP",
-      "type": "string"
+      "type": "string",
+      "description": "ZIP code on the right side."
     },
     {
       "name": "ONE_WAY",
-      "type": "int32"
+      "type": "int32",
+      "description": "One of. The source layer's domain allows: `0`, `1`, `2`."
     },
     {
       "name": "SPEED_LIMIT",
-      "type": "int32"
+      "type": "int32",
+      "description": "Posted speed limit, in miles per hour. 25 mph covers 4,064 of 5,072 segments."
     },
     {
       "name": "COMMENTS",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note entered by city staff. Unstructured and inconsistently populated."
     },
     {
       "name": "VECCOMMENTS",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note on the segment."
     },
     {
       "name": "UNIQUE_ID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Identifier of the segment in the source road network."
     },
     {
       "name": "EXCLUDE",
-      "type": "string"
+      "type": "string",
+      "description": "Flag marking a segment the city excludes from its own analyses."
     },
     {
       "name": "S_DATE",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the segment record was created."
     },
     {
       "name": "M_DATE",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the segment record was last modified."
     },
     {
       "name": "SOURCE",
-      "type": "string"
+      "type": "string",
+      "description": "Where the record came from. Measured in the published file: Populated on 99% of 5,072 rows, 10 distinct values."
     },
     {
       "name": "S_SURF",
-      "type": "int32"
+      "type": "int32",
+      "description": "Surface type of the segment."
     },
     {
       "name": "L_JURIS",
-      "type": "int32"
+      "type": "int32",
+      "description": "Jurisdiction code on the left side."
     },
     {
       "name": "R_JURIS",
-      "type": "int32"
+      "type": "int32",
+      "description": "Jurisdiction code on the right side."
     },
     {
       "name": "S_ROW",
-      "type": "int32"
+      "type": "int32",
+      "description": "Right-of-way width."
     },
     {
       "name": "S_ACCESS",
-      "type": "string"
+      "type": "string",
+      "description": "Access class of the segment."
     },
     {
       "name": "S_USE",
-      "type": "string"
+      "type": "string",
+      "description": "Use class of the segment."
     },
     {
       "name": "S_ACCUR",
-      "type": "int32"
+      "type": "int32",
+      "description": "Positional accuracy class of the centreline."
     },
     {
       "name": "CFCC",
-      "type": "string"
+      "type": "string",
+      "description": "Census Feature Class Code, the US Census classification of the road type, carried over from TIGER line data."
     },
     {
       "name": "ALT_NAME",
-      "type": "string"
+      "type": "string",
+      "description": "Alternative name the street is also known by."
     },
     {
       "name": "STREET",
-      "type": "string"
+      "type": "string",
+      "description": "Street the feature lies on. Measured in the published file: Populated on 100% of 5,072 rows, 1,624 distinct values."
     },
     {
       "name": "LOW",
-      "type": "double"
+      "type": "double",
+      "description": "Lowest address number on the segment."
     },
     {
       "name": "HIGH",
-      "type": "double"
+      "type": "double",
+      "description": "Highest address number on the segment."
     },
     {
       "name": "MAINTENANCE",
-      "type": "string"
+      "type": "string",
+      "description": "Who maintains the segment. `SANPV` is Sandy, `SHARE` is shared, `SANG` is a further Sandy class."
     },
     {
       "name": "FUNCTIONAL_CLASS",
-      "type": "string"
+      "type": "string",
+      "description": "Functional classification of the road."
     },
     {
       "name": "CARTO_CODE",
-      "type": "string"
+      "type": "string",
+      "description": "Cartographic class controlling how the segment draws on the city's own maps."
     },
     {
       "name": "DATA_DATE",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date of the data load this row came from."
     },
     {
       "name": "DATA_EDITOR",
-      "type": "string"
+      "type": "string",
+      "description": "Editor of the data load."
     },
     {
       "name": "RuleID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Esri symbology rule identifier. It selects a renderer class in the city's own map documents and carries no meaning about the feature itself."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "Shape.STLength()",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 5072,

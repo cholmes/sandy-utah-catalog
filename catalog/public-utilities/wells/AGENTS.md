@@ -17,41 +17,106 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 33 columns, 24 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `SYSNUM` | int32 |
-| `SORNUM` | int16 |
-| `EPAID` | string |
-| `SOWN` | string |
-| `SNAM` | string |
-| `GPM3` | int32 |
-| `STYP` | string |
-| `DIAM` | int16 |
-| `CODE` | int16 |
-| `LABEL` | string |
-| `STATE_ID` | string |
-| `DESCR` | string |
-| `OLD_LABEL` | string |
-| `NEW_LABEL` | string |
-| `UHDID` | string |
-| `GREG_` | double |
-| `GREG_ID` | double |
-| `HDDWS_ALL_` | double |
-| `HDDWS_ALL1` | double |
-| `COMMENT` | string |
-| `CH2MGRID_` | double |
-| `CH2MGRID_I` | double |
-| `CH2MCELL` | int32 |
-| `CH2MROW` | int16 |
-| `CH2MCOL` | int16 |
-| `CH2MAREA` | double |
-| `OWNER` | int32 |
-| `Q_` | string |
-| `Q_COMMENT` | string |
-| `TC_COMMENT` | string |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+5 of 33 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`SYSNUM`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 2 distinct values, ranging 0 to 18028.
+
+**`SORNUM`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 19 distinct values, ranging 0 to 28.
+
+**`EPAID`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 88% of 24 rows, 17 distinct values.
+
+**`SOWN`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 92% of 24 rows, 1 distinct values.
+
+**`SNAM`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 92% of 24 rows, 22 distinct values.
+
+**`GPM3`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 15 distinct values, ranging 0 to 3000.
+
+**`STYP`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 88% of 24 rows, 1 distinct values.
+
+**`DIAM`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 3 distinct values, ranging 0 to 2.
+
+**`CODE`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 2 distinct values, ranging 0 to 6.
+
+**`LABEL`** — *string*  
+Short label used on the city's own maps. Measured in the published file: Populated on 96% of 24 rows, 22 distinct values.
+
+**`STATE_ID`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 75% of 24 rows, 16 distinct values.
+
+**`DESCR`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Empty in all 24 rows of the published file.
+
+**`OLD_LABEL`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 88% of 24 rows, 19 distinct values.
+
+**`NEW_LABEL`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 24 distinct values.
+
+**`UHDID`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 92% of 24 rows, 20 distinct values.
+
+**`GREG_`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 235.
+
+**`GREG_ID`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 323.
+
+**`HDDWS_ALL_`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 243.
+
+**`HDDWS_ALL1`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 1 distinct values.
+
+**`COMMENT`** — *string*  
+Free-text note entered by city staff. Unstructured and inconsistently populated.
+
+**`CH2MGRID_`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 110042.
+
+**`CH2MGRID_I`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 110041.
+
+**`CH2MCELL`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 20 distinct values, ranging 0 to 110041.
+
+**`CH2MROW`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 17 distinct values, ranging 0 to 401.
+
+**`CH2MCOL`** — *int16*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 19 distinct values, ranging 0 to 261.
+
+**`CH2MAREA`** — *double*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 5 distinct values, ranging 0 to 9287.09.
+
+**`OWNER`** — *int32*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 24 rows, 1 distinct values.
+
+**`Q_`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Empty in all 24 rows of the published file.
+
+**`Q_COMMENT`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 4% of 24 rows, 1 distinct values.
+
+**`TC_COMMENT`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 4% of 24 rows, 1 distinct values.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -70,5 +135,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/SourceProtectionWells/FeatureServer/1](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/SourceProtectionWells/FeatureServer/1) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/SourceProtectionWells/FeatureServer/1](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/SourceProtectionWells/FeatureServer/1?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

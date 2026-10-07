@@ -17,18 +17,37 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 10 columns, 49 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `frequency` | string |
-| `routetype` | string |
-| `avgbrd` | int32 |
-| `city` | string |
-| `county` | string |
-| `Shape` | binary |
-| `Shape.STLength()` | double |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+9 of 10 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`frequency`** — *string*  
+Frequency (minutes). Measured in the published file: Populated on 100% of 49 rows, 5 distinct values.
+
+**`routetype`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 49 rows, 4 distinct values.
+
+**`avgbrd`** — *int32*  
+AVG WKD Boarding. Measured in the published file: Populated on 100% of 49 rows, 49 distinct values, ranging 12 to 4131.
+
+**`city`** — *string*  
+City the feature falls in. Measured in the published file: Populated on 100% of 49 rows, 37 distinct values.
+
+**`county`** — *string*  
+County the feature falls in. Sandy is in Salt Lake County. Measured in the published file: Populated on 100% of 49 rows, 4 distinct values.
+
+**`Shape`** — *binary*  
+Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column.
+
+**`Shape.STLength()`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -58,5 +77,5 @@ Measured on the published file:
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/UTA_Routes/MapServer/5](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/UTA_Routes/MapServer/5) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/UTA_Routes/MapServer/5](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/UTA_Routes/MapServer/5?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

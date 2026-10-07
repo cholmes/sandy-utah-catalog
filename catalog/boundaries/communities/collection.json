@@ -9,7 +9,7 @@
   "title": "Communities",
   "description": "Communities in Sandy City, Utah. 30 multipolygon features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Common/Sandy_Communities/MapServer/0",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -155,8 +155,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2542,
-      "file:checksum": "1220d8b62b29576c57124ad3a5774ea28bf1e1ea7eba5c098e2ac3780516dd6ee30d"
+      "file:size": 2820,
+      "file:checksum": "12202c13864e17db2d0eeaab33a77bd86fe8a639e1e6c14dfa294e6c68e1754275cd"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -165,8 +165,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2378,
-      "file:checksum": "12202e9dde7886bec3716746725813c6256fe35c9e400b4d63ba4c77bf880b56c060"
+      "file:size": 5927,
+      "file:checksum": "1220b80587e95338088853f260c90cfe274c0edef0134a0bfa3c48f24299cb6584e0"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -182,91 +182,113 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "COMMUNITY_ID",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy community area number, joining to the `communities` collection. Measured in the published file: Populated on 100% of 30 rows, 30 distinct values, ranging 1 to 30."
     },
     {
       "name": "COMMUNITY_NAME",
-      "type": "string"
+      "type": "string",
+      "description": "Name of the community area. Some rows carry a number rather than a name."
     },
     {
       "name": "LEADER_NAME",
-      "type": "string"
+      "type": "string",
+      "description": "Community council chair. Contact details for this person were removed before publication; see the README."
     },
     {
       "name": "Color",
-      "type": "string"
+      "type": "string",
+      "description": "Cartographic fill index used so that neighbouring areas differ on the city's own maps. It carries no meaning about the area."
     },
     {
       "name": "EMERGENCY_PREPAREDNESS_LEADER",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 40% of 30 rows, 12 distinct values."
     },
     {
       "name": "EMERGENCY_PREPAREDNESS_LEADER2",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 17% of 30 rows, 5 distinct values."
     },
     {
       "name": "LINK",
-      "type": "string"
+      "type": "string",
+      "description": "Link to a page about this feature on a city or partner website."
     },
     {
       "name": "Sandy_HH",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 30 rows, 30 distinct values, ranging 0 to 2497."
     },
     {
       "name": "Unicorp_HH",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 30 rows, 18 distinct values, ranging 0 to 938."
     },
     {
       "name": "Sandy_Pop",
-      "type": "double"
+      "type": "double",
+      "description": "Population within the Sandy city limit."
     },
     {
       "name": "Unicorp_Pop",
-      "type": "double"
+      "type": "double",
+      "description": "Population in the unincorporated part of the community area."
     },
     {
       "name": "Total_HH",
-      "type": "int16"
+      "type": "int16",
+      "description": "Total households in the community area."
     },
     {
       "name": "Total_Pop",
-      "type": "double"
+      "type": "double",
+      "description": "Total population of the community area. Ranges 661 to 7,084 across the 30 areas."
     },
     {
       "name": "Date_Updated",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 30 rows, 1 distinct values."
     },
     {
       "name": "Sandy_PPH",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 97% of 30 rows, 29 distinct values, ranging 2.06286 to 3.33391."
     },
     {
       "name": "Unincorp_PPH",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 60% of 30 rows, 17 distinct values, ranging 2 to 4."
     },
     {
       "name": "Total_PPH",
-      "type": "double"
+      "type": "double",
+      "description": "Average persons per household, derived by the city from the population and household counts."
     },
     {
       "name": "Shape.area",
-      "type": "double"
+      "type": "double",
+      "description": "Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited."
     },
     {
       "name": "Shape.len",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 30,

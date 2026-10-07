@@ -9,7 +9,7 @@
   "title": "Fire Hydrants",
   "description": "Fire Hydrants in Sandy City, Utah. The upstream service publishes no description for this layer. Sandy also publishes a hydrant layer under `Pub_Safety/Hydrants` with a different count (5,047 against 5,292). This mirrors the Public Utilities copy, which is the one maintained with the water system. 5,292 point features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Utils/WaterSystem/FeatureServer/1",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -155,8 +155,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2804,
-      "file:checksum": "12204ce35afd288b05ea98b3b79feb42804dd87e9f5106e0e15e797938f3993d43c1"
+      "file:size": 3082,
+      "file:checksum": "1220d0aa001ec4190431ae649daa49fc22660d65896c852e4ecb4982f7e000c7b45f"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -165,8 +165,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 4549,
-      "file:checksum": "1220675ea3acaf61052b37df2f80bab3ee2cca577a846844a0cd3bc1671effde3d7d"
+      "file:size": 12201,
+      "file:checksum": "1220358a08f7c77a1b8aafb9783a765dca829b8d08d7cf09a5fdee494d3b4322d888"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -182,183 +182,228 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "FACILITYID",
-      "type": "string"
+      "type": "string",
+      "description": "Identifier of the asset in the city's maintenance management system. Stable within that system, and the key field crews use. Measured in the published file: Populated on 100% of 5,292 rows, 5,291 distinct values."
     },
     {
       "name": "HYD_ID",
-      "type": "int32"
+      "type": "int32",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 97% of 5,292 rows, 5,135 distinct values, ranging 158 to 9856."
     },
     {
       "name": "COMMENTS",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note entered by city staff. Unstructured and inconsistently populated."
     },
     {
       "name": "GPS_DATE",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date the location was captured by GPS in the field. Measured in the published file: Populated on 75% of 5,292 rows, 542 distinct values."
     },
     {
       "name": "NORTHING",
-      "type": "double"
+      "type": "double",
+      "description": "Y coordinate copied into an attribute. The geometry column is authoritative; this copy is not always consistent with it."
     },
     {
       "name": "EASTING",
-      "type": "double"
+      "type": "double",
+      "description": "X coordinate copied into an attribute. The geometry column is authoritative; this copy is not always consistent with it."
     },
     {
       "name": "PROVIDER",
-      "type": "string"
+      "type": "string",
+      "description": "Coded value. The source layer's domain allows: `Sandy`, `Other`, `Midvale`. Codes: `SANDY` = Sandy, `OTHER` = Other, `Midvale` = Midvale."
     },
     {
       "name": "MAP_NO",
-      "type": "string"
+      "type": "string",
+      "description": "Sheet number of the paper map the feature was digitised from. Measured in the published file: Populated on 92% of 5,292 rows, 161 distinct values."
     },
     {
       "name": "APADDRESS",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 98% of 5,292 rows, 4,684 distinct values."
     },
     {
       "name": "LANDTIES",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 66% of 5,292 rows, 1,958 distinct values."
     },
     {
       "name": "HYDSIZE",
-      "type": "double"
+      "type": "double",
+      "description": "Coded value. The source layer's domain allows: `4\"`, `5.25\"`. Codes: `4` = 4\", `5.25` = 5.25\"."
     },
     {
       "name": "HYD_TYPE",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `SCISSORS`, `COMPRESSION`."
     },
     {
       "name": "HYD_MANUF",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `CLOW`, `IOWA`, `WATEROUS`, `PACIFIC STATES`, `KENNEDY`, `OTHER`, `MUELLER`, `EJ`."
     },
     {
       "name": "MANUF_DATE",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 82% of 5,292 rows, 74 distinct values."
     },
     {
       "name": "VDEPTH",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 66% of 5,292 rows, 92 distinct values."
     },
     {
       "name": "VLOCAT",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 74% of 5,292 rows, 375 distinct values."
     },
     {
       "name": "VSIZE",
-      "type": "double"
+      "type": "double",
+      "description": "Coded value. The source layer's domain allows: `2\"`, `4\"`, `8\"`, `10\"`, `12\"`, `14\"`, `16\"`, `20\"`, `24\"`, `30\"`, and 3 more. Codes: `2` = 2\", `4` = 4\", `8` = 8\", `10` = 10\", `12` = 12\", `14` = 14\", `16` = 16\", `20` = 20\", `24` = 24\", `30` = 30\", `33` = 33\", `36` = 36\"."
     },
     {
       "name": "VTYPE",
-      "type": "string"
+      "type": "string",
+      "description": "Coded value. The source layer's domain allows: `GATE VALVE`, `BUTTERFLY VALVE`, `OTHER VALVE`, `UNKOWN VALVE`. Codes: `GATE` = GATE VALVE, `BUTTERFLY` = BUTTERFLY VALVE, `OTHER` = OTHER VALVE, `UNKNOWN` = UNKOWN VALVE."
     },
     {
       "name": "VMAUF",
-      "type": "string"
+      "type": "string",
+      "description": "One of. The source layer's domain allows: `MUELLER`, `AFC`, `WATTEROUS`, `CLOW`, `PRATT`, `OTHER`, `KENNEDY`, `VAL-MATIC`, `EJ`, `AVTEK`, and 1 more."
     },
     {
       "name": "VMAUNFDATE",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 80% of 5,292 rows, 37 distinct values, ranging 0 to 20221."
     },
     {
       "name": "INSTDATE",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 20% of 5,292 rows, 740 distinct values."
     },
     {
       "name": "DATECOLT",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 77% of 5,292 rows, 1,091 distinct values."
     },
     {
       "name": "COLLTBY",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 79% of 5,292 rows, 101 distinct values."
     },
     {
       "name": "OTHER_INFO",
-      "type": "string"
+      "type": "string",
+      "description": "Free-text note carried from the source record. Measured in the published file: Populated on 69% of 5,292 rows, 646 distinct values."
     },
     {
       "name": "ACAD_ANGLE",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 84% of 5,292 rows, 3,272 distinct values, ranging 0 to 359.943."
     },
     {
       "name": "ENABLED",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 5,292 rows, 2 distinct values, ranging 0 to 1."
     },
     {
       "name": "ANCILLARYROLE",
-      "type": "int16"
+      "type": "int16",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 5,292 rows, 2 distinct values, ranging 0 to 2."
     },
     {
       "name": "LOCATION",
-      "type": "string"
+      "type": "string",
+      "description": "Street address or place description of the feature. Measured in the published file: Populated on 96% of 5,292 rows, 4,184 distinct values."
     },
     {
       "name": "INSPDATE",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Date of the most recent inspection. Measured in the published file: Populated on 97% of 5,292 rows, 5,078 distinct values."
     },
     {
       "name": "RESIDPRESSURE",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 3% of 5,292 rows, 56 distinct values, ranging 0 to 170."
     },
     {
       "name": "STATICPRESSURE",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 5% of 5,292 rows, 87 distinct values, ranging 47 to 240."
     },
     {
       "name": "TWENTYPSIFLOW",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 3% of 5,292 rows, 145 distinct values, ranging 0 to 30352."
     },
     {
       "name": "THIRTYPSIFLOW",
-      "type": "double"
+      "type": "double",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 3% of 5,292 rows, 147 distinct values, ranging 0 to 28438."
     },
     {
       "name": "WATER_ENTITY",
-      "type": "string"
+      "type": "string",
+      "description": "Coded value. The source layer's domain allows: `Jordan Valley Water`, `Salt Lake City Water`, `Midvale Water`, `Sandy Water`, `Private Owner`, `White City Water`. Codes: `JVW` = Jordan Valley Water, `SLCW` = Salt Lake City Water, `MIDW` = Midvale Water, `Sandy` = Sandy Water, `Private` = Private Owner, `White City Water` = White City Water."
     },
     {
       "name": "FIRE_INSP_DIST",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 94% of 5,292 rows, 15 distinct values."
     },
     {
       "name": "CONST_STATUS",
-      "type": "string"
+      "type": "string",
+      "description": "Construction status of the asset. Measured in the published file: Populated on 100% of 5,292 rows, 1 distinct values."
     },
     {
       "name": "STATUS",
-      "type": "string"
+      "type": "string",
+      "description": "Operational status of the feature. See the measured values below, because the source layer declares no code list. Measured in the published file: Populated on 100% of 5,292 rows, 4 distinct values."
     },
     {
       "name": "created_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who created the row, from the geodatabase editor tracking."
     },
     {
       "name": "created_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was created, from the geodatabase editor tracking. It records the database edit, not when the feature was built in the world."
     },
     {
       "name": "last_edited_user",
-      "type": "string"
+      "type": "string",
+      "description": "Username of the staff member who last edited the row, from the geodatabase editor tracking."
     },
     {
       "name": "last_edited_date",
-      "type": "timestamp[ms]"
+      "type": "timestamp[ms]",
+      "description": "Timestamp when the row was last edited, from the geodatabase editor tracking. It records the database edit, not a change in the world."
     },
     {
       "name": "AssetStatus",
-      "type": "string"
+      "type": "string",
+      "description": "Where the asset sits in the capital planning cycle. Measured in the published file: Populated on 52% of 5,292 rows, 5 distinct values."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 5292,

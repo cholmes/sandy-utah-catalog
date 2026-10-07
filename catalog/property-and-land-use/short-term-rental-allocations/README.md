@@ -17,15 +17,19 @@ Sandy City publishes no licence for this data. There is no terms-of-use page on 
 
 This is a **mirror**. Sandy City produced the data; it is republished here unmodified except where noted below.
 
-- **Source**: [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2)
-- **Mirrored**: 2026-10-06T22:11:04Z
+- **Source**: [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/Short_Term_Rental_Allocations_Map/FeatureServer/2?f=json) (the city's server answers 403 on the plain endpoint, so this links the `f=json` form it does serve)
+- **Mirrored**: 2026-10-07T21:00:33Z
 
-Converted with [gpio](https://github.com/developmentseed/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
+Converted with [gpio](https://github.com/geoparquet/geoparquet-io) (`extract arcgis --output-crs native`, preserving the source projection) and tiled with [tylertoo](https://github.com/geoparquet-io/tylertoo) 0.7.1.
 
 ## Files
 
 - [`short-term-rental-allocations.parquet`](https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.parquet) — GeoParquet, EPSG:3566
 - [`short-term-rental-allocations.pmtiles`](https://data.source.coop/portolan-mirrors/sandy-utah-catalog/property-and-land-use/short-term-rental-allocations/short-term-rental-allocations.pmtiles) — vector tiles, Web Mercator
+
+## Columns
+
+The [agent guide](AGENTS.md) documents every column, with the source of each definition. Columns Sandy City does not define say so, rather than carrying a guess.
 
 ## Reading it
 

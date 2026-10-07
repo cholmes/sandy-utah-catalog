@@ -17,29 +17,73 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 21 columns, 42 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `Quadrant` | string |
-| `Community` | int16 |
-| `Police_Beat` | string |
-| `NW_Group` | string |
-| `Alt_Area_Name` | string |
-| `AreaLeader` | string |
-| `Leader_Address` | string |
-| `Email` | string |
-| `Hm_Phone` | string |
-| `Cell_Phone` | string |
-| `Wk_Phone` | string |
-| `Prefered_Phone` | string |
-| `Color` | string |
-| `Include` | string |
-| `Last_Active` | string |
-| `Shape` | binary |
-| `Shape.area` | double |
-| `Shape.len` | double |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+
+**Where these meanings come from.** Neighbourhood watch group areas. Contact details for the named volunteers were removed before publication; see the README.
+
+15 of 21 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`Quadrant`** — *string*  
+Sandy addressing and policing quadrant. Measured in the published file: Populated on 100% of 42 rows, 6 distinct values.
+
+**`Community`** — *int16*  
+Sandy community area the group sits in, joining to the `communities` collection.
+
+**`Police_Beat`** — *string*  
+Police beat the area falls in, joining to the `police-beats` collection.
+
+**`NW_Group`** — *string*  
+Name or number of the neighbourhood watch group.
+
+**`Alt_Area_Name`** — *string*  
+Alternative name the area is known by.
+
+**`AreaLeader`** — *string*  
+Volunteer who leads the group. Their address, email and telephone numbers were removed before publication.
+
+**`Leader_Address`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. 
+
+**`Email`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. 
+
+**`Hm_Phone`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. 
+
+**`Cell_Phone`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. 
+
+**`Wk_Phone`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. 
+
+**`Prefered_Phone`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. 
+
+**`Color`** — *string*  
+Cartographic fill index so neighbouring areas differ on the city's own maps. It carries no meaning about the area.
+
+**`Include`** — *string*  
+Whether the city includes the group on its published map.
+
+**`Last_Active`** — *string*  
+When the group was last recorded as active.
+
+**`Shape`** — *binary*  
+Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column.
+
+**`Shape.area`** — *double*  
+Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited.
+
+**`Shape.len`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -58,5 +102,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Neighborhood_Watch/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Neighborhood_Watch/MapServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Neighborhood_Watch/MapServer/0](https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Safety/Police_Neighborhood_Watch/MapServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

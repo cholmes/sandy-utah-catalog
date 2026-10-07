@@ -17,21 +17,46 @@ There is a `bbox` struct column on every row, written by gpio for spatial prunin
 
 13 columns, 960 rows.
 
-| column | type |
-| --- | --- |
-| `OBJECTID` | int64 |
-| `Id` | int32 |
-| `Res_or_Com` | string |
-| `Use_or_Str` | string |
-| `Detail` | string |
-| `Bus_Name` | string |
-| `App_Name` | string |
-| `Address` | string |
-| `File_Num` | string |
-| `Shape__Area` | double |
-| `Shape__Length` | double |
-| `geometry` | binary |
-| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+7 of 13 columns carry a definition. The rest say so rather than guess.
+
+**`OBJECTID`** — *int64*  
+Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes.
+
+**`Id`** — *int32*  
+Identifier assigned by the source layer. Measured in the published file: Populated on 11% of 960 rows, 9 distinct values, ranging 0 to 1.2212e+07.
+
+**`Res_or_Com`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 97% of 960 rows, 6 distinct values.
+
+**`Use_or_Str`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 82% of 960 rows, 6 distinct values.
+
+**`Detail`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 91% of 960 rows, 623 distinct values.
+
+**`Bus_Name`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 83% of 960 rows, 622 distinct values.
+
+**`App_Name`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 47% of 960 rows, 377 distinct values.
+
+**`Address`** — *string*  
+Street address of the feature. Measured in the published file: Populated on 100% of 960 rows, 873 distinct values.
+
+**`File_Num`** — *string*  
+Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 960 rows, 953 distinct values.
+
+**`Shape__Area`** — *double*  
+Polygon area computed by the geodatabase, in the square units of the source coordinate system. Recompute it from the geometry rather than trusting it, because it is not updated when a shape is edited.
+
+**`Shape__Length`** — *double*  
+Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it.
+
+**`geometry`** — *binary*  
+Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system.
+
+**`bbox`** — *struct<xmin: double, ymin: double, xmax: double, ymax: double>*  
+Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently.
 
 ## Coded values
 
@@ -50,5 +75,5 @@ The default style is a single colour: no column in this collection has both low 
 
 ## Provenance
 
-Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/CUP/FeatureServer/0](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/CUP/FeatureServer/0) on 2026-10-06T22:11:04Z.
+Mirrored from [https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/CUP/FeatureServer/0](https://services3.arcgis.com/IGYUtIzoA63tzE48/arcgis/rest/services/CUP/FeatureServer/0?f=json) on 2026-10-07T21:00:33Z.
 Sandy City publishes no licence for this data; see the [README](README.md).

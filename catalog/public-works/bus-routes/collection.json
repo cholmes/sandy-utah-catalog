@@ -9,7 +9,7 @@
   "title": "UTA Bus Routes",
   "description": "UTA Bus Routes in Sandy City, Utah. The upstream service publishes no description for this layer. 49 multilinestring features, mirrored as GeoParquet in EPSG:3566 (NAD83(HARN) / Utah Central (ftUS)) with Web Mercator vector tiles for display. See the [agent guide](AGENTS.md) for the schema, the coded-value lists and queries that run.",
   "license": "other",
-  "updated": "2026-10-06T22:11:04Z",
+  "updated": "2026-10-07T21:00:33Z",
   "providers": [
     {
       "name": "Sandy City, Utah \u2014 GIS Division",
@@ -75,9 +75,9 @@
     },
     {
       "rel": "via",
-      "href": "https://gis.sandy.utah.gov/arcgis/rest/services/Pub_Works/UTA_Routes/MapServer/5",
+      "href": "https://gis.sandy.utah.gov/WebApplications/gismaps.html",
       "type": "text/html",
-      "title": "Upstream ArcGIS service layer"
+      "title": "Sandy City GIS, the publisher of this layer"
     },
     {
       "rel": "license",
@@ -135,8 +135,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2319,
-      "file:checksum": "122042f72bd652a39175d81c7df2e7b8d2720b65f762bf5cde8bc52bdcdae0d3b979"
+      "file:size": 2597,
+      "file:checksum": "12203c2ca51a547b116933c333eb9f91289c0d8f27d36ea8db34b1ba12adeee37573"
     },
     "agents": {
       "href": "./AGENTS.md",
@@ -145,8 +145,8 @@
       "roles": [
         "metadata"
       ],
-      "file:size": 2154,
-      "file:checksum": "1220736180cc4c719812cd7853b6eedcd37b670a604132fc933edd0ee4abd0a29929"
+      "file:size": 3712,
+      "file:checksum": "1220336a917c7604f27970f119259b4a9feca5de9cd1392197f3409c3dfa8bd277db"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -162,43 +162,53 @@
   "table:columns": [
     {
       "name": "OBJECTID",
-      "type": "int64"
+      "type": "int64",
+      "description": "Esri object identifier. A row number assigned by the source geodatabase and reassigned when the layer is republished. It is not a stable key and must not be used to join across collections or across refreshes."
     },
     {
       "name": "frequency",
-      "type": "string"
+      "type": "string",
+      "description": "Frequency (minutes). Measured in the published file: Populated on 100% of 49 rows, 5 distinct values."
     },
     {
       "name": "routetype",
-      "type": "string"
+      "type": "string",
+      "description": "Sandy City publishes no definition for this column, and the source layer declares no coded-value domain for it. Measured in the published file: Populated on 100% of 49 rows, 4 distinct values."
     },
     {
       "name": "avgbrd",
-      "type": "int32"
+      "type": "int32",
+      "description": "AVG WKD Boarding. Measured in the published file: Populated on 100% of 49 rows, 49 distinct values, ranging 12 to 4131."
     },
     {
       "name": "city",
-      "type": "string"
+      "type": "string",
+      "description": "City the feature falls in. Measured in the published file: Populated on 100% of 49 rows, 37 distinct values."
     },
     {
       "name": "county",
-      "type": "string"
+      "type": "string",
+      "description": "County the feature falls in. Sandy is in Salt Lake County. Measured in the published file: Populated on 100% of 49 rows, 4 distinct values."
     },
     {
       "name": "Shape",
-      "type": "binary"
+      "type": "binary",
+      "description": "Residual Esri geometry field. It carries no coordinates here; the geometry is in the `geometry` column."
     },
     {
       "name": "Shape.STLength()",
-      "type": "double"
+      "type": "double",
+      "description": "Line length or polygon perimeter computed by the geodatabase, in the units of the source coordinate system. Recompute it from the geometry rather than trusting it."
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Feature geometry, WKB encoded, in the collection's `proj:epsg` coordinate system."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Per-row bounding box written by gpio, as a struct of `xmin`, `ymin`, `xmax`, `ymax`, in the same coordinate system as the geometry. Rows are in Hilbert order, so filtering on this column prunes row groups efficiently."
     }
   ],
   "geoparquet:feature_count": 49,
